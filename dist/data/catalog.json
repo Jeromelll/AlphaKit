@@ -1,0 +1,666 @@
+{
+  "updatedAt": "2026-10-13",
+  "skills": [
+    {
+      "id": "equity-earnings-update",
+      "name": "已覆盖公司的财报更新分析",
+      "originalName": "earnings-analysis",
+      "category": "earnings",
+      "summary": "面向已有覆盖公司的季度财报更新，先判断业绩相对预期的差异及原因，再梳理分部、利润率和指引变化，并说明这些新信息如何影响估算与投资逻辑。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/earnings-analysis/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-analysis/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "财报更新",
+        "预期差",
+        "盈利预测",
+        "来源引用"
+      ],
+      "environment": "Claude Code / Cowork；其他宿主兼容性未实测",
+      "dependencies": [
+        "必需：Python、matplotlib、pandas、seaborn，用于图表",
+        "必需：DOCX 文档处理能力",
+        "可选：XLS 模型更新能力"
+      ],
+      "inputs": [
+        "公司及报告季度",
+        "业绩公告、申报文件和业绩会纪要",
+        "带来源日期的市场一致预期及上季指引"
+      ],
+      "outputs": [
+        "财报更新报告与来源链接",
+        "业绩差异及指引分析",
+        "更新后估算与图表"
+      ],
+      "example": "为已覆盖的某家零售公司整理最新季度更新：比较公司公告、申报文件与有日期的市场预期，并解释库存和同店销售变化。",
+      "method": "按业绩差异、分部经营、利润率与管理层指引逐项比较市场预期和公司披露，再更新估算并检查论点变化。图表和表格需标明可点击的具体来源。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "仅适用于已有覆盖公司；财务数据与一致预期需由用户提供或通过可用来源检索并核对，不构成投资建议。",
+      "evidenceQuotes": [
+        "Focus on NEW information only",
+        "Explain WHY results differed from expectations"
+      ],
+      "nameEn": "Post-earnings update for a covered company",
+      "summaryEn": "Prepares a quarterly earnings update for a company already under coverage. Compares results with expectations, explains the variance, reviews segment performance, margins and guidance, and describes how new information affects estimates and the investment thesis.",
+      "methodEn": "Compare reported results, segment performance, margins and management guidance with expectations. Update estimates and assess changes to the thesis; cite specific sources in tables and charts.",
+      "environmentEn": "Claude Code / Cowork; compatibility with other hosts has not been tested.",
+      "dependenciesEn": [
+        "Required: Python with matplotlib, pandas and seaborn for charts",
+        "Required: DOCX document editing capability",
+        "Optional: XLS model update capability"
+      ],
+      "inputsEn": [
+        "Company and reporting quarter",
+        "Earnings release, filings and earnings call transcript",
+        "Consensus estimates with source and date, plus prior-quarter guidance"
+      ],
+      "outputsEn": [
+        "Earnings update report with source links",
+        "Beat/miss and guidance analysis",
+        "Updated estimates and charts"
+      ],
+      "exampleEn": "Prepare an update for a covered retailer using its latest release, filings and dated consensus estimates, and explain changes in inventory and same-store sales.",
+      "notesEn": "For companies already under coverage. Financial data and consensus estimates must be supplied or retrieved from available sources and checked. This is not investment advice.",
+      "tagsEn": [
+        "earnings update",
+        "expectations gap",
+        "earnings estimates",
+        "source citations"
+      ]
+    },
+    {
+      "id": "earnings-preview",
+      "name": "财报前关键指标与情景预案",
+      "originalName": "earnings-preview",
+      "category": "earnings",
+      "summary": "在公司披露财报前，整理报告时点、市场预期和上季指引，按行业选择关键经营指标，搭建多空情景并列出可能驱动市场反应的事项。同时区分已披露事实、市场预期和待验证假设。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "财报前瞻",
+        "情景分析",
+        "经营指标",
+        "事件跟踪"
+      ],
+      "environment": "Claude Code / Cowork；其他宿主兼容性未实测",
+      "dependencies": [
+        "必需：公司财报日及上一季度业绩会材料",
+        "必需：带来源与日期的一致预期",
+        "可选：历史财报反应与期权隐含波动数据"
+      ],
+      "inputs": [
+        "公司与报告季度",
+        "一致预期及估算来源日期",
+        "上季指引和重点业务指标"
+      ],
+      "outputs": [
+        "财报前瞻摘要",
+        "分层关键指标清单",
+        "多空情景与催化事项"
+      ],
+      "example": "为一家软件公司准备下季业绩前瞻，比较 ARR、续约和现金流预期，列出需要核对的指引变化。",
+      "method": "先核对财报日期、市场预期和上季指引，再选择行业相关指标构造情景，最后按重要性排列可能影响解读的事项。估算需注明来源和日期。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "一致预期、期权数据和历史市场反应需连接可用数据源；技能未验证实际数据访问，也不输出可执行交易指令。",
+      "evidenceQuotes": [
+        "Build a \"what to watch\" framework specific to the company",
+        "Consensus estimates change — always note the source and date of estimates"
+      ],
+      "nameEn": "Pre-earnings metrics and scenario brief",
+      "summaryEn": "Before a company reports, organize the reporting time, market expectations and prior guidance. Select sector-specific operating metrics, develop bull and bear scenarios, and list events or results that could shape the market reaction.",
+      "methodEn": "Verify the reporting date, consensus estimates and prior guidance. Select relevant sector metrics, build scenarios and rank the items that could affect interpretation; record the source and date for estimates.",
+      "environmentEn": "Claude Code / Cowork; compatibility with other hosts has not been tested.",
+      "dependenciesEn": [
+        "Required: Earnings date and prior-quarter call materials",
+        "Required: Consensus estimates with source and date",
+        "Optional: Historical earnings reactions and options-implied move data"
+      ],
+      "inputsEn": [
+        "Company and reporting quarter",
+        "Consensus estimates and source date",
+        "Prior guidance and key operating metrics to monitor"
+      ],
+      "outputsEn": [
+        "Pre-earnings brief",
+        "Ranked key-metrics checklist",
+        "Scenarios and catalyst checklist"
+      ],
+      "exampleEn": "Prepare a pre-earnings brief for a software company, compare expectations for ARR, renewals and cash flow, and list guidance changes to verify.",
+      "notesEn": "Consensus, options and historical market-reaction data require an available source. Actual data access has not been tested; the skill does not provide executable trade instructions.",
+      "tagsEn": [
+        "earnings preview",
+        "scenario analysis",
+        "operating metrics",
+        "event monitoring"
+      ]
+    },
+    {
+      "id": "initiating-coverage",
+      "name": "公司首次覆盖研究分步流程",
+      "originalName": "initiating-coverage",
+      "category": "research",
+      "summary": "把首次覆盖拆成公司研究、财务建模、估值、图表和报告组装等独立任务；每步先检查前置材料再交付对应成果，避免未经核验地串行完成整套流程。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/initiating-coverage/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/initiating-coverage/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "首次覆盖",
+        "公司研究",
+        "前置检查",
+        "研究报告"
+      ],
+      "environment": "Claude Code / Cowork；其他宿主兼容性未实测",
+      "dependencies": [
+        "必需：公司名称或证券代码",
+        "按所选任务提供财报、模型或前序研究成果",
+        "按交付需要提供 Excel、图表及 DOCX 处理能力"
+      ],
+      "inputs": [
+        "公司名称或证券代码",
+        "明确指定的单项任务",
+        "该任务要求的财务资料或前序交付物"
+      ],
+      "outputs": [
+        "公司研究文档或财务模型",
+        "估值分析或图表",
+        "满足前置条件后的报告组装成果"
+      ],
+      "example": "对一家新覆盖的工业公司仅执行公司研究任务，基于其申报文件梳理业务、管理层、竞争格局与风险。",
+      "method": "将覆盖工作分成五项任务，分别验证输入条件并单独交付；估值、制图和最终组装须检查前序产物是否存在。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "原文要求一次只执行用户指定的一项任务；需逐项请求，任务三至五依赖前序成果。金融数据来源与最终判断须人工核实。",
+      "evidenceQuotes": [
+        "Tasks must be executed individually with verified prerequisites",
+        "Tasks 3-5 have dependencies on earlier tasks."
+      ],
+      "nameEn": "Company initiation research workflow",
+      "summaryEn": "Splits an initiation into separate tasks for company research, financial modeling, valuation, charting and report assembly. Each task checks its prerequisites and delivers its specified output, preventing an unverified end-to-end run.",
+      "methodEn": "Divide the coverage process into five tasks, verify each task’s inputs and deliver them separately. Valuation, charting and final assembly require the relevant prior outputs.",
+      "environmentEn": "Claude Code / Cowork; compatibility with other hosts has not been tested.",
+      "dependenciesEn": [
+        "Required: Company name or ticker",
+        "Provide filings, a model or prior research required by the selected task",
+        "Excel, charting and DOCX capabilities as needed for the selected output"
+      ],
+      "inputsEn": [
+        "Company name or ticker",
+        "The specific task requested",
+        "Financial materials or prerequisite deliverables required for that task"
+      ],
+      "outputsEn": [
+        "Company research document or financial model",
+        "Valuation analysis or charts",
+        "Report assembly after prerequisites are met"
+      ],
+      "exampleEn": "For a newly covered industrial company, request only the company-research task and use its filings to examine the business, management, competitive position and risks.",
+      "notesEn": "The source requires one explicitly requested task at a time. Tasks three through five depend on earlier deliverables. Financial sources and conclusions require human review.",
+      "tagsEn": [
+        "initiation",
+        "company research",
+        "prerequisite checks",
+        "research report"
+      ]
+    },
+    {
+      "id": "catalyst-calendar",
+      "name": "覆盖标的催化事件日历",
+      "originalName": "catalyst-calendar",
+      "category": "operations",
+      "summary": "围绕指定公司范围和观察期限，汇集财报、投资者日、产品发布、监管决定、并购节点及宏观事件，记录日期并标注来源，帮助研究团队安排事件跟踪。为每项事件保留出处与日期确认状态。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/catalyst-calendar/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/catalyst-calendar/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "催化事件",
+        "事件日历",
+        "财报日期",
+        "研究运营"
+      ],
+      "environment": "Claude Code / Cowork；其他宿主兼容性未实测",
+      "dependencies": [
+        "必需：公司名称或证券代码清单",
+        "必需：可核对的公司公告、监管与宏观日程来源",
+        "可选：可维护的日历或表格工具"
+      ],
+      "inputs": [
+        "覆盖公司或行业范围",
+        "观察期限",
+        "是否纳入宏观事件"
+      ],
+      "outputs": [
+        "带日期和来源的事件清单",
+        "按事件类别整理的日历",
+        "需要持续确认的待核事项"
+      ],
+      "example": "整理一组医疗器械公司的未来一季事件，纳入财报、监管决定和行业会议，并逐项保留出处。",
+      "method": "先确定覆盖范围、行业与时间窗，再按财务、公司、行业和宏观类别收集事件，并对日期来源进行标记。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "事件日期可能变化；需在正式使用前回查公司或监管机构的最新公告，不能把日历条目视为已确认事件。",
+      "evidenceQuotes": [
+        "Build and maintain a calendar of upcoming catalysts across a coverage universe",
+        "For each company, identify upcoming events:"
+      ],
+      "nameEn": "Catalyst calendar for covered companies",
+      "summaryEn": "For a defined company universe and time horizon, collect earnings, investor days, product launches, regulatory decisions, deal milestones and macro events. Record dates and sources to help a research team plan event monitoring.",
+      "methodEn": "Define the universe, sector and time window, then gather financial, corporate, industry and macro events and record the source for each date.",
+      "environmentEn": "Claude Code / Cowork; compatibility with other hosts has not been tested.",
+      "dependenciesEn": [
+        "Required: List of companies or tickers",
+        "Required: Verifiable company, regulatory and macro-calendar sources",
+        "Optional: Calendar or spreadsheet tool for maintaining the schedule"
+      ],
+      "inputsEn": [
+        "Company or sector coverage universe",
+        "Monitoring horizon",
+        "Whether to include macro events"
+      ],
+      "outputsEn": [
+        "Dated event list with sources",
+        "Calendar grouped by event type",
+        "Items requiring follow-up verification"
+      ],
+      "exampleEn": "Compile the upcoming events for a group of medical-device companies, including earnings, regulatory decisions and industry conferences, with a source for each item.",
+      "notesEn": "Event dates can change. Recheck current company or regulator announcements before relying on a calendar entry; inclusion does not mean the event has been reconfirmed.",
+      "tagsEn": [
+        "catalysts",
+        "event calendar",
+        "earnings dates",
+        "research operations"
+      ]
+    },
+    {
+      "id": "three-statement-model",
+      "name": "三表联动财务模型填充",
+      "originalName": "3-statement-model",
+      "category": "valuation",
+      "summary": "在既有模板中补齐利润表、资产负债表和现金流量表之间的公式联动，区分历史实际值与假设输入，并检查资产负债平衡和现金流勾稽。在修改单元格前确认模板映射和历史期间。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/financial-analysis/skills/3-statement-model/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/3-statement-model/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "三表模型",
+        "财务预测",
+        "公式联动",
+        "模型校验"
+      ],
+      "environment": "Claude Code / Cowork；原文包含 Excel Office JS 与独立 xlsx 两种流程；其他宿主未实测",
+      "dependencies": [
+        "必需：用户提供的三表模板及历史财务资料",
+        "Excel Office JS，或 Python/openpyxl 及原文要求的 recalc.py",
+        "预测假设由用户提供或确认"
+      ],
+      "inputs": [
+        "现有 Excel 三表模板",
+        "历史报表与期间口径",
+        "经确认的预测假设"
+      ],
+      "outputs": [
+        "联动的三张财务报表",
+        "公式填充的预测期单元格",
+        "资产负债与现金余额检查"
+      ],
+      "example": "填充一家消费品公司的三表模板，使用用户提供的历史报表并检查预测期资产负债表是否平衡。",
+      "method": "先映射模板结构并逐表确认历史数据，再通过公式连接三张报表；依次检查损益小计、资产负债平衡和现金流结余。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "需要现成模板、可追溯历史数据和确认过的假设；原文要求分阶段确认，不应将公式生成等同于模型已审定。",
+      "evidenceQuotes": [
+        "Every projection cell, roll-forward, linkage, and subtotal MUST be an Excel formula",
+        "Do NOT populate the entire model end-to-end and present it complete"
+      ],
+      "nameEn": "Populate an integrated three-statement model",
+      "summaryEn": "Complete formula linkages among the income statement, balance sheet and cash flow statement in an existing template. Distinguish historical actuals from assumptions and check the balance sheet and cash flow tie-outs.",
+      "methodEn": "Map the template and confirm historical data statement by statement, then connect the statements with formulas. Check income-statement subtotals, the balance sheet and ending cash in stages.",
+      "environmentEn": "Claude Code / Cowork; the source describes Excel Office JS and standalone XLSX workflows. Other-host compatibility has not been tested.",
+      "dependenciesEn": [
+        "Required: User-provided three-statement template and historical financials",
+        "Excel Office JS, or Python/openpyxl and the source-required recalc.py",
+        "Forecast assumptions supplied or confirmed by the user"
+      ],
+      "inputsEn": [
+        "Existing Excel three-statement template",
+        "Historical statements and period conventions",
+        "Confirmed forecast assumptions"
+      ],
+      "outputsEn": [
+        "Linked income statement, balance sheet and cash flow statement",
+        "Formula-driven forecast-period cells",
+        "Balance-sheet and cash tie-out checks"
+      ],
+      "exampleEn": "Populate a consumer-products company’s three-statement template with user-provided historical reports and check whether the forecast balance sheet balances.",
+      "notesEn": "Requires an existing template, traceable historical data and confirmed assumptions. The source calls for staged confirmation; formulas alone do not mean the model has been reviewed.",
+      "tagsEn": [
+        "three-statement model",
+        "financial forecast",
+        "formula linkages",
+        "model checks"
+      ]
+    },
+    {
+      "id": "comps-analysis",
+      "name": "上市公司可比估值分析",
+      "originalName": "comps-analysis",
+      "category": "valuation",
+      "summary": "选取业务可比的上市公司，整理经营指标、估值倍数和统计分布，形成可追溯的同业基准表，用于公司估值、行业比较或投资委员会材料。同时记录同行筛选逻辑与数据来源口径。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/financial-analysis/skills/comps-analysis/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/comps-analysis/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "可比公司",
+        "相对估值",
+        "同业基准",
+        "市场数据"
+      ],
+      "environment": "Claude Code / Cowork；其他宿主兼容性未实测",
+      "dependencies": [
+        "必需：可比公司财务与交易数据；优先使用已配置的 S&P Kensho、FactSet 或 Daloopa MCP",
+        "上述 MCP 不可用时需 Bloomberg Terminal、SEC EDGAR 或其他机构数据源",
+        "必需：Excel 或兼容电子表格工具"
+      ],
+      "inputs": [
+        "目标公司及拟选同行",
+        "可比公司的财报与市场数据",
+        "估值日期及使用场景"
+      ],
+      "outputs": [
+        "同业公司经营指标表",
+        "估值倍数与统计基准",
+        "可编辑的 Excel 可比分析表"
+      ],
+      "example": "为一家上市物流公司建立同业对照，按业务模式筛选同行并解释数据口径差异。",
+      "method": "先按业务可比性筛选同行，再统一财务与交易数据口径，比较经营表现及估值倍数并标记异常值。数据优先来自机构 MCP 或终端，而非普通网页搜索。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "S&P Kensho、FactSet、Daloopa 属需用户配置的外部数据连接；未配置时需提供机构数据访问。原文不建议将普通网页搜索作为主要数据源。",
+      "evidenceQuotes": [
+        "ALWAYS follow this data source hierarchy:",
+        "NEVER use web search as a primary data source"
+      ],
+      "nameEn": "Public-company comparable valuation analysis",
+      "summaryEn": "Select listed companies with comparable businesses and organize operating metrics, valuation multiples and statistical benchmarks. Produces a traceable peer table for company valuation, sector comparison or investment-committee materials.",
+      "methodEn": "Select peers based on business comparability, standardize financial and trading-data definitions, compare operating performance and valuation multiples, and flag outliers. Prefer institutional MCP or terminal data over general web search.",
+      "environmentEn": "Claude Code / Cowork; compatibility with other hosts has not been tested.",
+      "dependenciesEn": [
+        "Required: Peer financial and trading data; use configured S&P Kensho, FactSet or Daloopa MCP sources first",
+        "If those MCPs are unavailable, Bloomberg Terminal, SEC EDGAR or another institutional data source is needed",
+        "Required: Excel or compatible spreadsheet software"
+      ],
+      "inputsEn": [
+        "Subject company and proposed peers",
+        "Peer filings and market data",
+        "Valuation date and use case"
+      ],
+      "outputsEn": [
+        "Peer operating-metrics table",
+        "Valuation multiples and statistical benchmarks",
+        "Editable comparable-company spreadsheet"
+      ],
+      "exampleEn": "Build a peer comparison for a listed logistics company, select peers by business model and explain differences in data definitions.",
+      "notesEn": "S&P Kensho, FactSet and Daloopa are external data connections the user must configure. Without them, institutional data access is needed. The source advises against using general web search as the primary data source.",
+      "tagsEn": [
+        "comparable companies",
+        "relative valuation",
+        "peer benchmarks",
+        "market data"
+      ]
+    },
+    {
+      "id": "dcf-model",
+      "name": "贴现现金流估值建模",
+      "originalName": "dcf-model",
+      "category": "valuation",
+      "summary": "以公司历史财务和用户确认的经营假设搭建自由现金流预测，计算资本成本与终值，输出企业价值桥接、敏感性分析及可调整的 Excel 估值模型。关键输入、折现过程和敏感性结果都保留可追溯公式。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/financial-analysis/skills/dcf-model/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/dcf-model/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "DCF",
+        "现金流估值",
+        "资本成本",
+        "敏感性分析"
+      ],
+      "environment": "Claude Code / Cowork；原文包含 Excel Office JS 与独立 xlsx 两种流程；其他宿主未实测",
+      "dependencies": [
+        "必需：历史财务、股数、现金与债务数据及用户确认的预测假设",
+        "可选：已配置的财务 MCP、用户材料或可访问的公开申报文件",
+        "Office JS，或 Python/openpyxl 与原文要求的 recalc.py"
+      ],
+      "inputs": [
+        "公司历史财务与市场数据",
+        "收入、利润率、资本开支等情景假设",
+        "无风险利率、Beta、债务和股数等估值输入"
+      ],
+      "outputs": [
+        "含公式的现金流预测模型",
+        "WACC 与企业价值至股权价值桥接",
+        "基于关键假设的敏感性分析"
+      ],
+      "example": "用用户提供的工业公司现金流数据构建 DCF，展示关键经营假设变化时估值模型如何调整。",
+      "method": "从历史财务出发建立收入、利润和自由现金流预测，再计算 WACC、终值与折现价值；用中心情景校验敏感性表，并保留公式而非固化结果。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "关键预测与资本成本假设须用户确认，原文要求分阶段检查；市场数据需用户材料或另行配置的数据源。模型结果不构成目标价或投资建议。",
+      "evidenceQuotes": [
+        "Every projection, margin, discount factor, PV, and sensitivity cell MUST be a live Excel formula",
+        "Verify net debt vs net cash (critical for valuation)"
+      ],
+      "nameEn": "Discounted cash flow valuation model",
+      "summaryEn": "Build free-cash-flow projections from company financials and user-confirmed assumptions, calculate cost of capital and terminal value, and produce an enterprise-to-equity bridge, sensitivity analysis and editable Excel model.",
+      "methodEn": "Build revenue, earnings and free-cash-flow forecasts from historical financials, then calculate WACC, terminal value and discounted value. Keep formulas live and use the center case to check the sensitivity table.",
+      "environmentEn": "Claude Code / Cowork; the source describes Excel Office JS and standalone XLSX workflows. Other-host compatibility has not been tested.",
+      "dependenciesEn": [
+        "Required: Historical financials, share count, cash and debt data, and user-confirmed forecast assumptions",
+        "Optional: Configured financial MCP, user materials or accessible public filings",
+        "Office JS, or Python/openpyxl and the source-required recalc.py"
+      ],
+      "inputsEn": [
+        "Company historical financials and market data",
+        "Revenue, margin and capital-expenditure assumptions by scenario",
+        "Valuation inputs such as risk-free rate, beta, debt and share count"
+      ],
+      "outputsEn": [
+        "Formula-driven cash-flow forecast model",
+        "WACC and enterprise-to-equity bridge",
+        "Sensitivity analysis for key assumptions"
+      ],
+      "exampleEn": "Build a DCF for an industrial company using financials supplied by the user and show how changing operating assumptions changes the model.",
+      "notesEn": "The user must confirm key forecast and cost-of-capital assumptions; the source calls for staged checks. Market data must come from user materials or a separately configured source. Model output is not a price target or investment advice.",
+      "tagsEn": [
+        "DCF",
+        "cash-flow valuation",
+        "cost of capital",
+        "sensitivity analysis"
+      ]
+    },
+    {
+      "id": "due-diligence-checklist",
+      "name": "并购尽调工作清单与红旗跟踪",
+      "originalName": "dd-checklist",
+      "category": "deals",
+      "summary": "按标的行业、交易类型和复杂度组织财务、商业、法律、运营及人员等尽调工作流，分配优先级和状态，并持续记录红旗、缺口及其可能影响。便于团队回查责任分工、进度与待处理风险。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/private-equity/skills/dd-checklist/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/dd-checklist/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "并购尽调",
+        "工作清单",
+        "红旗管理",
+        "数据室"
+      ],
+      "environment": "Claude Code / Cowork；其他宿主兼容性未实测",
+      "dependencies": [
+        "必需：标的业务、行业、交易类型与时间安排",
+        "可选：用户提供的资料清单或数据室文件",
+        "Excel 或兼容电子表格工具，用于默认工作簿交付"
+      ],
+      "inputs": [
+        "标的行业与商业模式",
+        "交易类型及复杂度",
+        "重点担忧与预期时间表"
+      ],
+      "outputs": [
+        "按工作流划分的尽调清单",
+        "事项状态及优先级跟踪",
+        "红旗摘要与待补资料项"
+      ],
+      "example": "为一项软件企业控股收购建立尽调清单，覆盖收入质量、客户留存、网络安全和关键人员风险。",
+      "method": "先根据标的和交易背景确定尽调范围，再生成跨工作流事项清单，记录状态与责任人，并汇总红旗及待核实缺口。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "清单仅辅助资料组织；法律、财税和商业结论需专业人员基于原始材料核验，不能据此自动批准交易。",
+      "evidenceQuotes": [
+        "Generate a checklist across all major workstreams, tailored to the sector:",
+        "Maintain a running list of red flags discovered during diligence:"
+      ],
+      "nameEn": "Deal due-diligence checklist and red-flag tracking",
+      "summaryEn": "Organize financial, commercial, legal, operational and people workstreams according to the target’s sector, deal type and complexity. Assign priorities and status, and track red flags, gaps and their potential implications.",
+      "methodEn": "Scope diligence from the target and deal context, generate workstream checklists, track status and owners, and summarize red flags and information gaps.",
+      "environmentEn": "Claude Code / Cowork; compatibility with other hosts has not been tested.",
+      "dependenciesEn": [
+        "Required: Target business, sector, deal type and timeline",
+        "Optional: User-provided request list or data-room materials",
+        "Excel or compatible spreadsheet software for the default workbook output"
+      ],
+      "inputsEn": [
+        "Target sector and business model",
+        "Deal type and complexity",
+        "Priority concerns and expected timeline"
+      ],
+      "outputsEn": [
+        "Workstream due-diligence checklist",
+        "Item status and priority tracker",
+        "Red-flag summary and outstanding information list"
+      ],
+      "exampleEn": "Create a diligence checklist for the acquisition of a software company, covering revenue quality, customer retention, cybersecurity and key-person risk.",
+      "notesEn": "The checklist organizes diligence but does not establish legal, tax, financial or commercial conclusions. Qualified professionals must verify findings against original materials; the checklist does not approve a deal.",
+      "tagsEn": [
+        "deal diligence",
+        "workstream checklist",
+        "red flags",
+        "data room"
+      ]
+    },
+    {
+      "id": "portfolio-monitoring",
+      "name": "被投企业经营与契约监测",
+      "originalName": "portfolio-monitoring",
+      "category": "portfolio",
+      "summary": "读取被投企业月度或季度财务包，抽取经营与现金流指标，对照预算和历史期间分析偏差，并整理预警、契约状态及管理层待核问题。缺少关键比较口径时先列出需要补充的材料。",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/private-equity/skills/portfolio-monitoring/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/portfolio-monitoring/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "tags": [
+        "被投企业",
+        "经营监测",
+        "预算偏差",
+        "契约风险"
+      ],
+      "environment": "Claude Code / Cowork；其他宿主兼容性未实测",
+      "dependencies": [
+        "必需：企业财务包（Excel、PDF 或 CSV）",
+        "必需：用于对比的预算或经营计划",
+        "契约检查需用户提供信贷协议中的阈值与定义"
+      ],
+      "inputs": [
+        "月度或季度财务包",
+        "预算及经营计划",
+        "如需检查则提供债务与契约条款"
+      ],
+      "outputs": [
+        "实际、预算与前期 KPI 对照",
+        "偏差及契约风险摘要",
+        "供董事会或管理层讨论的问题清单"
+      ],
+      "example": "复核某被投制造企业的季度财务包，对照预算查看收入、现金、资本开支和债务变化。",
+      "method": "从财务包提取核心指标并确认报告期间，再与预算和前期比较；在多期数据可用时补充趋势判断，并将异常与契约口径分开标记。",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "notes": "必须取得预算或计划才可做偏差分析；契约状态依赖用户提供的协议阈值，不能将数据提取视为合规确认。",
+      "evidenceQuotes": [
+        "Always ask for the budget/plan to compare against if not provided",
+        "If covenant levels aren't known, ask the user for the credit agreement terms"
+      ],
+      "nameEn": "Portfolio-company performance and covenant monitoring",
+      "summaryEn": "Extract operating and cash-flow metrics from monthly or quarterly portfolio-company packages, compare them with budget and prior periods, and summarize variances, alerts, covenant status and questions for management.",
+      "methodEn": "Extract core metrics and confirm the reporting period, then compare with budget and prior periods. When multiple periods are available, add trend analysis and distinguish operating variances from covenant definitions.",
+      "environmentEn": "Claude Code / Cowork; compatibility with other hosts has not been tested.",
+      "dependenciesEn": [
+        "Required: Company financial package in Excel, PDF or CSV",
+        "Required: Budget or operating plan for comparison",
+        "For covenant checks, user-provided thresholds and definitions from the credit agreement"
+      ],
+      "inputsEn": [
+        "Monthly or quarterly financial package",
+        "Budget and operating plan",
+        "Debt and covenant terms when covenant review is requested"
+      ],
+      "outputsEn": [
+        "Actual-versus-budget and prior-period KPI comparison",
+        "Variance and covenant-risk summary",
+        "Questions for board or management discussion"
+      ],
+      "exampleEn": "Review a portfolio manufacturer’s quarterly package against budget, focusing on revenue, cash, capital spending and debt changes.",
+      "notesEn": "A budget or plan is required for variance analysis. Covenant status depends on the agreement thresholds supplied by the user; data extraction alone is not a compliance determination.",
+      "tagsEn": [
+        "portfolio company",
+        "performance monitoring",
+        "budget variance",
+        "covenant risk"
+      ]
+    }
+  ],
+  "evidence": {
+    "archive": "anthropics/financial-services",
+    "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+    "archiveSha256": "9ac1bd211ef4c377778c8531cae5813fe20737c74e6a0fe9633bc9ce5f3c2e83",
+    "license": "Apache-2.0",
+    "licenseVerified": "fixed-commit repository-root LICENSE; selected vertical-plugin paths have no local overriding license",
+    "checks": {
+      "skills": 9,
+      "sourcePathsFound": 9,
+      "evidenceQuotesMatched": 18,
+      "executionTestsRun": 0
+    }
+  }
+}

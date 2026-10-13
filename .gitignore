@@ -1,0 +1,8 @@
+.DS_Store
+.openai/local*
+.openai/*.tar.gz
+artifacts/
+node_modules/
+__pycache__/
+.site-qa/
+
