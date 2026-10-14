@@ -1,4 +1,8 @@
 const $ = selector => document.querySelector(selector);
+const canonicalAssets = 'https://raw.githubusercontent.com/Jeromelll/AlphaKit/main/dist/';
+const siteMirror = location.hostname.endsWith('.chatgpt.site');
+let catalogAssets = new URL('./', location.href).href;
+let usingSnapshot = false;
 const messages = {
   zh: {
     brand:'AlphaKit',brandDescriptor:'投研技能库',skip:'跳到技能目录',catalogNav:'技能目录',workflowNav:'任务组合',guideNav:'使用指南',myList:'我的清单',
@@ -22,7 +26,7 @@ const messages = {
     guideOne:'确认输入与产物',guideOneNote:'看技能需要公告、财务报表还是模型文件，检查产物是否对应当前的研究问题。',
     guideTwo:'获取完整原始包',guideTwoNote:'打开原仓库安装说明，保留配套脚本和参考文件。需要连接器或商业数据时，按原作者要求配置。',
     guideThree:'用公开资料试跑并复核',guideThreeNote:'检查来源、时点、币种、年度口径和计算结果。把能重复完成任务的技能加入自己的清单。',
-    footerNote:'为研究工作选方法，让来源与边界看得见。',about:'关于目录',attribution:'技能归原作者所有，遵守各自开源许可。',
+    footerNote:'为研究工作选方法，让来源与边界看得见。',githubRepo:'GitHub · 贡献技能',snapshotAt:'当前显示随站副本，来源核验于 {date}',about:'关于目录',attribution:'技能归原作者所有，遵守各自开源许可。',
     clear:'清空',compareThese:'比较这些技能',all:'全部技能',research:'公司与行业研究',earnings:'财报分析',valuation:'估值与建模',portfolio:'组合与风险',deals:'交易与尽调',operations:'研究流程',data:'金融数据',macro:'宏观与市场',quant:'量化与技术研究',fixedincome:'固收与信用',
     sourceFilter:'来源仓库',allSources:'全部来源',sourceCount:'来自 {n} 个原始仓库',browseSources:'浏览来源仓库',sourcesContext:'回到完整原作',sourcesTitle:'原始技能仓库',sourcesNote:'按原仓库获取完整技能包；每条目录介绍都保留固定版本、许可与依赖。',includedCount:'已收录 {n} 个技能',openRepository:'打开固定版本仓库',filterSource:'查看这组技能',
     results:'{n} 个技能',savedResults:'{n} 个已收藏技能',verifiedAt:'来源核验于 {date}',verified:'✓ 来源已核验',verifiedHint:'原仓库、文件路径与许可证已核对；实际执行未验证',
@@ -36,7 +40,7 @@ const messages = {
     repositoryIntro:'获取配套文件与安装说明：',repository:'原作者完整仓库',copyDone:'使用示例已复制',copyFailed:'当前浏览器无法自动复制，已选中示例，可手动复制。',
     compareTitle:'比较这些技能',compareNote:'先比较输入、产物与依赖，选择适合当前任务的技能。',compareItem:'比较项',methodShort:'方法',inputsShort:'输入',outputsShort:'产物',licenseFull:'开源许可',notExecuted:'尚未执行验证',
     aboutTitle:'关于 AlphaKit',aboutOne:'AlphaKit 把公开的金融投研 AI 技能按研究任务组织，帮助使用者判断方法、输入、产物和依赖是否适合自己的工作。',
-    aboutTwo:'首版为精选来源目录。所有收录条目保留原作者与开源许可，不代表原作者或任何技能平台的官方认证。',
+    aboutTwo:'目录由公开 GitHub 仓库持续维护。新条目经过双语内容审核、原始文件与许可证核验后发布。所有收录条目保留原作者与开源许可，不代表原作者或任何技能平台的官方认证。',
     aboutThree:'我的清单保存在当前浏览器。网站不接收研究材料，不要求填写券商、数据平台或模型服务的密钥。',
     aboutCredits:'技能来自多个原作者仓库，分别保留 MIT、Apache-2.0 等开源许可。中英文介绍、分类和示例由本目录整理，并非原作者原文。',licenseCopy:'随附的原始许可证',
     standardsTitle:'我们的收录标准',standardOne:'有具体金融或投研用途，能够说明输入、方法与产物。',standardTwo:'能回到原作者仓库与固定版本的技能文件。',
@@ -66,7 +70,7 @@ const messages = {
     guideOne:'Match the inputs and outputs',guideOneNote:'Check whether the skill needs filings, financial statements or a model, and whether its output answers your research question.',
     guideTwo:'Get the complete source package',guideTwoNote:'Follow the original installation instructions and retain supporting scripts and references. Configure connectors or licensed data when required.',
     guideThree:'Test with public materials and review',guideThreeNote:'Check sources, dates, currencies, fiscal periods and calculations. Shortlist skills that can repeat the task reliably.',
-    footerNote:'Find a method for the task, with its source and boundaries in view.',about:'About the directory',attribution:'Skills belong to their original authors and retain their open-source licenses.',
+    footerNote:'Find a method for the task, with its source and boundaries in view.',githubRepo:'GitHub · Contribute',snapshotAt:'Bundled copy; sources checked {date}',about:'About the directory',attribution:'Skills belong to their original authors and retain their open-source licenses.',
     clear:'Clear',compareThese:'Compare selected',all:'All skills',research:'Company research',earnings:'Earnings analysis',valuation:'Valuation & models',portfolio:'Portfolio & risk',deals:'Deals & diligence',operations:'Research operations',data:'Financial data',macro:'Macro & markets',quant:'Quant & technical research',fixedincome:'Fixed income & credit',
     sourceFilter:'Source repository',allSources:'All sources',sourceCount:'From {n} original repositories',browseSources:'Browse source repositories',sourcesContext:'Get the complete original',sourcesTitle:'Original skill repositories',sourcesNote:'Use the original repository for the complete package. Each entry retains its revision, license and dependencies.',includedCount:'{n} skills included',openRepository:'Open pinned repository',filterSource:'Explore these skills',
     results:'{n} skills',savedResults:'{n} shortlisted skills',verifiedAt:'Sources checked {date}',verified:'✓ Source checked',verifiedHint:'Repository, file path and license checked. Execution has not been verified.',
@@ -80,7 +84,7 @@ const messages = {
     repositoryIntro:'Supporting files and installation instructions: ',repository:'Complete original repository',copyDone:'Example task copied',copyFailed:'Automatic copy is unavailable. The example is selected for manual copying.',
     compareTitle:'Compare these skills',compareNote:'Compare inputs, outputs and dependencies to choose a skill for the task.',compareItem:'Compare',methodShort:'Method',inputsShort:'Inputs',outputsShort:'Outputs',licenseFull:'Open-source license',notExecuted:'Not execution-verified',
     aboutTitle:'About AlphaKit',aboutOne:'AlphaKit organizes public finance and research AI skills around working tasks, helping you evaluate methods, inputs, outputs and dependencies.',
-    aboutTwo:'This first release is a curated source directory. Entries retain the original author and license. Inclusion is not an official endorsement by an author or a skill platform.',
+    aboutTwo:'The directory is maintained in a public GitHub repository. New entries pass bilingual content review and original-file and license checks before publication. Entries retain the original author and license. Inclusion is not an official endorsement by an author or a skill platform.',
     aboutThree:'Your shortlist stays in this browser. This site does not receive research materials or request broker, data-platform or model-service keys.',
     aboutCredits:'Skills come from several original repositories and retain their MIT, Apache-2.0 or other stated licenses. Bilingual descriptions, categories and examples are edited by this directory and are not verbatim author text.',licenseCopy:'Included original licenses',
     standardsTitle:'Our inclusion criteria',standardOne:'A specific finance or research use case with clear inputs, method and outputs.',standardTwo:'Traceable to an original repository and a skill file at a fixed revision.',
@@ -125,7 +129,7 @@ function applyLanguage(){
   $('#search').placeholder=t('searchPlaceholder');$('#language-toggle').textContent=language==='en'?'中文':'EN';
   $('#language-toggle').setAttribute('aria-label',language==='en'?'Switch to Chinese':'切换到英文');
   $('#clear-workflow').setAttribute('aria-label',t('clearWorkflow'));
-  if(catalog)$('#catalog-updated').textContent=t('verifiedAt',{date:catalog.updatedAt});
+  if(catalog)$('#catalog-updated').textContent=t(usingSnapshot?'snapshotAt':'verifiedAt',{date:catalog.updatedAt});
 }
 function searchText(skill){
   const values=['name','nameEn','originalName','summary','summaryEn','method','methodEn','author','repository'].map(k=>skill[k]||'');
@@ -215,7 +219,7 @@ function renderComparison(){
 function openCompare(){if(state.compare.length<2)return;renderComparison();$('#compare-dialog').showModal();}
 function renderInfo(){
   const licenses=(catalog.sources||[]).filter(s=>s.licenseFile&&/^\/licenses\/[\w.-]+$/.test(s.licenseFile));
-  $('#info-content').innerHTML=infoMode==='about'?'<h2 id="info-title">'+esc(t('aboutTitle'))+'</h2>'+['aboutOne','aboutTwo','aboutThree','aboutCredits'].map(key=>'<p>'+esc(t(key))+'</p>').join('')+'<h3>'+esc(t('licenseCopy'))+'</h3><ul>'+licenses.map(s=>'<li><a href="'+esc(s.licenseFile)+'" target="_blank" rel="noopener noreferrer">'+esc(s.repository.replace('https://github.com/',''))+' · '+esc(s.license)+'</a></li>').join('')+'</ul>':
+  $('#info-content').innerHTML=infoMode==='about'?'<h2 id="info-title">'+esc(t('aboutTitle'))+'</h2>'+['aboutOne','aboutTwo','aboutThree','aboutCredits'].map(key=>'<p>'+esc(t(key))+'</p>').join('')+'<h3>'+esc(t('licenseCopy'))+'</h3><ul>'+licenses.map(s=>'<li><a href="'+esc(new URL(s.licenseFile.replace(/^\//,''),catalogAssets).href)+'" target="_blank" rel="noopener noreferrer">'+esc(s.repository.replace('https://github.com/',''))+' · '+esc(s.license)+'</a></li>').join('')+'</ul>':
     '<h2 id="info-title">'+esc(t('standardsTitle'))+'</h2><ul>'+['standardOne','standardTwo','standardThree','standardFour','standardFive'].map(key=>'<li>'+esc(t(key))+'</li>').join('')+'</ul><p>'+esc(t('standardsNote'))+'</p>';
 }
 function openInfo(mode='standards'){infoMode=mode;renderInfo();$('#info-dialog').showModal();}
@@ -255,7 +259,18 @@ for(const dialog of document.querySelectorAll('dialog')){
 document.addEventListener('keydown',event=>{if(event.key==='/'&&!document.querySelector('dialog[open]')&&!/input|textarea|select/i.test(document.activeElement?.tagName)){event.preventDefault();$('#search').focus();}});
 async function loadCatalog(){
   try{
-    const response=await fetch('/data/catalog.json',{cache:'no-cache'});if(!response.ok)throw new Error('catalog unavailable');catalog=await response.json();
+    async function readCatalog(assets){
+      const response=await fetch(new URL('data/catalog.json',assets),{cache:'no-cache',signal:AbortSignal.timeout(8000)});
+      if(!response.ok)throw new Error('catalog unavailable');
+      const data=await response.json();
+      if(!Array.isArray(data.skills)||!data.skills.length||!Array.isArray(data.sources))throw new Error('invalid catalog');
+      catalogAssets=assets;return data;
+    }
+    usingSnapshot=false;
+    if(siteMirror){
+      try{catalog=await readCatalog(canonicalAssets);}
+      catch{catalog=await readCatalog(new URL('./',location.href).href);usingSnapshot=true;}
+    }else{catalog=await readCatalog(new URL('./',location.href).href);}
     if(!Array.isArray(catalog.skills)||!catalog.skills.length)throw new Error('empty catalog');skills=catalog.skills;if(state.repository!=='all'&&!skills.some(s=>s.repository===state.repository))state.repository='all';applyLanguage();render();
   }catch{
     $('#result-count').textContent=t('unavailable');$('#skills-list').innerHTML='<div class="empty-state"><h3>'+esc(t('loadError'))+'</h3><p>'+esc(t('loadErrorNote'))+'</p><button id="retry-catalog" class="button button-quiet" type="button">'+esc(t('retry'))+'</button></div>';

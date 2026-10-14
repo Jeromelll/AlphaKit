@@ -5,4 +5,6 @@ artifacts/
 node_modules/
 __pycache__/
 .site-qa/
+.cache/
+.preview/
 

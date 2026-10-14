@@ -1,27 +1,54 @@
 # AlphaKit · 投研技能库
 
-独立的中英文金融投研技能目录。静态网站包含双语搜索、工作场景和来源仓库筛选、任务组合、技能详情、最多三个技能比较和浏览器本地清单。
+AlphaKit 是面向金融与投资研究工作流的中英文技能目录。目录按公开原始仓库和固定版本整理，展示原作者、许可证、依赖、输入输出、示例与逐字来源证据。它帮助读者发现和评估技能，不代表 AlphaKit 已实际运行这些技能。
 
-源码和发布资源位于 dist/。目录来自公开原始技能仓库的固定版本，保留原作者、许可证、依赖、输入、产物和实际执行未验证的状态。公开文件不包含 AlphaEngine 账号通知、积分、私有路径或访问凭据。
+## 访问与数据
 
-本地预览：
+- 主站：[AlphaKit GitHub Pages](https://jeromelll.github.io/AlphaKit/)
+- 维护仓库：[github.com/Jeromelll/AlphaKit](https://github.com/Jeromelll/AlphaKit)
+- 完整技能索引：[docs/CATALOG.md](docs/CATALOG.md)；结构化目录：[catalog.json](dist/data/catalog.json)
+- 现有 [AlphaKit 站点](https://finskills-hub.fit-lemon-8083.chatgpt.site) 继续公开；该站每次读取 GitHub 上的权威目录，获取失败时显示标有核验日期的随站副本。GitHub 仓库是唯一维护源。
 
-    python3 -m http.server 5188 --bind 127.0.0.1 --directory dist
+技能和来源仓库数量会随审核结果变化，请以 `docs/CATALOG.md` 和网站当前目录为准，不依赖固定数量。每条记录分别标注来源核验与实际执行状态；`sourceVerified: true` 表示来源、版本、许可和引用已核对，`executionVerified: false` 表示 AlphaKit 没有验证技能在宿主环境中的实际运行效果。目录不提供官方认证、收益或执行性能承诺。
 
-检查 JavaScript：
+## 本地开发
 
-    node --check dist/app.js
+静态站点文件在 `dist/`。Python 3 用于来源处理，Node.js 用于浏览器验收。
 
-浏览器验收使用隔离的 headless Chromium，不操作用户已有浏览器。
+```sh
+python3 -m http.server 5188 --bind 127.0.0.1 --directory dist
+```
 
-目录数据的 sources 记录每个原作的固定 commit、归档 SHA-256 与许可证文件。每条 skills 记录对应源文件与至少两条逐字核对的证据引文。增补条目先写到外部机器草稿，经内容复核后用 qa/merge-catalog.py 合入；qa/verify-catalog.py 对每个固定归档核验来源、许可、双语字段、相同文件和私有数据。
+在另一个终端运行浏览器检查：
 
-来源核验：
+```sh
+npm ci
+npx playwright install chromium
+BASE_URL=http://127.0.0.1:5188/ node qa/browser-check.cjs
+```
 
-    python3 qa/verify-catalog.py <source-archive-directory>
+`BASE_URL` 可设置为部署子路径，例如 `http://127.0.0.1:5188/AlphaKit/`。`BROWSER_EXECUTABLE_PATH` 可指定已有的 Chromium 可执行文件。来源和目录验证使用已固定的归档：
 
-浏览器验收：
+```sh
+python3 scripts/fetch_sources.py --archive-dir .cache/sources
+python3 qa/verify-catalog.py .cache/sources
+```
 
-    NODE_PATH=<bundled-node-modules> node qa/browser-check.cjs
+生成待审查更新的命令如下。它每轮最多尝试新增 3 条、复核 12 个候选；已拒绝且内容未变的候选不会每天重复送审。只有通过来源、许可、模式和两轮独立审核的条目才进入暂存目录：
 
-发布使用 Sites 的 source workflow helper，保持 .openai/hosting.json 中的站点身份和访问范围。目录当前为固定来源的精选版本，没有声明已接通实时采集或自动部署。来源核验与实际执行验证分开记录，未经试跑不标记为实测可用。
+```sh
+python3 scripts/update_catalog.py --write --max-items 3 --archive-dir .cache/sources --receipt artifacts/update.json
+python3 scripts/build_index.py
+```
+
+`Update catalog` 工作流每天 `00:45 UTC`（上海时间 `08:45`）运行，使用 GLM-5.3-flash Coding Plan 生成双语描述，并做独立的第二轮审核；没有付费备用供应商。自动更新还会执行目录验证、JavaScript 语法检查以及根路径和 `/AlphaKit/` 两种浏览器验收，通过后才提交目录、公开 ledger 和 `update-status.json`，并触发 GitHub Pages 部署。候选校验失败会保留上一版。具体字段和人工维护流程见 [docs/CATALOG.md](docs/CATALOG.md)。日常健康收据和失败边界见 [maintenance/GOAL.md](maintenance/GOAL.md) 与 [maintenance/NO_WINDOW.md](maintenance/NO_WINDOW.md)。
+
+## 使用与许可
+
+AlphaKit 默认建议从原始仓库获取所需技能，并遵循对应宿主的安装说明。安装或再分发时保留原作者版权、原许可证及其要求的 `NOTICE` 文件。目录维护程序只处理公开来源和说明，不运行第三方技能脚本或发起交易。使用者应先检查来源、权限、依赖和风险，并在自己的环境中试跑。
+
+根目录 [LICENSE](LICENSE) 适用于 AlphaKit 自有代码、策展工作和原创双语描述。目录包含独立的第三方作品；第三方 MIT、Apache-2.0 等原作继续受各自许可证约束。根目录 MIT 许可不改变第三方许可证，也不覆盖第三方原文、引用、商标或其他受保护材料。
+
+## 贡献
+
+新收录建议通过 Pull Request 提交，并提供原始仓库和固定版本、可核验的 `SKILL.md` 路径、许可证及必要的 `NOTICE`、具体示例和依赖。维护者会检查来源归属、引用准确性、双语内容和边界表述。详见 [CONTRIBUTING.md](CONTRIBUTING.md)。

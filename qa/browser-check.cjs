@@ -3,9 +3,13 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const output = path.resolve(__dirname, '../.site-qa');
+const repoRoot = path.resolve(__dirname, '..');
+const output = path.resolve(process.env.QA_OUTPUT_DIR || path.join(repoRoot, '.site-qa'));
 fs.mkdirSync(output, { recursive: true });
-const base = process.env.FINSKILLS_PREVIEW_URL || 'http://127.0.0.1:5188';
+const base = new URL(process.env.BASE_URL || process.env.FINSKILLS_PREVIEW_URL || 'http://127.0.0.1:5188');
+if (!base.pathname.endsWith('/')) base.pathname += '/';
+const baseUrl = base.toString();
+const basePath = base.pathname;
 const catalog = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../dist/data/catalog.json'), 'utf8'));
 const total = catalog.skills.length;
 const failures = [];
@@ -14,10 +18,11 @@ const check = name => checks.push(name);
 const row = id => '.skill-row[data-skill-id="' + id + '"]';
 
 (async () => {
-  const browser = await chromium.launch({
-    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-    headless: true
-  });
+  const options = { headless: true };
+  const macChrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+  if (process.env.BROWSER_EXECUTABLE_PATH) options.executablePath = process.env.BROWSER_EXECUTABLE_PATH;
+  else if (process.platform === 'darwin' && fs.existsSync(macChrome)) options.executablePath = macChrome;
+  const browser = await chromium.launch(options);
   try {
     const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
     await context.addInitScript(() => {
@@ -29,7 +34,14 @@ const row = id => '.skill-row[data-skill-id="' + id + '"]';
     page.on('pageerror', error => failures.push(error.message));
     page.on('console', message => { if (message.type() === 'error') failures.push(message.text()); });
     const count = async n => { await page.waitForFunction(n => document.querySelectorAll('.skill-row').length === n, n); };
-    await page.goto(base, { waitUntil: 'networkidle' });
+    const catalogRequests = [];
+    page.on('request', request => {
+      const url = new URL(request.url());
+      if (url.pathname.endsWith('/data/catalog.json')) catalogRequests.push(url.pathname);
+    });
+    await page.goto(baseUrl, { waitUntil: 'networkidle' });
+    assert(catalogRequests.some(requestPath => requestPath.startsWith(basePath)),
+      `Catalog request did not use the configured base path ${basePath}: ${catalogRequests.join(', ')}`);
     await count(total);
     assert.equal(await page.locator('html').getAttribute('lang'), 'zh-CN');
     await page.screenshot({ path: path.join(output, 'home-zh-desktop.png') });
@@ -167,7 +179,7 @@ const row = id => '.skill-row[data-skill-id="' + id + '"]';
       if (selector === '#about-button') {
         const licenseHrefs = await page.locator('#info-dialog a').evaluateAll(links => links.map(a => a.getAttribute('href')));
         assert.equal(licenseHrefs.length, catalog.sources.length);
-        for (const licenseHref of licenseHrefs) assert.equal((await context.request.get(base + licenseHref)).status(), 200);
+        for (const licenseHref of licenseHrefs) assert.equal((await context.request.get(new URL(licenseHref, baseUrl).toString())).status(), 200);
       }
       await page.keyboard.press('Escape');
     }
@@ -180,7 +192,9 @@ const row = id => '.skill-row[data-skill-id="' + id + '"]';
         const mobile = await context.newPage();
         mobile.on('pageerror', error => failures.push(error.message));
         await mobile.setViewportSize({ width, height: 844 });
-        await mobile.goto(base + '?lang=' + language, { waitUntil: 'networkidle' });
+        const localizedUrl = new URL(baseUrl);
+        localizedUrl.searchParams.set('lang', language);
+        await mobile.goto(localizedUrl.toString(), { waitUntil: 'networkidle' });
         await mobile.waitForSelector('.skill-row');
         const overflow = await mobile.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth }));
         assert(overflow.scroll <= overflow.width + 1, JSON.stringify({ language, ...overflow }));
@@ -205,14 +219,22 @@ const row = id => '.skill-row[data-skill-id="' + id + '"]';
       if (attempts++ === 0) await route.fulfill({ status: 503, contentType: 'application/json', body: '{}' });
       else await route.continue();
     });
-    await retry.goto(base);
+    await retry.goto(baseUrl);
     await retry.locator('#retry-catalog').waitFor();
     await retry.locator('#retry-catalog').click();
     await retry.waitForFunction(total => document.querySelectorAll('.skill-row').length === total, total);
     await retry.close();
     check('A failed catalog request can be retried successfully');
     assert.deepEqual(failures, []);
-    const report = { status: 'passed', checks, consoleErrors: failures, screenshotDirectory: output, browser: await browser.version() };
+    const relativeOutput = path.relative(repoRoot, output);
+    const report = {
+      status: 'passed',
+      checks,
+      consoleErrors: failures,
+      screenshotDirectory: relativeOutput && !relativeOutput.startsWith('..' + path.sep) && !path.isAbsolute(relativeOutput) ? relativeOutput : path.basename(output),
+      browser: await browser.version(),
+      basePath
+    };
     fs.writeFileSync(path.join(output, 'browser-report.json'), JSON.stringify(report, null, 2));
     console.log(JSON.stringify(report, null, 2));
     await context.close();

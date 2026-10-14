@@ -1,0 +1,11 @@
+{
+  "tracked": [
+    {"repository": "anthropics/financial-services", "prefix": "plugins/vertical-plugins/"},
+    {"repository": "RKiding/Awesome-finance-skills", "prefix": ""},
+    {"repository": "himself65/finance-skills", "prefix": ""},
+    {"repository": "Geeksfino/finskills", "prefix": ""},
+    {"repository": "questflowai/investorskills", "prefix": ""},
+    {"repository": "star23/Day1Global-Skills", "prefix": ""}
+  ],
+  "candidates": ["agiprolabs/claude-trading-skills", "aldlgt/awesome-financial-skills"]
+}

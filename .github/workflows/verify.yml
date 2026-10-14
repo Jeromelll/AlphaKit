@@ -1,0 +1,80 @@
+name: Verify AlphaKit
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - maintenance/**
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: npm ci --ignore-scripts
+
+      - name: Install Chromium and system dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Download pinned source archives
+        run: python3 scripts/fetch_sources.py --archive-dir .cache/sources
+
+      - name: Verify catalog sources and metadata
+        run: python3 qa/verify-catalog.py .cache/sources
+
+      - name: Run catalog unit checks
+        run: python3 -m unittest discover -s qa -p 'test_*.py'
+
+      - name: Check application JavaScript syntax
+        run: node --check dist/app.js
+
+      - name: Run browser QA at the site root and GitHub Pages subpath
+        shell: bash
+        run: |
+          set -euo pipefail
+          web_root="$(mktemp -d)"
+          # The Pages-style mount points /AlphaKit/ at the contents of dist.
+          ln -s "$GITHUB_WORKSPACE/dist" "$web_root/AlphaKit"
+          python3 -m http.server 5188 --bind 127.0.0.1 --directory "$GITHUB_WORKSPACE/dist" >"$web_root/root-server.log" 2>&1 &
+          root_pid=$!
+          python3 -m http.server 5189 --bind 127.0.0.1 --directory "$web_root" >"$web_root/subpath-server.log" 2>&1 &
+          subpath_pid=$!
+          trap 'kill "$root_pid" "$subpath_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 50); do
+            if curl --silent --fail http://127.0.0.1:5188/ >/dev/null && curl --silent --fail http://127.0.0.1:5189/AlphaKit/ >/dev/null; then
+              break
+            fi
+            sleep 0.2
+          done
+          mkdir -p .site-qa/root .site-qa/pages-subpath
+          QA_OUTPUT_DIR="$GITHUB_WORKSPACE/.site-qa/root" BASE_URL=http://127.0.0.1:5188/ node qa/browser-check.cjs
+          QA_OUTPUT_DIR="$GITHUB_WORKSPACE/.site-qa/pages-subpath" BASE_URL=http://127.0.0.1:5189/AlphaKit/ node qa/browser-check.cjs
+
+      - name: Upload browser reports and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alphakit-verify-report
+          path: .site-qa/
+          if-no-files-found: warn

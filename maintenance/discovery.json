@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-14T02:41:17.772919+00:00",
+  "query": "financial skills in:name,description",
+  "candidates": [
+    "agiprolabs/claude-trading-skills",
+    "aldlgt/awesome-financial-skills",
+    "DhruPtel/Monad-Metropolis-2026-Alpha-Agents",
+    "Choppy-superfamilymuscoidea9021/buffett-skills",
+    "MatthewNnaji/MatthewNnaji",
+    "FadiEsam/MyPath",
+    "kurwa-1944/Monopoly-Full-Version",
+    "Jack-Li-Npu/financial-research-workbench",
+    "linshanova-ops/daily-financial-insights",
+    "lj22503/invest-dictionary"
+  ],
+  "decisions": []
+}

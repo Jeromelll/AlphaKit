@@ -4922,11 +4922,247 @@
         "MOVE index",
         "yen carry"
       ]
+    },
+    {
+      "nameEn": "Equity Idea Generation Workflow",
+      "tagsEn": [
+        "stock-screening",
+        "idea-generation",
+        "long-short-research",
+        "thematic-investing"
+      ],
+      "method": "五步流程：(1) 定义搜索标准（方向、市值、行业、风格、地域、主题）；(2) 按风格运行量化筛选（价值、成长、质量、做空、特殊情形各有明确指标阈值）；(3) 主题扫描：定义论点、绘制价值链、区分纯正/多元敞口、评估定价程度、寻找二阶受益者；(4) 以指标对比表加3-5条论点要点、关键风险与后续步骤呈现每个想法；(5) 输出5-10个想法的短名单、筛选方法论、对比表与优先级排序。",
+      "environmentEn": "Claude conversational environment; requires user-supplied screening parameters; actual financial data must come from external sources — the file itself provides no data-retrieval tooling.",
+      "example": "输入：寻找AI基础设施主题下的全球大盘中长仓想法。流程运行成长与质量筛选（营收增速>15%、ROIC>15%等），绘制AI基础设施价值链，评估哪些公司已定价，输出5-10个想法的一页纸摘要与优先研究排序。",
+      "outputsEn": [
+        "One-page summaries of 5-10 ideas",
+        "Documented screening criteria and methodology",
+        "Comparison table across ideas",
+        "Prioritized list of which ideas to research first"
+      ],
+      "dependencies": [
+        "用户提供的筛选参数",
+        "外部市场与财务数据（文件未内置）"
+      ],
+      "summaryEn": "A systematic stock screening and idea generation workflow combining quantitative screens, thematic sweeps, and contrarian checks to produce long/short candidate shortlists with one-page summaries.",
+      "category": "research",
+      "notes": "此条目经来源核对但执行未验证：筛选阈值取自文件原文，数据完整性、市场有效性及想法盈利率均无保证。文件本身声明'筛选只是候选，不是结论'。",
+      "inputsEn": [
+        "Direction (long/short/both)",
+        "Market cap and sector scope",
+        "Style (value/growth/quality/special situation)",
+        "Geography and thematic angle"
+      ],
+      "inputs": [
+        "方向（长/短/两者）",
+        "市值与行业范围",
+        "投资风格（价值/成长/质量/特殊情形）",
+        "地域与主题角度"
+      ],
+      "summary": "系统性股票筛选与投资想法生成流程，结合量化筛选、主题研究与逆向思维，产出长/短仓候选清单及一页纸摘要。",
+      "notesEn": "Source-checked but execution-unverified: screening thresholds are quoted from the file; no guarantee of data completeness, market validity, or idea hit rates. The file itself states screens surface candidates, not conclusions.",
+      "evidenceQuotes": [
+        "Screens surface candidates, not conclusions — every screen output needs fundamental work",
+        "Shortlist of 5-10 ideas with one-page summaries"
+      ],
+      "name": "选股想法生成工作流",
+      "dependenciesEn": [
+        "User-supplied screening parameters",
+        "External market and financial data (not built into the file)"
+      ],
+      "outputs": [
+        "5-10个想法的一页纸摘要",
+        "筛选标准与方法论记录",
+        "跨想法对比表",
+        "优先研究排序"
+      ],
+      "tags": [
+        "股票筛选",
+        "投资想法",
+        "多空研究",
+        "主题投资"
+      ],
+      "exampleEn": "Input: find global large-cap long ideas on the AI infrastructure theme. The workflow runs growth and quality screens (e.g., revenue growth >15%, ROIC >15%), maps the AI infrastructure value chain, assesses what is already priced in, and outputs 5-10 one-page idea summaries with a prioritized research order.",
+      "environment": "Claude对话环境；需要使用者提供筛选参数；实际财务数据需外部来源支持，文件本身不包含数据获取工具。",
+      "methodEn": "Five steps: (1) define search criteria (direction, market cap, sector, style, geography, theme); (2) run style-based quantitative screens with explicit metric thresholds (value, growth, quality, short, special situations); (3) thematic sweep — define thesis, map the value chain, distinguish pure-play vs diversified exposure, assess what is priced in, find second-order beneficiaries; (4) present each idea with a peer comparison table, 3-5 thesis bullets, key risks and next steps; (5) output a 5-10 idea shortlist, documented methodology, comparison table and prioritized list.",
+      "id": "skill-138d7a9bc558649b",
+      "author": "anthropics",
+      "originalName": "idea-generation",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/idea-generation/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/idea-generation/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "nameEn": "Post-Earnings Financial Model Update",
+      "tagsEn": [
+        "equity research",
+        "financial modeling",
+        "earnings analysis",
+        "valuation",
+        "price target"
+      ],
+      "method": "六步流程：(1) 确定更新触发类型（财报、指引变化、假设修正、宏观变化、事件驱动）；(2) 将新实际数据填入模型，包括分部收入与利润率、资产负债表、现金流、股本变动；(3) 调整前瞻预测并记录关键假设变化及原因；(4) 用更新后的预测重算DCF、P/E、EV/EBITDA估值与目标价；(5) 撰写估计变化摘要，判断是改变投资论点还是噪音；(6) 输出更新模型与目标价推导。",
+      "environmentEn": "Requires the user's analytical environment; can update an existing Excel model if provided.",
+      "example": "某公司发布Q3财报后：将营收、毛利率、EBITDA、EPS实际值与此前估计逐项对比填入偏差表，更新分部数据与股本，将下年营收增速假设从8%下调至6%（因管理层指引下调），重算DCF与NTM P/E得出新目标价，并总结该季度是信号还是噪音、相对市场一致预期的差异。",
+      "outputsEn": [
+        "Estimate change table (old estimate, actual, delta)",
+        "Revised forward estimates with documented assumption changes",
+        "Updated valuation and price target derivation",
+        "Estimate change summary"
+      ],
+      "dependencies": [
+        "Excel/电子表格工具（用户提供模型时）",
+        "公司披露的财报数据"
+      ],
+      "summaryEn": "Systematically update financial models after earnings, guidance changes, or macro shifts: plug in actuals, revise forward estimates, recalculate valuation, and flag material changes.",
+      "category": "research",
+      "notes": "此条目经来源核查，执行未验证。局限：无内置市场数据访问，需用户提供实际数据与现有模型；估值倍数与假设由分析师自行设定。示例仅使用公开、非敏感输入。",
+      "inputsEn": [
+        "Quarterly earnings actuals",
+        "Existing Excel financial model",
+        "Management guidance",
+        "Updated macro assumptions (rates, FX, commodities)"
+      ],
+      "inputs": [
+        "季度财报实际数据",
+        "现有Excel财务模型",
+        "管理层指引",
+        "更新后的宏观假设（利率、汇率、商品价格）"
+      ],
+      "summary": "在财报、指引变化或宏观假设变动后，系统化更新财务模型：填入实际数据、修正前瞻预测、重算估值并标注重大变化。",
+      "notesEn": "Source-checked, execution-unverified. Limits: no built-in market data access; users must supply actuals and the existing model. Valuation multiples and assumptions are set by the analyst. Examples use public, non-sensitive inputs only.",
+      "evidenceQuotes": [
+        "Update financial models with new data — quarterly earnings, management guidance, macro changes, or revised assumptions. Adjusts estimates, recalculates valuation, and flags material changes.",
+        "Always reconcile your estimates to the company's reported figures before projecting forward"
+      ],
+      "name": "财报后财务模型更新",
+      "dependenciesEn": [
+        "Excel/spreadsheet tool (when user provides a model)",
+        "Company-reported earnings data"
+      ],
+      "outputs": [
+        "估计变化对比表（旧估计、实际值、偏差）",
+        "修正后的前瞻预测及假设变化说明",
+        "更新后的估值与目标价推导",
+        "估计变化摘要"
+      ],
+      "tags": [
+        "股票研究",
+        "财务建模",
+        "财报分析",
+        "估值",
+        "目标价"
+      ],
+      "exampleEn": "After a company releases Q3 results: compare revenue, gross margin, EBITDA, and EPS actuals vs. prior estimates in a delta table, update segment data and share count, cut next-year revenue growth assumption from 8% to 6% due to lowered guidance, recompute DCF and NTM P/E for a new price target, and summarize signal vs. noise and positioning vs. Street consensus.",
+      "environment": "需要用户的分析环境；若提供现有Excel模型则可直接更新。",
+      "methodEn": "Six steps: (1) identify update trigger (earnings, guidance change, assumption revision, macro, event-driven); (2) plug in new actuals including segment detail, balance sheet, cash flow, and share count; (3) revise forward estimates and document key assumption changes with reasons; (4) recalculate DCF, P/E, EV/EBITDA valuation and price target; (5) write an estimate-change summary judging whether it is thesis-changing or noise; (6) output updated model and price target derivation.",
+      "id": "skill-09effdcdea221d9d",
+      "author": "anthropics",
+      "originalName": "model-update",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/model-update/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/model-update/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "nameEn": "Morning Note Drafting",
+      "tagsEn": [
+        "equity research",
+        "morning meeting",
+        "earnings quick take",
+        "trade ideas",
+        "sell-side coverage"
+      ],
+      "method": "四步流程：(1) 扫描覆盖股票的隔夜动态，包括财报与指引、并购/管理层变动/监管决定、期货与板块 ETF 及商品汇率、当日经济数据；(2) 按固定模板撰写 2 分钟可读完的晨报，头条观点置顶，逐条给出一句话新闻+我们观点；(3) 对已披露财报的公司填写共识 vs 实际的 Beat/Miss 表并给出两三句点评与评级/目标价行动建议；(4) 输出 Markdown（邮件/Slack）或 Word 文档，限一页。写作原则：必须有观点、不埋头条、区分可操作事件与噪音、给观点加时间戳、错误要在次晨认领。",
+      "environmentEn": "Requires access to overnight/real-time market and news data (quotes, earnings, economic calendar) plus the coverage list and analyst views; distribution is Markdown text or a Word document via email/Slack.",
+      "example": "示例：输入覆盖清单（如 A 公司、B 公司）与隔夜公开数据——A 公司盘前公布财报（营收/EPS vs 共识）、板块 ETF 隔夜跌 0.8%、今日 10:30 公布 PMI。输出一页晨报：Top Call 为 A 公司业绩超预期但下调指引、我们的两句话观点；事件表列出财报电话会与 PMI；交易想法为做多 B 公司及证伪条件；末尾标注“6am 撰写，盘前可能变化”。",
+      "outputsEn": [
+        "One-page morning note (Markdown or Word)",
+        "Top call and item-by-item takes",
+        "Timetable of today's events",
+        "Earnings beat/miss quick-take table",
+        "Trade ideas with risks and falsification conditions"
+      ],
+      "dependencies": [
+        "实时行情与新闻数据源",
+        "财报/共识数据库",
+        "经济日历",
+        "邮件/Slack 分发渠道",
+        "Word 文档工具（正式分发时）"
+      ],
+      "summaryEn": "For equity research coverage teams: drafts a one-page morning note in a 7am meeting format, scanning overnight earnings, news and market context, then producing an opinionated top call, today's key events, trade ideas with risks, and a quick earnings take template.",
+      "category": "research",
+      "notes": "本条目为经来源核验的技能目录记录，尚未实际执行验证；依赖的实时行情、财报与新闻数据可用性未确认，若数据源不可达应视为数据缺口而非“无重要事件”。来源明确指出“没有新闻”是合法晨报（维持仓位），但这仅适用于已确认无重大事件的情形。交易想法属分析框架，不构成盈利保证。",
+      "inputsEn": [
+        "Coverage stock list",
+        "Overnight/pre-market quotes and news",
+        "Actual results vs consensus",
+        "Today's events and economic calendar",
+        "Analyst views, ratings and price targets"
+      ],
+      "inputs": [
+        "覆盖股票清单",
+        "隔夜/盘前行情与新闻数据",
+        "财报实际值与市场共识",
+        "当日事件与经济日历",
+        "分析师观点与评级/目标价"
+      ],
+      "summary": "面向股票研究覆盖团队，按 7 点晨会格式撰写 1 页内晨报：梳理隔夜财报/新闻/市场动态，给出观点鲜明的 Top Call、当日事件表、交易想法与风险，并附财报快速点评模板。",
+      "notesEn": "This is a source-checked directory entry, not execution-verified; availability of real-time quotes, earnings and news feeds is unconfirmed, and an unreachable feed must be recorded as a data gap rather than treated as no material events. Per the source, a 'no news' note is valid only when quiet conditions are verified, not assumed. Trade ideas are analytical frameworks, not guarantees of profit.",
+      "evidenceQuotes": [
+        "Keep it tight — a morning note should be readable in 2 minutes",
+        "Be opinionated — morning notes that just summarize news without a view are useless"
+      ],
+      "name": "晨会纪要速写（Morning Note）",
+      "dependenciesEn": [
+        "Real-time quotes and news feeds",
+        "Earnings/consensus database",
+        "Economic calendar",
+        "Email/Slack distribution channel",
+        "Word document tooling (for formal distribution)"
+      ],
+      "outputs": [
+        "一页晨会纪要（Markdown 或 Word）",
+        "Top Call 与逐条新闻点评",
+        "当日事件时间表",
+        "财报 Beat/Miss 快评表",
+        "交易想法及风险/证伪条件"
+      ],
+      "tags": [
+        "股票研究",
+        "晨会",
+        "财报点评",
+        "交易想法",
+        "卖方覆盖"
+      ],
+      "exampleEn": "Example: given a coverage list (e.g., companies A and B) and public overnight data — company A pre-market earnings (revenue/EPS vs consensus), sector ETF down 0.8% overnight, PMI due 10:30 — output a one-page note: top call on A's beat with lowered guidance plus a two-sentence take; events table with the earnings call and PMI; a long idea in B with its falsification condition; footer 'written at 6am, pre-market may change by open'.",
+      "environment": "需要接入实时/隔夜市场与新闻数据（行情、财报、经济日历）以及覆盖清单与分析师观点输入；输出以 Markdown 文本或 Word 文档分发（邮件/Slack）。",
+      "methodEn": "Four steps: (1) scan the coverage universe for overnight earnings/guidance, M&A/management/regulatory news, futures and sector ETF moves, commodities/FX, and today's data releases; (2) write a note readable in 2 minutes using a fixed template, leading with the top call and pairing each item with a one-line summary plus the desk's take; (3) for companies that reported, fill a consensus-vs-actual beat/miss table and give a 2-3 sentence take with a rating/price-target action; (4) output Markdown for email/Slack or Word for formal distribution, capped at one page. Writing rules: be opinionated, never bury the headline, separate actionable events from noise, time-stamp takes, and own mistakes in the next note.",
+      "id": "skill-3ecad7c894597202",
+      "author": "anthropics",
+      "originalName": "morning-note",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/morning-note/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/morning-note/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 77,
+      "skills": 80,
       "repositories": 6,
       "executionTestsRun": 0
     },

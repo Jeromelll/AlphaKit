@@ -1,0 +1,89 @@
+name: Deploy AlphaKit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - dist/**
+      - .github/workflows/deploy.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  verify-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: npm ci --ignore-scripts
+
+      - name: Install Chromium and system dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Download pinned source archives
+        run: python3 scripts/fetch_sources.py --archive-dir .cache/sources
+
+      - name: Verify catalog sources and metadata
+        run: python3 qa/verify-catalog.py .cache/sources
+
+      - name: Check application JavaScript syntax
+        run: node --check dist/app.js
+
+      - name: Run portable browser QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 5188 --bind 127.0.0.1 --directory "$GITHUB_WORKSPACE/dist" >"$RUNNER_TEMP/alphakit-server.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 50); do
+            if curl --silent --fail http://127.0.0.1:5188/ >/dev/null; then break; fi
+            sleep 0.2
+          done
+          mkdir -p .site-qa/deploy
+          QA_OUTPUT_DIR="$GITHUB_WORKSPACE/.site-qa/deploy" BASE_URL=http://127.0.0.1:5188/ node qa/browser-check.cjs
+
+      - name: Upload browser report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alphakit-deploy-verification
+          path: .site-qa/
+          if-no-files-found: warn
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

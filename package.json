@@ -1,0 +1,7 @@
+{
+  "name": "alphakit-research-skills",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AlphaKit finance and investment research skill directory",
+  "devDependencies": {"playwright": "1.58.2"}
+}
