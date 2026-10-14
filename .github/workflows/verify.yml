@@ -46,6 +46,9 @@ jobs:
       - name: Run catalog unit checks
         run: python3 -m unittest discover -s qa -p 'test_*.py'
 
+      - name: Verify hosted mirror updates and fallback
+        run: node qa/mirror-check.cjs
+
       - name: Check application JavaScript syntax
         run: node --check dist/app.js
 

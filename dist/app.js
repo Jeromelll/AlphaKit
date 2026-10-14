@@ -260,7 +260,9 @@ document.addEventListener('keydown',event=>{if(event.key==='/'&&!document.queryS
 async function loadCatalog(){
   try{
     async function readCatalog(assets){
-      const response=await fetch(new URL('data/catalog.json',assets),{cache:'no-cache',signal:AbortSignal.timeout(8000)});
+      const url=new URL('data/catalog.json',assets);
+      if(assets===canonicalAssets)url.searchParams.set('v',Math.floor(Date.now()/60000));
+      const response=await fetch(url,{cache:'no-cache',signal:AbortSignal.timeout(8000)});
       if(!response.ok)throw new Error('catalog unavailable');
       const data=await response.json();
       if(!Array.isArray(data.skills)||!data.skills.length||!Array.isArray(data.sources))throw new Error('invalid catalog');

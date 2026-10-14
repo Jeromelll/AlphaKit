@@ -51,6 +51,9 @@ jobs:
       - name: Verify catalog sources and metadata
         run: python3 qa/verify-catalog.py .cache/sources
 
+      - name: Verify hosted mirror updates and fallback
+        run: node qa/mirror-check.cjs
+
       - name: Check application JavaScript syntax
         run: node --check dist/app.js
 
