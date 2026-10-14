@@ -1,7 +1,7 @@
 const $ = selector => document.querySelector(selector);
 const messages = {
   zh: {
-    brand:'研技集',skip:'跳到技能目录',catalogNav:'技能目录',workflowNav:'任务组合',guideNav:'使用指南',myList:'我的清单',
+    brand:'AlphaKit',brandDescriptor:'投研技能库',skip:'跳到技能目录',catalogNav:'技能目录',workflowNav:'任务组合',guideNav:'使用指南',myList:'我的清单',
     heroContext:'面向金融与投研工作的 AI 技能目录',heroTitle:'把 AI 技能用进<br>你的研究工作。',
     heroDescription:'从财报拆解到模型搭建，找到有具体方法的技能。看清来源、输入与依赖，再决定怎么用。',heroCta:'查找适合的技能',
     principleSource:'原始来源可追溯',principleLicense:'开源许可可核对',principleDependencies:'环境依赖说清楚',
@@ -35,7 +35,7 @@ const messages = {
     example:'从这个问题开始',boundary:'使用边界',source:'原始来源',openSkill:'打开原始技能',copyExample:'复制使用示例',addList:'加入我的清单',removeList:'移出我的清单',
     repositoryIntro:'获取配套文件与安装说明：',repository:'原作者完整仓库',copyDone:'使用示例已复制',copyFailed:'当前浏览器无法自动复制，已选中示例，可手动复制。',
     compareTitle:'比较这些技能',compareNote:'先比较输入、产物与依赖，选择适合当前任务的技能。',compareItem:'比较项',methodShort:'方法',inputsShort:'输入',outputsShort:'产物',licenseFull:'开源许可',notExecuted:'尚未执行验证',
-    aboutTitle:'关于研技集',aboutOne:'研技集把公开的金融投研 AI 技能按研究任务组织，帮助使用者判断方法、输入、产物和依赖是否适合自己的工作。',
+    aboutTitle:'关于 AlphaKit',aboutOne:'AlphaKit 把公开的金融投研 AI 技能按研究任务组织，帮助使用者判断方法、输入、产物和依赖是否适合自己的工作。',
     aboutTwo:'首版为精选来源目录。所有收录条目保留原作者与开源许可，不代表原作者或任何技能平台的官方认证。',
     aboutThree:'我的清单保存在当前浏览器。网站不接收研究材料，不要求填写券商、数据平台或模型服务的密钥。',
     aboutCredits:'技能来自多个原作者仓库，分别保留 MIT、Apache-2.0 等开源许可。中英文介绍、分类和示例由本目录整理，并非原作者原文。',licenseCopy:'随附的原始许可证',
@@ -45,7 +45,7 @@ const messages = {
     unavailable:'目录暂时不可用',loadError:'技能目录暂时无法载入',loadErrorNote:'请刷新页面重试，或稍后再来查看。',retry:'重新载入',close:'关闭',clearWorkflow:'取消任务组合筛选'
   },
   en: {
-    brand:'FinSkills',skip:'Skip to the skill directory',catalogNav:'Directory',workflowNav:'Workflows',guideNav:'Getting started',myList:'My shortlist',
+    brand:'AlphaKit',brandDescriptor:'Research Skills',skip:'Skip to the skill directory',catalogNav:'Directory',workflowNav:'Workflows',guideNav:'Getting started',myList:'My shortlist',
     heroContext:'AI skills for finance and investment research',heroTitle:'Put AI skills<br>to work in research.',
     heroDescription:'Find a concrete method for your next earnings review or financial model. Check the source, inputs and dependencies before you use it.',heroCta:'Find a research skill',
     principleSource:'Traceable sources',principleLicense:'Clear licenses',principleDependencies:'Explicit dependencies',
@@ -79,7 +79,7 @@ const messages = {
     example:'Start with this task',boundary:'Scope and limits',source:'Original source',openSkill:'Open original skill',copyExample:'Copy example task',addList:'Add to shortlist',removeList:'Remove from shortlist',
     repositoryIntro:'Supporting files and installation instructions: ',repository:'Complete original repository',copyDone:'Example task copied',copyFailed:'Automatic copy is unavailable. The example is selected for manual copying.',
     compareTitle:'Compare these skills',compareNote:'Compare inputs, outputs and dependencies to choose a skill for the task.',compareItem:'Compare',methodShort:'Method',inputsShort:'Inputs',outputsShort:'Outputs',licenseFull:'Open-source license',notExecuted:'Not execution-verified',
-    aboutTitle:'About FinSkills Hub',aboutOne:'FinSkills Hub organizes public finance and research AI skills around working tasks, helping you evaluate methods, inputs, outputs and dependencies.',
+    aboutTitle:'About AlphaKit',aboutOne:'AlphaKit organizes public finance and research AI skills around working tasks, helping you evaluate methods, inputs, outputs and dependencies.',
     aboutTwo:'This first release is a curated source directory. Entries retain the original author and license. Inclusion is not an official endorsement by an author or a skill platform.',
     aboutThree:'Your shortlist stays in this browser. This site does not receive research materials or request broker, data-platform or model-service keys.',
     aboutCredits:'Skills come from several original repositories and retain their MIT, Apache-2.0 or other stated licenses. Bilingual descriptions, categories and examples are edited by this directory and are not verbatim author text.',licenseCopy:'Included original licenses',
@@ -118,7 +118,7 @@ function persistSaved(){try{localStorage.setItem('finskills:saved:v1',JSON.strin
 function syncURL(){const p=new URLSearchParams();if(language==='en')p.set('lang','en');if(state.q)p.set('q',state.q);if(state.category!=='all')p.set('category',state.category);if(state.repository!=='all')p.set('repo',state.repository);if(state.workflow)p.set('workflow',state.workflow);if(state.savedOnly)p.set('saved','1');history.replaceState(null,'',location.pathname+(p.size?'?'+p.toString():'')+location.hash);}
 function applyLanguage(){
   document.documentElement.lang=language==='en'?'en':'zh-CN';
-  document.title=language==='en'?'FinSkills Hub — AI skills for financial research':'研技集 FinSkills Hub — 金融投研技能目录';
+  document.title=language==='en'?'AlphaKit — Finance & Investment Research Skills':'AlphaKit · 投研技能库';
   document.querySelectorAll('[data-i18n]').forEach(element=>element.textContent=t(element.dataset.i18n));
   document.querySelectorAll('[data-i18n-html]').forEach(element=>element.innerHTML=t(element.dataset.i18nHtml));
   document.querySelectorAll('.dialog-close').forEach(element=>element.setAttribute('aria-label',t('close')));

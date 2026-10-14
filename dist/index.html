@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#203f54">
-  <meta name="description" content="研技集 FinSkills Hub — A bilingual directory of AI skills for financial research, valuation, modeling and portfolio analysis, with original sources, licenses and dependencies.">
-  <meta property="og:title" content="研技集 FinSkills Hub">
+  <meta name="description" content="AlphaKit · 投研技能库 — A bilingual directory of AI skills for financial research, valuation, modeling and portfolio analysis, with original sources, licenses and dependencies.">
+  <meta property="og:title" content="AlphaKit · 投研技能库">
   <meta property="og:description" content="找到适合这次研究的 AI 技能。Find the right AI skill for your next research task.">
-  <title>研技集 FinSkills Hub — 金融投研技能目录</title>
+  <title>AlphaKit · 投研技能库</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script type="module" src="/app.js"></script>
@@ -16,9 +16,9 @@
   <a class="skip-link" href="#catalog" data-i18n="skip">跳到技能目录</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="/" aria-label="FinSkills Hub">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 8h8v17H7zM18 8h7v17h-7z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 12h3m-3 4h3m8-4h2m-2 4h2M4 26h24" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="5" r="2" fill="currentColor"/></svg></span>
-        <span class="brand-words"><strong data-i18n="brand">研技集</strong><span>FinSkills Hub</span></span>
+      <a class="brand" href="/" aria-label="AlphaKit">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 25 16 6 26 25M10 18h12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-words"><strong data-i18n="brand">AlphaKit</strong><span data-i18n="brandDescriptor">投研技能库</span></span>
       </a>
       <nav aria-label="Navigation"><a href="#catalog" class="nav-current" data-i18n="catalogNav">技能目录</a><a href="#workflows" data-i18n="workflowNav">任务组合</a><a href="#guide" data-i18n="guideNav">使用指南</a></nav>
       <div class="header-actions"><button id="saved-header" class="button button-quiet" type="button"><span class="bookmark-icon" aria-hidden="true"></span><span data-i18n="myList">我的清单</span><span id="saved-count" class="count-pill">0</span></button><button id="language-toggle" class="language-toggle" type="button" aria-label="Switch language">EN</button></div>
@@ -77,7 +77,7 @@
       </ol>
     </section>
   </main>
-  <footer class="site-footer"><div><a class="footer-brand" href="/"><span data-i18n="brand">研技集</span><span>FinSkills Hub</span></a><p data-i18n="footerNote">为研究工作选方法，让来源与边界看得见。</p></div><div class="footer-right"><button class="text-link" id="about-button" type="button" data-i18n="about">关于目录</button><span data-i18n="attribution">技能归原作者所有，遵守各自开源许可。</span></div></footer>
+  <footer class="site-footer"><div><a class="footer-brand" href="/"><span data-i18n="brand">AlphaKit</span><span data-i18n="brandDescriptor">投研技能库</span></a><p data-i18n="footerNote">为研究工作选方法，让来源与边界看得见。</p></div><div class="footer-right"><button class="text-link" id="about-button" type="button" data-i18n="about">关于目录</button><span data-i18n="attribution">技能归原作者所有，遵守各自开源许可。</span></div></footer>
   <div id="compare-bar" class="compare-bar" hidden><div><strong id="compare-count"></strong><span id="compare-names"></span></div><div><button id="compare-clear" class="button button-quiet" type="button" data-i18n="clear">清空</button><button id="compare-open" class="button button-primary" type="button" data-i18n="compareThese">比较这些技能</button></div></div>
   <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close" type="button" aria-label="Close">×</button><div id="detail-content"></div></dialog>
   <dialog id="compare-dialog" class="compare-dialog" aria-labelledby="compare-title"><button class="dialog-close" type="button" aria-label="Close">×</button><div id="compare-content"></div></dialog>
