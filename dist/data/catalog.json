@@ -5158,11 +5158,248 @@
       "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "notes": "本条目为来源核验（基于所提供的SKILL.md原文），但未经验证执行；实际数据质量取决于使用者接入的市场数据来源。源文件明确要求所有市场规模数据须注明来源、区分TAM炒作与可实现的可达市场，并标注报告日期与可能过时的数据；本目录不保证任何投资收益。",
+      "environmentEn": "Document tooling (Word/PowerPoint) and spreadsheets (Excel); requires access to reliable market data and research sources to support sizing, share, and valuation figures.",
+      "method": "六步工作流：(1) 界定范围——细分行业、用途、篇幅（5-10页概览或20-30页深度）与角度；(2) 市场概览——TAM及来源、5年历史CAGR与预测假设、市场细分、集中度与价值链、准入壁垒与关键趋势；(3) 竞争格局——对前5-10家公司建档（收入、增长、EBITDA利润率、市占率、护城河、估值快照）并分析竞争动态；(4) 估值背景——板块当前与历史交易区间、并购交易倍数、与大盘比较；(5) 投资含义——风险收益机会、主题表达、多空争论与催化剂；(6) 输出——Word/PPT正文加Excel数据附录。",
+      "nameEn": "Sector Overview Industry Landscape Report",
+      "inputs": [
+        "细分行业与覆盖范围（公司名单、是否含私营）",
+        "带来源的市场规模与历史增长数据",
+        "可比公司财务数据（收入、增长、EBITDA利润率、估值倍数）",
+        "板块历史交易倍数区间与近期并购交易倍数",
+        "报告用途与目标读者（客户/内部/推介材料）"
+      ],
+      "notesEn": "This entry is source-checked against the supplied SKILL.md but execution-unverified; actual data quality depends on the market data sources the user can access. The source explicitly requires sourcing all market size data, distinguishing TAM hype from realistic addressable market, and dating the report while flagging potentially stale data. No investment returns are guaranteed.",
+      "dependenciesEn": [
+        "Word/PowerPoint",
+        "Excel",
+        "Reliable market size and valuation data sources (e.g., third-party research, company disclosures)",
+        "Charting capability"
+      ],
+      "name": "行业与板块全景研究报告",
+      "example": "示例（公开数据演示）：为\"AI基础设施扩建\"主题撰写云计算子板块概览——用公开年报与第三方研究估算TAM与5年CAGR，列出前五大厂商的收入、EBITDA利润率与EV/EBITDA对比表，绘制估值散点与份额趋势图，并以当前板块倍数相对历史区间的位置讨论多空争论。",
+      "outputs": [
+        "板块全景报告（Word或PowerPoint）",
+        "公司对比表",
+        "竞争格局图与关键图表（市场规模瀑布、定位矩阵、估值散点）",
+        "含详细公司数据的Excel附录",
+        "投资含义与关键争论/催化剂清单"
+      ],
+      "environment": "文档编辑工具（Word/PowerPoint）与电子表格（Excel）；需接入可靠的市场数据与研究来源以支撑规模、份额与估值数据。",
+      "tagsEn": [
+        "industry research",
+        "sector analysis",
+        "competitive landscape",
+        "valuation",
+        "thematic research",
+        "equity research"
+      ],
+      "exampleEn": "Example (public-data demo): draft a cloud-infrastructure subsector overview themed on AI infrastructure buildout — estimate TAM and 5-year CAGR from public filings and third-party research, build a comparison table of the top five vendors' revenue, EBITDA margins, and EV/EBITDA, chart valuation scatter and share trends, and frame bull vs bear debates around where current sector multiples sit versus their historical range.",
+      "summaryEn": "A reusable equity research workflow for producing sector landscape reports covering market sizing, industry structure, competitive positioning, valuation context, and investment implications, suited to client deliverables, sector initiations, and thematic research.",
+      "evidenceQuotes": [
+        "Create comprehensive industry and sector landscape reports covering market dynamics, competitive positioning, key players, and thematic trends.",
+        "Sector overviews age fast — note the date and flag data that may be stale"
+      ],
+      "inputsEn": [
+        "Subsector definition and coverage (company universe, private inclusion)",
+        "Market size and historical growth data with sources",
+        "Comparable company financials (revenue, growth, EBITDA margins, valuation multiples)",
+        "Sector historical trading multiple ranges and recent M&A transaction multiples",
+        "Report purpose and audience (client/internal/pitch)"
+      ],
+      "category": "research",
+      "methodEn": "Six-step workflow: (1) define scope — subsector, purpose, depth (5-10 page overview vs 20-30 page deep dive), and angle; (2) market overview — TAM with source, 5-year historical CAGR and forecast assumptions, segmentation, concentration and value chain, entry barriers, and key trends; (3) competitive landscape — profile top 5-10 players (revenue, growth, EBITDA margin, market share, moat, valuation snapshot) and analyze competitive dynamics; (4) valuation context — current and historical sector multiples, M&A transaction multiples, comparison to broader market; (5) investment implications — risk/reward opportunities, thematic expression, bull vs bear debates, and catalysts; (6) output — Word/PowerPoint body with an Excel data appendix.",
+      "tags": [
+        "行业研究",
+        "板块分析",
+        "竞争格局",
+        "估值",
+        "主题研究",
+        "股权研究"
+      ],
+      "outputsEn": [
+        "Sector overview report (Word or PowerPoint)",
+        "Company comparison table",
+        "Competitive landscape map and key charts (market size waterfall, positioning matrix, valuation scatter)",
+        "Excel appendix with detailed company data",
+        "Investment implications with key debates and catalysts"
+      ],
+      "summary": "一份可复用的行业研究工作流，用于撰写涵盖市场规模、行业结构、竞争格局、估值背景与投资含义的板块全景报告，适用于客户报告、板块覆盖启动或主题研究。",
+      "dependencies": [
+        "Word/PowerPoint",
+        "Excel",
+        "可靠的市场规模与估值数据来源（如第三方研究、公司披露）",
+        "图表制作能力"
+      ],
+      "id": "skill-3d5819815b3fd02d",
+      "author": "anthropics",
+      "originalName": "sector-overview",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/sector-overview/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/sector-overview/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "notes": "本条目经来源核验但未经验证执行：目录编制时核对了技能源文件，未实际运行工作流。无保证盈利含义；论点结论取决于用户提供的数据质量。该技能来自anthropics/financial-services仓库的权益研究插件，属于仓库作者框架。",
+      "environmentEn": "Claude / Claude Code with the ability to persist structured thesis data across sessions; outputs are markdown documents or Word documents.",
+      "method": "五步工作流：(1) 定义或载入论点，包括公司/代码、多空方向、1-2句核心论点、3-5条支持性支柱、3-5条否定性风险、催化剂、目标估值与止损触发条件；(2) 逐条更新日志，记录日期、数据点、对特定支柱的强化/削弱/中性影响、建议动作（不动/加仓/减仓/退出）与更新后信心水平；(3) 维护论点计分卡表格，对比原始预期、当前状态与趋势；(4) 维护催化剂日历；(5) 输出适用于晨会、组合回顾或风险委员会的简洁markdown/Word摘要。要求论点可证伪，并同等严格地记录证实与证伪证据。",
+      "nameEn": "Thesis Tracker",
+      "inputs": [
+        "公司名称与股票代码",
+        "多头/空头方向与核心论点陈述",
+        "支持性支柱与否定性风险",
+        "催化剂事件列表",
+        "新数据点或进展（财报、管理层变动、竞争动作等）"
+      ],
+      "notesEn": "Source-checked but execution-unverified: the skill source file was reviewed for curation, but the workflow has not been run by the directory. No guaranteed-profit implications; thesis conclusions depend on user-supplied data quality. From the equity-research plugin of the anthropics/financial-services repository; a repository-author framework, not an investor-endorsed official skill.",
+      "dependenciesEn": [
+        "Claude / Claude Code",
+        "Structured data storage across sessions",
+        "Markdown or Word document output capability"
+      ],
+      "name": "论点跟踪器",
+      "example": "用户输入\"update thesis for ACME — Q3 revenue +22%, margins flat YoY, product launch delayed to Q2\"，技能在现有ACME多头论点的日志中添加该数据点，更新计分卡（营收增长>20%：按轨道进行/稳定；利润率扩张：落后/令人担忧；新品发布：推迟/观察），调整信心水平并生成供晨会使用的论点摘要。",
+      "outputs": [
+        "论点更新日志（日期、数据点、影响、动作、信心水平）",
+        "论点计分卡表格（支柱、原始预期、当前状态、趋势）",
+        "催化剂日历",
+        "可证伪的论点摘要文档（markdown或Word）"
+      ],
+      "environment": "Claude / Claude Code，具备会话间持久化结构化论点数据的能力；输出为markdown文档或Word文档。",
+      "tagsEn": [
+        "equity research",
+        "investment thesis",
+        "portfolio management",
+        "catalyst tracking",
+        "risk monitoring"
+      ],
+      "exampleEn": "User inputs \"update thesis for ACME — Q3 revenue +22%, margins flat YoY, product launch delayed to Q2\"; the skill adds this to the ACME long-thesis log, updates the scorecard (revenue growth >20%: on track/stable; margin expansion: behind/concerning; product launch: delayed/watch), adjusts conviction, and generates a thesis summary for the morning meeting.",
+      "summaryEn": "Maintain and update investment theses for portfolio positions and watchlist names, tracking key data points, catalysts, and thesis milestones to assess whether a thesis remains intact.",
+      "evidenceQuotes": [
+        "Maintain and update investment theses for portfolio positions and watchlist names. Track key data points, catalysts, and thesis milestones over time.",
+        "- Track disconfirming evidence as rigorously as confirming evidence\n- Review theses at least quarterly, even when nothing dramatic has happened"
+      ],
+      "inputsEn": [
+        "Company name and ticker",
+        "Long/short direction and core thesis statement",
+        "Supporting pillars and falsifying risks",
+        "Catalyst event list",
+        "New data points or developments (earnings, management changes, competitor moves)"
+      ],
+      "category": "research",
+      "methodEn": "Five-step workflow: (1) define or load a thesis with company/ticker, long/short direction, a 1-2 sentence core statement, 3-5 supporting pillars, 3-5 falsifying risks, catalysts, target valuation, and stop-loss triggers; (2) log each new data point with date, what changed, impact on a specific pillar (strengthen/weaken/neutral), recommended action (no change/increase/trim/exit), and updated conviction; (3) maintain a running scorecard table comparing original expectation, current status, and trend; (4) maintain a catalyst calendar; (5) output a concise markdown or Word summary suitable for morning meetings, portfolio reviews, or risk committees. Theses must be falsifiable; disconfirming evidence is tracked as rigorously as confirming evidence, with quarterly reviews even absent dramatic news.",
+      "tags": [
+        "权益研究",
+        "投资论点",
+        "组合管理",
+        "催化剂跟踪",
+        "风险监控"
+      ],
+      "outputsEn": [
+        "Thesis update log (date, data point, impact, action, conviction)",
+        "Thesis scorecard table (pillar, original expectation, current status, trend)",
+        "Catalyst calendar",
+        "Falsifiable thesis summary document (markdown or Word)"
+      ],
+      "summary": "维护并更新投资组合头寸与观察名单公司的投资论点，跟踪关键数据点、催化剂与论点里程碑，评估论点是否仍然成立。",
+      "dependencies": [
+        "Claude / Claude Code",
+        "跨会话的结构化数据存储",
+        "markdown或Word文档输出能力"
+      ],
+      "id": "skill-d34865586a48dc7a",
+      "author": "anthropics",
+      "originalName": "thesis-tracker",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "notes": "此技能描述经来源核对，仅基于所提供的 SKILL.md 文件内容，未实际执行审计验证其效果。缺少数据必须作为明确的数据缺口处理，不能将数据不可得视为无问题。VBA 宏驱动的计算仅凭公式无法审计，须显式标注为局限。不承诺修复后模型必然正确。",
+      "environmentEn": "A macro-enabled spreadsheet workbook (e.g., Excel); formula-level audits work directly from formulas; VBA macro-driven calculations cannot be audited from formulas alone and must be flagged.",
+      "method": "1) 确定范围（选区/工作表/模型），未给出时先询问。2) 所有范围执行公式级检查：#REF!/#VALUE! 等错误、公式内硬编码、邻居间公式不一致、范围差一、被覆盖为常量的单元格、循环引用、失效跨表链接、单位/量级不匹配、隐藏行列。3) 模型级执行结构审查（输入与计算分离、颜色约定、标签页顺序、日期与单位一致性）、资产负债表平衡与留存收益滚动、现金流量表勾稽（期末现金=资产负债表现金、CFO+CFI+CFF=ΔCash、D&A与CapEx匹配）、利润表校验、循环引用判定、逻辑合理性（增长率、利润率、终值占比、边缘情形），以及按模型类型的专项bug清单（DCF折现期/中途年惯例、LBO偿债与PIK、并购股份与PPA、三表营运资本符号等）。4) 输出问题表（位置、严重度、类别、建议修复），模型级附总结行；先报告、经请求才修改。",
+      "nameEn": "Spreadsheet & Financial Model Audit",
+      "inputs": [
+        "电子表格工作簿（选区、工作表或完整财务模型）",
+        "模型类型标识（DCF / LBO / 三表 / 并购 / 可比公司 / 自定义）"
+      ],
+      "notesEn": "This skill description is source-checked against the supplied SKILL.md only; the audit workflow has not been execution-verified. Missing data must remain an explicit data gap and failed access must not be treated as absence of issues. Macro-driven calculations cannot be audited from formulas alone and must be flagged as a limitation. No guarantee that a fixed model is error-free.",
+      "dependenciesEn": [
+        "Spreadsheet application (formats with cross-sheet references and formulas, e.g., .xlsx)"
+      ],
+      "name": "电子表格与财务模型审计",
+      "example": "对一份三表模型运行模型级审计：发现资产负债表在2026年不平行（缺口量化并追溯断裂点），第4季度CapEx被粘贴为硬编码值，LBO口径下利息循环引用缺少迭代开关——输出 Critical/Warning/Info 分级表格供修复。",
+      "outputs": [
+        "公式与模型完整性问题表（工作表、单元格、严重度、类别、问题、建议修复）",
+        "模型级总结行（模型类型、总体评级、各级问题计数）"
+      ],
+      "environment": "支持宏的电子表格工作簿（如 Excel）；公式级审计从公式直接完成，VBA 宏驱动的计算无法仅从公式审计，需单独注明。",
+      "tagsEn": [
+        "model audit",
+        "spreadsheet QA",
+        "3-statement model",
+        "DCF",
+        "LBO",
+        "formula errors",
+        "model integrity"
+      ],
+      "exampleEn": "Run a model-scope audit on a 3-statement workbook: find the balance sheet stops balancing in 2026 (quantify the gap and trace where it breaks), a Q4 CapEx cell pasted over as a hardcoded value, and an intentional interest circularity missing a working iteration toggle — output a Critical/Warning/Info findings table for remediation.",
+      "summaryEn": "Audits spreadsheets at selection, sheet, or full-model scope: checks formula errors, hardcodes, and circular references, and at model scope runs balance-sheet balance, cash tie-out, and DCF/LBO/merger/3-statement specific integrity checks, producing a severity-ranked findings table.",
+      "evidenceQuotes": [
+        "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected range, a single sheet, or the entire model",
+        "Cash tie-out | CF Ending Cash = BS Cash (every period)",
+        "Hardcoded overrides are the #1 source of silent bugs"
+      ],
+      "inputsEn": [
+        "Spreadsheet workbook (selection, sheet, or full financial model)",
+        "Model type identification (DCF / LBO / 3-statement / merger / comps / custom)"
+      ],
+      "category": "operations",
+      "methodEn": "1) Determine scope (selection/sheet/model); ask if not given. 2) All scopes: formula-level checks for #REF!/#VALUE! errors, hardcodes inside formulas, inconsistent formulas, off-by-one ranges, pasted-over formulas, circular references, broken cross-sheet links, unit/scale mismatches, hidden rows/tabs. 3) Model scope: structural review (input/formula separation, color convention, tab flow, date and unit consistency); balance sheet balance and RE rollforward; cash flow tie-outs (ending cash = BS cash, CFO+CFI+CFF = delta cash, D&A and CapEx matches); income statement checks; circular reference classification; logic/reasonableness flags (growth, margins, terminal value dominance, edge cases); model-type-specific bug lists (DCF discounting period conventions, LBO sweep/PIK mechanics, merger share counts and PPA, 3-statement working capital signs). 4) Output a findings table (location, severity, category, suggested fix) with a summary line for model scope; report first, fix only on request.",
+      "tags": [
+        "模型审计",
+        "电子表格QA",
+        "三表模型",
+        "DCF",
+        "LBO",
+        "公式错误",
+        "模型完整性"
+      ],
+      "outputsEn": [
+        "Formula and model-integrity findings table (sheet, cell/range, severity, category, issue, suggested fix)",
+        "Model-scope summary line (model type, overall rating, counts by severity)"
+      ],
+      "summary": "按选区、工作表或整模型三级范围审计电子表格：检查公式错误、硬编码、循环引用，并在模型级执行资产负债表平衡、现金勾稽、DCF/LBO/并购/三表专项校验，输出分级问题清单。",
+      "dependencies": [
+        "电子表格应用（支持跨表引用与公式的格式，如 .xlsx）"
+      ],
+      "id": "skill-04d6d38a4280cf22",
+      "author": "anthropics",
+      "originalName": "audit-xls",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 80,
+      "skills": 83,
       "repositories": 6,
       "executionTestsRun": 0
     },

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-14T02:41:17.772919+00:00",
+  "checkedAt": "2026-10-14T02:49:00.195613+00:00",
   "query": "financial skills in:name,description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
@@ -11,7 +11,8 @@
     "kurwa-1944/Monopoly-Full-Version",
     "Jack-Li-Npu/financial-research-workbench",
     "linshanova-ops/daily-financial-insights",
-    "lj22503/invest-dictionary"
+    "lj22503/invest-dictionary",
+    "makaroonapln79/Monopoly"
   ],
   "decisions": []
 }

@@ -2,7 +2,7 @@
 
 由同一份网站目录自动生成。Generated from the website catalog.
 
-80 skills · 6 original repositories · 2026-10-14
+83 skills · 6 original repositories · 2026-10-14
 
 收录表示原文件与许可证已核对，实际执行未验证。Inclusion means source and license checks; execution is unverified.
 
@@ -20,6 +20,8 @@
 | [选股想法生成工作流](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/idea-generation/SKILL.md)<br>Equity Idea Generation Workflow | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [财报后财务模型更新](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/model-update/SKILL.md)<br>Post-Earnings Financial Model Update | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [晨会纪要速写（Morning Note）](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/morning-note/SKILL.md)<br>Morning Note Drafting | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [行业与板块全景研究报告](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/sector-overview/SKILL.md)<br>Sector Overview Industry Landscape Report | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [论点跟踪器](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md)<br>Thesis Tracker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 
 ## 财报分析 / Earnings
 
@@ -90,6 +92,7 @@
 | [基金净资产值勾稽检查](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/nav-tieout/SKILL.md)<br>LP Statement to Fund NAV Tie-Out | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [基金账户余额期间滚动](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/roll-forward/SKILL.md)<br>Balance-Sheet Account Roll-Forward | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [预算与实际差异说明](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md)<br>Financial-Statement Flux Commentary | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [电子表格与财务模型审计](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md)<br>Spreadsheet & Financial Model Audit | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 
 ## 金融数据 / Financial data
 
