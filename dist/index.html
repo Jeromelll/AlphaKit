@@ -60,12 +60,14 @@
         <div class="catalog-main">
           <div class="search-row"><label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.7"/></svg><span class="sr-only" data-i18n="search">搜索技能</span><input id="search" type="search" autocomplete="off" placeholder="搜索财报、DCF、信用风险或一个研究任务…"><kbd aria-hidden="true">/</kbd></label><button id="clear-filters" class="button button-quiet reset-button" type="button" data-i18n="reset">重置</button></div>
           <div class="catalog-toolbar"><div class="toolbar-left"><span id="result-count" role="status" aria-live="polite"></span><button id="saved-filter" class="filter-toggle" type="button" aria-pressed="false" data-i18n="savedOnly">只看我的清单</button></div><label class="sort-label"><span data-i18n="sort">排序</span><select id="sort"><option value="curated" data-i18n="sortCurated">目录顺序</option><option value="name" data-i18n="sortName">技能名称</option><option value="category" data-i18n="scenario">工作场景</option></select></label></div>
+          <div class="source-controls"><label><span data-i18n="sourceFilter">来源仓库</span><select id="source-filter"><option value="all">全部来源</option></select></label><div><span id="source-summary"></span><a class="text-link" href="#sources" data-i18n="browseSources">浏览来源仓库</a></div></div>
           <div id="active-workflow" class="active-workflow" hidden><span></span><button type="button" id="clear-workflow" aria-label="Clear workflow">×</button></div>
           <div id="skills-list" class="skills-list" aria-live="polite"><div class="loading-state" data-i18n="loading">正在载入技能目录…</div></div>
           <div class="catalog-bottom"><span class="small-check" aria-hidden="true">✓</span><p data-i18n="catalogBottom">每条技能保留原作者与许可信息。下载与安装以原仓库说明为准。</p><button class="text-link" id="standards-bottom" type="button" data-i18n="standardsShort">收录标准</button></div>
         </div>
       </div>
     </section>
+    <section id="sources" class="sources-section section-wrap"><div class="section-heading"><div><p class="section-context" data-i18n="sourcesContext">回到完整原作</p><h2 data-i18n="sourcesTitle">原始技能仓库</h2></div></div><p class="sources-intro" data-i18n="sourcesNote">按原仓库获取完整技能包；每条目录介绍都保留固定版本、许可与依赖。</p><div id="source-list" class="source-grid"></div></section>
     <section id="guide" class="guide-section section-wrap">
       <div class="guide-intro"><p class="section-context" data-i18n="guideContext">先做一个能验证的小任务</p><h2 data-i18n-html="guideTitle">把技能接进工作，<br>从一次公开材料试跑开始。</h2><p data-i18n="guideDescription">一个好的技能应说清楚要什么、怎么做、交付什么。先确认这些，再逐步扩大使用范围。</p></div>
       <ol class="guide-steps">

@@ -11,7 +11,7 @@ const messages = {
     workflowContext:'先从你手上的任务出发',workflowTitle:'这次研究要完成什么？',firstUse:'第一次使用技能？',
     bundleEarnings:'做好一次财报研究',bundleEarningsNote:'财报分析、预测更新、情景检验',
     bundleValuation:'搭一份可复核的模型',bundleValuationNote:'财务建模、估值方法、假设校验',
-    bundlePortfolio:'监测被投企业经营风险',bundlePortfolioNote:'经营偏离、债务契约、风险信号',viewBundle:'查看这组技能',
+    bundlePortfolio:'检查组合与企业风险',bundlePortfolioNote:'组合敞口、经营偏离、风险信号',viewBundle:'查看这组技能',
     catalogContext:'按场景选择，按证据判断',catalogTitle:'金融投研技能目录',scenario:'工作场景',
     verifiedQuestion:'“来源核验”核验什么？',verifiedAnswer:'核对原作者仓库、技能文件和开源许可。实际执行与产物质量须在使用环境中验证。',
     standards:'查看收录标准',standardsShort:'收录标准',search:'搜索技能',searchPlaceholder:'搜索财报、DCF、信用风险或一个研究任务…',
@@ -23,11 +23,12 @@ const messages = {
     guideTwo:'获取完整原始包',guideTwoNote:'打开原仓库安装说明，保留配套脚本和参考文件。需要连接器或商业数据时，按原作者要求配置。',
     guideThree:'用公开资料试跑并复核',guideThreeNote:'检查来源、时点、币种、年度口径和计算结果。把能重复完成任务的技能加入自己的清单。',
     footerNote:'为研究工作选方法，让来源与边界看得见。',about:'关于目录',attribution:'技能归原作者所有，遵守各自开源许可。',
-    clear:'清空',compareThese:'比较这些技能',all:'全部技能',research:'公司与行业研究',earnings:'财报分析',valuation:'估值与建模',portfolio:'组合与风险',deals:'交易与尽调',operations:'研究流程',
+    clear:'清空',compareThese:'比较这些技能',all:'全部技能',research:'公司与行业研究',earnings:'财报分析',valuation:'估值与建模',portfolio:'组合与风险',deals:'交易与尽调',operations:'研究流程',data:'金融数据',macro:'宏观与市场',quant:'量化与技术研究',fixedincome:'固收与信用',
+    sourceFilter:'来源仓库',allSources:'全部来源',sourceCount:'来自 {n} 个原始仓库',browseSources:'浏览来源仓库',sourcesContext:'回到完整原作',sourcesTitle:'原始技能仓库',sourcesNote:'按原仓库获取完整技能包；每条目录介绍都保留固定版本、许可与依赖。',includedCount:'已收录 {n} 个技能',openRepository:'打开固定版本仓库',filterSource:'查看这组技能',
     results:'{n} 个技能',savedResults:'{n} 个已收藏技能',verifiedAt:'来源核验于 {date}',verified:'✓ 来源已核验',verifiedHint:'原仓库、文件路径与许可证已核对；实际执行未验证',
     viewDetail:'查看方法与依赖',save:'收藏',saved:'已收藏',removeSaved:'从清单移除',addSaved:'加入清单',compare:'比较',selected:'已选 {n} 个技能',
     emptyTitle:'没有找到匹配的技能',emptyNote:'换一个工作场景或更短的关键词，也可以清除筛选。',emptySaved:'清单里还没有匹配的技能',emptySavedNote:'点击技能旁的“收藏”，在这台浏览器中建立自己的清单。',
-    clearFilters:'清除筛选',workflowActive:'任务组合：{name}',workflowEarnings:'财报研究',workflowValuation:'模型搭建',workflowPortfolio:'被投企业风险监测',
+    clearFilters:'清除筛选',workflowActive:'任务组合：{name}',workflowEarnings:'财报研究',workflowValuation:'模型搭建',workflowPortfolio:'组合与企业风险',
     saveDone:'已加入我的清单，保存在当前浏览器',removeDone:'已从我的清单移除',saveUnavailable:'当前浏览器无法保存清单，已在本次页面中保留。',compareLimit:'最多比较三个技能，请先移除一个。',
     author:'原作者',license:'许可',verifiedDate:'来源核验',method:'它用什么方法？',inputs:'需要哪些输入',outputs:'得到什么产物',dependencies:'环境与依赖',
     execution:'执行验证',executionPending:'实际执行尚未验证。请先按原仓库说明，在你的工具与数据环境中试跑。',executionVerified:'有执行验证记录。',
@@ -37,7 +38,7 @@ const messages = {
     aboutTitle:'关于研技集',aboutOne:'研技集把公开的金融投研 AI 技能按研究任务组织，帮助使用者判断方法、输入、产物和依赖是否适合自己的工作。',
     aboutTwo:'首版为精选来源目录。所有收录条目保留原作者与开源许可，不代表原作者或任何技能平台的官方认证。',
     aboutThree:'我的清单保存在当前浏览器。网站不接收研究材料，不要求填写券商、数据平台或模型服务的密钥。',
-    aboutCredits:'首批技能来自 Anthropic 的 financial-services 仓库，采用 Apache-2.0 许可。中英文介绍、分类和示例由本目录整理，并非原作者原文。',licenseCopy:'查看随附的原始许可证',
+    aboutCredits:'技能来自多个原作者仓库，分别保留 MIT、Apache-2.0 等开源许可。中英文介绍、分类和示例由本目录整理，并非原作者原文。',licenseCopy:'随附的原始许可证',
     standardsTitle:'我们的收录标准',standardOne:'有具体金融或投研用途，能够说明输入、方法与产物。',standardTwo:'能回到原作者仓库与固定版本的技能文件。',
     standardThree:'核对明确的开源许可，并保留原作者归属。',standardFour:'说明实际依赖，区分用户材料、公开数据与需另配置的连接器。',standardFive:'来源核验与执行验证分别记录，未经试跑不标为“实测可用”。',
     standardsNote:'当前“来源已核验”只表示原始文件、版本和许可证已核对。请按原仓库的完整安装说明使用配套资源。',
@@ -54,7 +55,7 @@ const messages = {
     workflowContext:'Start with the task on your desk',workflowTitle:'What are you working on?',firstUse:'New to AI skills?',
     bundleEarnings:'Review an earnings release',bundleEarningsNote:'Results analysis, forecast updates, scenarios',
     bundleValuation:'Build a reviewable model',bundleValuationNote:'Financial modeling, valuation, assumptions',
-    bundlePortfolio:'Monitor portfolio-company risk',bundlePortfolioNote:'Operating performance, covenants, risk signals',viewBundle:'Explore these skills',
+    bundlePortfolio:'Review portfolio and operating risk',bundlePortfolioNote:'Exposures, operating variances, risk signals',viewBundle:'Explore these skills',
     catalogContext:'Choose by task. Evaluate the evidence.',catalogTitle:'The finance skills directory',scenario:'Work scenario',
     verifiedQuestion:'What is source verification?',verifiedAnswer:'We check the original repository, skill file and license. Execution and output quality still need testing in your environment.',
     standards:'Our inclusion criteria',standardsShort:'Inclusion criteria',search:'Search skills',searchPlaceholder:'Search earnings, DCF, credit risk or a research task…',
@@ -66,11 +67,12 @@ const messages = {
     guideTwo:'Get the complete source package',guideTwoNote:'Follow the original installation instructions and retain supporting scripts and references. Configure connectors or licensed data when required.',
     guideThree:'Test with public materials and review',guideThreeNote:'Check sources, dates, currencies, fiscal periods and calculations. Shortlist skills that can repeat the task reliably.',
     footerNote:'Find a method for the task, with its source and boundaries in view.',about:'About the directory',attribution:'Skills belong to their original authors and retain their open-source licenses.',
-    clear:'Clear',compareThese:'Compare selected',all:'All skills',research:'Company research',earnings:'Earnings analysis',valuation:'Valuation & models',portfolio:'Portfolio & risk',deals:'Deals & diligence',operations:'Research operations',
+    clear:'Clear',compareThese:'Compare selected',all:'All skills',research:'Company research',earnings:'Earnings analysis',valuation:'Valuation & models',portfolio:'Portfolio & risk',deals:'Deals & diligence',operations:'Research operations',data:'Financial data',macro:'Macro & markets',quant:'Quant & technical research',fixedincome:'Fixed income & credit',
+    sourceFilter:'Source repository',allSources:'All sources',sourceCount:'From {n} original repositories',browseSources:'Browse source repositories',sourcesContext:'Get the complete original',sourcesTitle:'Original skill repositories',sourcesNote:'Use the original repository for the complete package. Each entry retains its revision, license and dependencies.',includedCount:'{n} skills included',openRepository:'Open pinned repository',filterSource:'Explore these skills',
     results:'{n} skills',savedResults:'{n} shortlisted skills',verifiedAt:'Sources checked {date}',verified:'✓ Source checked',verifiedHint:'Repository, file path and license checked. Execution has not been verified.',
     viewDetail:'Method & dependencies',save:'Save',saved:'Saved',removeSaved:'Remove from shortlist',addSaved:'Add to shortlist',compare:'Compare',selected:'{n} skills selected',
     emptyTitle:'No matching skills',emptyNote:'Try a different scenario or a shorter query, or clear the filters.',emptySaved:'No matching skills in your shortlist',emptySavedNote:'Use “Save” beside a skill to build a shortlist in this browser.',
-    clearFilters:'Clear filters',workflowActive:'Workflow: {name}',workflowEarnings:'Earnings research',workflowValuation:'Financial modeling',workflowPortfolio:'Portfolio-company risk',
+    clearFilters:'Clear filters',workflowActive:'Workflow: {name}',workflowEarnings:'Earnings research',workflowValuation:'Financial modeling',workflowPortfolio:'Portfolio and operating risk',
     saveDone:'Added to your shortlist in this browser',removeDone:'Removed from your shortlist',saveUnavailable:'Browser storage is unavailable. Your shortlist is retained for this visit.',compareLimit:'Compare up to three skills. Remove one first.',
     author:'Author',license:'License',verifiedDate:'Source check',method:'What is the method?',inputs:'Inputs you need',outputs:'Outputs you get',dependencies:'Environment & dependencies',
     execution:'Execution check',executionPending:'Execution has not been verified. Follow the original instructions and test with your own tools and data environment.',executionVerified:'An execution verification record is available.',
@@ -80,7 +82,7 @@ const messages = {
     aboutTitle:'About FinSkills Hub',aboutOne:'FinSkills Hub organizes public finance and research AI skills around working tasks, helping you evaluate methods, inputs, outputs and dependencies.',
     aboutTwo:'This first release is a curated source directory. Entries retain the original author and license. Inclusion is not an official endorsement by an author or a skill platform.',
     aboutThree:'Your shortlist stays in this browser. This site does not receive research materials or request broker, data-platform or model-service keys.',
-    aboutCredits:'The initial skills come from Anthropic’s financial-services repository under Apache-2.0. Bilingual descriptions, categories and examples are edited by this directory and are not verbatim author text.',licenseCopy:'Read the included original license',
+    aboutCredits:'Skills come from several original repositories and retain their MIT, Apache-2.0 or other stated licenses. Bilingual descriptions, categories and examples are edited by this directory and are not verbatim author text.',licenseCopy:'Included original licenses',
     standardsTitle:'Our inclusion criteria',standardOne:'A specific finance or research use case with clear inputs, method and outputs.',standardTwo:'Traceable to an original repository and a skill file at a fixed revision.',
     standardThree:'An explicit open-source license and retained author attribution.',standardFour:'Dependencies distinguish user materials, public data and connectors that need configuration.',standardFive:'Source and execution checks are recorded separately. Unexecuted skills are not labeled tested.',
     standardsNote:'“Source checked” means the original file, revision and license were checked. Use supporting resources as instructed by the original repository.',
@@ -89,7 +91,8 @@ const messages = {
 };
 const categoryDefs = [
   {id:'all',symbol:'⌘'},{id:'research',symbol:'⌕'},{id:'earnings',symbol:'≋'},
-  {id:'valuation',symbol:'ƒ'},{id:'portfolio',symbol:'⊞'},{id:'deals',symbol:'◇'},{id:'operations',symbol:'▤'}
+  {id:'valuation',symbol:'ƒ'},{id:'portfolio',symbol:'⊞'},{id:'deals',symbol:'◇'},{id:'operations',symbol:'▤'},
+  {id:'data',symbol:'▦'},{id:'macro',symbol:'◎'},{id:'quant',symbol:'∑'},{id:'fixedincome',symbol:'⇌'}
 ];
 const workflows = {
   earnings:{label:'workflowEarnings',categories:['earnings','research','valuation']},
@@ -99,7 +102,7 @@ const workflows = {
 const params = new URLSearchParams(location.search);
 let language = params.get('lang') === 'en' ? 'en' : 'zh';
 if(!params.has('lang')){try{language = localStorage.getItem('finskills:language') === 'en' ? 'en' : 'zh';}catch{}}
-const state = {q:params.get('q')||'',category:params.get('category')||'all',workflow:params.get('workflow')||'',savedOnly:params.get('saved')==='1',sort:'curated',compare:[]};
+const state = {q:params.get('q')||'',category:params.get('category')||'all',repository:params.get('repo')||'all',workflow:params.get('workflow')||'',savedOnly:params.get('saved')==='1',sort:'curated',compare:[]};
 if(!categoryDefs.some(c=>c.id===state.category))state.category='all';
 if(!workflows[state.workflow])state.workflow='';
 let catalog=null,skills=[],currentDetail=null,toastTimer=null,saved=new Set(),infoMode='standards';
@@ -112,7 +115,7 @@ const iconBookmark = '<svg viewBox="0 0 14 18" aria-hidden="true"><path d="M2 2h
 function sourceLink(value){try{const url=new URL(value);return url.protocol==='https:'&&url.hostname==='github.com'?url.href:'#';}catch{return '#';}}
 function notify(message){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').hidden=false;toastTimer=setTimeout(()=>$('#toast').hidden=true,2500);}
 function persistSaved(){try{localStorage.setItem('finskills:saved:v1',JSON.stringify([...saved]));}catch{notify(t('saveUnavailable'));}}
-function syncURL(){const p=new URLSearchParams();if(language==='en')p.set('lang','en');if(state.q)p.set('q',state.q);if(state.category!=='all')p.set('category',state.category);if(state.workflow)p.set('workflow',state.workflow);if(state.savedOnly)p.set('saved','1');history.replaceState(null,'',location.pathname+(p.size?'?'+p.toString():'')+location.hash);}
+function syncURL(){const p=new URLSearchParams();if(language==='en')p.set('lang','en');if(state.q)p.set('q',state.q);if(state.category!=='all')p.set('category',state.category);if(state.repository!=='all')p.set('repo',state.repository);if(state.workflow)p.set('workflow',state.workflow);if(state.savedOnly)p.set('saved','1');history.replaceState(null,'',location.pathname+(p.size?'?'+p.toString():'')+location.hash);}
 function applyLanguage(){
   document.documentElement.lang=language==='en'?'en':'zh-CN';
   document.title=language==='en'?'FinSkills Hub — AI skills for financial research':'研技集 FinSkills Hub — 金融投研技能目录';
@@ -125,12 +128,12 @@ function applyLanguage(){
   if(catalog)$('#catalog-updated').textContent=t('verifiedAt',{date:catalog.updatedAt});
 }
 function searchText(skill){
-  const values=['name','nameEn','originalName','summary','summaryEn','method','methodEn','author'].map(k=>skill[k]||'');
+  const values=['name','nameEn','originalName','summary','summaryEn','method','methodEn','author','repository'].map(k=>skill[k]||'');
   for(const key of ['tags','tagsEn','inputs','inputsEn','outputs','outputsEn','dependencies','dependenciesEn'])values.push(...(skill[key]||[]));
   values.push(messages.zh[skill.category],messages.en[skill.category]);return values.join(' ').toLocaleLowerCase();
 }
 function filteredSkills(){
-  let rows=skills.filter(s=>(state.category==='all'||s.category===state.category)&&(!state.workflow||workflows[state.workflow].categories.includes(s.category))&&(!state.savedOnly||saved.has(s.id)));
+  let rows=skills.filter(s=>(state.category==='all'||s.category===state.category)&&(state.repository==='all'||s.repository===state.repository)&&(!state.workflow||workflows[state.workflow].categories.includes(s.category))&&(!state.savedOnly||saved.has(s.id)));
   const terms=state.q.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
   if(terms.length)rows=rows.filter(s=>terms.every(term=>searchText(s).includes(term)));
   if(state.sort==='name')rows.sort((a,b)=>field(a,'name').localeCompare(field(b,'name'),language==='en'?'en':'zh-CN'));
@@ -138,7 +141,19 @@ function filteredSkills(){
   return rows;
 }
 function renderCategories(){
-  $('#categories').innerHTML=categoryDefs.map(c=>'<button class="category-button'+(c.id===state.category?' active':'')+'" data-category="'+c.id+'" type="button" aria-pressed="'+(c.id===state.category)+'"><span class="category-symbol" aria-hidden="true">'+esc(c.symbol)+'</span><span>'+esc(t(c.id))+'</span><span class="category-count">'+(c.id==='all'?skills.length:skills.filter(s=>s.category===c.id).length)+'</span></button>').join('');
+  $('#categories').innerHTML=categoryDefs.filter(c=>c.id==='all'||skills.some(s=>s.category===c.id)).map(c=>'<button class="category-button'+(c.id===state.category?' active':'')+'" data-category="'+c.id+'" type="button" aria-pressed="'+(c.id===state.category)+'"><span class="category-symbol" aria-hidden="true">'+esc(c.symbol)+'</span><span>'+esc(t(c.id))+'</span><span class="category-count">'+(c.id==='all'?skills.length:skills.filter(s=>s.category===c.id).length)+'</span></button>').join('');
+}
+function sourceGroups(){
+  return [...new Set(skills.map(s=>s.repository))].map(repository=>{
+    const first=skills.find(s=>s.repository===repository),source=(catalog.sources||[]).find(s=>s.repository===repository)||{};
+    return {...source,repository,commit:source.commit||first.commit,license:source.license||first.license,count:skills.filter(s=>s.repository===repository).length};
+  });
+}
+function renderSources(){
+  const sources=sourceGroups();
+  $('#source-filter').innerHTML='<option value="all">'+esc(t('allSources'))+'</option>'+sources.map(s=>'<option value="'+esc(s.repository)+'">'+esc(s.repository.replace('https://github.com/',''))+' ('+s.count+')</option>').join('');
+  $('#source-filter').value=state.repository;$('#source-summary').textContent=t('sourceCount',{n:sources.length});
+  $('#source-list').innerHTML=sources.map(s=>'<article class="source-card"><p class="source-license">'+esc(s.license)+'</p><h3>'+esc(s.repository.replace('https://github.com/',''))+'</h3><p>'+esc(field(s,'description')||'')+'</p><div class="source-card-bottom"><span>'+esc(t('includedCount',{n:s.count}))+'</span><button class="text-link" type="button" data-repository="'+esc(s.repository)+'">'+esc(t('filterSource'))+'</button></div><a class="source-repository-link" href="'+sourceLink(s.repository+'/tree/'+s.commit)+'" target="_blank" rel="noopener noreferrer">'+esc(t('openRepository'))+' ↗</a></article>').join('');
 }
 function skillRow(s){
   const glyph=categoryDefs.find(c=>c.id===s.category)?.symbol||'研',name=field(s,'name');
@@ -154,7 +169,7 @@ function skillRow(s){
     '<button class="compare-button" data-compare="'+esc(s.id)+'" type="button" aria-pressed="'+state.compare.includes(s.id)+'" aria-label="'+esc(t('compare')+': '+name)+'"><span class="compare-symbol">'+(state.compare.includes(s.id)?'✓':'')+'</span>'+esc(t('compare'))+'</button></div></div></article>';
 }
 function render(){
-  renderCategories();const rows=filteredSkills();$('#result-count').textContent=t(state.savedOnly?'savedResults':'results',{n:rows.length});
+  renderCategories();renderSources();const rows=filteredSkills();$('#result-count').textContent=t(state.savedOnly?'savedResults':'results',{n:rows.length});
   $('#saved-count').textContent=String(skills.filter(s=>saved.has(s.id)).length);$('#saved-filter').setAttribute('aria-pressed',String(state.savedOnly));
   $('#skills-list').innerHTML=rows.length?rows.map(skillRow).join(''):'<div class="empty-state"><h3>'+esc(t(state.savedOnly?'emptySaved':'emptyTitle'))+'</h3><p>'+esc(t(state.savedOnly?'emptySavedNote':'emptyNote'))+'</p><button class="button button-quiet" type="button" data-reset>'+esc(t('clearFilters'))+'</button></div>';
   $('#active-workflow').hidden=!state.workflow;if(state.workflow)$('#active-workflow span').textContent=t('workflowActive',{name:t(workflows[state.workflow].label)});
@@ -199,11 +214,12 @@ function renderComparison(){
 }
 function openCompare(){if(state.compare.length<2)return;renderComparison();$('#compare-dialog').showModal();}
 function renderInfo(){
-  $('#info-content').innerHTML=infoMode==='about'?'<h2 id="info-title">'+esc(t('aboutTitle'))+'</h2>'+['aboutOne','aboutTwo','aboutThree','aboutCredits'].map(key=>'<p>'+esc(t(key))+'</p>').join('')+'<p><a href="/licenses/anthropic-financial-services-LICENSE.txt" target="_blank" rel="noopener noreferrer">'+esc(t('licenseCopy'))+'</a></p>':
+  const licenses=(catalog.sources||[]).filter(s=>s.licenseFile&&/^\/licenses\/[\w.-]+$/.test(s.licenseFile));
+  $('#info-content').innerHTML=infoMode==='about'?'<h2 id="info-title">'+esc(t('aboutTitle'))+'</h2>'+['aboutOne','aboutTwo','aboutThree','aboutCredits'].map(key=>'<p>'+esc(t(key))+'</p>').join('')+'<h3>'+esc(t('licenseCopy'))+'</h3><ul>'+licenses.map(s=>'<li><a href="'+esc(s.licenseFile)+'" target="_blank" rel="noopener noreferrer">'+esc(s.repository.replace('https://github.com/',''))+' · '+esc(s.license)+'</a></li>').join('')+'</ul>':
     '<h2 id="info-title">'+esc(t('standardsTitle'))+'</h2><ul>'+['standardOne','standardTwo','standardThree','standardFour','standardFive'].map(key=>'<li>'+esc(t(key))+'</li>').join('')+'</ul><p>'+esc(t('standardsNote'))+'</p>';
 }
 function openInfo(mode='standards'){infoMode=mode;renderInfo();$('#info-dialog').showModal();}
-function resetFilters(){state.q='';state.category='all';state.workflow='';state.savedOnly=false;$('#search').value='';render();}
+function resetFilters(){state.q='';state.category='all';state.repository='all';state.workflow='';state.savedOnly=false;$('#search').value='';render();}
 function moveToCatalog(){$('#catalog').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
 function switchLanguage(){
   language=language==='en'?'zh':'en';try{localStorage.setItem('finskills:language',language);}catch{}
@@ -215,14 +231,16 @@ document.addEventListener('click',event=>{
   if(button.dataset.save)toggleSaved(button.dataset.save);
   if(button.dataset.compare)toggleCompare(button.dataset.compare);
   if(button.dataset.category){state.category=button.dataset.category;state.workflow='';render();}
-  if(button.dataset.workflow){state.workflow=button.dataset.workflow;state.category='all';state.q='';state.savedOnly=false;$('#search').value='';render();moveToCatalog();}
+  if(button.dataset.workflow){state.workflow=button.dataset.workflow;state.category='all';state.repository='all';state.q='';state.savedOnly=false;$('#search').value='';render();moveToCatalog();}
+  if(button.dataset.repository){state.repository=button.dataset.repository;state.category='all';state.workflow='';state.q='';state.savedOnly=false;$('#search').value='';render();moveToCatalog();}
   if(button.hasAttribute('data-reset'))resetFilters();
 });
 $('#search').value=state.q;$('#search').addEventListener('input',event=>{state.q=event.target.value;render();});
 $('#sort').addEventListener('change',event=>{state.sort=event.target.value;render();});
+$('#source-filter').addEventListener('change',event=>{state.repository=event.target.value;render();});
 $('#clear-filters').addEventListener('click',resetFilters);
 $('#saved-filter').addEventListener('click',()=>{state.savedOnly=!state.savedOnly;render();});
-$('#saved-header').addEventListener('click',()=>{state.savedOnly=true;state.q='';state.category='all';state.workflow='';$('#search').value='';render();moveToCatalog();});
+$('#saved-header').addEventListener('click',()=>{state.savedOnly=true;state.q='';state.category='all';state.repository='all';state.workflow='';$('#search').value='';render();moveToCatalog();});
 $('#clear-workflow').addEventListener('click',()=>{state.workflow='';render();});
 $('#compare-clear').addEventListener('click',()=>{state.compare=[];render();});
 $('#compare-open').addEventListener('click',openCompare);
@@ -238,7 +256,7 @@ document.addEventListener('keydown',event=>{if(event.key==='/'&&!document.queryS
 async function loadCatalog(){
   try{
     const response=await fetch('/data/catalog.json',{cache:'no-cache'});if(!response.ok)throw new Error('catalog unavailable');catalog=await response.json();
-    if(!Array.isArray(catalog.skills)||!catalog.skills.length)throw new Error('empty catalog');skills=catalog.skills;applyLanguage();render();
+    if(!Array.isArray(catalog.skills)||!catalog.skills.length)throw new Error('empty catalog');skills=catalog.skills;if(state.repository!=='all'&&!skills.some(s=>s.repository===state.repository))state.repository='all';applyLanguage();render();
   }catch{
     $('#result-count').textContent=t('unavailable');$('#skills-list').innerHTML='<div class="empty-state"><h3>'+esc(t('loadError'))+'</h3><p>'+esc(t('loadErrorNote'))+'</p><button id="retry-catalog" class="button button-quiet" type="button">'+esc(t('retry'))+'</button></div>';
     $('#retry-catalog').addEventListener('click',loadCatalog);
