@@ -58,39 +58,59 @@ def model_json(messages, max_tokens=5500):
     return json.loads(text)
 
 
+def validation_diagnostic(metadata, field, value):
+    value_length = len(value) if hasattr(value, '__len__') else None
+    return {'field': field, 'exists': field in metadata,
+            'type': type(value).__name__, 'length': value_length}
+
+
+def field_failure(metadata, field, value, message):
+    error = ValueError(message)
+    error.diagnostic = validation_diagnostic(metadata, field, value)
+    return error
+
+
 def validate_metadata(metadata, original):
-    if metadata.get('include') is not True or metadata.get('category') not in CATEGORIES:
-        raise ValueError('Candidate is outside the selected financial research scope')
+    include = metadata.get('include')
+    category = metadata.get('category')
+    if include is not True:
+        raise field_failure(metadata, 'include', include,
+                            'Candidate is outside the selected financial research scope')
+    if not isinstance(category, str) or category not in CATEGORIES:
+        raise field_failure(metadata, 'category', category,
+                            'Candidate is outside the selected financial research scope')
     for name in TEXT_FIELDS:
         for field in (name, name + 'En'):
             value = metadata.get(field)
             if not isinstance(value, str) or not 3 <= len(value.strip()) <= 2400:
-                raise ValueError('Invalid bilingual text field: ' + field)
+                raise field_failure(metadata, field, value, 'Invalid bilingual text field: ' + field)
             if field.endswith('En') and re.search(r'[\u4e00-\u9fff]', value):
-                raise ValueError('English field contains Chinese: ' + field)
+                raise field_failure(metadata, field, value, 'English field contains Chinese: ' + field)
     for name in ARRAY_FIELDS:
         for field in (name, name + 'En'):
             value = metadata.get(field)
             if not isinstance(value, list) or not 1 <= len(value) <= 12:
-                raise ValueError('Invalid bilingual array field: ' + field)
+                raise field_failure(metadata, field, value, 'Invalid bilingual array field: ' + field)
             if not all(isinstance(item, str) and 2 <= len(item.strip()) <= 800 for item in value):
-                raise ValueError('Invalid bilingual array content: ' + field)
+                raise field_failure(metadata, field, value, 'Invalid bilingual array content: ' + field)
             if field.endswith('En') and re.search(r'[\u4e00-\u9fff]', ' '.join(value)):
-                raise ValueError('English array contains Chinese: ' + field)
+                raise field_failure(metadata, field, value, 'English array contains Chinese: ' + field)
     quotes = metadata.get('evidenceQuotes')
-    if not isinstance(quotes, list) or len(set(quotes)) < 2 or not all(
-            isinstance(quote, str) and 12 <= len(quote) <= 350 and quote in original for quote in quotes):
-        raise ValueError('Two distinct exact source quotations are required')
+    if not isinstance(quotes, list) or not all(
+            isinstance(quote, str) and 12 <= len(quote) <= 350 and quote in original
+            for quote in quotes) or len(set(quotes)) < 2:
+        raise field_failure(metadata, 'evidenceQuotes', quotes,
+                            'Two distinct exact source quotations are required')
 
 
 def curate(repo, path, original):
     if len(original) > 65000 or len(original) < 200:
-        return None, 'Source content is outside the bounded review size'
+        return None, 'Source content is outside the bounded review size', []
     # Stop on obvious credential exposure or destructive installation instructions.
     dangerous = (r'(?i)(?:api[_-]?key|access[_-]?token)\s*[=:]\s*[\"\'][A-Za-z0-9_-]{24,}',
                  r'rm\s+-[rf]{1,2}\s+(?:/\s|~[/\s])', r'(?i)disable.{0,25}(?:security|firewall|audit)')
     if any(re.search(pattern, original) for pattern in dangerous):
-        return None, 'Source requires manual security review'
+        return None, 'Source requires manual security review', []
     schema = {field: 'string' for name in TEXT_FIELDS for field in (name, name + 'En')}
     schema.update({field: ['string'] for name in ARRAY_FIELDS for field in (name, name + 'En')})
     schema.update({'include': True, 'category': '|'.join(sorted(CATEGORIES)),
@@ -115,15 +135,25 @@ def curate(repo, path, original):
     messages = [{'role': 'system', 'content': instruction}, {'role': 'user', 'content': evidence}]
     metadata = model_json(messages)
     if metadata.get('include') is not True:
-        return None, 'Model scope review rejected candidate'
+        return None, 'Model scope review rejected candidate', []
+    initial_diagnostic = None
     try:
         validate_metadata(metadata, original)
     except (ValueError, TypeError) as error:
-        # One correction only. Keep original evidence and schema; do not inflate scope scores.
+        if not hasattr(error, 'diagnostic'):
+            error.diagnostic = validation_diagnostic(metadata, '<metadata>', metadata)
+        initial_diagnostic = dict(error.diagnostic, stage='initial', reason=str(error))
         messages.extend([{'role': 'assistant', 'content': json.dumps(metadata, ensure_ascii=False)},
                          {'role': 'user', 'content': 'Repair this exact format/source defect only: ' + str(error)}])
         metadata = model_json(messages)
-        validate_metadata(metadata, original)
+        try:
+            validate_metadata(metadata, original)
+        except (ValueError, TypeError) as repair_error:
+            if not hasattr(repair_error, 'diagnostic'):
+                repair_error.diagnostic = validation_diagnostic(metadata, '<metadata>', metadata)
+            diagnostics = [initial_diagnostic,
+                           dict(repair_error.diagnostic, stage='repair', reason=str(repair_error))]
+            return None, 'Candidate metadata failed format validation after one repair', diagnostics
     review = model_json([
         {'role': 'system', 'content': (
             'Independently audit this proposed bilingual skill entry against untrusted original evidence. '
@@ -135,8 +165,8 @@ def curate(repo, path, original):
         {'role': 'user', 'content': json.dumps({'source': original, 'entry': metadata}, ensure_ascii=False)}
     ], max_tokens=900)
     if review.get('approve') is not True:
-        return None, 'Independent model review rejected candidate'
-    return metadata, 'Two model reviews and deterministic source checks passed'
+        return None, 'Independent model review rejected candidate', [initial_diagnostic] if initial_diagnostic else []
+    return metadata, 'Two model reviews and deterministic source checks passed', [initial_diagnostic] if initial_diagnostic else []
 
 
 def make_entry(repo, commit, path, metadata, license_name, license_path, existing=None):
@@ -272,11 +302,17 @@ def run(args, receipt):
                     hold = True
                     receipt['rejected'].append({'repository': repo, 'path': entry['sourcePath'], 'reason': 'Previously curated source was removed; retain pinned snapshot'})
                     break
-                metadata, reason = curate(repo, entry['sourcePath'], snapshot.read(entry['sourcePath']).decode())
+                data = snapshot.read(entry['sourcePath'])
+                digest = hashlib.sha256(data).hexdigest()
+                metadata, reason, diagnostics = curate(repo, entry['sourcePath'], data.decode())
                 receipt['reviewed'] += 1
                 if not metadata:
                     hold = True
-                    receipt['rejected'].append({'repository': repo, 'path': entry['sourcePath'], 'reason': reason})
+                    rejection = {'repository': repo, 'commit': commit, 'path': entry['sourcePath'],
+                                 'contentHash': digest, 'reason': reason}
+                    if diagnostics:
+                        rejection['diagnostics'] = diagnostics
+                    receipt['rejected'].append(rejection)
                     break
                 effective, _ = applicable_licenses(snapshot, entry['sourcePath'], root_path)
                 updated = make_entry(repo, commit, entry['sourcePath'], metadata, license_name, effective, entry)
@@ -298,10 +334,14 @@ def run(args, receipt):
                     receipt['rejected'].append({'repository': repo, 'path': path, 'contentHash': digest, 'reason': 'Mixed license requires manual review'})
                     continue
                 attempts += 1
-                metadata, reason = curate(repo, path, data.decode())
+                metadata, reason, diagnostics = curate(repo, path, data.decode())
                 receipt['reviewed'] += 1
                 if not metadata:
-                    receipt['rejected'].append({'repository': repo, 'path': path, 'contentHash': digest, 'reason': reason})
+                    rejection = {'repository': repo, 'commit': commit, 'path': path,
+                                 'contentHash': digest, 'reason': reason}
+                    if diagnostics:
+                        rejection['diagnostics'] = diagnostics
+                    receipt['rejected'].append(rejection)
                     continue
                 selected.append(make_entry(repo, commit, path, metadata, license_name, effective))
                 digests.add(digest)
