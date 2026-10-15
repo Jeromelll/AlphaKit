@@ -52,3 +52,5 @@ The root [LICENSE](LICENSE) applies to AlphaKit's own code, curation work, and o
 ## Contributing
 
 Propose new entries by Pull Request with the original repository and pinned revision, a verifiable `SKILL.md` path, license and any required `NOTICE`, a concrete example, and dependencies. Maintainers review attribution, quotation accuracy, bilingual content, and stated limits. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+The three original research skills, installation instructions and synthetic examples are documented in [Original research skills](docs/RESEARCH_SKILLS.md).
