@@ -5627,12 +5627,226 @@
       "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "author": "Jeromelll",
+      "repository": "https://github.com/Jeromelll/AlphaKit",
+      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/incremental-business-sizing/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "id": "incremental-business-sizing",
+      "originalName": "incremental-business-sizing",
+      "name": "增量业务收入与利润测算",
+      "nameEn": "Incremental business revenue and profit sizing",
+      "category": "research",
+      "sourcePath": "skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/incremental-business-sizing/SKILL.md",
+      "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
+      "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
+      "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
+      "methodEn": "Define billable activity, resource and timing constraints, annotate units, periods and sources, and evaluate the dependency graph for each scenario. Sensitivity axes replace two specified inputs in the same model.",
+      "environment": "支持自定义 SKILL.md 的宿主与本地 Python；宿主自动调用未实测。",
+      "environmentEn": "A host that supports custom SKILL.md packages and local Python; automatic host invocation has not been tested.",
+      "dependencies": [
+        "必需：Python 标准库",
+        "可选：配合 sellside-model-exhibits 输出图表和工作簿"
+      ],
+      "dependenciesEn": [
+        "Required: Python standard library",
+        "Optional: sellside-model-exhibits for charts and workbooks"
+      ],
+      "inputs": [
+        "对象、币种、预测期间与情景定义",
+        "带单位、来源、约束和公式的 JSON 参数",
+        "敏感性输入轴与固定假设"
+      ],
+      "inputsEn": [
+        "Subject, currency, forecast period and scenarios",
+        "JSON inputs with units, sources, bounds and formulas",
+        "Sensitivity input axes and fixed assumptions"
+      ],
+      "outputs": [
+        "可复算的情景收入、利润和 EPS",
+        "双变量敏感性矩阵",
+        "缺失参数、阻断值和对账差异诊断"
+      ],
+      "outputsEn": [
+        "Reproducible scenario revenue, profit and EPS",
+        "Two-input sensitivity matrices",
+        "Diagnostics for missing inputs, blocked values and reconciliation differences"
+      ],
+      "example": "原创合成示例：数量 100 × 单价 20 得到收入 2,000；经营利润率 25%、税率 20%、股数 100 时 EPS 为 4。移除股数后 EPS 保持未知。",
+      "exampleEn": "An original synthetic example uses 100 units at a price of 20 for revenue of 2,000. A 25% operating margin, 20% tax rate and 100 shares produce EPS of 4. Removing the share count keeps EPS unknown.",
+      "notes": "示例均为原创合成数据。引擎只检查算术与接口，不验证来源、会计处理或投资结论；宿主自动调用仍未验证。",
+      "notesEn": "Examples use original synthetic data. The engine checks arithmetic and interfaces, not source quality, accounting treatment or investment conclusions. Automatic host invocation remains unverified.",
+      "tags": [
+        "增量测算",
+        "量价驱动",
+        "利润桥",
+        "情景与敏感性"
+      ],
+      "tagsEn": [
+        "incremental sizing",
+        "volume and price",
+        "profit bridge",
+        "scenarios and sensitivities"
+      ],
+      "evidenceQuotes": [
+        "脚本检查表达式、依赖、范围、缺失值和已报告结果差异。",
+        "缺少税率、股数、成本或运行时间时保留未知。"
+      ]
+    },
+    {
+      "author": "Jeromelll",
+      "repository": "https://github.com/Jeromelll/AlphaKit",
+      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/sellside-model-exhibits/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "id": "sellside-model-exhibits",
+      "originalName": "sellside-model-exhibits",
+      "name": "测算表与敏感性矩阵",
+      "nameEn": "Financial model exhibits and sensitivity tables",
+      "category": "operations",
+      "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/sellside-model-exhibits/SKILL.md",
+      "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
+      "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
+      "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
+      "methodEn": "Read versioned calculation results and format rows by role, expression and status. Every output format shares the same numeric source, and formulas reference valid inputs within the same scenario.",
+      "environment": "本地 Python 与支持自定义技能的宿主；文档导入需另用目标平台正式接口。",
+      "environmentEn": "Local Python and a host that supports custom skills. Document import requires the target platform official interface.",
+      "dependencies": [
+        "必需：Python、Pillow、openpyxl",
+        "必需：能显示所需字符的系统字体",
+        "输入：incremental-sizing-results/v1 JSON"
+      ],
+      "dependenciesEn": [
+        "Required: Python, Pillow and openpyxl",
+        "Required: system fonts covering the output characters",
+        "Input: incremental-sizing-results/v1 JSON"
+      ],
+      "inputs": [
+        "已完成测算的 results.json",
+        "对象、期间、币种、单位及来源",
+        "可选的敏感性轴、固定条件和脚注"
+      ],
+      "inputsEn": [
+        "A completed model results.json",
+        "Subject, period, currency, units and sources",
+        "Optional sensitivity axes, fixed conditions and footnotes"
+      ],
+      "outputs": [
+        "HTML、PNG 和带公式的 Excel 工作簿",
+        "exhibits.xml 审计数据",
+        "feishu.xml 文档原生表格片段"
+      ],
+      "outputsEn": [
+        "HTML, PNG and an Excel workbook with formulas",
+        "exhibits.xml audit data",
+        "feishu.xml native document table fragment"
+      ],
+      "example": "将增量测算技能的原创合成结果制作成三情景计算桥和数量×价格收入敏感性表；股数缺失的基准 EPS 显示为 -，不替换为零。",
+      "exampleEn": "Render the sizing skill original synthetic results as a three-scenario bridge and a units-by-price revenue sensitivity table. A missing base-case share count displays EPS as a hyphen instead of zero.",
+      "notes": "示例均为原创合成数据。工作簿设置打开重算，但生成器未运行 Microsoft Excel；字体和目标文档中的显示仍需核验。",
+      "notesEn": "Examples use original synthetic data. The workbook requests recalculation on opening, but the generator does not run Microsoft Excel. Fonts and target-document appearance still require verification.",
+      "tags": [
+        "计算桥",
+        "测算展示",
+        "敏感性矩阵",
+        "工作簿与文档"
+      ],
+      "tagsEn": [
+        "calculation bridge",
+        "model exhibits",
+        "sensitivity matrix",
+        "workbooks and documents"
+      ],
+      "evidenceQuotes": [
+        "同一份结果生成 HTML、PNG、Excel、审计 XML（exhibits.xml）及可导入飞书的正文片段（feishu.xml）。",
+        "缺失值显示 -，说明或诊断解释原因。"
+      ]
+    },
+    {
+      "author": "Jeromelll",
+      "repository": "https://github.com/Jeromelll/AlphaKit",
+      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/pre-trade-quick-brief/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false,
+      "id": "pre-trade-quick-brief",
+      "originalName": "pre-trade-quick-brief",
+      "name": "新股票快速初步研究",
+      "nameEn": "Quick initial research for a new stock",
+      "category": "research",
+      "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/pre-trade-quick-brief/SKILL.md",
+      "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
+      "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
+      "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
+      "methodEn": "Freeze the information date, connect prior expectations to new inputs, check demand, supply, timing, costs and financing dilution, and distinguish current value from a future conditional terminal value.",
+      "environment": "可阅读自定义 SKILL.md 的宿主；资料检索依赖用户已授权来源。",
+      "environmentEn": "A host that can read custom SKILL.md packages; evidence retrieval uses sources authorized by the user.",
+      "dependencies": [
+        "必需：公司或主题及可核验原始资料",
+        "可选：incremental-business-sizing 与 sellside-model-exhibits",
+        "不要求私人目录、书籍技能或内部知识库"
+      ],
+      "dependenciesEn": [
+        "Required: a company or theme and verifiable original materials",
+        "Optional: incremental-business-sizing and sellside-model-exhibits",
+        "No private directory, book skill or internal knowledge base is required"
+      ],
+      "inputs": [
+        "公司、ticker、股类或主题",
+        "叙事、事件、行情与明确资料时点",
+        "旧预测、披露和带来源的经营假设"
+      ],
+      "inputsEn": [
+        "Company, ticker, share class or theme",
+        "Narrative, events, prices and explicit information dates",
+        "Prior forecasts, disclosures and sourced operating assumptions"
+      ],
+      "outputs": [
+        "两分钟初筛结论与叙事变化表",
+        "NTM、下一完整财年和远期条件上限",
+        "估值证据、稀释后每股空间、敏感性及反证"
+      ],
+      "outputsEn": [
+        "A concise initial conclusion and narrative-change table",
+        "NTM, next full fiscal year and a future conditional earnings ceiling",
+        "Valuation evidence, diluted per-share value, sensitivities and disconfirming evidence"
+      ],
+      "example": "对未研究的新股票先解释收费对象与新增变量；合成产能例按半年投产计算收入，并在净利、股数或倍数依据缺失时保留目标待核。",
+      "exampleEn": "For a new stock, explain the billable activity and changed variables first. A synthetic capacity example weights half-year production and leaves targets unconfirmed when net profit, shares or multiple evidence is missing.",
+      "notes": "公开适配已去除私人路径和书籍模块依赖。初筛不授权交易、付费检索或对外通信；既有会话的热加载仍未验证。",
+      "notesEn": "The public adaptation removes private paths and book-module dependencies. Initial research does not authorize trading, paid retrieval or external communication. Hot loading in existing host sessions remains unverified.",
+      "tags": [
+        "新股票初筛",
+        "叙事变化",
+        "业绩天花板",
+        "前瞻估值"
+      ],
+      "tagsEn": [
+        "initial stock research",
+        "narrative changes",
+        "earnings ceiling",
+        "forward valuation"
+      ],
+      "evidenceQuotes": [
+        "本包不要求私人知识库、内部目录脚本或任何书籍技能。",
+        "未来条件终值与今日价值分栏；概率无依据就写未估。"
+      ]
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 86,
-      "repositories": 6,
+      "skills": 89,
+      "repositories": 7,
       "executionTestsRun": 0
     },
     "method": "Pinned original files and retained licenses; execution is unverified."
@@ -5787,6 +6001,35 @@
       "archiveSha256": "1b200fe96b729bf0bc20b11598f02bb3542a12dfede3c5f2364b2450609daa94",
       "description": "科技股财报深挖、美国价值投资、市场情绪与宏观流动性研究方法。",
       "descriptionEn": "Research methods for technology earnings, US value investing, market sentiment and macro liquidity."
+    },
+    {
+      "repository": "https://github.com/Jeromelll/AlphaKit",
+      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "licenseFile": "/licenses/alphakit-LICENSE.txt",
+      "licenseFiles": [
+        {
+          "sourcePath": "LICENSE",
+          "file": "/licenses/alphakit-LICENSE.txt"
+        },
+        {
+          "sourcePath": "skills/incremental-business-sizing/LICENSE",
+          "file": "/licenses/alphakit-incremental-business-sizing-LICENSE.txt"
+        },
+        {
+          "sourcePath": "skills/sellside-model-exhibits/LICENSE",
+          "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
+        },
+        {
+          "sourcePath": "skills/pre-trade-quick-brief/LICENSE",
+          "file": "/licenses/alphakit-pre-trade-quick-brief-LICENSE.txt"
+        }
+      ],
+      "archive": "Jeromelll--AlphaKit--622395dc7f746438f3f13f585cee1f30a2cf3f67.zip",
+      "archiveSha256": "e83db19bda2c44e5c9463a41d65f7cac9a66ab800acd924f38e7f4e9a6cf653f",
+      "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
+      "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }
   ]
 }
