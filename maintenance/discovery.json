@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-16T02:42:43.386623+00:00",
+  "checkedAt": "2026-10-16T05:07:16.399435+00:00",
   "query": "equity research skills in:description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
@@ -52,6 +52,34 @@
       "commit": "853f09b4d0baae747759ed31e21ed5c5b2316a5f",
       "path": "skills/skill-creator/SKILL.md",
       "contentHash": "4afbad1d930d98a0610f09bbf810f8a49de7b3187a7050d7974c3b600ae83c90",
+      "reason": "Model scope review rejected candidate"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "path": "plugins/vertical-plugins/financial-analysis/skills/pptx-author/SKILL.md",
+      "contentHash": "db3f0f249787e2a4d5baf75daf9f5e96f151d1a84e89a1215cc59716a2e97bec",
+      "reason": "Model scope review rejected candidate"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "path": "plugins/vertical-plugins/financial-analysis/skills/skill-creator/SKILL.md",
+      "contentHash": "b2e3d83f60425c2d0b9d4162efb8f9aa322b45843497340f2289f42be422801c",
+      "reason": "Model scope review rejected candidate"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "path": "plugins/vertical-plugins/financial-analysis/skills/xlsx-author/SKILL.md",
+      "contentHash": "85b5b76901a7c53f9725220251ccf0f014dc5f66a3f100e762b64fddb368cfa6",
+      "reason": "Model scope review rejected candidate"
+    },
+    {
+      "repository": "himself65/finance-skills",
+      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "path": "plugins/skill-creator/skills/skill-creator/SKILL.md",
+      "contentHash": "d957be74044c55697e60e536ff5b460bfae5d2be8825d39510d8e272d4be2752",
       "reason": "Model scope review rejected candidate"
     }
   ]

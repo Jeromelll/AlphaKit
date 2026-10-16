@@ -5631,9 +5631,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5642,7 +5642,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5701,9 +5701,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5712,7 +5712,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5773,9 +5773,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5784,7 +5784,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -5841,11 +5841,246 @@
         "本包不要求私人知识库、内部目录脚本或任何书籍技能。",
         "未来条件终值与今日价值分栏；概率无依据就写未估。"
       ]
+    },
+    {
+      "environmentEn": "Requires LibreOffice (soffice) and pdftoppm installed for validation rendering; handles .pptx/.xlsx/.csv file formats.",
+      "evidenceQuotes": [
+        "Populates investment banking pitch deck templates with data from source files.",
+        "Copy and track progress:\n\n```\nPitch Deck Progress:\n- [ ] Phase 1: Extract and validate source data",
+        "**LibreOffice is used for validation but DOES NOT render PowerPoint files accurately.**"
+      ],
+      "example": "用户提供某科技公司的 TAM 路演书空白模板与一份包含市场规模、CAGR 与可比交易数据的 Excel：先备份 pptx，核对 Excel 数字与来源报告一致，将市场定义、TAM 测算与交易可比页映射到模板版块，删除黄色指引框后以真实表格对象填充数据，转图校验字号与跨页一致性后交付，并附 LibreOffice 校验声明。",
+      "notes": "该技能为资料整理与格式化工作流，来源已核查但执行效果未经实际运行验证；LibreOffice 校验无法捕获字体替换与渐变等渲染差异，交付前须在 Microsoft PowerPoint 中人工复核。缺失数据（如未提供公司 Logo）须明确标记为数据缺口，不得臆造。",
+      "nameEn": "Investment Banking Pitch Deck Template Population",
+      "inputsEn": [
+        "PowerPoint pitch deck template file (.pptx)",
+        "Source data files (Excel, CSV, PDF reports, Word documents)",
+        "Optional: company logo image file"
+      ],
+      "summary": "一套将 Excel/CSV/PDF 等来源数据填充到现有投行路演书 PowerPoint 模板的完整工作流，覆盖数据提取校验、内容映射、模板填充、LibreOffice 视觉校验与修复循环。",
+      "summaryEn": "A complete workflow for populating investment banking pitch deck PowerPoint templates with data from Excel/CSV/PDF sources, covering data extraction and validation, content mapping, slide population, LibreOffice visual validation, and fix cycles.",
+      "environment": "需要安装 LibreOffice（soffice）与 pdftoppm 用于校验渲染；处理 .pptx/.xlsx/.csv 等文件格式。",
+      "dependenciesEn": [
+        "LibreOffice (soffice)",
+        "pdftoppm (Poppler)",
+        "PowerPoint/PDF file read-write capability"
+      ],
+      "method": "五阶段流程：(1) 备份原模板，从各来源提取数据并对照原始文件校验数字、统一单位与货币；(2) 审阅模板结构，将来源数据映射到对应版块，识别占位指引框并记录数据缺口；(3) 删除彩色指引框、按模板风格填充内容，表格必须为真实表格对象而非竖线/制表符文本，箭头为 PowerPoint 形状；(4) 用 soffice 转 PDF 再转图片做逐页校验清单（对比度、表格对象、字号一致、无越界、跨页数字一致），最多三个修复循环后升级给用户；(5) 交付前核对数据准确性、引用脚注与模板合规清单。计算值按 CAGR、共识等标准公式复核；LibreOffice 渲染局限需在交付时声明并建议在 Microsoft PowerPoint 中复核。",
+      "exampleEn": "A user provides a blank TAM pitch deck template for a tech company plus an Excel with market size, CAGR, and transaction comps data: back up the pptx, verify the Excel figures against source reports, map market definition, TAM sizing, and comps slides to template sections, delete yellow instruction boxes, populate data as real table objects, validate font sizes and cross-slide consistency via rendered images, then deliver with the LibreOffice validation disclaimer.",
+      "outputsEn": [
+        "Populated, template-compliant pitch deck .pptx file",
+        "Source footnotes plus validation and fix documentation",
+        "List of data gaps and unresolved issues (e.g., missing logo)"
+      ],
+      "tagsEn": [
+        "investment banking",
+        "pitch deck",
+        "PowerPoint",
+        "template population",
+        "format validation",
+        "data presentation"
+      ],
+      "dependencies": [
+        "LibreOffice (soffice)",
+        "pdftoppm (Poppler)",
+        "PowerPoint/PDF 文件读写能力"
+      ],
+      "methodEn": "Five phases: (1) back up the original template, extract data from each source, validate figures against originals, standardize units and currency; (2) review template structure, map source data to sections, identify placeholder instruction boxes, and note data gaps; (3) remove colored instruction boxes and populate content per template style, with tables as actual table objects (never pipe/tab-separated text) and arrows as PowerPoint shapes; (4) validate each slide via soffice-to-PDF-to-image checks (contrast, table objects, font consistency, boundaries, cross-slide figure consistency) in up to three fix cycles before escalation; (5) run final checklists on data accuracy, citations/footnotes, and template compliance. Calculations are verified against CAGR and consensus formula standards; the LibreOffice rendering limitation must be disclosed and PowerPoint review recommended.",
+      "inputs": [
+        "PowerPoint 路演书模板文件（.pptx）",
+        "来源数据文件（Excel、CSV、PDF 报告、Word 文档等）",
+        "可选：公司 Logo 图片文件"
+      ],
+      "tags": [
+        "投行",
+        "路演书",
+        "PowerPoint",
+        "模板填充",
+        "格式校验",
+        "数据可视化"
+      ],
+      "name": "投行路演书模板填充",
+      "category": "deals",
+      "notesEn": "This skill is a data preparation and formatting workflow; the source has been checked but execution is unverified in a live run. LibreOffice validation cannot catch font substitution or gradient rendering differences, so manual review in Microsoft PowerPoint is required before distribution. Missing data (e.g., no company logo supplied) must be flagged explicitly as a data gap and never fabricated.",
+      "outputs": [
+        "已填充数据并符合模板格式的路演书 .pptx 文件",
+        "数据来源脚注与验证/修复说明",
+        "数据缺口与未解决事项清单（如缺失 Logo）"
+      ],
+      "id": "skill-36cb266c11d21483",
+      "author": "anthropics",
+      "originalName": "pitch-deck",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/investment-banking/skills/pitch-deck/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/investment-banking/skills/pitch-deck/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "environmentEn": "Requires Node.js >= 20 and the global npm package @jackwener/opencli; Discord Desktop launched with --remote-debugging-port=9232; environment variable OPENCLI_CDP_ENDPOINT=http://127.0.0.1:9232 set. No bot account or token extraction needed.",
+      "evidenceQuotes": [
+        "Reads Discord for financial research using [opencli](https://github.com/jackwener/opencli), a universal CLI tool that bridges desktop apps and web services to the terminal via Chrome DevTools Protocol (CDP).",
+        "Lead with what matters for the user's research question rather than a raw dump. Attribute each message (username, timestamp, content), group search results by theme, and note the bullish or bearish lean"
+      ],
+      "example": "启动带 CDP 的 Discord 并设置 OPENCLI_CDP_ENDPOINT 后，依次执行：opencli discord-app status；opencli discord-app servers -f json；opencli discord-app channels -f json；在应用中切换到目标频道后 opencli discord-app read 50 -f json；opencli discord-app search \"price target\" -f json，再按主题归纳多空观点并以表格呈现频道列表。",
+      "notes": "opencli 只能读取 Discord 中当前活跃的服务器与频道，跨频道需用户先在应用内切换；搜索依赖 Discord 内置搜索，可能受速率限制；社区消息属非权威情绪线索，不构成投资建议。本条目为源码审查所得，未实际执行命令验证。",
+      "nameEn": "Discord Read-Only Financial Community Reader",
+      "inputsEn": [
+        "Currently active Discord server/channel",
+        "User-specified search keywords (e.g., tickers, topics)",
+        "Message read count (e.g., 20-50)"
+      ],
+      "summary": "通过 opencli 经 CDP 连接 Discord 桌面客户端，以只读方式读取交易/加密社区的服务器、频道、成员与消息，并按主题归纳多空倾向用于金融研究。",
+      "summaryEn": "Uses opencli over CDP against the Discord desktop app to read-only inspect trading/crypto community servers, channels, members, and messages, then summarize bullish/bearish leans by theme for financial research.",
+      "environment": "需安装 Node.js >= 20 与全局 npm 包 @jackwener/opencli；Discord 桌面端以 --remote-debugging-port=9232 启动；设置环境变量 OPENCLI_CDP_ENDPOINT=http://127.0.0.1:9232。无需机器人账号或令牌提取。",
+      "dependenciesEn": [
+        "Node.js >= 20",
+        "@jackwener/opencli (global npm install)",
+        "Discord Desktop client (CDP port 9232)",
+        "OPENCLI_CDP_ENDPOINT environment variable"
+      ],
+      "method": "先运行 opencli discord-app status 验证连接；列出服务器与频道确认上下文；在活跃频道读取最近消息（建议先读 20-50 条）；用内置搜索按关键词（如股票代码、价格目标）检索；将结果按用户名与时间戳归因、按主题分组，标注共识与逆向观点。全程只读，不发送、回复、编辑或删除任何消息。",
+      "exampleEn": "After launching Discord with CDP and setting OPENCLI_CDP_ENDPOINT, run: opencli discord-app status; opencli discord-app servers -f json; opencli discord-app channels -f json; after navigating to the target channel in the app, opencli discord-app read 50 -f json; opencli discord-app search \"price target\" -f json, then group bullish/bearish views by theme and present channel listings as a table.",
+      "outputsEn": [
+        "Structured server/channel/member listings (JSON/YAML)",
+        "Recent messages attributed by username and timestamp",
+        "Thematic summary of views with bullish/bearish lean and consensus vs contrarian flags"
+      ],
+      "tagsEn": [
+        "Discord",
+        "community sentiment",
+        "read-only",
+        "opencli",
+        "CDP",
+        "crypto communities",
+        "trading communities"
+      ],
+      "dependencies": [
+        "Node.js >= 20",
+        "@jackwener/opencli（npm 全局安装）",
+        "Discord 桌面客户端（CDP 端口 9232）",
+        "OPENCLI_CDP_ENDPOINT 环境变量"
+      ],
+      "methodEn": "First verify connectivity with opencli discord-app status; list servers and channels to confirm context; read recent messages in the active channel (start with 20-50); use built-in search for keywords such as tickers or price targets; attribute results by username and timestamp, group by theme, and flag consensus vs contrarian views. Strictly read-only: never send, react, edit, or delete messages.",
+      "inputs": [
+        "Discord 桌面端当前活跃频道",
+        "用户指定的搜索关键词（如股票代码、话题）",
+        "读取条数（如 20-50）"
+      ],
+      "tags": [
+        "Discord",
+        "社群情绪",
+        "只读",
+        "opencli",
+        "CDP",
+        "加密社区",
+        "交易社区"
+      ],
+      "name": "Discord 只读金融社群研读",
+      "category": "research",
+      "notesEn": "opencli only reads the currently active server/channel in Discord; switching channels requires the user to navigate in the app first. Search relies on Discord's built-in search and may be rate limited. Community messages are non-authoritative sentiment signals, not investment advice. This entry is source-checked but execution-unverified.",
+      "outputs": [
+        "服务器/频道/成员结构化列表（JSON/YAML）",
+        "带用户名与时间戳的最近消息",
+        "按主题分组、标注多空倾向与共识/逆向的观点摘要"
+      ],
+      "id": "skill-5ce866f0e81f77a0",
+      "author": "himself65",
+      "originalName": "discord-reader",
+      "repository": "https://github.com/himself65/finance-skills",
+      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "sourcePath": "plugins/social-readers/skills/discord-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/social-readers/skills/discord-reader/SKILL.md",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "environmentEn": "Requires Node.js >= 20, Chrome with the Browser Bridge extension installed, an active linkedin.com login in Chrome, and opencli (npm install -g @jackwener/opencli).",
+      "evidenceQuotes": [
+        "Read LinkedIn for financial research through opencli: the user's feed, and job\n  search with location, seniority, job type, remote, company, and date filters.",
+        "highlight market commentary, analyst takes, and earnings reactions, and note the bullish or bearish lean and where views are consensus or contrarian."
+      ],
+      "example": "opencli linkedin timeline --limit 20 -f json；opencli linkedin search \"portfolio manager\" --location \"New York\" --limit 15 -f json",
+      "notes": "严格只读，不能发帖、点赞、评论、连接、私信或投递。该技能经来源核对但执行未验证；访问失败或空结果（EmptyResultError、限流）不代表无市场事件或无风险，仅表示数据获取受限。请保护浏览器会话隐私。",
+      "nameEn": "LinkedIn Read-Only Financial Research",
+      "inputsEn": [
+        "User research question or job query",
+        "LinkedIn feed and job search results (author, headline, text, engagement, title/company/location/salary)",
+        "Filters: --limit, --location, --experience-level, --job-type, --remote, --date-posted"
+      ],
+      "summary": "通过opencli以只读方式读取LinkedIn信息流与职位搜索，用于追踪分析师市场评论、盈利反应与金融/交易类职位。",
+      "summaryEn": "Read-only LinkedIn access via opencli for feed monitoring of analyst market commentary, earnings reactions, and finance/trading job searches.",
+      "environment": "需Node.js >= 20、Chrome已安装Browser Bridge扩展、Chrome中已登录linkedin.com，并安装opencli（npm install -g @jackwener/opencli）。",
+      "dependenciesEn": [
+        "opencli (@jackwener/opencli)",
+        "Node.js >= 20",
+        "Chrome Browser Bridge extension",
+        "Active linkedin.com login session in Chrome"
+      ],
+      "method": "先运行opencli doctor确认浏览器会话可用；读取feed用opencli linkedin timeline --limit N -f json；职位搜索用opencli linkedin search并配合--location/--experience-level/--job-type/--remote/--date-posted等过滤；结果按作者、内容、互动数和URL归因，标注多空倾向及共识或逆向观点。",
+      "exampleEn": "opencli linkedin timeline --limit 20 -f json; opencli linkedin search \"portfolio manager\" --location \"New York\" --limit 15 -f json",
+      "outputsEn": [
+        "Structured feed digest: author, headline, content, bullish/bearish lean, consensus vs contrarian framing",
+        "Job listings: title, company, location, salary when available, posting date, and URL",
+        "Formatted output (json/yaml/md/csv/table)"
+      ],
+      "tagsEn": [
+        "LinkedIn",
+        "sentiment",
+        "alternative data",
+        "job search",
+        "read-only",
+        "CLI"
+      ],
+      "dependencies": [
+        "opencli (@jackwener/opencli)",
+        "Node.js >= 20",
+        "Chrome Browser Bridge扩展",
+        "Chrome中有效的linkedin.com登录会话"
+      ],
+      "methodEn": "Verify session with opencli doctor; read feed with opencli linkedin timeline --limit N -f json; search jobs with opencli linkedin search plus filters such as --location, --experience-level, --job-type, --remote, --date-posted; present results attributed by author, content, engagement, and URL, noting bullish/bearish lean and consensus vs contrarian views.",
+      "inputs": [
+        "用户的研究问题或职位查询词",
+        "LinkedIn feed与职位搜索结果（作者、标题、正文、互动数、职位/公司/地点/薪资）",
+        "过滤参数：--limit、--location、--experience-level、--job-type、--remote、--date-posted"
+      ],
+      "tags": [
+        "LinkedIn",
+        "市场情绪",
+        "另类数据",
+        "职位搜索",
+        "只读",
+        "CLI"
+      ],
+      "name": "LinkedIn只读金融研究阅读",
+      "category": "research",
+      "notesEn": "Strictly read-only: no posting, liking, commenting, connecting, messaging, or applying. Source-checked but execution-unverified; access failures or empty results (EmptyResultError, rate limits) do not mean no market events or no risk — they indicate limited data availability. Keep browser session details private.",
+      "outputs": [
+        "结构化feed摘要：作者、标题、内容、多空倾向、共识/逆向判断",
+        "职位清单：职位、公司、地点、薪资（如有）、发布日期与链接",
+        "格式化输出（json/yaml/md/csv/table）"
+      ],
+      "id": "skill-6a2985cf69a4f8d8",
+      "author": "himself65",
+      "originalName": "linkedin-reader",
+      "repository": "https://github.com/himself65/finance-skills",
+      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "sourcePath": "plugins/social-readers/skills/linkedin-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/social-readers/skills/linkedin-reader/SKILL.md",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 89,
+      "skills": 92,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -6004,7 +6239,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "622395dc7f746438f3f13f585cee1f30a2cf3f67",
+      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -6018,16 +6253,16 @@
           "file": "/licenses/alphakit-incremental-business-sizing-LICENSE.txt"
         },
         {
-          "sourcePath": "skills/sellside-model-exhibits/LICENSE",
-          "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
-        },
-        {
           "sourcePath": "skills/pre-trade-quick-brief/LICENSE",
           "file": "/licenses/alphakit-pre-trade-quick-brief-LICENSE.txt"
+        },
+        {
+          "sourcePath": "skills/sellside-model-exhibits/LICENSE",
+          "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--622395dc7f746438f3f13f585cee1f30a2cf3f67.zip",
-      "archiveSha256": "e83db19bda2c44e5c9463a41d65f7cac9a66ab800acd924f38e7f4e9a6cf653f",
+      "archive": "Jeromelll--AlphaKit--c1ffac09b02dfc2745d29978c74b3437512e38f1.zip",
+      "archiveSha256": "54c8f5dc16e47fcecd2e903ce98e753c935b1270f29db76a58d058fce7745552",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }
