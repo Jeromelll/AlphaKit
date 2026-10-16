@@ -52,3 +52,5 @@ AlphaKit 默认建议从原始仓库获取所需技能，并遵循对应宿主�
 ## 贡献
 
 新收录建议通过 Pull Request 提交，并提供原始仓库和固定版本、可核验的 `SKILL.md` 路径、许可证及必要的 `NOTICE`、具体示例和依赖。维护者会检查来源归属、引用准确性、双语内容和边界表述。详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+本仓库提供的三项原创投研技能、安装方式与合成示例见 [原创投研技能](docs/RESEARCH_SKILLS.md)。
