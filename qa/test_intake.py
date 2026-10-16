@@ -352,6 +352,12 @@ class CatalogRunTests(unittest.TestCase):
         })
         self.assertEqual(receipt['sources'], [{
             'repository': REPO_NAME, 'status': 'held', 'commit': COMMIT}])
+        self.assertEqual(len(receipt['skipped']), 1)
+        self.assertEqual(receipt['skipped'][0]['field'], 'dependenciesEn')
+        self.assertEqual(receipt['skipped'][0]['path'], 'skills/example/SKILL.md')
+        self.assertTrue(receipt['skipped'][0]['id'].startswith('skill-'))
+        status = json.loads((dist / 'data/update-status.json').read_text())
+        self.assertEqual(status['skipped'], 1)
         self.assertEqual([(item['stage'], item['field'], item['type'], item['length'])
                           for item in rejection['diagnostics']],
                          [('initial', 'dependenciesEn', 'list', 0),
@@ -414,6 +420,8 @@ class CatalogRunTests(unittest.TestCase):
         self.assertEqual(receipt['rejected'][0]['diagnostics'][1]['length'], 1)
         self.assertEqual(receipt['sourceFailures'], [])
         self.assertEqual(receipt['sources'][-1]['status'], 'verified')
+        self.assertEqual([(item['repository'], item['path'], item['field']) for item in receipt['skipped']],
+                         [('example/new-skills', 'skills/example/SKILL.md', 'dependenciesEn')])
 
 
 class WriteProtectionTests(unittest.TestCase):

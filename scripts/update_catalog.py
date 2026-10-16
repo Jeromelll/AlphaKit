@@ -169,6 +169,14 @@ def curate(repo, path, original):
     return metadata, 'Two model reviews and deterministic source checks passed', [initial_diagnostic] if initial_diagnostic else []
 
 
+def skip_record(repo, path, rejection):
+    """Compact public summary of an entry skipped for invalid metadata."""
+    identifier = 'skill-' + hashlib.sha256((repo.lower() + '/' + path).encode()).hexdigest()[:16]
+    last = (rejection.get('diagnostics') or [{}])[-1] or {}
+    return {'id': identifier, 'repository': repo, 'path': path,
+            'reason': last.get('reason') or rejection['reason'], 'field': last.get('field')}
+
+
 def make_entry(repo, commit, path, metadata, license_name, license_path, existing=None):
     entry = copy.deepcopy(existing) if existing else {}
     allowed = {'category', 'evidenceQuotes'} | {field for name in TEXT_FIELDS + ARRAY_FIELDS
@@ -228,7 +236,7 @@ def run(args, receipt):
     for source in original_catalog['sources']:
         fetch_archive(repository_name(source['repository']), source['commit'], archive_dir, source['archiveSha256'])
     receipt.update({'model': MODEL, 'before': len(original_catalog['skills']), 'added': 0, 'refreshed': 0,
-                    'reviewed': 0, 'sources': [], 'rejected': [], 'sourceFailures': []})
+                    'reviewed': 0, 'sources': [], 'rejected': [], 'skipped': [], 'sourceFailures': []})
     known = {item['repository'] for item in original_catalog['sources']}
     prior_path = ROOT / 'maintenance/discovery.json'
     prior_decisions = json.loads(prior_path.read_text()).get('decisions', []) if prior_path.exists() else []
@@ -312,6 +320,7 @@ def run(args, receipt):
                                  'contentHash': digest, 'reason': reason}
                     if diagnostics:
                         rejection['diagnostics'] = diagnostics
+                        receipt['skipped'].append(skip_record(repo, entry['sourcePath'], rejection))
                     receipt['rejected'].append(rejection)
                     break
                 effective, _ = applicable_licenses(snapshot, entry['sourcePath'], root_path)
@@ -341,6 +350,7 @@ def run(args, receipt):
                                  'contentHash': digest, 'reason': reason}
                     if diagnostics:
                         rejection['diagnostics'] = diagnostics
+                        receipt['skipped'].append(skip_record(repo, path, rejection))
                     receipt['rejected'].append(rejection)
                     continue
                 selected.append(make_entry(repo, commit, path, metadata, license_name, effective))
@@ -374,6 +384,7 @@ def run(args, receipt):
                         'repositories': len(catalog['sources']), 'status': 'succeeded', 'catalogChanged': changed})
         receipt['modelCalls'] = MODEL_CALLS
         public_status = {key: receipt[key] for key in ('runAt', 'status', 'model', 'before', 'after', 'added', 'refreshed', 'repositories')}
+        public_status['skipped'] = len(receipt['skipped'])
         json_write(stage / 'dist/data/update-status.json', public_status)
         if args.write:
             # Only validated static catalog/license files are copied; no workflow or executable edits.
@@ -408,10 +419,17 @@ def main():
         receipt.update({'status': 'failed', 'failure': type(error).__name__ + ': ' + str(error)[:400]})
         receipt['modelCalls'] = MODEL_CALLS
         json_write(Path(args.receipt), receipt)
-        print(json.dumps({'status': 'failed', 'reason': receipt['failure']}))
+        skipped = receipt.get('skipped', [])
+        print(json.dumps({'status': 'failed', 'reason': receipt['failure'], 'skipped': len(skipped),
+                          'skippedEntries': skipped}, ensure_ascii=False))
         raise SystemExit(1) from None
     json_write(Path(args.receipt), receipt)
-    print(json.dumps({key: receipt[key] for key in ('status', 'before', 'after', 'added', 'refreshed', 'reviewed')}))
+    summary = {key: receipt[key] for key in ('status', 'before', 'after', 'added', 'refreshed', 'reviewed')}
+    summary.update({'skipped': len(receipt['skipped']), 'skippedEntries': receipt['skipped']})
+    print(json.dumps(summary, ensure_ascii=False))
+    for item in receipt['skipped']:
+        print('skipped ' + item['id'] + ' ' + item['repository'] + '/' + item['path'] + ': ' + str(item['reason']),
+              file=sys.stderr)
 
 
 if __name__ == '__main__':
