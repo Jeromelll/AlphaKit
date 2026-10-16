@@ -2,7 +2,7 @@
 
 由同一份网站目录自动生成。Generated from the website catalog.
 
-86 skills · 6 original repositories · 2026-10-16
+89 skills · 7 original repositories · 2026-10-16
 
 收录表示原文件与许可证已核对，实际执行未验证。Inclusion means source and license checks; execution is unverified.
 
@@ -24,6 +24,8 @@
 | [论点跟踪器](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md)<br>Thesis Tracker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [竞争格局分析框架](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md)<br>Competitive Landscape Analysis Framework | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [IB 演示文稿质检](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md)<br>IB Deck Checker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [增量业务收入与利润测算](https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/incremental-business-sizing/SKILL.md)<br>Incremental business revenue and profit sizing | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [新股票快速初步研究](https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/pre-trade-quick-brief/SKILL.md)<br>Quick initial research for a new stock | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
 
 ## 财报分析 / Earnings
 
@@ -96,6 +98,7 @@
 | [基金账户余额期间滚动](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/roll-forward/SKILL.md)<br>Balance-Sheet Account Roll-Forward | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [预算与实际差异说明](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md)<br>Financial-Statement Flux Commentary | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [电子表格与财务模型审计](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md)<br>Spreadsheet & Financial Model Audit | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [测算表与敏感性矩阵](https://github.com/Jeromelll/AlphaKit/blob/622395dc7f746438f3f13f585cee1f30a2cf3f67/skills/sellside-model-exhibits/SKILL.md)<br>Financial model exhibits and sensitivity tables | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
 
 ## 金融数据 / Financial data
 
