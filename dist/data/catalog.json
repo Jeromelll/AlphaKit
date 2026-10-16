@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-16",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5395,11 +5395,243 @@
       "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "notes": "此条目仅经过源代码检查，执行结果未经验证。演示文稿质量依赖用户/上传的数据；来自上传文件的数字应直接使用而不进行重新计算。在访问失败或缺失数据的情况下，应显示为带有估算标记的明确 N/A，而不是视为无事件或无风险。幻灯片设计规范是演示文稿构建规范，而非金融建议。",
+      "name": "竞争格局分析框架",
+      "notesEn": "Entry is source-checked and execution-unverified. Deck quality depends on user-supplied/uploaded data; numbers from uploaded files should be used directly without recalculation. Missing data must surface as explicit N/A with estimate flags, never be treated as no events or no risk. Slide design specs are presentation-construction conventions, not financial advice.",
+      "environmentEn": "Works in the PowerPoint add-in (slides built live) or chat (generates a .pptx file). Uses an interactive question tool for scoping and structural taste decisions.",
+      "exampleEn": "Build a 10-20 slide investment memo deck for an embedded-payments company: pin down metrics (GPV, take rate, attach rate), a McKinsey-cited market sizing, target segment revenue tables, per-competitor metrics/qualitative tables, then a ●●● $160B-style comparative rating and quantified moat/scenario synthesis.",
+      "tagsEn": [
+        "competitive analysis",
+        "investment memo",
+        "positioning",
+        "moats",
+        "peer benchmarking",
+        "deck building"
+      ],
+      "summary": "结构化的两阶段工作流，用于构建竞争格局演示文稿：范围界定、大纲审批，随后生成市场概况、竞争对手画像、定位可视化、护城河评估及情景综合。",
+      "environment": "适用于 PowerPoint 插件（实时构建幻灯片）或聊天（生成 .pptx 文件）。使用交互式提问工具进行范围界定和结构性品味决策。",
+      "tags": [
+        "竞争分析",
+        "投资备忘录",
+        "定位",
+        "护城河",
+        "同行基准分析",
+        "演示文稿构建"
+      ],
+      "summaryEn": "A structured two-phase workflow for building a competitive landscape deck: scope, outline approval, then market context, competitor profiles, positioning visuals, moat assessment, and scenario synthesis.",
+      "inputs": [
+        "目标公司及竞争对手名单（用户确认）",
+        "上传的竞争对手数据（Excel/CSV，列名已确认）",
+        "10-K/年度报告、财报电话会议、卖方研究、行业报告",
+        "范围选择：受众、深度、投资背景"
+      ],
+      "example": "为一家嵌入式支付公司构建10-20页的投资备忘录演示文稿：确定指标（GPV、take rate、attach rate），并引用麦肯锡的市场规模数据，提供目标细分收入表，以及每个竞争对手的指标/定性画像，然后是 ●●● $160B 风格的比较评级和量化的护城河/情景综合。",
+      "outputs": [
+        "10-20页的 .pptx 竞争格局演示文稿",
+        "定位可视化（2x2矩阵、雷达图或梯队图）",
+        "定量指标和定性评估的竞争对手深度剖析",
+        "护城河评估以及可选的多头/基准/悲观情景"
+      ],
+      "inputsEn": [
+        "Target company and competitor set (user-confirmed)",
+        "Uploaded competitor data (Excel/CSV with confirmed column mapping)",
+        "10-Ks/annual reports, earnings calls, sell-side research, industry reports",
+        "Scope choices: audience, depth, investment context"
+      ],
+      "outputsEn": [
+        "10-20 slide .pptx competitive landscape deck",
+        "Positioning visualization (2x2 matrix, radar, or tier diagram)",
+        "Competitor deep-dives with quantified metrics and qualitative assessments",
+        "Moat assessment and optional bull/base/bear scenarios"
+      ],
+      "nameEn": "Competitive Landscape Analysis Framework",
+      "dependenciesEn": [
+        "PowerPoint add-in or .pptx generation environment",
+        "Interactive user-question tool",
+        "Access to market sizing and source documents"
+      ],
+      "dependencies": [
+        "PowerPoint 插件或 .pptx 生成环境",
+        "交互式用户提问工具",
+        "市场规模/来源文档访问权限"
+      ],
+      "method": "阶段一：确定范围（单一目标公司还是多公司对比、竞争对手集合、受众深度、投资背景）。阶段二：在大纲获批后，确定3-5个行业指标，分析市场背景和行业经济学，构建目标/竞争对手画像，对竞争对手进行分组，选择定位可视化（2x2矩阵、雷达图、梯队图），进行带有评级定量对比分析，评估四种护城河类型，并选择性地添加带有量化路标的多头/基准/悲观情景。始终采用来源排名（经审计的10-K > 财报电话会议 > 卖方研究 > 行业报告 > 新闻）以及可比性规则（相同的财年、相同的指标定义、含汇率的美元转换、带有引用和估算标记的明确“-”/“N/A”条目）。",
+      "evidenceQuotes": [
+        "Build a complete competitive analysis deck. This is a two-phase process: gather requirements and get outline approval first, then build.",
+        "Missing data shows as \"-\" or \"N/A\" with an \"[E]\" flag for estimates — never blank"
+      ],
+      "methodEn": "Phase 1: scope (single target vs multi-company, competitor set, audience depth, investment context). Phase 2: after outline approval, define 3-5 industry metrics, analyze market context and industry economics, build target and competitor profiles, group competitors, choose a positioning visualization (2x2 matrix, radar, tier diagram), run comparative analysis with quantified ratings, assess four moat types, and optionally add bull/base/bear scenarios with quantified signposts. Source ranking (audited 10-K > earnings calls > sell-side > industry reports > news) and comparability rules (same fiscal year, same metric definitions, USD conversion with rate/date, explicit '-'/'N/A' with estimate flags, citation on every number) apply throughout.",
+      "category": "research",
+      "id": "skill-fe43712161b6f166",
+      "author": "anthropics",
+      "originalName": "competitive-analysis",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "notes": "此技能为只读检查，不执行交易或生成投资建议。条目已对源文件做来源核对，但未实际运行验证执行结果；报告依赖 references/ib-terminology.md 与 references/report-format.md 的存在，若缺失则为数据缺口。脚本的类别归一化可能无法覆盖全部指标语义冲突，仍需人工核验。",
+      "name": "IB 演示文稿质检",
+      "notesEn": "This is a read-only QC workflow; it executes no trades and gives no investment advice. The entry is source-checked but execution-unverified; the report depends on references/ib-terminology.md and references/report-format.md, and their absence would be an explicit data gap. Script-based category normalization may miss some semantic metric conflicts, so manual verification remains required.",
+      "environmentEn": "Works in either the PowerPoint add-in (reading the live open deck) or chat (reading an uploaded .pptx file); requires Python for the extraction script; read-and-report only, no edits.",
+      "exampleEn": "Before a client send, a user asks to \"check my numbers\": a 30-slide deck is extracted into slide-marked markdown; the script flags $500M on slides 3 and 8 versus $485M on slide 15, manual review finds a \"#1 player\" claim contradicted by 0.2% market share data, and the report lists both as Critical fixes before delivery.",
+      "tagsEn": [
+        "investment banking",
+        "deck QC",
+        "number consistency",
+        "visual verification",
+        "narrative alignment"
+      ],
+      "summary": "对投行级演示文稿（pitch deck / 客户材料）进行四维度质检：跨页数字一致性、数据与叙事对齐、语言规范、视觉与格式检查，输出按严重程度分级的报告。",
+      "environment": "支持 PowerPoint 加载项环境（读取当前打开的演示文稿）或聊天环境（读取上传的 .pptx 文件）；需要 Python 运行脚本；为只读检查，不修改文件。",
+      "tags": [
+        "投行",
+        "演示文稿质检",
+        "数字一致性",
+        "视觉验证",
+        "叙事对齐"
+      ],
+      "summaryEn": "Four-dimension quality control for investment banking decks and client-ready presentations: cross-slide number consistency, data-narrative alignment, language polish against IB standards, and visual/formatting QC, producing a severity-ranked report.",
+      "inputs": [
+        "待检演示文稿（.pptx 文件或当前打开的 deck）",
+        "带 slide 标记的提取文本文件"
+      ],
+      "example": "用户在发送前请求\"核对我的数字\"：将 30 页 deck 提取为带 slide 标记的 markdown，脚本发现 $500M 出现在第 3 和第 8 页而第 15 页为 $485M，同时人工核查发现\"#1 玩家\"声明与 0.2% 市占率数据不符，最终报告将上述列为 Critical 并建议修复后再发送客户。",
+      "outputs": [
+        "按 Critical/Important/Minor 分级的质检报告",
+        "带页码归属的数字冲突与叙事不一致清单"
+      ],
+      "inputsEn": [
+        "Presentation to review (.pptx upload or live open deck)",
+        "Extracted text file with slide markers"
+      ],
+      "outputsEn": [
+        "QC report ranked Critical/Important/Minor",
+        "Slide-attributed list of number conflicts and narrative misalignments"
+      ],
+      "nameEn": "IB Deck Checker",
+      "dependenciesEn": [
+        "PowerPoint add-in or .pptx upload channel",
+        "Python (scripts/extract_numbers.py)",
+        "references/ib-terminology.md",
+        "references/report-format.md"
+      ],
+      "dependencies": [
+        "PowerPoint 加载项或 .pptx 上传通道",
+        "Python（scripts/extract_numbers.py）",
+        "references/ib-terminology.md",
+        "references/report-format.md"
+      ],
+      "method": "先逐页提取文本并标注来源页码，写入带 slide 标记的文件；运行数字提取脚本归一化单位并按类别（收入、EBITDA、倍数、利润率）比对冲突值；人工核验计算、单位风格与期间标签（FY/LTM/季度）；将叙事声明与图表数据映射核查合理性与方向一致性；扫描语言风格问题；对每页进行视觉验证（引用缺失、轴标签、字号、日期格式等）；按 Critical/Important/Minor 分级报告，无 Critical 时明确声明。",
+      "evidenceQuotes": [
+        "It normalizes units ($500M vs $500MM vs $500,000,000 → same number), categorizes values (revenue, EBITDA, multiples, margins), and flags when the same metric category shows conflicting values on different slides.",
+        "Lead with criticals. If there aren't any, say so explicitly — \"no number inconsistencies found\" is a finding, not an absence of one."
+      ],
+      "methodEn": "Extract text from every slide with slide-level attribution into a slide-marked file; run a number-extraction script that normalizes units and categorizes values (revenue, EBITDA, multiples, margins) to flag conflicts across slides; manually verify calculations, unit style, and period labels (FY/LTM/quarterly); map narrative claims to charts for direction and plausibility; scan for language register issues; run visual verification per slide (missing source citations, axis labels, typography, date formats); report findings ranked Critical/Important/Minor, explicitly stating when no criticals are found.",
+      "category": "research",
+      "id": "skill-81b3979b78c41f1b",
+      "author": "anthropics",
+      "originalName": "ib-check-deck",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "notes": "仅用于研究与教育目的，非投资建议；yfinance 与 Yahoo Inc. 无隶属关系；Yahoo 共识可能滞后实时数据数小时；预估在报告日前可能变化。此技能为源码检查后收录，执行未经验证——即数据抓取失败时应报告为数据缺口，而非得出无重大事件或无风险的结论。",
+      "name": "财报前瞻简报生成",
+      "notesEn": "For research and educational purposes only, not financial advice; yfinance is not affiliated with Yahoo, Inc.; Yahoo consensus can lag real-time providers by a few hours; estimates can change until the report date. Included after source review but execution-unverified — failed data access must be reported as a data gap, never interpreted as no material events or no risk.",
+      "environmentEn": "Requires Python 3 with the yfinance library (installable via pip); depends on Yahoo Finance data being accessible.",
+      "exampleEn": "A user asks what the street expects for AAPL's next print: the script pulls the report date and timing, 0q EPS/revenue consensus (avg, low, high, analyst count, growth), the last four quarters of surprise %, Buy/Hold/Sell distribution, and price-target low/mean/median/high, producing a one-page preview with caveats that estimates can change and past beats don't guarantee future ones.",
+      "tagsEn": [
+        "earnings",
+        "consensus estimates",
+        "analyst price targets",
+        "equity research",
+        "yfinance"
+      ],
+      "summary": "基于 Yahoo Finance 数据（yfinance）为个股生成财报前瞻简报，涵盖报告日期与时段、共识 EPS 与营收预估区间、历史超预期记录、分析师评级与目标价，以及本次财报的关注要点。",
+      "environment": "需要可运行 Python 3 及 yfinance 库（可由 pip 安装）；依赖 Yahoo Finance 数据可访问。",
+      "tags": [
+        "财报",
+        "盈利预期",
+        "分析师目标价",
+        "股票研究",
+        "yfinance"
+      ],
+      "summaryEn": "Builds a pre-earnings briefing for a stock from Yahoo Finance data via yfinance, covering the upcoming report date and timing, consensus EPS and revenue estimates with ranges, beat/miss track record, analyst ratings and price targets, and what to watch in the print.",
+      "inputs": [
+        "股票代码或公司名称",
+        "财报日期与时段（盘前/盘后）",
+        "共识 EPS 与营收预估（均值/低/高/分析师数）",
+        "历史超预期记录",
+        "分析师评级分布与目标价",
+        "近月价格与季度财务数据"
+      ],
+      "example": "用户询问 AAPL 下次财报市场预期：脚本拉取报告日期与时点、0q EPS/营收共识（均值、低、高、分析师数、同比增速）、最近四季 surprise %、Buy/Hold/Sell 分布及目标价低/均值/中位/高，输出一页前瞻简报并注明预估随时间变化与历史表现不预示未来。",
+      "outputs": [
+        "五板块财报前瞻简报：日期背景、共识预估表、超预期记录、分析师情绪、关注要点",
+        "整体盘面解读（以市场预期口径而非建议表述）"
+      ],
+      "inputsEn": [
+        "Ticker symbol or company name",
+        "Earnings date and timing (before open / after close)",
+        "Consensus EPS and revenue estimates (avg/low/high/analyst count)",
+        "Historical beat/miss record",
+        "Analyst rating distribution and price targets",
+        "Recent price history and quarterly financials"
+      ],
+      "outputsEn": [
+        "Five-section earnings preview: date/context, consensus estimate table, beat/miss record, analyst sentiment, what to watch",
+        "Overall setup read framed as street expectations, not a recommendation"
+      ],
+      "nameEn": "Earnings Preview Briefing",
+      "dependenciesEn": [
+        "Python 3",
+        "yfinance",
+        "Yahoo Finance data feed",
+        "Reference file references/api_reference.md"
+      ],
+      "dependencies": [
+        "Python 3",
+        "yfinance",
+        "Yahoo Finance 数据源",
+        "参考文件 references/api_reference.md"
+      ],
+      "method": "一次脚本调用 yfinance 拉取日历、财报日期、预估、历史超预期、目标价与评级分布、季度报表；随后按五个板块整理：日期与背景、共识预估（区间宽度超过约 20% 视为不确定性偏高）、过去四季超预期记录、分析师情绪与目标价隐含涨跌空间、以及结合行业与季度变动的关注要点；缺失数据需显式说明而非省略。",
+      "evidenceQuotes": [
+        "Pulls together upcoming earnings date, consensus estimates, historical accuracy, analyst sentiment, and key financial context",
+        "estimates can change until the report date, past beats don't guarantee future ones, Yahoo Finance consensus can lag real-time providers by a few hours"
+      ],
+      "methodEn": "Fetch calendar, earnings dates, estimates, earnings history, price targets, recommendations, and quarterly statements from yfinance in one script; organize into five sections: date/context, consensus estimates (a high/low spread wider than about 20% of consensus flags unusual uncertainty), last four quarters of beat/miss record, analyst sentiment with implied upside/downside from mean target, and company-specific items to watch. Missing data must be stated explicitly rather than dropped.",
+      "category": "earnings",
+      "id": "skill-a28650ee622f3bf9",
+      "author": "himself65",
+      "originalName": "earnings-preview",
+      "repository": "https://github.com/himself65/finance-skills",
+      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "sourcePath": "plugins/market-analysis/skills/earnings-preview/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/earnings-preview/SKILL.md",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 83,
+      "skills": 86,
       "repositories": 6,
       "executionTestsRun": 0
     },

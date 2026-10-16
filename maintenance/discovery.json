@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-14T02:49:00.195613+00:00",
-  "query": "financial skills in:name,description",
+  "checkedAt": "2026-10-16T02:42:43.386623+00:00",
+  "query": "equity research skills in:description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -12,7 +12,47 @@
     "Jack-Li-Npu/financial-research-workbench",
     "linshanova-ops/daily-financial-insights",
     "lj22503/invest-dictionary",
-    "makaroonapln79/Monopoly"
+    "makaroonapln79/Monopoly",
+    "UnbelievableT/topxai-equity-research",
+    "bitpunklabs/market-brief",
+    "2382475730-alt/equity-research-report-skills",
+    "NamanKabra11/Daily-Market-Tracker",
+    "Junwei-Huangfu/ashare-equity-research-agent",
+    "Reza-Dila-Andrea/Equity-Research-Automation-IDX",
+    "y0n1n1/financial-skills",
+    "huihuisang/ajigu-skills"
   ],
-  "decisions": []
+  "decisions": [
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "path": "plugins/vertical-plugins/financial-analysis/skills/clean-data-xls/SKILL.md",
+      "contentHash": "f0dfceb01532a637b0edbbe15dbab9fe2d52279b140cea4ba8ba7823e46ad15b",
+      "reason": "Independent model review rejected candidate",
+      "diagnostics": [
+        {
+          "field": "evidenceQuotes",
+          "exists": true,
+          "type": "list",
+          "length": 2,
+          "stage": "initial",
+          "reason": "Two distinct exact source quotations are required"
+        }
+      ]
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "path": "plugins/vertical-plugins/financial-analysis/skills/ppt-template-creator/SKILL.md",
+      "contentHash": "a117a538e70a2cf4f242a923b57651db15e2f945191352207bfd9d0464db6ef9",
+      "reason": "Model scope review rejected candidate"
+    },
+    {
+      "repository": "RKiding/Awesome-finance-skills",
+      "commit": "853f09b4d0baae747759ed31e21ed5c5b2316a5f",
+      "path": "skills/skill-creator/SKILL.md",
+      "contentHash": "4afbad1d930d98a0610f09bbf810f8a49de7b3187a7050d7974c3b600ae83c90",
+      "reason": "Model scope review rejected candidate"
+    }
+  ]
 }

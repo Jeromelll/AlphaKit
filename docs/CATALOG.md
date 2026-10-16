@@ -2,7 +2,7 @@
 
 由同一份网站目录自动生成。Generated from the website catalog.
 
-83 skills · 6 original repositories · 2026-10-14
+86 skills · 6 original repositories · 2026-10-16
 
 收录表示原文件与许可证已核对，实际执行未验证。Inclusion means source and license checks; execution is unverified.
 
@@ -22,6 +22,8 @@
 | [晨会纪要速写（Morning Note）](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/morning-note/SKILL.md)<br>Morning Note Drafting | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [行业与板块全景研究报告](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/sector-overview/SKILL.md)<br>Sector Overview Industry Landscape Report | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [论点跟踪器](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md)<br>Thesis Tracker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [竞争格局分析框架](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md)<br>Competitive Landscape Analysis Framework | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [IB 演示文稿质检](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md)<br>IB Deck Checker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 
 ## 财报分析 / Earnings
 
@@ -32,6 +34,7 @@
 | [公司财报结果与股价反应复盘](https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/earnings-recap/SKILL.md)<br>Post-Earnings Results and Price-Reaction Review | [Alex Yang](https://github.com/himself65/finance-skills) | MIT |
 | [卖方盈利预测修订与分歧分析](https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/estimate-analysis/SKILL.md)<br>Analyst Estimate-Revisions Analysis | [Alex Yang](https://github.com/himself65/finance-skills) | MIT |
 | [科技股财报深度拆解与多视角备忘录](https://github.com/star23/Day1Global-Skills/blob/562c14b0c0bc84abff755181ead30ebea613d063/tech-earnings-deepdive/SKILL.md)<br>Tech earnings deep dive and multi-perspective memo | [Ruby (Rubywang) and Star (starzq)](https://github.com/star23/Day1Global-Skills) | MIT |
+| [财报前瞻简报生成](https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/earnings-preview/SKILL.md)<br>Earnings Preview Briefing | [himself65](https://github.com/himself65/finance-skills) | MIT |
 
 ## 估值与建模 / Valuation & models
 
