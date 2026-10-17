@@ -2,7 +2,7 @@
 
 由同一份网站目录自动生成。Generated from the website catalog.
 
-92 skills · 7 original repositories · 2026-10-16
+95 skills · 7 original repositories · 2026-10-17
 
 收录表示原文件与许可证已核对，实际执行未验证。Inclusion means source and license checks; execution is unverified.
 
@@ -24,8 +24,8 @@
 | [论点跟踪器](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md)<br>Thesis Tracker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [竞争格局分析框架](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md)<br>Competitive Landscape Analysis Framework | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [IB 演示文稿质检](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md)<br>IB Deck Checker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
-| [增量业务收入与利润测算](https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/incremental-business-sizing/SKILL.md)<br>Incremental business revenue and profit sizing | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
-| [新股票快速初步研究](https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/pre-trade-quick-brief/SKILL.md)<br>Quick initial research for a new stock | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [增量业务收入与利润测算](https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/incremental-business-sizing/SKILL.md)<br>Incremental business revenue and profit sizing | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [新股票快速初步研究](https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/pre-trade-quick-brief/SKILL.md)<br>Quick initial research for a new stock | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
 | [Discord 只读金融社群研读](https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/social-readers/skills/discord-reader/SKILL.md)<br>Discord Read-Only Financial Community Reader | [himself65](https://github.com/himself65/finance-skills) | MIT |
 | [LinkedIn只读金融研究阅读](https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/social-readers/skills/linkedin-reader/SKILL.md)<br>LinkedIn Read-Only Financial Research | [himself65](https://github.com/himself65/finance-skills) | MIT |
 
@@ -85,6 +85,7 @@
 | [A股事件驱动机会扫描](https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/event-driven-detector/SKILL.md)<br>A-share event-driven opportunity scan | [FinoGeeks Technology Ltd](https://github.com/Geeksfino/finskills) | Apache-2.0 |
 | [调查型做空证据链](https://github.com/questflowai/investorskills/blob/2844d7809a73c01e769c8c1c7ae8189788db4d9e/skills/hindenburg-investigation/SKILL.md)<br>Investigative short thesis and evidence chain | [Bob Xu](https://github.com/questflowai/investorskills) | MIT |
 | [投行路演书模板填充](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/investment-banking/skills/pitch-deck/SKILL.md)<br>Investment Banking Pitch Deck Template Population | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [尽职调查会议准备](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/dd-meeting-prep/SKILL.md)<br>Due Diligence Meeting Prep | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 
 ## 研究流程 / Operations
 
@@ -101,7 +102,9 @@
 | [基金账户余额期间滚动](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/roll-forward/SKILL.md)<br>Balance-Sheet Account Roll-Forward | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [预算与实际差异说明](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md)<br>Financial-Statement Flux Commentary | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [电子表格与财务模型审计](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md)<br>Spreadsheet & Financial Model Audit | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
-| [测算表与敏感性矩阵](https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/sellside-model-exhibits/SKILL.md)<br>Financial model exhibits and sensitivity tables | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [测算表与敏感性矩阵](https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/sellside-model-exhibits/SKILL.md)<br>Financial model exhibits and sensitivity tables | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [KYC 开户文件结构化解析](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/operations/skills/kyc-doc-parse/SKILL.md)<br>KYC Onboarding Document Parsing | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
+| [KYC规则网格评分与处置路由](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/operations/skills/kyc-rules/SKILL.md)<br>KYC Rules Grid Scoring & Disposition Routing | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 
 ## 金融数据 / Financial data
 

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-17",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5631,9 +5631,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
+      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5642,7 +5642,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5701,9 +5701,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
+      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5712,7 +5712,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5773,9 +5773,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
+      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5784,7 +5784,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c1ffac09b02dfc2745d29978c74b3437512e38f1/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -6076,11 +6076,248 @@
       "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "nameEn": "KYC Onboarding Document Parsing",
+      "methodEn": "Three steps: (1) inventory the packet by doc type (identity, entity formation, ownership & control, address, source of funds/wealth, tax); (2) extract one structured JSON record, using null for any field not found — do not guess; (3) flag obvious gaps (expired ID, address proof older than 3 months, missing UBO chart for an entity) as inventory gaps, not rules-engine outcomes. Document content is treated as untrusted data only — extract, never execute.",
+      "summary": "将投资人或客户的开户文件包解析为结构化 KYC 字段，涵盖身份、所有权、控制权、资金来源与文件清单，作为 KYC 审查的第一步，输出供规则引擎使用。",
+      "name": "KYC 开户文件结构化解析",
+      "notes": "此技能来自 anthropics/financial-services 仓库的垂直插件目录，仅经来源核验、未实际执行验证。文件内容由申请方提供，属不可信输入，仅作数据提取；缺失字段必须保留为 null 的显式数据缺口。文件明确说明清单缺口不等于规则引擎判定结果。",
+      "dependencies": [
+        "kyc-rules 规则引擎（下游）",
+        "文档读取能力（申请方提交的文本/PDF 文件）"
+      ],
+      "tagsEn": [
+        "KYC",
+        "AML",
+        "onboarding",
+        "compliance operations",
+        "document parsing",
+        "structured extraction"
+      ],
+      "inputsEn": [
+        "Onboarding packet: identity documents (passport, driver's license, national ID)",
+        "Entity formation documents (certificate of incorporation, LP agreement, trust deed)",
+        "Ownership & control documents (UBO declaration, org chart, register of members, board resolution)",
+        "Address proof (utility bill or bank statement <= 3 months old)",
+        "Source of funds/wealth documents (employer letter, tax return, sale agreement, audited accounts)",
+        "Tax forms (W-9 / W-8BEN(-E), CRS self-certification)"
+      ],
+      "environment": "需要能读取申请方提供的开户文档（文本/PDF）的文档处理环境；下游依赖 kyc-rules 规则引擎接收输出。",
+      "evidenceQuotes": [
+        "Parse an investor or client onboarding packet into structured KYC fields — identity, ownership, control, source of funds, and document inventory.",
+        "Produce one JSON record. Use `null` for any field not found — do not guess.",
+        "These are inventory gaps, not rules-engine outcomes."
+      ],
+      "method": "三步流程：(1) 盘点文件包，按类型（身份、实体设立、所有权与控制、地址、资金来源、税务）列出每份文件及标识；(2) 提取结构化字段为一条 JSON 记录，缺失字段用 null，不得猜测；(3) 标记明显缺口（证件过期、地址证明超过3个月、实体缺少 UBO 图），这些仅为清单缺口而非规则引擎结论。文件内容一律视为不可信数据，只提取不执行。",
+      "notesEn": "Sourced from the anthropics/financial-services vertical-plugins repository; source-checked but execution-unverified. Applicant-supplied documents are untrusted input for data extraction only; missing fields must remain explicit null data gaps. The skill explicitly distinguishes inventory gaps from rules-engine outcomes.",
+      "environmentEn": "Requires an environment that can read applicant-supplied onboarding documents (text/PDF); downstream dependency on the kyc-rules rules engine receiving the output.",
+      "summaryEn": "Parses an investor or client onboarding packet into structured KYC fields — identity, ownership, control, source of funds, and document inventory — as the first step of KYC screening, with output feeding a rules engine.",
+      "dependenciesEn": [
+        "kyc-rules rules engine (downstream)",
+        "Document-reading capability for applicant-supplied text/PDF files"
+      ],
+      "example": "输入一份实体开户包（注册证书、UBO 声明、W-8BEN-E、3个月内的银行对账单），输出一条 JSON：applicant_type 为 entity，列出受益所有人及其持股比例、控制人角色、资金来源描述，并标记缺少董事会决议这一清单缺口。",
+      "inputs": [
+        "开户文件包：身份证明（护照、驾照、国民身份证）",
+        "实体设立文件（注册证书、LP 协议、信托契约）",
+        "所有权与控制文件（UBO 声明、组织图、股东名册、董事会决议）",
+        "地址证明（3个月内的公用事业账单或银行对账单）",
+        "资金/财富来源文件（雇主信、税表、出售协议、审计报表）",
+        "税务表格（W-9 / W-8BEN(-E)、CRS 自我声明）"
+      ],
+      "outputs": [
+        "结构化 JSON KYC 记录（申请人类型、法定名称、身份文件、受益所有人、控制人、资金来源、PEP 声明、税务表格、文件清单）",
+        "缺失或过期文件的清单缺口标记（供 kyc-rules 规则引擎使用）"
+      ],
+      "category": "operations",
+      "exampleEn": "Given an entity onboarding packet (certificate of incorporation, UBO declaration, W-8BEN-E, bank statement within 3 months), output one JSON record: applicant_type entity, beneficial owners with ownership percentages, controllers, a source-of-funds description, and a flagged inventory gap such as a missing board resolution.",
+      "tags": [
+        "KYC",
+        "反洗钱",
+        "开户",
+        "合规运营",
+        "文档解析",
+        "结构化提取"
+      ],
+      "outputsEn": [
+        "One structured JSON KYC record (applicant type, legal name, ID documents, beneficial owners, controllers, source of funds, PEP declaration, tax forms, document inventory)",
+        "Flagged inventory gaps for missing/expired documents, feeding the kyc-rules rules engine"
+      ],
+      "id": "skill-e64730dd1c0257e1",
+      "author": "anthropics",
+      "originalName": "kyc-doc-parse",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/operations/skills/kyc-doc-parse/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/operations/skills/kyc-doc-parse/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "nameEn": "KYC Rules Grid Scoring & Disposition Routing",
+      "methodEn": "Four steps: (1) risk-rate — compute low/medium/high from grid factors (jurisdiction, applicant type, ownership opacity, PEP exposure, sanctions/adverse media, source-of-funds clarity) and output the factor table; (2) required-document check — mark each required document received/missing/expired against documents_received; (3) rule outcomes — for every applicable rule output rule id, text, outcome (pass/fail/n/a) and driving fields, always citing the rule; (4) disposition — produce a structured JSON with risk_rating, disposition (clear/request-docs/escalate-EDD/decline-recommend), missing documents, and escalation reasons. clear is issued only when rating is low/medium, all docs received, and no escalation rule fired; the skill never approves — escalation and human review are required.",
+      "summary": "将机构KYC/AML规则网格应用于已解析的开户记录：计算风险评级，逐条输出规则判定结果并引用规则编号，标注缺失文件与升级事项。",
+      "name": "KYC规则网格评分与处置路由",
+      "notes": "仓库作者框架，非官方监管技能。来源文件已核对但执行未验证：未实际运行或确认 screening MCP 可用性；若筛查结果或规则网格缺失，应作为数据缺口明确报告，而非视为无风险或无命中。",
+      "dependencies": [
+        "screening MCP",
+        "kyc-doc-parse 技能",
+        "机构规则网格文件"
+      ],
+      "tagsEn": [
+        "KYC",
+        "AML",
+        "compliance operations",
+        "risk rating",
+        "escalation"
+      ],
+      "inputsEn": [
+        "Structured onboarding record from kyc-doc-parse",
+        "Firm KYC/AML rules grid (via screening MCP or provided file)",
+        "Sanctions / PEP / adverse media screening results (screening MCP)"
+      ],
+      "environment": "依赖 screening MCP 获取制裁/PEP/负面媒体筛查结果与规则网格（或提供的网格文件），以及上游 kyc-doc-parse 技能产出的结构化开户记录。",
+      "evidenceQuotes": [
+        "Apply the firm's KYC/AML rules grid to a parsed onboarding record — assign a risk rating, list every rule outcome with the rule cited, and flag what's missing or escalation-worthy.",
+        "clear` only if rating is low/medium, all required docs received, and no escalation rule fired. Otherwise route — **this skill never approves**; the escalator and a human reviewer do."
+      ],
+      "method": "四个步骤：(1) 风险评级——依据网格因子（管辖区、申请人类型、受益所有权透明度、PEP暴露、制裁/负面媒体、资金来源清晰度）计算 low/medium/high 评级并输出因子表；(2) 必备文件核对——按申请人类型与评级对照已收文件标记 received/missing/expired；(3) 规则判定——每条适用规则输出规则ID、文本、结果（pass/fail/n/a）与证据字段；(4) 处置——生成含 risk_rating、disposition（clear/request-docs/escalate-EDD/decline-recommend）、缺失文件与升级原因的结构化结论。clear 仅在评级为低/中、文件齐全且无升级规则触发时给出；本技能不审批，升级与人工复核由人和审批流程完成。",
+      "notesEn": "Repository-author framework, not an official regulatory skill. Source-checked but execution-unverified: the workflow was not run and screening MCP availability is unconfirmed; missing screening results or rules grid must be reported as an explicit data gap, not treated as no hits or no risk.",
+      "environmentEn": "Requires a screening MCP for sanctions/PEP/adverse media results and the rules grid (or a provided grid file), plus the structured onboarding record produced by the upstream kyc-doc-parse skill.",
+      "summaryEn": "Applies the firm's KYC/AML rules grid to a parsed onboarding record: computes a risk rating, outputs each rule outcome with the rule cited, and flags missing documents and escalation-worthy items.",
+      "dependenciesEn": [
+        "screening MCP",
+        "kyc-doc-parse skill",
+        "firm rules grid file"
+      ],
+      "example": "输入：一名申报为信托结构的申请人，UBO 链三层、国籍位于机构高风险名单、来源文件不完整。输出：风险评级 high，disposition 为 escalate-EDD，缺失文件列表（如近期审计报表），升级原因引用规则编号（如规则4.2），并附逐条规则判定表。",
+      "inputs": [
+        "来自 kyc-doc-parse 的结构化开户记录",
+        "机构KYC/AML规则网格（screening MCP 或提供的文件）",
+        "制裁/PEP/负面媒体筛查结果（screening MCP）"
+      ],
+      "outputs": [
+        "风险评级（low/medium/high）及因子表",
+        "必备文件核对表（received/missing/expired）",
+        "逐条规则判定结果（规则ID、文本、结果、证据）",
+        "结构化处置JSON（disposition、缺失文件、升级原因）"
+      ],
+      "category": "operations",
+      "exampleEn": "Input: a trust applicant with a three-layer UBO chain, nationality on the firm's high-risk list, and incomplete source-of-funds documents. Output: risk rating high, disposition escalate-EDD, a missing-documents list, escalation reasons citing rule ids (e.g., rule 4.2), and a per-rule outcome table.",
+      "tags": [
+        "KYC",
+        "AML",
+        "合规运营",
+        "风险评级",
+        "升级流程"
+      ],
+      "outputsEn": [
+        "Risk rating (low/medium/high) with factor table",
+        "Required-document checklist (received/missing/expired)",
+        "Per-rule outcomes (rule id, text, outcome, evidence)",
+        "Structured disposition JSON (disposition, missing documents, escalation reasons)"
+      ],
+      "id": "skill-7931b87b21b3df79",
+      "author": "anthropics",
+      "originalName": "kyc-rules",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/operations/skills/kyc-rules/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/operations/skills/kyc-rules/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "nameEn": "Due Diligence Meeting Prep",
+      "methodEn": "Five-step workflow: 1) Collect meeting context (type, attendees, focus, prior knowledge, key concerns); 2) Generate a prioritized, topic-grouped question list with templates per meeting type (management, expert, customer reference); 3) Match benchmarks and cross-source discrepancies to each topic; 4) Flag red flags to probe based on known information (CIM inconsistencies, customer concentration, management gaps, unusual accounting, missing data room items); 5) Output a one-page prep doc with logistics, top-3 objectives, 15-20 questions with must-asks starred, key benchmarks, red flags, and follow-up requests.",
+      "summary": "为私募股权尽职调查会议（管理层演示、专家访谈、客户背调、顾问会面）生成有针对性的问题清单、基准数据和需追问的风险信号，并输出一页会议准备文档。",
+      "name": "尽职调查会议准备",
+      "notes": "该技能为仓库作者的框架，非任何投资者官方背书。内容仅经来源核对，未经验证执行；问题清单限制在 15-20 个以适配 60-90 分钟会议；建议以开放式、中性问题为主，缺失数据仍为数据缺口而非无风险。",
+      "dependencies": [
+        "支持技能文件的 AI 助手会话",
+        "用户提供的会议背景与数据室/CIM 信息",
+        "可选：会话内的可比公司分析"
+      ],
+      "tagsEn": [
+        "due diligence",
+        "private equity",
+        "meeting prep",
+        "question lists",
+        "risk probing"
+      ],
+      "inputsEn": [
+        "Meeting type (management presentation / expert call / customer reference / advisor session / site visit)",
+        "Attendees",
+        "Topic focus (full overview or specific workstream)",
+        "Known information (CIM, data room findings, prior meetings)",
+        "Key concerns to probe"
+      ],
+      "environment": "可在支持技能文件的 AI 助手会话中使用；依赖用户提供会议背景、CIM/数据室发现等信息；若可比公司分析存在可引用其指标，缺失数据作为明确数据缺口标注。",
+      "evidenceQuotes": [
+        "Prepare for due diligence meetings — management presentations, expert network calls, customer references, and advisor sessions.",
+        "Keep the question list to 15-20 max — you won't get through more in a 60-90 min session"
+      ],
+      "method": "五步工作流：1) 收集会议背景（类型、参会人、议题重点、已知信息、关键疑虑）；2) 按会议类型生成优先级分组的问题清单（管理层、专家、客户各有专属模板）；3) 为每个主题匹配基准数据与跨数据源差异点；4) 基于已知信息标记需追问的风险信号（CIM 不一致、客户集中度、管理层空缺、异常会计处理、数据室缺项）；5) 输出一页准备文档，含会议安排、三大目标、15-20 个问题（标注必问项）、基准数字、风险信号与后续跟进事项。",
+      "notesEn": "This is a repository-author framework, not an investor-endorsed official skill. Content is source-checked but execution-unverified; question lists are capped at 15-20 to fit 60-90 minute sessions; open-ended neutral questioning is advised; missing data remains an explicit data gap, not evidence of no risk.",
+      "environmentEn": "Usable in an AI assistant session that supports skill files; relies on the user for meeting context and CIM/data room findings; comparable-company metrics may be referenced if a comps analysis exists in session; missing data remains an explicit data gap.",
+      "summaryEn": "Generates targeted question lists, benchmarks, and red flags to probe for private equity diligence meetings (management presentations, expert calls, customer references, advisor sessions), producing a one-page prep document.",
+      "dependenciesEn": [
+        "AI assistant session supporting skill files",
+        "User-supplied meeting context and CIM/data room information",
+        "Optional: in-session comparable company analysis"
+      ],
+      "example": "用户准备一家目标公司的管理层演示会，输入会议类型、参会高管、已知 CIM 发现及对客户流失的疑虑；技能输出一页文档：营收增长与利润率桥接的必问问题、行业增长与利润率基准、客户集中度等风险信号，以及会后需索取的数据清单。",
+      "inputs": [
+        "会议类型（管理层演示/专家访谈/客户背调/顾问会面/实地考察）",
+        "参会人员",
+        "议题重点（全面概览或特定工作流）",
+        "已知信息（CIM、数据室发现、既往会议）",
+        "需追问的关键疑虑"
+      ],
+      "outputs": [
+        "一页会议准备文档",
+        "按优先级和主题分组的问题清单（15-20 个）",
+        "基准数据与跨数据源差异点",
+        "需追问的风险信号清单",
+        "会后跟进索取事项"
+      ],
+      "category": "deals",
+      "exampleEn": "Before a management presentation at a target company, the user supplies meeting type, attending executives, known CIM findings, and a concern about customer churn; the skill returns a one-page doc with must-ask questions on revenue growth and margin bridge, industry growth and margin benchmarks, red flags such as customer concentration, and a list of data to request afterward.",
+      "tags": [
+        "尽职调查",
+        "私募股权",
+        "会议准备",
+        "问题清单",
+        "风险管理"
+      ],
+      "outputsEn": [
+        "One-page meeting prep document",
+        "Prioritized, topic-grouped question list (15-20 questions)",
+        "Benchmarks and cross-source discrepancy points",
+        "Red flags to probe list",
+        "Post-meeting follow-up requests"
+      ],
+      "id": "skill-64f5d8467e88dd0c",
+      "author": "anthropics",
+      "originalName": "dd-meeting-prep",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/private-equity/skills/dd-meeting-prep/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/dd-meeting-prep/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 92,
+      "skills": 95,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -6239,7 +6476,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c1ffac09b02dfc2745d29978c74b3437512e38f1",
+      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -6261,8 +6498,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--c1ffac09b02dfc2745d29978c74b3437512e38f1.zip",
-      "archiveSha256": "54c8f5dc16e47fcecd2e903ce98e753c935b1270f29db76a58d058fce7745552",
+      "archive": "Jeromelll--AlphaKit--14af4fd42bc20c837d93187b5b44b554956ef274.zip",
+      "archiveSha256": "740feacf4117f4060bc820ac24b0b09d7292132c82a1eb4bf68ca83b29b1c6d5",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }

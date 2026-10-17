@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-16T05:07:16.399435+00:00",
-  "query": "equity research skills in:description",
+  "checkedAt": "2026-10-17T05:02:01.396861+00:00",
+  "query": "quant skills in:name,description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -20,7 +20,15 @@
     "Junwei-Huangfu/ashare-equity-research-agent",
     "Reza-Dila-Andrea/Equity-Research-Automation-IDX",
     "y0n1n1/financial-skills",
-    "huihuisang/ajigu-skills"
+    "huihuisang/ajigu-skills",
+    "Arnold3395/quant-research-suite",
+    "thexuanngu/quant-lob-deep-hedging",
+    "Furox-Art/quantum-reasoning-skill",
+    "StrikingHour/quantum-phd-opportunities",
+    "robinritter/ai-agent-skills",
+    "ml4t/skills",
+    "Shreyankkkkk/foundations",
+    "cookiy-ai/user-research-skill"
   ],
   "decisions": [
     {
