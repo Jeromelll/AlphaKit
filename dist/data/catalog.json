@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17",
+  "updatedAt": "2026-10-19",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5631,9 +5631,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
+      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5642,7 +5642,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5701,9 +5701,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
+      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5712,7 +5712,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5773,9 +5773,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
+      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5784,7 +5784,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/14af4fd42bc20c837d93187b5b44b554956ef274/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -6313,11 +6313,255 @@
       "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "category": "deals",
+      "notes": "该技能为仓库作者框架，非任何投资者官方背书。内容为源文件核实的方法说明，未执行验证；IRR求解与Excel生成等实际执行结果未经验证。需提供交易数据；缺失数据（如债务条款、税务结构）仍是明确数据缺口。文件提醒区分毛/净回报、管理层滚动与共同投资、股息资本重组及交易成本（约占EV 2-4%）影响。",
+      "outputsEn": [
+        "Base-case MOIC and IRR",
+        "Returns waterfall attribution",
+        "Two-way sensitivity grids (IRR/MOIC)",
+        "Bull/base/bear scenario table",
+        "Excel workbook and one-page IC summary"
+      ],
+      "outputs": [
+        "基准MOIC与IRR",
+        "回报瀑布归因",
+        "双向敏感性矩阵（IRR/MOIC）",
+        "牛/基准/熊情景表",
+        "Excel工作簿与一页IC摘要"
+      ],
+      "method": "五步工作流：1) 收集入场（EBITDA、倍数、EV、净债务、股权支票、交易费用）、融资（高级/次级债务、股权出资）、经营（增长、利润率、资本开支、营运资本、还债计划）与退出假设；2) 计算基准退出股权价值、MOIC、IRR及回报瀑布归因（增长/倍数/还债/费用拖累）；3) 构建双向敏感性矩阵，每格以 IRR/MOIC 格式呈现；4) 牛/基准/熊三情景；5) 输出含假设页、敏感性条件着色的Excel与一页IC摘要。",
+      "dependenciesEn": [
+        "Excel workbook generation capability",
+        "User-supplied deal assumptions"
+      ],
+      "inputsEn": [
+        "Entry EBITDA and multiple",
+        "Enterprise value and net debt",
+        "Equity contribution and debt structure",
+        "Revenue growth and EBITDA margin trajectory",
+        "Hold period and exit multiple",
+        "Transaction fees and dividend plans"
+      ],
+      "exampleEn": "Public, non-sensitive example: 'a hypothetical LBO with $100M entry EBITDA, 8.0x entry multiple, 50% equity contribution, 6% annual EBITDA growth, exit at 8.0x after 7 years' — generate base MOIC/IRR, entry-by-exit multiple sensitivity grid, and three-scenario comparison.",
+      "summaryEn": "Builds base-case IRR/MOIC, two-way sensitivity matrices (entry/exit multiple, leverage, growth, hold period), and bull/base/bear scenarios for PE deal evaluation, outputting an IC-ready Excel workbook and one-page returns summary.",
+      "dependencies": [
+        "Excel工作簿生成能力",
+        "用户提供的交易假设"
+      ],
+      "methodEn": "Five-step workflow: 1) collect entry (EBITDA, multiple, EV, net debt, equity check, fees), financing (senior/sub debt, equity contribution), operating (growth, margin, capex, working capital, debt paydown) and exit assumptions; 2) compute base-case exit equity value, MOIC, IRR and returns waterfall attribution (growth/multiple/deleveraging/fee drag); 3) build 2-way sensitivity grids with IRR/MOIC in each cell; 4) bull/base/bear scenarios; 5) output Excel workbook with assumptions tab and conditionally formatted sensitivities plus a one-page IC summary.",
+      "name": "私募股权回报分析（IRR/MOIC敏感性）",
+      "example": "以公开、非敏感示例：'某假想LBO：入场EBITDA $100M，8.0x入场倍数，50%股权出资，EBITDA年增6%，7年后8.0x退出'，生成基准MOIC/IRR、入场倍数×退出倍数敏感性表及三情景对比。",
+      "nameEn": "PE Returns Analysis (IRR/MOIC Sensitivity)",
+      "tags": [
+        "私募股权",
+        "回报分析",
+        "IRR",
+        "MOIC",
+        "敏感性分析",
+        "杠杆收购",
+        "投委会材料"
+      ],
+      "evidenceQuotes": [
+        "Build quick IRR/MOIC sensitivity tables for PE deal evaluation. Models returns across entry multiple, leverage, exit multiple, growth, and hold period scenarios.",
+        "Don't forget transaction costs (typically 2-4% of EV) — they reduce Day 1 equity value"
+      ],
+      "notesEn": "This is a repository-author framework, not an investor-endorsed official skill. The method is source-checked but execution-unverified; IRR solving and workbook generation have not been run. Deal data must be supplied; missing inputs such as debt terms or tax structure remain explicit data gaps. The source notes gross vs net returns, management rollover/co-invest, dividend recaps, and transaction costs (typically 2-4% of EV).",
+      "environmentEn": "Suited to a Claude environment with spreadsheet computation and the ability to generate Excel workbooks.",
+      "summary": "为私募股权交易评估构建IRR/MOIC基准测算、双向敏感性矩阵（入场/退出倍数、杠杆、增长、持有期）与牛/基准/熊三情景，并输出适用于投委会的Excel工作簿与一页回报摘要。",
+      "environment": "适用于具备电子表格计算能力的Claude环境，需能够生成Excel工作簿。",
+      "tagsEn": [
+        "private-equity",
+        "returns-analysis",
+        "IRR",
+        "MOIC",
+        "sensitivity",
+        "LBO",
+        "IC-materials"
+      ],
+      "inputs": [
+        "入场EBITDA与倍数",
+        "企业价值与净债务",
+        "股权出资与债务结构",
+        "收入增长与EBITDA利润率轨迹",
+        "持有期与退出倍数",
+        "交易费用与股息安排"
+      ],
+      "id": "skill-308a54d6a5fb82ba",
+      "author": "anthropics",
+      "originalName": "returns-analysis",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/private-equity/skills/returns-analysis/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/returns-analysis/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "category": "deals",
+      "notes": "源文件已核对，未经验证执行。文件提示聚合指标可能掩盖问题，应索取客户级原始数据；NDR>100%可能掩盖高毛流失；合同ARR与确认收入需区分。示例仅用公开/非敏感输入。",
+      "outputsEn": [
+        "Excel workbook with ARR bridge and cohort matrix",
+        "Unit economics dashboard",
+        "Benchmark comparison and revenue quality score",
+        "Red flags and areas for further diligence"
+      ],
+      "outputs": [
+        "ARR桥与客户群矩阵Excel工作簿",
+        "单位经济学仪表盘",
+        "基准对比与收入质量评分",
+        "红旗与后续尽调事项清单"
+      ],
+      "method": "五步法：(1) 识别收入模式（订阅/经常性服务/交易/混合）；(2) 计算核心指标：ARR桥（期初→新增→扩展→收缩→流失→期末）、客户集中度、CAC、LTV、LTV:CAC、回收期、毛/净留存、客户群矩阵（绝对值与指数化Y0=100%）；(3) 基准对比（Rule of 40、Magic Number、NDR、LTV:CAC、留存、回收期阈值）；(4) 六因子收入质量评分（1-5分）；(5) 输出Excel工作簿与红旗清单。",
+      "dependenciesEn": [
+        "Excel or equivalent spreadsheet tool",
+        "Target company financial and customer data"
+      ],
+      "inputsEn": [
+        "ARR bridge data (beginning/new/expansion/contraction/churn/ending)",
+        "Customer-level revenue and churn data",
+        "Sales and marketing spend (for CAC)",
+        "Gross margin and cost data by revenue stream"
+      ],
+      "exampleEn": "Build a 2020-2023 cohort matrix for a SaaS target and compute LTV:CAC and payback: input the ARR bridge and churn data; output cohort retention index tables, a revenue quality scorecard, and red flags (e.g., top-10 concentration above 50%, payback over 24 months).",
+      "summaryEn": "A due-diligence workflow for PE targets covering ARR bridge, LTV/CAC, net retention, payback periods, revenue quality scoring, and margin waterfall, tailored to SaaS and recurring-revenue businesses.",
+      "dependencies": [
+        "Excel或同类电子表格工具",
+        "目标公司财务与客户数据"
+      ],
+      "methodEn": "Five steps: (1) identify revenue model (subscription, recurring services, transaction, hybrid); (2) compute core metrics — ARR bridge (beginning → new → expansion → contraction → churn → ending), customer concentration, CAC, LTV, LTV:CAC, payback, gross/net retention, cohort matrix in absolute and indexed (Y0=100%) views; (3) benchmark against Rule of 40, SaaS Magic Number, and NDR/LTV:CAC/retention/payback thresholds; (4) six-factor 1-5 revenue quality score; (5) deliver Excel workbook and red-flag list.",
+      "name": "私募股权单位经济学分析",
+      "example": "对一家SaaS目标构建2020-2023客户群矩阵并计算LTV:CAC与回收期：输入ARR桥与流失数据，输出客户群留存指数表、收入质量评分卡及红旗（如客户集中度超50%、回收期>24个月）。",
+      "nameEn": "PE Unit Economics Analysis",
+      "tags": [
+        "私募股权",
+        "单位经济学",
+        "SaaS",
+        "客户群分析",
+        "收入质量",
+        "尽职调查"
+      ],
+      "evidenceQuotes": [
+        "**ARR bridge**: Beginning ARR → New → Expansion → Contraction → Churn → Ending ARR",
+        "NDR above 100% can mask high gross churn if expansion is strong enough — always show both"
+      ],
+      "notesEn": "Source-checked, execution-unverified. The source warns aggregate metrics can hide problems and raw customer-level data should be requested; NDR above 100% can mask high gross churn; contracted ARR must be distinguished from recognized revenue. Examples use public, non-sensitive inputs only.",
+      "environmentEn": "Spreadsheet and slide environment (Excel/deck); requires access to the target's customer-level revenue data.",
+      "summary": "针对PE尽调标的的单位经济学工作流：ARR桥、LTV/CAC、净留存、回收期、收入质量评分与利润率瀑布，适用于SaaS与订阅制业务。",
+      "environment": "表格与演示环境（Excel/幻灯片）；需访问目标公司客户级收入数据。",
+      "tagsEn": [
+        "private-equity",
+        "unit-economics",
+        "saas",
+        "cohort-analysis",
+        "revenue-quality",
+        "due-diligence"
+      ],
+      "inputs": [
+        "ARR桥数据（期初/新增/扩展/收缩/流失/期末）",
+        "客户级收入与流失数据",
+        "销售与市场费用（用于CAC）",
+        "按收入流划分的毛利与成本数据"
+      ],
+      "id": "skill-2a30a485da4505c8",
+      "author": "anthropics",
+      "originalName": "unit-economics",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/private-equity/skills/unit-economics/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/unit-economics/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "category": "operations",
+      "notes": "本条目为源文件审核后的方法整理，未经实际执行验证。时效假设需注意：多数PE价值创造需12-24个月才在财务上体现。该方法依赖尽调数据、运营指标与管理层访谈输入；若这些数据缺失，需作为明确的数据缺口处理，不能默认为无风险。",
+      "outputsEn": [
+        "Word/PowerPoint value creation plan with EBITDA bridge and 100-day timeline",
+        "Per-lever detail pages",
+        "KPI dashboard and accountability matrix",
+        "Excel model backing the EBITDA bridge"
+      ],
+      "outputs": [
+        "包含EBITDA桥与100天时间线的Word/PPT价值创造计划",
+        "逐杠杆详细说明页",
+        "KPI看板与问责矩阵",
+        "支撑EBITDA桥的Excel模型"
+      ],
+      "method": "六步流程：(1) 基线评估——现有收入、EBITDA、利润率、组织能力与管理层差距；(2) 识别价值创造杠杆——有机增长、交叉销售、市场进入、定价、COGS与OpEx优化、技术投资、附加并购、经常性收入转型，每个杠杆标注现状→目标、金额影响、时间线、所需投资与置信度；(3) 构建逐年的EBITDA桥；(4) 分三个阶段（1-30天稳定评估、31-60天规划启动、61-100天执行衡量）制定100天计划；(5) 定义KPI看板与汇报频率；(6) 输出Word/PPT文件与Excel模型。",
+      "dependenciesEn": [
+        "Document generation tooling (Word/PowerPoint/Excel-compatible output)"
+      ],
+      "inputsEn": [
+        "Current revenue, EBITDA, and margins",
+        "Operational metrics by function",
+        "Organizational structure and management strengths/gaps",
+        "Quick wins identified during diligence",
+        "Lever-level investment and confidence assumptions"
+      ],
+      "exampleEn": "For an industrial company with $50M base EBITDA, build a hold-period plan where the bridge attributes $3M of Year-1 COGS savings from supplier consolidation, $4M from Year-2 pricing optimization, and $8M from add-on M&A, paired with a Days-1-30 checklist covering management retention, weekly flash reporting setup, and add-on pipeline development.",
+      "summaryEn": "Structures a post-acquisition value creation plan around an EBITDA bridge, mapping revenue, margin, and strategic levers with 100-day priorities, KPI targets, and accountability frameworks for board-ready execution.",
+      "dependencies": [
+        "文档生成工具（Word/PowerPoint/Excel兼容输出）"
+      ],
+      "methodEn": "Six steps: (1) baseline assessment of revenue, EBITDA, margins, organization, and management gaps; (2) map value creation levers — organic growth, cross-sell, market entry, pricing, COGS/OpEx optimization, technology, add-on M&A, recurring revenue shift — each with current-to-target state, dollar impact, timeline, investment, and confidence level; (3) build a multi-year EBITDA bridge; (4) set a 100-day plan across three phases (stabilize, plan/initiate, execute/measure); (5) define a KPI dashboard with owners and reporting frequency; (6) produce a document deliverable and supporting Excel model.",
+      "name": "并购后价值创造计划",
+      "example": "对一家年EBITDA 5000万美元的工业企业制定持有期价值创造计划：桥式分解显示第1年通过供应商整合节省300万美元COGS、第2年定价优化带来400万美元、附加并购贡献800万美元，并配套30天内启动的管理层留任、闪报体系与附加并购管道开发清单。",
+      "nameEn": "Post-Acquisition Value Creation Plan",
+      "tags": [
+        "私募股权",
+        "价值创造",
+        "EBITDA桥",
+        "100天计划",
+        "运营改进",
+        "KPI看板",
+        "并购整合"
+      ],
+      "evidenceQuotes": [
+        "Structure post-acquisition value creation plans with revenue, cost, and operational levers mapped to an EBITDA bridge. Includes 100-day priorities, KPI targets, and accountability frameworks.",
+        "Be realistic about timing — most PE value creation takes 12-24 months to show in financials"
+      ],
+      "notesEn": "Source-checked and structurally summarized from the repository file; execution unverified. Timing realism matters: most PE value creation takes 12-24 months to appear in financials. The method depends on diligence data, operating metrics, and management interviews; any missing inputs must be flagged as explicit data gaps rather than treated as absence of risk.",
+      "environmentEn": "Document-authoring environment capable of producing Word/PowerPoint deliverables and an Excel model; no special runtime dependencies.",
+      "summary": "以EBITDA桥为核心，规划私募股权收购后的价值创造：梳理收入增长、利润率提升与战略杠杆，制定100天优先事项、KPI看板与问责框架。",
+      "environment": "文档处理环境，可生成Word/PowerPoint叙事文件与Excel模型；无特殊运行时依赖。",
+      "tagsEn": [
+        "private equity",
+        "value creation",
+        "EBITDA bridge",
+        "100-day plan",
+        "operational improvement",
+        "KPI dashboard",
+        "M&A integration"
+      ],
+      "inputs": [
+        "当前收入、EBITDA与利润率",
+        "按职能的运营指标",
+        "组织结构与管理团队能力/缺口",
+        "尽调阶段已识别的速赢项目",
+        "杠杆层面的投资与置信度假设"
+      ],
+      "id": "skill-af7b4e9b17b47e26",
+      "author": "anthropics",
+      "originalName": "value-creation-plan",
+      "repository": "https://github.com/anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sourcePath": "plugins/vertical-plugins/private-equity/skills/value-creation-plan/SKILL.md",
+      "sourceUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/value-creation-plan/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 95,
+      "skills": 98,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -6476,7 +6720,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "14af4fd42bc20c837d93187b5b44b554956ef274",
+      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -6498,8 +6742,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--14af4fd42bc20c837d93187b5b44b554956ef274.zip",
-      "archiveSha256": "740feacf4117f4060bc820ac24b0b09d7292132c82a1eb4bf68ca83b29b1c6d5",
+      "archive": "Jeromelll--AlphaKit--c736bd7d75dc666da61ac3a47c13cc22ecd6212a.zip",
+      "archiveSha256": "c06435fbf7f199c6bb93a41a20d96a21506f3a57badbf783fccf6c054ef4f2d9",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }

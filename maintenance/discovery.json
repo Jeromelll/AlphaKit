@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-17T05:02:01.396861+00:00",
-  "query": "quant skills in:name,description",
+  "checkedAt": "2026-10-19T05:22:58.624005+00:00",
+  "query": "finance skills in:name,description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -28,7 +28,14 @@
     "robinritter/ai-agent-skills",
     "ml4t/skills",
     "Shreyankkkkk/foundations",
-    "cookiy-ai/user-research-skill"
+    "cookiy-ai/user-research-skill",
+    "adamriofc/indonesian-business-agent-skills",
+    "xje218/10.19",
+    "iamsikun/finch",
+    "Edel-Finance/edel-ai-config",
+    "EricToshioGoya/Finance-management",
+    "Crawlora-org/crawlora-skills",
+    "kangshifu1/jev-skills-market"
   ],
   "decisions": [
     {
