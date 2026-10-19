@@ -9,10 +9,13 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import random
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path, PurePosixPath
 
 from source_io import (ROOT, Snapshot, applicable_licenses, archive_name, fetch_archive,
@@ -28,6 +31,23 @@ SEARCHES = ('finance skills in:name,description', 'financial skills in:name,desc
             'investment skills in:name,description', 'equity research skills in:description',
             'quant skills in:name,description', '金融 skills in:name,description')
 MODEL_CALLS = []
+MAX_HTTP_BODY_BYTES = 64 * 1024
+MAX_MODEL_ATTEMPTS = 3
+MAX_RETRY_WAIT_SECONDS = 60
+MAX_PROVIDER_CODE = 2_147_483_647
+RETRYABLE_PROVIDER_CODES = {1302, 1305}
+PERMANENT_RATE_LIMIT_CODES = {
+    1113, 1308, 1309, 1310, 1311, 1313, 1314, 1315, 1316, 1317, 1318, 1319,
+    1320, 1321,
+}
+
+
+class ModelTransportError(RuntimeError):
+    def __init__(self, diagnostic):
+        if not isinstance(diagnostic, dict):
+            diagnostic = {'kind': 'model_transport_failure'}
+        self.diagnostic = copy.deepcopy(diagnostic)
+        super().__init__('Model transport failed')
 
 
 def json_write(path, value):
@@ -43,13 +63,78 @@ def model_json(messages, max_tokens=5500):
                        'max_tokens': max_tokens, 'thinking': {'type': 'disabled'}}).encode()
     request = urllib.request.Request(ENDPOINT, data=body,
                                     headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key})
-    try:
-        with urllib.request.urlopen(request, timeout=180) as response:
-            result = json.loads(response.read(2 * 1024 * 1024))
-    except urllib.error.HTTPError as error:
-        raise RuntimeError('Zhipu request failed: HTTP ' + str(error.code)) from None
-    except (TimeoutError, urllib.error.URLError):
-        raise RuntimeError('Zhipu request timed out or failed') from None
+    decisions = []
+    remaining_wait = MAX_RETRY_WAIT_SECONDS
+    for attempt in range(1, MAX_MODEL_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=180) as response:
+                result = json.loads(response.read(2 * 1024 * 1024))
+        except urllib.error.HTTPError as error:
+            try:
+                response_body = error.read(MAX_HTTP_BODY_BYTES + 1)
+            except Exception:
+                response_body = b''
+            finally:
+                error.close()
+            provider_code = None
+            if len(response_body) <= MAX_HTTP_BODY_BYTES:
+                try:
+                    error_json = json.loads(response_body.decode('utf-8', 'replace'))
+                    if isinstance(error_json, dict) and isinstance(error_json.get('error'), dict):
+                        candidate = error_json['error'].get('code')
+                        if (isinstance(candidate, int) and not isinstance(candidate, bool) and
+                                0 <= candidate <= MAX_PROVIDER_CODE):
+                            provider_code = candidate
+                        elif (isinstance(candidate, str) and re.fullmatch(r'[0-9]+', candidate) and
+                              int(candidate) <= MAX_PROVIDER_CODE):
+                            provider_code = int(candidate)
+                except (UnicodeError, json.JSONDecodeError):
+                    pass
+            wait_seconds = None
+            retry = False
+            if error.code == 429 and provider_code in RETRYABLE_PROVIDER_CODES:
+                retry_after = error.headers.get('Retry-After') if error.headers else None
+                if retry_after is not None and retry_after.strip().isdigit():
+                    wait_seconds = int(retry_after)
+                elif retry_after is not None:
+                    try:
+                        retry_time = parsedate_to_datetime(retry_after)
+                        if retry_time.tzinfo is None:
+                            wait_seconds = None
+                        else:
+                            wait_seconds = max(0.0, retry_time.timestamp() - time.time())
+                    except (TypeError, ValueError, OverflowError):
+                        wait_seconds = None
+                if wait_seconds is None:
+                    wait_seconds = 0.5 * (2 ** (attempt - 1))
+                jitter = 0.0
+                if wait_seconds <= remaining_wait:
+                    jitter = random.uniform(0, 0.1 * wait_seconds if wait_seconds else 0.1)
+                retry = (error.code == 429 and attempt < MAX_MODEL_ATTEMPTS and
+                         provider_code in RETRYABLE_PROVIDER_CODES and
+                         wait_seconds + jitter <= remaining_wait)
+                wait_seconds += jitter
+                if retry:
+                    remaining_wait -= wait_seconds
+            if retry:
+                decisions.append({'httpStatus': error.code, 'providerCode': provider_code,
+                                  'retry': True, 'waitSeconds': wait_seconds})
+                time.sleep(wait_seconds)
+                continue
+            decisions.append({'httpStatus': error.code, 'providerCode': provider_code,
+                              'retry': False, 'waitSeconds': wait_seconds or 0})
+            raise ModelTransportError({'httpStatus': error.code, 'providerCode': provider_code,
+                                       'attempts': attempt, 'decisions': decisions}) from None
+        except (TimeoutError, urllib.error.URLError):
+            raise RuntimeError('Zhipu request timed out or failed') from None
+        if not isinstance(result, dict):
+            raise ValueError('Invalid model provider response')
+        if not isinstance(result.get('model'), str) or not result['model'].startswith(MODEL):
+            raise ValueError('Unexpected model provider response')
+        MODEL_CALLS.append({'model': result['model'], 'usage': result.get('usage', {})})
+        message = result['choices'][0]['message']['content']
+        text = re.sub(r'^```(?:json)?\s*|\s*```$', '', message.strip())
+        return json.loads(text)
     if not isinstance(result.get('model'), str) or not result['model'].startswith(MODEL):
         raise ValueError('Unexpected model provider response')
     MODEL_CALLS.append({'model': result['model'], 'usage': result.get('usage', {})})
@@ -417,6 +502,8 @@ def main():
         run(args, receipt)
     except Exception as error:
         receipt.update({'status': 'failed', 'failure': type(error).__name__ + ': ' + str(error)[:400]})
+        if isinstance(error, ModelTransportError):
+            receipt['modelFailure'] = error.diagnostic
         receipt['modelCalls'] = MODEL_CALLS
         json_write(Path(args.receipt), receipt)
         skipped = receipt.get('skipped', [])
