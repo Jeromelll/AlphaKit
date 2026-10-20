@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-20",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5631,9 +5631,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
+      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5642,7 +5642,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5701,9 +5701,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
+      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5712,7 +5712,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5773,9 +5773,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
+      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5784,7 +5784,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/c736bd7d75dc666da61ac3a47c13cc22ecd6212a/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -6557,11 +6557,274 @@
       "licenseUrl": "https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "notes": "该技能为分析框架而非投资建议，文件明确声明不构成个人化建议。数据局限需明示：A股ESG披露不均匀、各评级机构一致性低；无法获取的披露或评级数据必须作为数据缺口保留，不得当作无争议或无风险。本目录收录为源文件核验条目，方法与依赖均来自原始文件，未实际执行验证。",
+      "dependencies": [
+        "references/esg-framework.md 评分标准",
+        "references/output-template.md 输出模板",
+        "findata-toolkit-cn（可选，实时市场数据）"
+      ],
+      "name": "ESG与负责任投资筛选器",
+      "evidenceQuotes": [
+        "在E、S、G三个支柱上对每家公司评分",
+        "ESG筛选是分析框架，不构成投资建议",
+        "A股ESG数据披露不均匀，各评级机构之间一致性低"
+      ],
+      "environmentEn": "A text-based analytical framework using A-share ESG disclosures and public ratings; optionally depends on the findata-toolkit-cn skill for real-time quotes and financial metrics from free data sources (no API key required). Tool availability unverified.",
+      "summaryEn": "Scores A-share listed companies on environmental, social and governance pillars, assesses ESG momentum, screens controversy events, and integrates financial quality into a structured screening report.",
+      "category": "research",
+      "notesEn": "This skill is an analytical framework, not investment advice; the file explicitly disclaims personalized recommendations. Data limits must be stated: A-share ESG disclosure is uneven and rating agencies are inconsistent; unavailable disclosures or ratings must remain explicit data gaps and must not be treated as no controversy or no risk. Cataloged as a source-checked entry; method and dependencies come from the original file and execution is unverified.",
+      "method": "七步流程：(1) 与用户确认选股池、ESG策略（同类最优/排除法/整合/主题）、聚焦支柱、行业与排除项；(2) 执行排除筛选（烟草、争议性武器、高污染、赌博、严重争议、ST/*ST）；(3) 按E/S/G三支柱（各约33/33/34权重）用定量与定性数据打0-100分；(4) 通过排放趋势、争议趋势、披露质量、目标设定与评级变化评估ESG动量；(5) 按严重程度分级检查活跃争议事件；(6) 将ESG得分与ROE、波动率、股东回报、成本结构交叉验证；(7) 按模板呈现筛选标准、精选名单、动量面板、争议监控、财务整合与公司卡片。",
+      "outputs": [
+        "筛选标准汇总",
+        "ESG精选名单与综合排名",
+        "ESG动量面板",
+        "争议监控报告",
+        "ESG与财务质量整合对比",
+        "个别公司ESG卡片"
+      ],
+      "inputsEn": [
+        "Screening universe (CSI 300 / CSI 800 / all A-shares / custom)",
+        "ESG strategy and focus pillars",
+        "Exclusions and sector scope",
+        "Company ESG disclosures and rating changes",
+        "Controversy event records",
+        "Financial metrics (ROE, volatility, shareholder returns, etc.)"
+      ],
+      "summary": "从环境、社会、治理三个支柱对A股上市公司进行ESG评分、动量评估、争议事件筛查与财务整合，输出结构化筛选报告。",
+      "nameEn": "ESG & Responsible Investment Screener",
+      "environment": "文本分析框架，配合A股ESG披露与公开评级信息使用；可选依赖 findata-toolkit-cn 技能获取实时行情、财务指标等免费数据源（无需API密钥）。未验证工具可用性。",
+      "outputsEn": [
+        "Screening criteria summary",
+        "ESG pick list with composite rankings",
+        "ESG momentum panel",
+        "Controversy monitoring report",
+        "ESG vs financial quality integration",
+        "Individual company ESG cards"
+      ],
+      "tagsEn": [
+        "ESG investing",
+        "A-share screening",
+        "exclusion list",
+        "controversy screening",
+        "governance assessment",
+        "sustainable investing"
+      ],
+      "tags": [
+        "ESG投资",
+        "A股筛选",
+        "排除清单",
+        "争议事件筛查",
+        "治理评估",
+        "可持续投资"
+      ],
+      "exampleEn": "User request: screen the CSI 300 with a best-in-class strategy for the top 10 governance leaders, excluding heavy polluters and ST firms. Steps: apply exclusions, score using disclosed emissions and governance metrics, assess disclosure-quality momentum, check controversies such as regulatory penalties, cross-check governance scores against ROE and shareholder returns, then output the pick list, momentum panel and company cards.",
+      "inputs": [
+        "选股池（沪深300/中证800/全A/自定义）",
+        "ESG策略与聚焦支柱",
+        "排除项与行业范围",
+        "公司ESG披露数据与评级变化",
+        "争议事件记录",
+        "财务指标（ROE、波动率、股东回报等）"
+      ],
+      "dependenciesEn": [
+        "references/esg-framework.md scoring criteria",
+        "references/output-template.md output template",
+        "findata-toolkit-cn (optional, real-time market data)"
+      ],
+      "methodEn": "A seven-step workflow: (1) confirm universe, ESG strategy (best-in-class / exclusionary / integration / thematic), pillars, sector and exclusions with the user; (2) apply exclusion screens (tobacco, controversial weapons, heavy polluters, gambling, severe unresolved controversies, ST/*ST); (3) score each company 0-100 on E/S/G pillars (~33/33/34 weights) using quantitative and qualitative data; (4) assess ESG momentum via emissions trends, controversy trends, disclosure quality, target setting and rating changes; (5) screen active controversies by severity tier; (6) cross-check ESG scores against ROE, volatility, shareholder returns and cost structure; (7) present screening criteria, picks, momentum panel, controversy monitoring, financial integration and per-company cards per the output template.",
+      "example": "用户请求：从沪深300中用同类最优策略筛选治理维度领先的前10家公司，排除高污染与ST公司。流程：执行排除筛选→按披露的排放数据与治理指标打分→评估披露质量动量→检查监管处罚等争议→将治理得分与ROE和股东回报对比→输出精选名单、动量面板与公司卡片。",
+      "id": "skill-4eae9cc21e44e87b",
+      "author": "Geeksfino",
+      "originalName": "esg-screener",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "China-market/esg-screener/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/esg-screener/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/esg-screener/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "notes": "本技能仅分析依法公开披露的增减持行为，非违法内幕交易。关键甄别：高比例质押股东增持可能为维护质押安全线；监管鼓励的“维稳增持”信号弱于自发增持；信号强度为增持>回购>仅公告增持计划；减持原因多样不应简单视为看空；集群增持优于个体增持。结果为信息参考，不构成投资建议，且为源码已审、执行未验证。",
+      "dependencies": [
+        "references/screening-criteria.md",
+        "references/output-template.md",
+        "findata-toolkit-cn 技能（可选，用于实时市场数据）"
+      ],
+      "name": "董监高增减持行为分析器",
+      "evidenceQuotes": [
+        "扮演专业的内部交易分析师。分析A股上市公司董事、监事、高级管理人员及重要股东的增减持行为，识别具有管理层信心信号的投资机会。",
+        "高比例股权质押的股东增持可能是为了维护质押安全线，而非出于对公司前景的信心，需特别甄别。"
+      ],
+      "environmentEn": "Conversational analysis environment requiring A-share insider trading disclosure data. Real-time quotes, financial metrics and insider transaction records can be sourced via the findata-toolkit-cn companion skill; all data sources are free with no API key required.",
+      "summaryEn": "Screens and ranks cluster-based open-market insider buying by A-share directors, supervisors, executives and major shareholders to surface management-confidence signals, producing structured per-company reports.",
+      "category": "research",
+      "notesEn": "The skill analyzes only legally disclosed trading, not illegal insider trading. Key caveats: purchases by heavily pledged shareholders may defend pledge margin lines; policy-encouraged 'stabilization' buying is a weaker signal than voluntary buying; signal strength ranks buying > buybacks > mere plans; sales have varied motives and are not automatically bearish; cluster buying outweighs single-buyer buying. Output is informational, not investment advice; the skill is source-reviewed but execution-unverified.",
+      "method": "五步工作流：确认分析范围（行业、时间窗口默认90天、结果数量默认前5家、交易主体、板块）→ 按集群增持（≥2名内部人）、交易方式（仅二级市场竞价或大宗买入，排除股权激励行权与定增）、时效性、显著性、股权质押筛选 → 按增持人职务层级、金额绝对值、占年薪比例、逆势买入、增持密度、主动vs政策驱动排名评分 → 对头部公司逐家深度分析（谁在增持、历史效果、信心解读、风险信号）→ 输出含摘要、方法论、个股分析、对比表与风险提示的结构化报告。",
+      "outputs": [
+        "符合条件的集群增持公司排名评分列表",
+        "前5家公司逐家深度分析",
+        "含摘要、方法论、个股分析、对比表、风险提示的结构化报告"
+      ],
+      "inputsEn": [
+        "Scope parameters (industry, time window, result count, insider type, board segment)",
+        "A-share insider transaction disclosures (name, role, shares, amount, date)",
+        "Shareholder share-pledge ratio data",
+        "Historical post-buying stock performance data"
+      ],
+      "summary": "筛选并排名A股董监高及重要股东的集群式主动增持行为，识别管理层信心信号并输出结构化个股分析报告。",
+      "nameEn": "Insider Trading Analyzer (A-Share Director/Officer Activity)",
+      "environment": "对话式分析环境；需A股董监高增减持披露数据。实时行情、财务指标、增减持记录等可借助金融数据工具包技能（findata-toolkit-cn），所有数据源免费且无需API密钥。",
+      "outputsEn": [
+        "Ranked and scored list of companies with qualifying cluster buying",
+        "Per-company deep dives for the top five",
+        "Structured report with summary, methodology, company analyses, comparison table, and risk caveats"
+      ],
+      "tagsEn": [
+        "A-shares",
+        "insider transactions",
+        "director and officer buying",
+        "management confidence signal",
+        "share pledges",
+        "stock screening"
+      ],
+      "tags": [
+        "A股",
+        "董监高增减持",
+        "内部人交易",
+        "管理层信心信号",
+        "股权质押",
+        "股票筛选"
+      ],
+      "exampleEn": "User asks: which A-share companies saw clustered insider buying in the past 90 days? Workflow: scan the whole market over 90 days, filter for at least two insiders making voluntary open-market purchases while excluding purchases by heavily pledged shareholders, score by buyer seniority and amount, take the top five, and for each report buyer names/roles, amounts and dates, historical post-buying price performance, plus pledge or policy-driven risk caveats.",
+      "inputs": [
+        "分析范围参数（行业、时间窗口、结果数量、交易主体、板块）",
+        "A股董监高及重要股东增减持披露数据（姓名、职务、股数、金额、日期）",
+        "股东股权质押比例数据",
+        "历史增持后股价表现数据"
+      ],
+      "dependenciesEn": [
+        "references/screening-criteria.md",
+        "references/output-template.md",
+        "findata-toolkit-cn skill (optional, for live market data)"
+      ],
+      "methodEn": "Five-step workflow: confirm scope (industry, default 90-day window, top-5 results, insider type, board segment) -> screen for cluster buying (>=2 insiders), genuine open-market or block purchases (excluding option exercises and private placements), recency, materiality, and pledge status -> rank on buyer seniority, absolute amount, ratio to salary, counter-trend timing, buying density, and voluntary vs policy-driven nature -> deep-dive top companies (who bought, historical follow-through, confidence interpretation, risk signals) -> deliver a structured report with summary, methodology, company analyses, comparison table, and risk caveats.",
+      "example": "用户问：近90天哪些A股公司出现董监高集群增持？分析：以全市场90天窗口扫描，筛出至少2名内部人二级市场主动买入、剔除高质押股东增持的公司；按增持人职务与金额评分取前5家；对每家列出增持人姓名职务、金额日期、历史增持后的股价表现、以及质押或政策驱动的风险提示。",
+      "id": "skill-5a496c431d2fde42",
+      "author": "Geeksfino",
+      "originalName": "insider-trading-analyzer",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "China-market/insider-trading-analyzer/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/insider-trading-analyzer/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/insider-trading-analyzer/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "notes": "定位为诊断而非从零构建组合（构建请用风险调整收益优化器）。强调情境依赖（100%权益对长期年轻投资者可能合理）、A股无资本利得税、涨跌停对极端流动性影响、分红税持有期、行为敏感性与非个人化声明。若用户数据不完整需追问；引用的实时数据依赖外部数据工具包，本条目为源文件审核结果，未实际执行验证。",
+      "dependencies": [
+        "findata-toolkit-cn 金融数据工具包（可选，实时行情与财务数据）",
+        "references/diagnostic-framework.md 阈值与情景细则",
+        "references/output-template.md 报告格式模板"
+      ],
+      "name": "组合健康诊断",
+      "evidenceQuotes": [
+        "识别**相关性聚集**——3只及以上持仓平均两两相关系数 > 0.7",
+        "变现天数 | 以日均成交量20%计算，每个仓位完全退出需多少天"
+      ],
+      "environmentEn": "Designed for the China A-share market (CSI 300 default benchmark, SW industry classification, price-limit and stamp-tax rules). Optionally pairs with a named financial data toolkit skill (findata-toolkit-cn) providing free A-share quotes and fundamentals without API keys. Diagnostic framework and output template live in references subfiles.",
+      "summaryEn": "Diagnoses risk and inefficiency in an existing portfolio, covering concentration, correlation clusters, factor exposures, risk metrics, historical scenario stress tests, and liquidity, then produces a health score and prioritized improvement recommendations.",
+      "category": "portfolio",
+      "notesEn": "Positioned as diagnosis rather than building a portfolio from scratch (use a risk-adjusted return optimizer for that). Emphasizes context dependence (100% equity may suit a young long-horizon investor), no A-share capital gains tax, price-limit liquidity effects, dividend-tax holding periods, behavioral sensitivity, and a non-personalized-advice disclaimer. Incomplete user data must be clarified; real-time data depends on the external data toolkit. This entry is source-reviewed but execution-unverified.",
+      "method": "按八个步骤工作：导入并归一化持仓为百分比权重；多维度集中度分析（个股、前五大、申万行业、市场、市值、资产类别、风格，各有红灯阈值）；两两相关系数检测相关性聚集（3只以上平均两两相关>0.7）与有效分散比率；因子暴露分解（Beta、价值、成长、规模、动量、质量、波动率、股息率）并标记偏离基准超1个标准差的暴露；计算波动率、Beta、跟踪误差、主动份额、VaR/CVaR、最大回撤与夏普/索提诺估计；以2015股灾、2018贸易摩擦、2020疫情、2022调整、2008金融危机等历史情景做压力测试；按日均成交量20%估算变现天数评估流动性；综合为健康评分、严重问题、警示事项、优势、改进建议与调仓方案。",
+      "outputs": [
+        "组合健康评分（0-100）",
+        "集中度诊断（个股/前五/行业/市场/市值/资产类别/风格）",
+        "相关性聚集与有效分散比率",
+        "因子暴露与基准偏离标记",
+        "风险指标（波动率、Beta、跟踪误差、VaR/CVaR、回撤、夏普/索提诺）",
+        "历史情景压力测试结果",
+        "流动性评估（变现天数、低流动性仓位）",
+        "严重问题、警示事项与优先级调仓建议"
+      ],
+      "inputsEn": [
+        "Holdings list (code + shares/value or percentage, required)",
+        "Cash position (amount or percentage, required)",
+        "Account type (regular / with personal pension / margin, optional)",
+        "Benchmark (default CSI 300, optional)",
+        "Risk appetite (conservative / moderate / aggressive, optional)",
+        "Investment horizon (years, optional)"
+      ],
+      "summary": "对现有投资组合进行风险与效率诊断，涵盖集中度、相关性聚集、因子暴露、风险指标、历史情景压力测试和流动性评估，并输出健康评分与优先级改进建议。",
+      "nameEn": "Portfolio Health Check",
+      "environment": "针对A股市场设计（沪深300默认基准、申万行业分类、涨跌停与印花税规则）。可选配合名金融数据工具包技能（findata-toolkit-cn）获取免费A股实时行情与财务数据，无需API密钥。诊断框架与输出模板在references子文件中。",
+      "outputsEn": [
+        "Portfolio health score (0-100)",
+        "Concentration diagnostics (single stock / top five / industry / market / size / asset class / style)",
+        "Correlation clusters and effective diversification ratio",
+        "Factor exposures with benchmark-deviation flags",
+        "Risk metrics (volatility, Beta, tracking error, VaR/CVaR, drawdown, Sharpe/Sortino)",
+        "Historical scenario stress test results",
+        "Liquidity assessment (liquidation days, illiquid positions)",
+        "Critical issues, warnings, and prioritized rebalancing recommendations"
+      ],
+      "tagsEn": [
+        "portfolio",
+        "risk diagnosis",
+        "A-shares",
+        "concentration",
+        "factor exposure",
+        "stress testing",
+        "liquidity",
+        "rebalancing"
+      ],
+      "tags": [
+        "投资组合",
+        "风险诊断",
+        "A股",
+        "集中度",
+        "因子暴露",
+        "压力测试",
+        "流动性",
+        "再平衡"
+      ],
+      "exampleEn": "A user supplies a holdings list with cash (e.g., Kweichow Moutai 5%, CATL 8%, several ChiNext stocks, and cash) and a moderate risk profile; the skill returns concentration traffic lights, a correlation-cluster warning for the new-energy supply chain, portfolio Beta and VaR, a 2018-scenario drawdown simulation, a list of positions needing more than five trading days to exit, and prioritized rebalancing suggestions.",
+      "inputs": [
+        "持仓清单（代码+股数/金额或百分比，必需）",
+        "现金仓位（金额或百分比，必需）",
+        "账户类型（普通/含个人养老金/两融，可选）",
+        "基准（默认沪深300，可选）",
+        "风险偏好（保守/稳健/积极，可选）",
+        "投资期限（年数，可选）"
+      ],
+      "dependenciesEn": [
+        "findata-toolkit-cn data toolkit (optional, real-time quotes and fundamentals)",
+        "references/diagnostic-framework.md for thresholds and scenario details",
+        "references/output-template.md for report formatting"
+      ],
+      "methodEn": "An eight-step workflow: import and normalize holdings to percentage weights; multi-dimensional concentration analysis (single stock, top five, SW industry, market, size band, asset class, style, each with red-line thresholds); pairwise correlation cluster detection (three or more holdings averaging pairwise correlation above 0.7) plus effective diversification ratio; factor exposure decomposition (Beta, value, growth, size, momentum, quality, volatility, dividend yield) flagging deviations beyond one standard deviation vs benchmark; portfolio metrics (volatility, Beta, tracking error, active share, VaR/CVaR, max drawdown, Sharpe/Sortino estimates); stress testing against 2015 crash, 2018 trade friction, 2020 pandemic, 2022 adjustment, and 2008 financial crisis scenarios; liquidity assessment via liquidation days at 20% of average daily volume; and a synthesis into health score, critical issues, warnings, strengths, prioritized recommendations, and rebalancing plan.",
+      "example": "用户提供含现金的持仓清单（如：贵州茅台5%、宁德时代8%、若干创业板股票及现金），指定稳健风险偏好后，技能输出：单一个股与行业集中度红绿灯、新能源产业链相关性聚集提示、组合Beta与VaR、2018年情景下的回撤模拟、退出需超过5个交易日的低流动性仓位清单，以及按优先级排列的调仓建议。",
+      "id": "skill-f5385ad763430187",
+      "author": "Geeksfino",
+      "originalName": "portfolio-health-check",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "China-market/portfolio-health-check/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/portfolio-health-check/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/portfolio-health-check/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 98,
+      "skills": 101,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -6627,6 +6890,10 @@
       "licenseFile": "/licenses/Geeksfino--finskills--LICENSE",
       "licenseFiles": [
         {
+          "sourcePath": "China-market/esg-screener/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--China-market--esg-screener--LICENSE.txt"
+        },
+        {
           "sourcePath": "China-market/event-driven-detector/LICENSE.txt",
           "file": "/licenses/Geeksfino--finskills--China-market--event-driven-detector--LICENSE.txt"
         },
@@ -6641,6 +6908,14 @@
         {
           "sourcePath": "China-market/high-dividend-strategy/LICENSE.txt",
           "file": "/licenses/Geeksfino--finskills--China-market--high-dividend-strategy--LICENSE.txt"
+        },
+        {
+          "sourcePath": "China-market/insider-trading-analyzer/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--China-market--insider-trading-analyzer--LICENSE.txt"
+        },
+        {
+          "sourcePath": "China-market/portfolio-health-check/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--China-market--portfolio-health-check--LICENSE.txt"
         },
         {
           "sourcePath": "China-market/quant-factor-screener/LICENSE.txt",
@@ -6720,7 +6995,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "c736bd7d75dc666da61ac3a47c13cc22ecd6212a",
+      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -6742,8 +7017,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--c736bd7d75dc666da61ac3a47c13cc22ecd6212a.zip",
-      "archiveSha256": "c06435fbf7f199c6bb93a41a20d96a21506f3a57badbf783fccf6c054ef4f2d9",
+      "archive": "Jeromelll--AlphaKit--d2afeaec24d72dcd4212ce5c28802fe5c8f92b11.zip",
+      "archiveSha256": "1a2cc781a56288df6c86117be9a318e92869014e001268ba2b115056d6d242ec",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }

@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-19T05:22:58.624005+00:00",
-  "query": "finance skills in:name,description",
+  "checkedAt": "2026-10-20T08:51:00.883095+00:00",
+  "query": "financial skills in:name,description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -35,7 +35,12 @@
     "Edel-Finance/edel-ai-config",
     "EricToshioGoya/Finance-management",
     "Crawlora-org/crawlora-skills",
-    "kangshifu1/jev-skills-market"
+    "kangshifu1/jev-skills-market",
+    "AndreYamada/maia-skill",
+    "dcoburn414-ai/benjamin-cowen",
+    "nascimento7030/ApocData-skill",
+    "Marekm9823/maia-skill",
+    "NikolaiPelletier/ApocData-skill"
   ],
   "decisions": [
     {
@@ -96,6 +101,31 @@
       "path": "plugins/skill-creator/skills/skill-creator/SKILL.md",
       "contentHash": "d957be74044c55697e60e536ff5b460bfae5d2be8825d39510d8e272d4be2752",
       "reason": "Model scope review rejected candidate"
+    },
+    {
+      "repository": "himself65/finance-skills",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
+      "path": "plugins/data-providers/skills/fintel-data/SKILL.md",
+      "contentHash": "dcb856e10a2d99ea3bbf9c57bcc1c5581dae9b6cb3f8b38d772e3cab7ca84ec9",
+      "reason": "Candidate metadata failed format validation after one repair",
+      "diagnostics": [
+        {
+          "field": "evidenceQuotes",
+          "exists": true,
+          "type": "list",
+          "length": 2,
+          "stage": "initial",
+          "reason": "Two distinct exact source quotations are required"
+        },
+        {
+          "field": "evidenceQuotes",
+          "exists": true,
+          "type": "list",
+          "length": 2,
+          "stage": "repair",
+          "reason": "Two distinct exact source quotations are required"
+        }
+      ]
     }
   ]
 }
