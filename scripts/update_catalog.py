@@ -337,6 +337,7 @@ def run(args, receipt):
     candidates = list(dict.fromkeys(policy.get('candidates', []) + prior_candidates + discovered))
     configs.extend({'repository': repo, 'prefix': ''} for repo in candidates
                    if repo not in source_by_repo and repo not in {c['repository'] for c in configs})
+    reviewed_changes = policy.get('reviewedChanges', [])
     new_repo_checks = 0
     new_count = 0
     changed_count = 0
@@ -386,7 +387,19 @@ def run(args, receipt):
             old_snapshot = Snapshot(archive_dir / previous['archive']) if previous else None
             changed = [entry for entry in selected if entry['sourcePath'] not in snapshot.paths
                        or old_snapshot.read(entry['sourcePath']) != snapshot.read(entry['sourcePath'])]
-            changed_count += len(changed)
+            # A maintainer can approve one specific upstream commit after reviewing its diff by
+            # listing it in maintenance/sources.json "reviewedChanges". The approval is pinned to
+            # the exact commit and an upper bound on changed skills, so any later upstream change
+            # falls back to the six-change manual review limit.
+            approved = next((item for item in reviewed_changes
+                             if item.get('repository') == repo and item.get('commit') == commit
+                             and isinstance(item.get('maxChanged'), int)
+                             and len(changed) <= item['maxChanged']), None)
+            if approved:
+                receipt.setdefault('reviewedChanges', []).append(
+                    {'repository': repo, 'commit': commit, 'changed': len(changed)})
+            else:
+                changed_count += len(changed)
             if changed_count > 6:
                 raise ValueError('More than six changed existing skills in one batch require manual review')
             hold = False
