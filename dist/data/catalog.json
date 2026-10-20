@@ -1259,11 +1259,11 @@
       "summary": "从 Adanos Finance API 读取 Reddit、X、财经新闻及 Polymarket 的标准化讨论热度、看多比例、提及或交易数和趋势；仅作只读情绪观察。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/data-providers/skills/finance-sentiment/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/data-providers/skills/finance-sentiment/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/data-providers/skills/finance-sentiment/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "社媒热度",
         "情绪对照",
@@ -1286,7 +1286,7 @@
       "method": "先确认 ADANOS_API_KEY，再按问题选择单股、多股或跨源请求；读取 Reddit、X、新闻及 Polymarket 返回的统一字段；比较时对齐代码、来源和抓取时点，明确数据是热度代理而非投资者全体情绪。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "必须提供 Adanos 的 ADANOS_API_KEY；平台覆盖有限，热度与看多比例是聚合代理，Polymarket 数据反映预测市场而非股东观点。",
+      "notes": "必须提供 Adanos 的 ADANOS_API_KEY；平台覆盖有限，热度与看多比例是聚合代理，Polymarket 数据反映预测市场而非股东观点。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "Fetches structured stock sentiment from the Adanos Finance API.",
         "This skill is read-only. It is designed for research questions that are easier to answer with normalized sentiment signals than with raw social feeds."
@@ -1308,7 +1308,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Compare Reddit mentions, bullish share and news trend for three semiconductor tickers at the same retrieval time.",
-      "notesEn": "Confirm ADANOS_API_KEY, route the request to a single-ticker, multi-ticker or cross-source query, then read the normalized Reddit, X, news and Polymarket fields. Align ticker, source and retrieval time in comparisons and describe the metrics as coverage-dependent attention proxies. Attention metrics are provider-coverage proxies, not the views of all investors. Runtime execution has not been verified.",
+      "notesEn": "Confirm ADANOS_API_KEY, route the request to a single-ticker, multi-ticker or cross-source query, then read the normalized Reddit, X, news and Polymarket fields. Align ticker, source and retrieval time in comparisons and describe the metrics as coverage-dependent attention proxies. Attention metrics are provider-coverage proxies, not the views of all investors. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "finance sentiment",
         "quant",
@@ -1323,11 +1323,11 @@
       "summary": "通过 Fintel REST 或官方 MCP 查询卖空余额、借券成本、FTD、13F 持有人、Form 3/4/5 内幕交易、分析师目标价等机构市场数据；仅允许 GET 查询。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/data-providers/skills/fintel-data/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/data-providers/skills/fintel-data/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/data-providers/skills/fintel-data/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "Fintel",
         "卖空数据",
@@ -1350,7 +1350,7 @@
       "method": "先核实 FINTEL_API_KEY 和证券标识；按请求映射到对应 GET endpoint，仅在需要时改用官方 MCP；核对响应的日期、国家和 entitlement，再解释卖空、13F 或 Form 4 字段。不得调用创建列表或提醒的写接口。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需要 Fintel API key、订阅 entitlement 和可达 REST/MCP；数据字段依国家/证券覆盖不同。遵循只读 GET，历史 13F 存在披露滞后。",
+      "notes": "需要 Fintel API key、订阅 entitlement 和可达 REST/MCP；数据字段依国家/证券覆盖不同。遵循只读 GET，历史 13F 存在披露滞后。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "Both require a Fintel API key. **This skill is read-only** — only call",
         "Read-only: GET endpoints only."
@@ -1372,7 +1372,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Retrieve a company’s short-interest, 13F ownership and recent Form 4 activity using authorized Fintel access.",
-      "notesEn": "Verify FINTEL_API_KEY and resolve the security identifier, map the question to a GET endpoint, and use the official MCP only when useful. Check response dates, country and entitlements before interpreting short-interest, 13F or Form 4 fields; do not call write endpoints. 13F filings are delayed and endpoint availability depends on subscription entitlement. Runtime execution has not been verified.",
+      "notesEn": "Verify FINTEL_API_KEY and resolve the security identifier, map the question to a GET endpoint, and use the official MCP only when useful. Check response dates, country and entitlements before interpreting short-interest, 13F or Form 4 fields; do not call write endpoints. 13F filings are delayed and endpoint availability depends on subscription entitlement. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "fintel data",
         "data",
@@ -1387,11 +1387,11 @@
       "summary": "读取公开监测面板中的海峡开放状态、油轮通行与滞留、布伦特影响、战争险、货运和外交动态，用于能源供应链风险跟踪。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/data-providers/skills/hormuz-strait/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/data-providers/skills/hormuz-strait/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/data-providers/skills/hormuz-strait/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "霍尔木兹",
         "油运",
@@ -1449,11 +1449,11 @@
       "summary": "使用 opencli 插件及公开 info API 读取标记价、预言机价、资金费率、持仓量、成交量、盘口、K 线和跨平台费率对照；仅查公开市场数据，不涉及账户或交易。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/data-providers/skills/hyperliquid-reader/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/data-providers/skills/hyperliquid-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/data-providers/skills/hyperliquid-reader/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "Hyperliquid",
         "资金费率",
@@ -1477,7 +1477,7 @@
       "method": "先检查 opencli 和独立 Hyperliquid 插件已安装，再按用户问题选择 markets、book、candles、funding-history 或 funding-compare；输出标记币种、区间、费率年化口径和 API 时间。仅访问公开 info API。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需 Node 24+、opencli 和单独安装的 finance-skills Hyperliquid 插件；API 无需 key/wallet/login。只读公开行情，不读账户、不下单、不转账。",
+      "notes": "需 Node 24+、opencli 和单独安装的 finance-skills Hyperliquid 插件；API 无需 key/wallet/login。只读公开行情，不读账户、不下单、不转账。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "**How it works**: every command issues a single `POST https://api.hyperliquid.xyz/info` with a `{ \"type\": \"...\" }` body and normalizes the response. **No API key, no wallet, no login, no running app** — the info API is public.",
         "8. **Read-only market data.** No account reads, no order placement, modification, or cancellation, and no transfers — the plugin intentionally exposes no write endpoints, so don't look for workarounds."
@@ -1500,7 +1500,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Read BTC perpetual funding, open interest and order-book depth, and compare funding with Binance and Bybit.",
-      "notesEn": "Verify that opencli and the separate Hyperliquid plugin are installed, then choose markets, book, candles, funding-history or funding-compare for the request. Label the coin, interval, funding annualization and API time. Use only the public info API. Public market data only; no account, order, transfer or wallet operations. Runtime execution has not been verified.",
+      "notesEn": "Verify that opencli and the separate Hyperliquid plugin are installed, then choose markets, book, candles, funding-history or funding-compare for the request. Label the coin, interval, funding annualization and API time. Use only the public info API. Public market data only; no account, order, transfer or wallet operations. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "hyperliquid reader",
         "data",
@@ -1515,19 +1515,20 @@
       "summary": "通过随包 MCP 服务读取 TradingView 扫描器和 Yahoo Finance 数据，覆盖指标摘要、多周期走势、市场扫描、期货、盘前盘后和期权链等；大多数工具无需账户，策略回测只反映输入历史数据。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/data-providers/skills/tradingview-mcp/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/data-providers/skills/tradingview-mcp/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/data-providers/skills/tradingview-mcp/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "TradingView",
         "技术指标",
         "市场扫描"
       ],
-      "environment": "需具备 Python/opencli/API 或本机 TradingView 条件，取决于技能；未在本目录运行验证。",
+      "environment": "支持本地 stdio MCP 进程的宿主及 uvx；使用完整 finance-data-providers 插件或单独配置 server。无桌面 TradingView 或账号要求；执行未验证。",
       "dependencies": [
-        "宿主需加载随包 .mcp.json 的 tradingview MCP 服务；多数工具无需登录/key；新闻工具需 MARKETAUX_API_TOKEN"
+        "完整插件的 mcp.json（portable/Codex）或 .mcp.json（legacy）；仅安装技能不会安装 MCP server",
+        "uvx 及兼容 Python；TradingView MCP 固定 Git 版本与旧版相同；新闻工具仍需 MARKETAUX_API_TOKEN"
       ],
       "inputs": [
         "Ticker/exchange/timeframe or scanner/backtest query",
@@ -1541,7 +1542,7 @@
       "method": "先确认客户端已加载 bundled tradingview MCP；按问题挑最小工具集，标准化 ticker、交易所和周期；验证时间戳、缺失字段和来源后呈现。需要 Greeks、登录态观察列表或图表时转为桌面 reader 的能力边界说明。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "随包 MCP 通过公开 scanner/Yahoo Finance；多数工具无需 key，Marketaux 新闻工具例外需 MARKETAUX_API_TOKEN。TradingView 指标并非买卖指令，工具集可用性需宿主加载。",
+      "notes": "随包 MCP 通过公开 scanner/Yahoo Finance；多数工具无需 key，Marketaux 新闻工具例外需 MARKETAUX_API_TOKEN。TradingView 指标并非买卖指令，工具集可用性需宿主加载。 新源明确区分完整插件和单技能安装；Web-only 宿主不能据此假定可以启动本地 stdio server。",
       "evidenceQuotes": [
         "**Read-only.** Nothing here places trades or mutates any account.",
         "`uv` installed (`brew install uv`) — the server runs via `uvx` and self-installs on first launch (give the first call ~30s)."
@@ -1549,9 +1550,10 @@
       "nameEn": "TradingView Scanner and Technical-Data MCP",
       "summaryEn": "Query TradingView market data through the bundled tradingview MCP server without a desktop app or login. Use whenever the user wants a technical analysis readout (RSI, MACD, Bollinger rating, BUY/SELL summary), multi-timeframe alignment (weekly→daily→4h→1h→15m), exchange-wide scans (Bollinger squeeze, volume breakout, consecutive candles, smart volume), top gainers/losers by exchange, futures market data (NQ/ES/CL/GC overview, overnight movers, category snapshots), pre-market / after-hours quotes, a quick options chain or unusual options activity (volume/OI by strike), bulk stock prices, a global market snapshot, strategy backtests (Sharpe, drawdown, win rate), or crypto exchange scans. Triggers include \"TA on X\", \"multi-timeframe read\", \"BB squeeze scan\", \"futures movers\", \"NQ overnight\", \"pre-market price\", \"unusual options activity\", \"backtest RSI on AAPL\", and \"top gainers on NASDAQ\". For options greeks, watchlists, alerts, or chart screenshots use tradingview-reader instead.",
       "methodEn": "Confirm the bundled TradingView MCP is available, select the smallest relevant tool set, and normalize ticker, exchange and interval. Check timestamps, missing fields and sources before presenting results; account-bound watchlists, charts and option Greeks require the separate desktop reader.",
-      "environmentEn": "The source package runtime and external services required by this skill have not been tested.",
+      "environmentEn": "A host able to run local stdio MCP processes and uvx, using the full finance-data-providers plugin or a separately configured server. No TradingView desktop app or account is required. Runtime unverified.",
       "dependenciesEn": [
-        "Host must load the bundled tradingview MCP server from .mcp.json; most tools need no login/key; news tools require MARKETAUX_API_TOKEN"
+        "Full-plugin mcp.json (portable/Codex) or .mcp.json (legacy); a skill-only install does not install the MCP server",
+        "uvx and compatible Python; the TradingView MCP Git pin is unchanged; news tools still require MARKETAUX_API_TOKEN"
       ],
       "inputsEn": [
         "Ticker/exchange/timeframe or scanner/backtest query",
@@ -1562,7 +1564,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Screen Nasdaq stocks for a Bollinger squeeze and return the selected timeframe and technical indicators.",
-      "notesEn": "Confirm the bundled TradingView MCP is available, select the smallest relevant tool set, and normalize ticker, exchange and interval. Check timestamps, missing fields and sources before presenting results; account-bound watchlists, charts and option Greeks require the separate desktop reader. Most tools are public; news access may require MARKETAUX_API_TOKEN. Runtime execution has not been verified.",
+      "notesEn": "Confirm the bundled TradingView MCP is available, select the smallest relevant tool set, and normalize ticker, exchange and interval. Check timestamps, missing fields and sources before presenting results; account-bound watchlists, charts and option Greeks require the separate desktop reader. Most tools are public; news access may require MARKETAUX_API_TOKEN. Runtime execution has not been verified. The current source distinguishes full-plugin and skill-only installs; web-only hosts cannot assume they can launch this local stdio server.",
       "tagsEn": [
         "tradingview mcp",
         "data",
@@ -1577,11 +1579,11 @@
       "summary": "通过 opencli/CDP 从已运行且登录的 TradingView 桌面应用读取期权链 Greeks、IV、观察列表、警报、筛选器和图表状态；依赖本机 Chrome DevTools Protocol 会话且只读。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/data-providers/skills/tradingview-reader/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/data-providers/skills/tradingview-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/data-providers/skills/tradingview-reader/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "TradingView 桌面端",
         "期权 Greeks",
@@ -1606,7 +1608,7 @@
       "method": "检查 opencli status，确认 TradingView.app 已登录且 CDP 可达；按需读取期权链、IV、警报、观察列表或图表；结果中不暴露 cookies、CDP target 或布局 ID，并把桌面会话数据标为只读。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需 Node 24+、opencli、包内 adapter、macOS TradingView.app 已安装并登录，且通过 CDP 重启/连接；会读取用户 session cookies，只用于只读，不能把 cookie 或目标 ID暴露。",
+      "notes": "需 Node 24+、opencli、包内 adapter、macOS TradingView.app 已安装并登录，且通过 CDP 重启/连接；会读取用户 session cookies，只用于只读，不能把 cookie 或目标 ID暴露。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "**Important**: Unlike browser-based opencli readers (twitter, linkedin), this one talks directly to a running TradingView desktop app over Chrome DevTools Protocol. The user must (a) have `TradingView.app` installed, and (b) be logged in inside that app. The plugin handles relaunching with the debug port.",
         "**How it works**: data commands read the app's session cookies over CDP and call TradingView's HTTP APIs from Node directly, so no Browser Bridge extension or `apps.yaml` registration is needed."
@@ -1630,7 +1632,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "From the logged-in desktop app, read a ticker’s option expiries, per-strike implied volatility and current alert status.",
-      "notesEn": "Check opencli status and confirm that TradingView.app is signed in and reachable over CDP. Read only the requested chain, IV, alerts, watchlist or chart state; do not expose cookies, CDP target IDs or layout IDs. Requires the user’s local signed-in app/CDP session and must remain read-only. Runtime execution has not been verified.",
+      "notesEn": "Check opencli status and confirm that TradingView.app is signed in and reachable over CDP. Read only the requested chain, IV, alerts, watchlist or chart state; do not expose cookies, CDP target IDs or layout IDs. Requires the user’s local signed-in app/CDP session and must remain read-only. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "tradingview reader",
         "data",
@@ -1645,11 +1647,11 @@
       "summary": "根据可用数据选择 5 年 FCFF DCF、同行倍数和适用时的分部估值，再合成为隐含股价，并展示 WACC/永续增长敏感性及多空情景。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/company-valuation/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/company-valuation/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/company-valuation/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "DCF",
         "同行估值",
@@ -1673,7 +1675,7 @@
       "method": "先检测输入和可用数据源，按适用性选择 DCF、相对估值及至少两个独立分部时的 SOTP；建立五年 FCFF 和 WACC/永续增长假设，单列同行口径；最后做敏感性与多空情景，核对净债务、股数及单位后才汇总隐含股价。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需要可核验财务报表、预测、可比公司及市场价；yfinance/MCP 等路径可用字段不同。WACC、终值、peer set 和净债务/股数等假设决定结果，原文声明为研究教育用途。",
+      "notes": "需要可核验财务报表、预测、可比公司及市场价；yfinance/MCP 等路径可用字段不同。WACC、终值、peer set 和净债务/股数等假设决定结果，原文声明为研究教育用途。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "Triangulates intrinsic value via three methods, then blends them to an implied share price:",
         "1. **DCF** — 5-year FCFF projection, discount at WACC, terminal value."
@@ -1696,7 +1698,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Value a multi-segment issuer with DCF, peer multiples and SOTP, then reconcile the share count and net debt before presenting scenarios.",
-      "notesEn": "Inspect available inputs and choose DCF, relative valuation and SOTP only when at least two distinct segments apply. Build five-year FCFF and WACC/terminal-growth assumptions, document peer definitions, then produce sensitivities and scenarios. Reconcile net debt, share count and units before blending implied prices. DCF and peer output are assumption-sensitive research estimates, not investment advice. Runtime execution has not been verified.",
+      "notesEn": "Inspect available inputs and choose DCF, relative valuation and SOTP only when at least two distinct segments apply. Build five-year FCFF and WACC/terminal-growth assumptions, document peer definitions, then produce sensitivities and scenarios. Reconcile net debt, share count and units before blending implied prices. DCF and peer output are assumption-sensitive research estimates, not investment advice. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "company valuation",
         "valuation",
@@ -1711,11 +1713,11 @@
       "summary": "用 yfinance 可得数据比较实际 EPS 与预期、计算差异，梳理收入和利润率趋势及股价反应，形成已披露财报后的复盘。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/earnings-recap/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/earnings-recap/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/earnings-recap/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "业绩复盘",
         "预期差",
@@ -1739,7 +1741,7 @@
       "method": "确认代码和财报季度，检查 yfinance 是否可用并读取实际值与一致预期；匹配财报公布日期，计算 EPS surprise；再对照财报窗口股价、收入与利润率变化，区分公布前后交易时段。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "依赖 Python yfinance 返回实际值、估算、历史价格；Yahoo 数据可能缺值或历史修订，财报盘后/盘前价格窗口需以公告时间校准。",
+      "notes": "依赖 Python yfinance 返回实际值、估算、历史价格；Yahoo 数据可能缺值或历史修订，财报盘后/盘前价格窗口需以公告时间校准。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "**Important**: Data is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.",
         "**Current environment status:**"
@@ -1762,7 +1764,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Review a retailer’s reported EPS against consensus and compare the earnings release time with the stock’s session move.",
-      "notesEn": "Resolve the ticker and quarter, check yfinance availability, and collect actuals and estimates. Match the release date and calculate the EPS surprise, then compare the release-window price move with revenue and margin changes while distinguishing pre- and post-release sessions. Confirm release timestamp and market session when measuring price reaction. Runtime execution has not been verified.",
+      "notesEn": "Resolve the ticker and quarter, check yfinance availability, and collect actuals and estimates. Match the release date and calculate the EPS surprise, then compare the release-window price move with revenue and margin changes while distinguishing pre- and post-release sessions. Confirm release timestamp and market session when measuring price reaction. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "earnings recap",
         "earnings",
@@ -1777,11 +1779,11 @@
       "summary": "读取多期间 EPS、收入预测区间与分析师修订，比较 7/30/60/90 日修订方向、广度和分歧，并参照行业、板块及标普 500 增长预期。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/estimate-analysis/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/estimate-analysis/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/estimate-analysis/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "盈利预测",
         "修订趋势",
@@ -1805,7 +1807,7 @@
       "method": "先锁定预测年度或季度并读取估算区间、分布和更新时间；分别整理 7/30/60/90 日 EPS 与收入修订方向及上调广度；再比较行业增长和历史准确度，区分分析师覆盖变化与真实预测修订。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "依赖 Python yfinance 的估值预测及修订字段；覆盖稀疏或频率不一致时不能误判修订广度，须显示目标期间、币种与更新时间。",
+      "notes": "依赖 Python yfinance 的估值预测及修订字段；覆盖稀疏或频率不一致时不能误判修订广度，须显示目标期间、币种与更新时间。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "**Important**: Data is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.",
         "**Current environment status:**"
@@ -1828,7 +1830,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Compare a software issuer’s EPS estimate revisions over 30 and 90 days and show analyst revision breadth.",
-      "notesEn": "Set the target quarter or fiscal year and retrieve estimate ranges, dispersion and update dates. Summarize EPS and revenue revisions over 7/30/60/90 days and revision breadth, then compare sector growth and historical accuracy while separating coverage changes from estimate revisions. Coverage and update-date differences can distort revision breadth. Runtime execution has not been verified.",
+      "notesEn": "Set the target quarter or fiscal year and retrieve estimate ranges, dispersion and update dates. Summarize EPS and revenue revisions over 7/30/60/90 days and revision breadth, then compare sector growth and historical accuracy while separating coverage changes from estimate revisions. Coverage and update-date differences can distort revision breadth. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "estimate analysis",
         "earnings",
@@ -1843,11 +1845,11 @@
       "summary": "用 yfinance 获取价格和净值相关数据，计算 ETF 溢价或折价并比较多个基金；可讨论做市商伽马、申赎受阻与情绪等结构因素。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/etf-premium/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/etf-premium/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/etf-premium/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "ETF",
         "NAV",
@@ -1871,7 +1873,7 @@
       "method": "先安装 yfinance、pandas、numpy 并确认 ETF/NAV 字段；按请求路由到单只计算、同类比较或筛选；只有用户询问异动原因时才分解 NAV 变化、GEX 与申赎套利约束，并披露数据频率及估算限制。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需要 Python yfinance、pandas、numpy 及 ETF/NAV 字段；普通行情不一定含同步 NAV、期权链或 AP 申赎数据，GEX/套利机制分析缺数据时应删去因果结论。",
+      "notes": "需要 Python yfinance、pandas、numpy 及 ETF/NAV 字段；普通行情不一定含同步 NAV、期权链或 AP 申赎数据，GEX/套利机制分析缺数据时应删去因果结论。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "**Important**: For research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.",
         "**Current environment status:**"
@@ -1894,7 +1896,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Compare two bond ETFs’ quoted prices with available NAV data and explain the timestamp alignment.",
-      "notesEn": "Check yfinance, pandas and numpy and verify which ETF/NAV fields are available. Route to a single-fund calculation, peer comparison or screen. Decompose NAV movement, GEX and creation/redemption constraints only for a causal question, and disclose data frequency and estimation limits. NAV, options and creation/redemption data may not be synchronous or available. Runtime execution has not been verified.",
+      "notesEn": "Check yfinance, pandas and numpy and verify which ETF/NAV fields are available. Route to a single-fund calculation, peer comparison or screen. Decompose NAV movement, GEX and creation/redemption constraints only for a causal question, and disclose data frequency and estimation limits. NAV, options and creation/redemption data may not be synchronous or available. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "etf premium",
         "portfolio",
@@ -1909,19 +1911,20 @@
       "summary": "按标的价格、执行价、权利金、隐含波动率和剩余期限绘制到期盈亏及 Black–Scholes 理论价值交互图，展示参数变化对盈亏形态的影响。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/options-payoff/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/options-payoff/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/options-payoff/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "期权收益",
         "Black-Scholes",
         "情景图"
       ],
-      "environment": "需具备 Python/opencli/API 或本机 TradingView 条件，取决于技能；未在本目录运行验证。",
+      "environment": "具备原生可视化能力的宿主，或可在工作区保存完整 HTML 的宿主；浏览器校验取决可用性，执行未验证。",
       "dependencies": [
-        "支持交互图表/控件的宿主渲染能力；策略计算依原文内公式"
+        "可用宿主渲染器，或含图表库与 CSS 的完整 HTML 文件；不假定 visualize 工具存在",
+        "Black–Scholes 与到期收益计算、参数控件保持原文；实际渲染与行情探测未验证"
       ],
       "inputs": [
         "Each option leg, spot, strike, premium, IV, expiry and rate assumptions",
@@ -1935,17 +1938,18 @@
       "method": "先从用户输入确认每条腿的方向、数量、执行价、权利金和到期日；按策略计算到期分段盈亏，对非到期理论值使用 Black–Scholes 和 IV；将日历价差等模型假设写在交互控件旁。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需能生成交互可视化组件；Black–Scholes 依赖用户 IV、利率/分红及时间假设，日历价差提前估值不等同券商实时报价。",
+      "notes": "需能生成交互可视化组件；Black–Scholes 依赖用户 IV、利率/分红及时间假设，日历价差提前估值不等同券商实时报价。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。 无内嵌 renderer 时可交付独立 HTML；仍须保留参数控件和计算，未承诺已验证跨宿主展示。",
       "evidenceQuotes": [
-        "Generates a fully interactive HTML widget (via `visualize:show_widget`) showing:",
+        "Generates an interactive HTML chart using the host's available visualization tool, or a standalone HTML file in Codex, showing:",
         "**Expiry payoff curve** (dashed gray line) — intrinsic value at expiration"
       ],
       "nameEn": "Options Payoff and Theoretical-Value Chart",
       "summaryEn": "Render an interactive options payoff chart — expiry P&L plus Black-Scholes theoretical value — with sliders for strikes, premium, IV, DTE, and spot. Use this skill whenever the user describes or shares an options position or strategy and wants to see how it makes or loses money: vertical, calendar, diagonal, or ratio spreads, butterflies, condors and iron condors, straddles, strangles, covered calls, protective or naked puts, or any multi-leg structure. This includes pasted strikes, premiums, and expiries, requests like \"show me the payoff\" or \"draw the P&L curve\", and broker screenshots (IBKR, TastyTrade, Robinhood). Use it even when details are partial — defaults fill the gaps.",
       "methodEn": "Resolve each option leg’s direction, quantity, strike, premium and expiry. Calculate piecewise expiration P&L by strategy and use Black–Scholes with IV for pre-expiry theoretical value; expose assumptions for calendar spreads and other modeled values.",
-      "environmentEn": "The source package runtime and external services required by this skill have not been tested.",
+      "environmentEn": "A host with a native renderer, or workspace access to save complete standalone HTML. Browser validation is conditional on availability. Runtime unverified.",
       "dependenciesEn": [
-        "Host capable of rendering interactive charts/controls; strategy calculations follow the formulas in the source"
+        "An available host renderer, or complete standalone HTML including chart dependencies and CSS; visualize tools are not assumed",
+        "Original Black-Scholes, expiration payoff calculations and controls are preserved; actual rendering and quote probes are unverified"
       ],
       "inputsEn": [
         "Each option leg, spot, strike, premium, IV, expiry and rate assumptions",
@@ -1956,7 +1960,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Plot a call debit spread’s expiry payoff and theoretical value using the supplied IV and expiry assumptions.",
-      "notesEn": "Resolve each option leg’s direction, quantity, strike, premium and expiry. Calculate piecewise expiration P&L by strategy and use Black–Scholes with IV for pre-expiry theoretical value; expose assumptions for calendar spreads and other modeled values. Black–Scholes output depends on supplied volatility and rate assumptions. Runtime execution has not been verified.",
+      "notesEn": "Resolve each option leg’s direction, quantity, strike, premium and expiry. Calculate piecewise expiration P&L by strategy and use Black–Scholes with IV for pre-expiry theoretical value; expose assumptions for calendar spreads and other modeled values. Black–Scholes output depends on supplied volatility and rate assumptions. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified. Without an inline renderer, standalone HTML is an allowed output; preserve the controls and calculations. Cross-host rendering has not been tested.",
       "tagsEn": [
         "options payoff",
         "quant",
@@ -1971,11 +1975,11 @@
       "summary": "分析软件公司估值倍数压缩与收入增长、利率、利润率及可比估值变化的关系，量化市场重估情景对估值的影响。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/saas-valuation-compression/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/saas-valuation-compression/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/saas-valuation-compression/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "SaaS",
         "倍数压缩",
@@ -2037,11 +2041,11 @@
       "summary": "依据 SEPA 趋势模板筛选处于上升趋势、基本面改善且具备催化的股票，并记录入场区域、风险控制和失效条件；研究筛选不构成下单授权。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/sepa-strategy/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/sepa-strategy/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/sepa-strategy/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "SEPA",
         "趋势筛选",
@@ -2103,11 +2107,11 @@
       "summary": "计算多标的收益相关矩阵并比较滚动窗口中的相关性变化，帮助识别分散化关系是否稳定；需统一行情频率和复权口径。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/stock-correlation/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/stock-correlation/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/stock-correlation/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "相关性",
         "滚动窗口",
@@ -2131,7 +2135,7 @@
       "method": "先检查 yfinance、pandas、numpy 并统一复权与交易日期；按任务建立同行、横截面或滚动窗口样本；计算收益率而非价格水平的相关系数，并展示窗口、缺失值处理和相关关系不代表因果。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需 yfinance、pandas、numpy 等价格数据包；停牌、交易日错位、拆股复权和窗口选择会改变相关性，结果不说明因果，也不保证未来关系稳定。",
+      "notes": "需 yfinance、pandas、numpy 等价格数据包；停牌、交易日错位、拆股复权和窗口选择会改变相关性，结果不说明因果，也不保证未来关系稳定。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "**Important**: This is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.",
         "**Current environment status:**"
@@ -2154,7 +2158,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Compare 60-day and one-year adjusted-return correlations between two energy shares and an oil ETF.",
-      "notesEn": "Check yfinance, pandas and numpy, then align adjusted prices and trading dates. Build the requested peer, cross-sectional or rolling sample; calculate return correlations rather than price-level correlations, and disclose windows, missing-data treatment and the lack of causal inference. Correlation is window-sensitive and does not show causality or future stability. Runtime execution has not been verified.",
+      "notesEn": "Check yfinance, pandas and numpy, then align adjusted prices and trading dates. Build the requested peer, cross-sectional or rolling sample; calculate return correlations rather than price-level correlations, and disclose windows, missing-data treatment and the lack of causal inference. Correlation is window-sensitive and does not show causality or future stability. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "stock correlation",
         "quant",
@@ -2169,11 +2173,11 @@
       "summary": "从成交额、价差、市场深度和成交分布等指标评估股票流动性，识别大额交易可能面临的冲击成本与退出难度。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/stock-liquidity/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/stock-liquidity/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/stock-liquidity/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "流动性",
         "冲击成本",
@@ -2197,7 +2201,7 @@
       "method": "按任务路由到成交额、价差、成交量、深度或冲击估算；先核对报价时间和单位，再在统一观察窗汇总成交指标；冲击成本只作为估算，不把日均成交量当作可无影响成交额度。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需 pandas 和行情/盘口数据；日成交量、点差、深度与冲击估算受市场时点影响，无法从历史成交量保证订单可成交。",
+      "notes": "需 pandas 和行情/盘口数据；日成交量、点差、深度与冲击估算受市场时点影响，无法从历史成交量保证订单可成交。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "**Important**: This is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.",
         "**Current environment status:**"
@@ -2220,7 +2224,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Estimate spread and trading-volume constraints for a small-cap stock across several proposed order sizes.",
-      "notesEn": "Route the request to dollar volume, spreads, trading volume, depth or market-impact estimation. Verify quote time and units before aggregating a consistent window; label impact as an estimate and do not equate average volume with executable capacity. Historical average volume does not guarantee executable capacity. Runtime execution has not been verified.",
+      "notesEn": "Route the request to dollar volume, spreads, trading volume, depth or market-impact estimation. Verify quote time and units before aggregating a consistent window; label impact as an estimate and do not equate average volume with executable capacity. Historical average volume does not guarantee executable capacity. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "stock liquidity",
         "quant",
@@ -2235,11 +2239,11 @@
       "summary": "通过 Python yfinance 读取报价、历史价格、基本资料、财务报表、股息、拆股和分析师估计；属于非官方数据接口，字段可用性和延迟需核验。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/yfinance-data/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/yfinance-data/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/yfinance-data/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "yfinance",
         "历史行情",
@@ -2263,7 +2267,7 @@
       "method": "检查 Python 环境中的 yfinance，再按 ticker 和日期/周期调用接口；根据数据类型选择价格、报表、股息或公司资料字段；核验时区、空值、拆股复权和区间限制后汇报。",
       "sourceVerified": true,
       "executionVerified": false,
-      "notes": "需要 Python 和 yfinance；接口非 Yahoo 官方、可能限流/缺字段，历史价格复权与间隔限制应报告，不得将空结果补作零。",
+      "notes": "需要 Python 和 yfinance；接口非 Yahoo 官方、可能限流/缺字段，历史价格复权与间隔限制应报告，不得将空结果补作零。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "evidenceQuotes": [
         "Fetches financial and market data from Yahoo Finance using the [yfinance](https://github.com/ranaroussi/yfinance) Python library.",
         "**Important**: yfinance is not affiliated with Yahoo, Inc. Data is for research and educational purposes."
@@ -2286,7 +2290,7 @@
         "State sources, as-of time, assumptions and checks requiring human review"
       ],
       "exampleEn": "Retrieve one year of daily ETF prices and its available profile fields, noting missing fields and the query interval.",
-      "notesEn": "Check for yfinance in Python, query by ticker and explicit date/period, and select price, statement, dividend or profile fields. Verify timezone, missing values, split adjustment and interval limits before reporting. Yahoo Finance access is unofficial and may be delayed, rate-limited or incomplete. Runtime execution has not been verified.",
+      "notesEn": "Check for yfinance in Python, query by ticker and explicit date/period, and select price, statement, dividend or profile fields. Verify timezone, missing values, split adjustment and interval limits before reporting. Yahoo Finance access is unofficial and may be delayed, rate-limited or incomplete. Runtime execution has not been verified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "tagsEn": [
         "yfinance data",
         "data",
@@ -2301,11 +2305,11 @@
       "summary": "汇总初创企业资料、融资轮次、投资方、市场定位和同业背景，形成早期公司分析；公开资料缺失时应显式标注，不能把估计融资信息当成披露事实。",
       "author": "Alex Yang",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/startup-tools/skills/startup-analysis/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/startup-tools/skills/startup-analysis/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/startup-tools/skills/startup-analysis/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "tags": [
         "初创公司",
         "融资研究",
@@ -5549,9 +5553,9 @@
       "executionVerified": false
     },
     {
-      "notes": "仅用于研究与教育目的，非投资建议；yfinance 与 Yahoo Inc. 无隶属关系；Yahoo 共识可能滞后实时数据数小时；预估在报告日前可能变化。此技能为源码检查后收录，执行未经验证——即数据抓取失败时应报告为数据缺口，而非得出无重大事件或无风险的结论。",
+      "notes": "仅用于研究与教育目的，非投资建议；yfinance 与 Yahoo Inc. 无隶属关系；Yahoo 共识可能滞后实时数据数小时；预估在报告日前可能变化。此技能为源码检查后收录，执行未经验证——即数据抓取失败时应报告为数据缺口，而非得出无重大事件或无风险的结论。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "name": "财报前瞻简报生成",
-      "notesEn": "For research and educational purposes only, not financial advice; yfinance is not affiliated with Yahoo, Inc.; Yahoo consensus can lag real-time providers by a few hours; estimates can change until the report date. Included after source review but execution-unverified — failed data access must be reported as a data gap, never interpreted as no material events or no risk.",
+      "notesEn": "For research and educational purposes only, not financial advice; yfinance is not affiliated with Yahoo, Inc.; Yahoo consensus can lag real-time providers by a few hours; estimates can change until the report date. Included after source review but execution-unverified — failed data access must be reported as a data gap, never interpreted as no material events or no risk. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "environmentEn": "Requires Python 3 with the yfinance library (installable via pip); depends on Yahoo Finance data being accessible.",
       "exampleEn": "A user asks what the street expects for AAPL's next print: the script pulls the report date and timing, 0q EPS/revenue consensus (avg, low, high, analyst count, growth), the last four quarters of surprise %, Buy/Hold/Sell distribution, and price-target low/mean/median/high, producing a one-page preview with caveats that estimates can change and past beats don't guarantee future ones.",
       "tagsEn": [
@@ -5620,11 +5624,11 @@
       "author": "himself65",
       "originalName": "earnings-preview",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/market-analysis/skills/earnings-preview/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/market-analysis/skills/earnings-preview/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/earnings-preview/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
     },
@@ -5926,7 +5930,7 @@
         "Lead with what matters for the user's research question rather than a raw dump. Attribute each message (username, timestamp, content), group search results by theme, and note the bullish or bearish lean"
       ],
       "example": "启动带 CDP 的 Discord 并设置 OPENCLI_CDP_ENDPOINT 后，依次执行：opencli discord-app status；opencli discord-app servers -f json；opencli discord-app channels -f json；在应用中切换到目标频道后 opencli discord-app read 50 -f json；opencli discord-app search \"price target\" -f json，再按主题归纳多空观点并以表格呈现频道列表。",
-      "notes": "opencli 只能读取 Discord 中当前活跃的服务器与频道，跨频道需用户先在应用内切换；搜索依赖 Discord 内置搜索，可能受速率限制；社区消息属非权威情绪线索，不构成投资建议。本条目为源码审查所得，未实际执行命令验证。",
+      "notes": "opencli 只能读取 Discord 中当前活跃的服务器与频道，跨频道需用户先在应用内切换；搜索依赖 Discord 内置搜索，可能受速率限制；社区消息属非权威情绪线索，不构成投资建议。本条目为源码审查所得，未实际执行命令验证。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "nameEn": "Discord Read-Only Financial Community Reader",
       "inputsEn": [
         "Currently active Discord server/channel",
@@ -5981,7 +5985,7 @@
       ],
       "name": "Discord 只读金融社群研读",
       "category": "research",
-      "notesEn": "opencli only reads the currently active server/channel in Discord; switching channels requires the user to navigate in the app first. Search relies on Discord's built-in search and may be rate limited. Community messages are non-authoritative sentiment signals, not investment advice. This entry is source-checked but execution-unverified.",
+      "notesEn": "opencli only reads the currently active server/channel in Discord; switching channels requires the user to navigate in the app first. Search relies on Discord's built-in search and may be rate limited. Community messages are non-authoritative sentiment signals, not investment advice. This entry is source-checked but execution-unverified. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "outputs": [
         "服务器/频道/成员结构化列表（JSON/YAML）",
         "带用户名与时间戳的最近消息",
@@ -5991,11 +5995,11 @@
       "author": "himself65",
       "originalName": "discord-reader",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/social-readers/skills/discord-reader/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/social-readers/skills/discord-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/discord-reader/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
     },
@@ -6006,7 +6010,7 @@
         "highlight market commentary, analyst takes, and earnings reactions, and note the bullish or bearish lean and where views are consensus or contrarian."
       ],
       "example": "opencli linkedin timeline --limit 20 -f json；opencli linkedin search \"portfolio manager\" --location \"New York\" --limit 15 -f json",
-      "notes": "严格只读，不能发帖、点赞、评论、连接、私信或投递。该技能经来源核对但执行未验证；访问失败或空结果（EmptyResultError、限流）不代表无市场事件或无风险，仅表示数据获取受限。请保护浏览器会话隐私。",
+      "notes": "严格只读，不能发帖、点赞、评论、连接、私信或投递。该技能经来源核对但执行未验证；访问失败或空结果（EmptyResultError、限流）不代表无市场事件或无风险，仅表示数据获取受限。请保护浏览器会话隐私。 Codex 等不自动执行 ! 探测命令的宿主，需要在授权范围内显式执行源中的探测；这些命令可能读取密钥是否配置、本机登录状态或联网行情。执行能力未验证。",
       "nameEn": "LinkedIn Read-Only Financial Research",
       "inputsEn": [
         "User research question or job query",
@@ -6059,7 +6063,7 @@
       ],
       "name": "LinkedIn只读金融研究阅读",
       "category": "research",
-      "notesEn": "Strictly read-only: no posting, liking, commenting, connecting, messaging, or applying. Source-checked but execution-unverified; access failures or empty results (EmptyResultError, rate limits) do not mean no market events or no risk — they indicate limited data availability. Keep browser session details private.",
+      "notesEn": "Strictly read-only: no posting, liking, commenting, connecting, messaging, or applying. Source-checked but execution-unverified; access failures or empty results (EmptyResultError, rate limits) do not mean no market events or no risk — they indicate limited data availability. Keep browser session details private. Hosts that do not preprocess ! shell probes must explicitly run them within granted access. Probes may check key presence, local login state or live quotes. Runtime execution remains unverified.",
       "outputs": [
         "结构化feed摘要：作者、标题、内容、多空倾向、共识/逆向判断",
         "职位清单：职位、公司、地点、薪资（如有）、发布日期与链接",
@@ -6069,11 +6073,11 @@
       "author": "himself65",
       "originalName": "linkedin-reader",
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "sourcePath": "plugins/social-readers/skills/linkedin-reader/SKILL.md",
-      "sourceUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/plugins/social-readers/skills/linkedin-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/linkedin-reader/SKILL.md",
       "license": "MIT",
-      "licenseUrl": "https://github.com/himself65/finance-skills/blob/cedadc4b9f0f25c072576331a151863c8632a2d6/LICENSE",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
       "sourceVerified": true,
       "executionVerified": false
     },
@@ -6867,7 +6871,7 @@
     },
     {
       "repository": "https://github.com/himself65/finance-skills",
-      "commit": "cedadc4b9f0f25c072576331a151863c8632a2d6",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/himself65--finance-skills--LICENSE",
@@ -6877,8 +6881,8 @@
           "file": "/licenses/himself65--finance-skills--LICENSE"
         }
       ],
-      "archive": "himself65--finance-skills--cedadc4b9f0f25c072576331a151863c8632a2d6.zip",
-      "archiveSha256": "905eb32f49492577b84e9169e1b50be93d261d8ec144d718b03b975202e70c71",
+      "archive": "himself65--finance-skills--73d554d60c0a3f121a30f505680f7a06b2b1fd11.zip",
+      "archiveSha256": "b220377a92d29ad77d42c660046d07fa10726631ce675cd7a43d7bdcad679133",
       "description": "面向 AI 研究代理的金融数据、财报、估值、期权和市场分析技能，明确列出外部服务要求。",
       "descriptionEn": "Financial data, earnings, valuation, options and market-analysis skills for AI research agents, with explicit external-service requirements."
     },
