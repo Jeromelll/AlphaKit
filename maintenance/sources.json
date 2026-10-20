@@ -7,5 +7,8 @@
     {"repository": "questflowai/investorskills", "prefix": ""},
     {"repository": "star23/Day1Global-Skills", "prefix": ""}
   ],
-  "candidates": ["agiprolabs/claude-trading-skills", "aldlgt/awesome-financial-skills"]
+  "candidates": ["agiprolabs/claude-trading-skills", "aldlgt/awesome-financial-skills"],
+  "reviewedChanges": [
+    {"repository": "himself65/finance-skills", "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11", "maxChanged": 16, "reviewedAt": "2026-10-20", "note": "v11.2.0 adds Codex host-compatibility wording to SKILL.md files (mostly +2 lines each); no method changes; root license still MIT."}
+  ]
 }
