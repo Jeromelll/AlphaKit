@@ -32,7 +32,7 @@ SEARCHES = ('finance skills in:name,description', 'financial skills in:name,desc
             'quant skills in:name,description', '金融 skills in:name,description')
 MODEL_CALLS = []
 MAX_HTTP_BODY_BYTES = 64 * 1024
-MAX_MODEL_ATTEMPTS = 3
+MAX_MODEL_ATTEMPTS = 4
 MAX_RETRY_WAIT_SECONDS = 60
 MAX_PROVIDER_CODE = 2_147_483_647
 RETRYABLE_PROVIDER_CODES = {1302, 1305}
@@ -106,7 +106,7 @@ def model_json(messages, max_tokens=5500):
                     except (TypeError, ValueError, OverflowError):
                         wait_seconds = None
                 if wait_seconds is None:
-                    wait_seconds = 0.5 * (2 ** (attempt - 1))
+                    wait_seconds = 5.0 * (2 ** (attempt - 1))
                 jitter = 0.0
                 if wait_seconds <= remaining_wait:
                     jitter = random.uniform(0, 0.1 * wait_seconds if wait_seconds else 0.1)
