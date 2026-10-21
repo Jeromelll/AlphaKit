@@ -104,20 +104,20 @@ class TransportTests(unittest.TestCase):
                                              'usage': {'total_tokens': 11}}])
         update_catalog.time.sleep.assert_called_once_with(1)
 
-    def test_retryable_429_stops_after_three_attempts(self):
+    def test_retryable_429_stops_after_four_attempts(self):
         with mock.patch.object(update_catalog.urllib.request, 'urlopen',
                                side_effect=[http_error(429, error_body(1305))
-                                            for _ in range(3)]) as urlopen:
+                                            for _ in range(4)]) as urlopen:
             with self.assertRaises(update_catalog.ModelTransportError) as raised:
                 self.call_model()
         self.assertEqual(raised.exception.diagnostic['httpStatus'], 429)
         self.assertEqual(raised.exception.diagnostic['providerCode'], 1305)
-        self.assertEqual(raised.exception.diagnostic['attempts'], 3)
+        self.assertEqual(raised.exception.diagnostic['attempts'], 4)
         self.assertEqual([decision['retry'] for decision in
-                          raised.exception.diagnostic['decisions']], [True, True, False])
-        self.assertEqual(urlopen.call_count, 3)
+                          raised.exception.diagnostic['decisions']], [True, True, True, False])
+        self.assertEqual(urlopen.call_count, 4)
         self.assertEqual(update_catalog.time.sleep.call_args_list,
-                         [mock.call(0.5), mock.call(1)])
+                         [mock.call(5.0), mock.call(10.0), mock.call(20.0)])
 
     def test_numeric_string_transient_code_retries_then_succeeds(self):
         result = None
