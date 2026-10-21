@@ -2,7 +2,7 @@
 
 由同一份网站目录自动生成。Generated from the website catalog.
 
-101 skills · 7 original repositories · 2026-10-20
+104 skills · 7 original repositories · 2026-10-21
 
 收录表示原文件与许可证已核对，实际执行未验证。Inclusion means source and license checks; execution is unverified.
 
@@ -24,12 +24,13 @@
 | [论点跟踪器](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md)<br>Thesis Tracker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [竞争格局分析框架](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/competitive-analysis/SKILL.md)<br>Competitive Landscape Analysis Framework | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [IB 演示文稿质检](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/ib-check-deck/SKILL.md)<br>IB Deck Checker | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
-| [增量业务收入与利润测算](https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/incremental-business-sizing/SKILL.md)<br>Incremental business revenue and profit sizing | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
-| [新股票快速初步研究](https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/pre-trade-quick-brief/SKILL.md)<br>Quick initial research for a new stock | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [增量业务收入与利润测算](https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/incremental-business-sizing/SKILL.md)<br>Incremental business revenue and profit sizing | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [新股票快速初步研究](https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/pre-trade-quick-brief/SKILL.md)<br>Quick initial research for a new stock | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
 | [Discord 只读金融社群研读](https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/discord-reader/SKILL.md)<br>Discord Read-Only Financial Community Reader | [himself65](https://github.com/himself65/finance-skills) | MIT |
 | [LinkedIn只读金融研究阅读](https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/linkedin-reader/SKILL.md)<br>LinkedIn Read-Only Financial Research | [himself65](https://github.com/himself65/finance-skills) | MIT |
 | [ESG与负责任投资筛选器](https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/esg-screener/SKILL.md)<br>ESG & Responsible Investment Screener | [Geeksfino](https://github.com/Geeksfino/finskills) | Apache-2.0 |
 | [董监高增减持行为分析器](https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/insider-trading-analyzer/SKILL.md)<br>Insider Trading Analyzer (A-Share Director/Officer Activity) | [Geeksfino](https://github.com/Geeksfino/finskills) | Apache-2.0 |
+| [Telegram 财经频道只读阅读器](https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/telegram-reader/SKILL.md)<br>Telegram Financial Channel Reader (Read-Only) | [himself65](https://github.com/himself65/finance-skills) | MIT |
 
 ## 财报分析 / Earnings
 
@@ -68,6 +69,7 @@
 | [SEPA 趋势交易筛查框架](https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/sepa-strategy/SKILL.md)<br>SEPA Trend-Setup Screening | [Alex Yang](https://github.com/himself65/finance-skills) | MIT |
 | [A股高股息可持续性分析](https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/high-dividend-strategy/SKILL.md)<br>A-share dividend sustainability review | [FinoGeeks Technology Ltd](https://github.com/Geeksfino/finskills) | Apache-2.0 |
 | [组合健康诊断](https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/portfolio-health-check/SKILL.md)<br>Portfolio Health Check | [Geeksfino](https://github.com/Geeksfino/finskills) | Apache-2.0 |
+| [风险调整收益优化器（A股）](https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/risk-adjusted-return-optimizer/SKILL.md)<br>Risk-Adjusted Return Optimizer (A-Share) | [Geeksfino](https://github.com/Geeksfino/finskills) | Apache-2.0 |
 
 ## 交易与尽调 / Deals & diligence
 
@@ -107,7 +109,7 @@
 | [基金账户余额期间滚动](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/roll-forward/SKILL.md)<br>Balance-Sheet Account Roll-Forward | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [预算与实际差异说明](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/fund-admin/skills/variance-commentary/SKILL.md)<br>Financial-Statement Flux Commentary | [Anthropic](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [电子表格与财务模型审计](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/financial-analysis/skills/audit-xls/SKILL.md)<br>Spreadsheet & Financial Model Audit | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
-| [测算表与敏感性矩阵](https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/sellside-model-exhibits/SKILL.md)<br>Financial model exhibits and sensitivity tables | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
+| [测算表与敏感性矩阵](https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/sellside-model-exhibits/SKILL.md)<br>Financial model exhibits and sensitivity tables | [Jeromelll](https://github.com/Jeromelll/AlphaKit) | MIT |
 | [KYC 开户文件结构化解析](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/operations/skills/kyc-doc-parse/SKILL.md)<br>KYC Onboarding Document Parsing | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [KYC规则网格评分与处置路由](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/operations/skills/kyc-rules/SKILL.md)<br>KYC Rules Grid Scoring & Disposition Routing | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | [并购后价值创造计划](https://github.com/anthropics/financial-services/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/private-equity/skills/value-creation-plan/SKILL.md)<br>Post-Acquisition Value Creation Plan | [anthropics](https://github.com/anthropics/financial-services) | Apache-2.0 |
@@ -124,6 +126,7 @@
 | [本机 TradingView 桌面数据读取](https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/data-providers/skills/tradingview-reader/SKILL.md)<br>Local TradingView Desktop Data Reader | [Alex Yang](https://github.com/himself65/finance-skills) | MIT |
 | [Yahoo Finance 股票与基金数据读取](https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/market-analysis/skills/yfinance-data/SKILL.md)<br>Yahoo Finance Market and Financial Data | [Alex Yang](https://github.com/himself65/finance-skills) | MIT |
 | [A股金融数据工具包](https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/findata-toolkit-cn/SKILL.md)<br>China A-share financial data toolkit | [FinoGeeks Technology Ltd](https://github.com/Geeksfino/finskills) | Apache-2.0 |
+| [opencli-reader](https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/opencli-reader/SKILL.md)<br>opencli Reader (Generic Fallback, Read-Only) | [himself65](https://github.com/himself65/finance-skills) | MIT |
 
 ## 宏观与市场 / Macro & markets
 

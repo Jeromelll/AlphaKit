@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20",
+  "updatedAt": "2026-10-21",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5635,9 +5635,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
+      "commit": "15b41e510a3842858b5263175461f082d7f09129",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5646,7 +5646,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5705,9 +5705,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
+      "commit": "15b41e510a3842858b5263175461f082d7f09129",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5716,7 +5716,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5777,9 +5777,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
+      "commit": "15b41e510a3842858b5263175461f082d7f09129",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5788,7 +5788,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d2afeaec24d72dcd4212ce5c28802fe5c8f92b11/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -6824,11 +6824,259 @@
       "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/portfolio-health-check/LICENSE.txt",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "inputsEn": [
+        "User-requested source/site and query topic",
+        "opencli list -f json registry metadata (site, name, strategy, args, columns)",
+        "Command-level help from opencli <site> <command> --help",
+        "Adapter strategy and local login state"
+      ],
+      "category": "data",
+      "outputsEn": [
+        "Structured JSON data (quotes, hot ranks, news, papers, etc.)",
+        "Summaries with source attribution (site name + URL)",
+        "Price/% change/volume/market-cap with anomaly flags for market data",
+        "Title, authors, abstract, and link for research papers"
+      ],
+      "environmentEn": "Node.js >= 20 (or Bun >= 1.0), installed via npm install -g @jackwener/opencli; browser-backed adapters require Chrome with the opencli Browser Bridge extension loaded and logged into the target site.",
+      "nameEn": "opencli Reader (Generic Fallback, Read-Only)",
+      "tags": [
+        "opencli",
+        "财经数据源",
+        "只读抓取",
+        "适配器注册表",
+        "Browser Bridge"
+      ],
+      "summary": "面向 opencli 适配器注册表的通用只读抓取技能，用于在无专用技能覆盖时读取 Yahoo Finance、Bloomberg、Reuters、东方财富、雪球、Reddit、HackerNews、arXiv 等财经与信息源。",
+      "evidenceQuotes": [
+        "Generic read-only fallback for sources opencli supports but no dedicated skill\n  covers: finance sites (Yahoo Finance, Bloomberg, Reuters, Barchart, Eastmoney,\n  Xueqiu, Sinafinance)",
+        "Use `opencli list -f json` as the source of truth. Never paste a site list into the plan from memory; adapters are added every week."
+      ],
+      "dependenciesEn": [
+        "opencli (@jackwener/opencli, global npm install)",
+        "Node.js >= 20 or Bun >= 1.0",
+        "Chrome + opencli Browser Bridge extension (only for COOKIE/HEADER/INTERCEPT/UI adapters)",
+        "Site login state (for non-PUBLIC/LOCAL adapters)"
+      ],
+      "environment": "Node.js >= 20（或 Bun >= 1.0），npm install -g @jackwener/opencli；浏览器类适配器需 Chrome 与 opencli Browser Bridge 扩展并已登录目标站点。",
+      "summaryEn": "A generic read-only fetch workflow for the opencli adapter registry, used when no dedicated skill covers a source such as Yahoo Finance, Bloomberg, Reuters, Eastmoney, Xueqiu, Reddit, HackerNews, or arXiv.",
+      "tagsEn": [
+        "opencli",
+        "finance data sources",
+        "read-only fetch",
+        "adapter registry",
+        "browser bridge"
+      ],
+      "method": "先用专用技能判断是否适用；通过 opencli list -f json 查询注册表（不凭记忆猜命令），确认各命令 strategy 字段（PUBLIC/LOCAL 无需浏览器，COOKIE/HEADER/INTERCEPT/UI 需 Chrome 登录与 Browser Bridge 扩展）；用 opencli <site> <command> --help 核对参数，以小 --limit（10–20）验证数据形态，统一用 -f json 输出；严格排除写命令（post、like、subscribe 等）；失败时用 OPENCLI_DIAGNOSTIC=1 输出 RepairContext 而非自行爬取。",
+      "name": "opencli-reader",
+      "notesEn": "Source-checked but execution-unverified: command behavior depends on the local opencli registry and adapter strategies, and this document has not been run in a live environment. COOKIE/HEADER/INTERCEPT/UI adapters fail without login; site rate limits can yield empty results; if a source is not in the registry, report it as uncovered rather than treating it as no information. Never echo browser-session secrets (cookies, auth tokens).",
+      "notes": "此条目为来源核查、未经执行验证：所有命令行为取决于本机 opencli 注册表与适配器策略，本文档未在真实环境运行确认。COOKIE/HEADER/INTERCEPT/UI 适配器在未登录时会失败；目标站点限流可致空结果；若源不在注册表中应明确告知未覆盖，而非默认无信息。浏览器会话信息（cookies、auth token）不得回显。",
+      "exampleEn": "opencli yahoo-finance quote AAPL -f json for a quote; opencli eastmoney hot-rank -f json for Eastmoney hot stocks; opencli arxiv search \"volatility surface\" --limit 10 -f json for volatility-surface papers.",
+      "example": "opencli yahoo-finance quote AAPL -f json 获取报价；opencli eastmoney hot-rank -f json 查看东方财富热股榜；opencli arxiv search \"volatility surface\" --limit 10 -f json 检索波动率曲面论文。",
+      "outputs": [
+        "结构化 JSON 数据（报价、热榜、新闻、论文等）",
+        "带站点名与 URL 来源署名的摘要",
+        "market 数据的价格/涨跌幅/成交量/市值与异常标记",
+        "研究文献的标题、作者、摘要与链接"
+      ],
+      "methodEn": "Check dedicated skills first; query the registry via opencli list -f json instead of guessing commands; verify each command's strategy field (PUBLIC/LOCAL need no browser; COOKIE/HEADER/INTERCEPT/UI require Chrome login plus the Browser Bridge extension); confirm flags with opencli <site> <command> --help; validate shape with a small --limit (10-20) and use -f json; strictly skip write commands (post, like, subscribe, etc.); on failure run OPENCLI_DIAGNOSTIC=1 for a RepairContext rather than ad-hoc scraping.",
+      "dependencies": [
+        "opencli（@jackwener/opencli，npm 全局安装）",
+        "Node.js >= 20 或 Bun >= 1.0",
+        "Chrome + opencli Browser Bridge 扩展（仅 COOKIE/HEADER/INTERCEPT/UI 适配器）",
+        "目标站点登录态（非 PUBLIC/LOCAL 适配器）"
+      ],
+      "inputs": [
+        "用户请求的站点/源与查询主题",
+        "opencli list -f json 注册表元数据（site、name、strategy、args、columns）",
+        "opencli <site> <command> --help 的命令级帮助",
+        "适配器 strategy 状态与本地登录情况"
+      ],
+      "id": "skill-5f16a16ea0255c1c",
+      "author": "himself65",
+      "originalName": "opencli-reader",
+      "repository": "https://github.com/himself65/finance-skills",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
+      "sourcePath": "plugins/social-readers/skills/opencli-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/opencli-reader/SKILL.md",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "inputsEn": [
+        "tdl installation and session status",
+        "Telegram chat/channel identifiers (@username, numeric ID, public link)",
+        "Message range (last N messages, Unix timestamp range, or message ID range)"
+      ],
+      "category": "research",
+      "outputsEn": [
+        "Chat/channel list (name, member count, type)",
+        "Exported message JSON (id, date, message, from_id, views)",
+        "Themed summary of news and market updates with timestamps and source channels"
+      ],
+      "environmentEn": "Requires shell access and the tdl CLI (macOS/Linux/Homebrew/Go install paths); interactive Telegram login via QR code or phone+code; export files written to /tmp; if shell access is unavailable, that limitation must be reported.",
+      "nameEn": "Telegram Financial Channel Reader (Read-Only)",
+      "tags": [
+        "Telegram",
+        "tdl",
+        "财经新闻",
+        "市场研究",
+        "只读导出",
+        "频道监控"
+      ],
+      "summary": "基于 tdl CLI 的只读工作流，用于列出 Telegram 聊天与频道、按名称查找频道，并导出近期消息或按日期/ID 范围导出消息，供财经新闻与市场研究使用。支持按主题（宏观、财报、加密）归纳呈现。",
+      "evidenceQuotes": [
+        "Reads Telegram channels and groups for financial news and market research using [tdl](https://github.com/iyear/tdl), a Telegram CLI tool.",
+        "Always use `--all --with-content` to get text messages (not just media)"
+      ],
+      "dependenciesEn": [
+        "tdl CLI",
+        "shell access",
+        "interactive Telegram login session"
+      ],
+      "environment": "需要 shell 访问与 tdl CLI（macOS/Linux/Homebrew/Go 等安装方式）；Telegram 交互式登录（QR 码或手机+验证码）；导出文件写入 /tmp；无法使用 shell 时须报告该限制。",
+      "summaryEn": "A read-only workflow using the tdl CLI to list Telegram chats and channels, find a channel by name, and export recent messages or a date/ID range for financial news and market research, with results grouped by theme (macro, earnings, crypto).",
+      "tagsEn": [
+        "Telegram",
+        "tdl",
+        "financial news",
+        "market research",
+        "read-only export",
+        "channel monitoring"
+      ],
+      "method": "先检测 tdl 是否安装并验证会话（tdl chat ls --limit 1）；如未认证则引导用户以 QR 码或手机+验证码交互登录。随后匹配读取操作：用 tdl chat ls（可加过滤器）列出或搜索频道，用 tdl chat export 配合 -T last/time/id 与 --all --with-content 导出消息到 JSON 文件，读取文件提取 id、date、message、views 等字段，最后按时间戳与来源频道归纳最相关的新闻与市场更新。",
+      "name": "Telegram 财经频道只读阅读器",
+      "notesEn": "Read-only: cannot send messages or join/leave channels. Credentials must be entered interactively by the user; never handle passwords or 2FA programmatically. On FLOOD_WAIT_X wait the indicated seconds; CHANNEL_PRIVATE means the user must join the channel in their app first. This skill is source-checked but execution-unverified; failed access or missing data must be stated as an explicit data gap, not treated as no material events or no risk.",
+      "notes": "只读：不支持发送消息、加入或退出频道。登录凭据须由用户交互输入，不得程序化处理密码或 2FA。遭遇 FLOOD_WAIT_X 需等待；CHANNEL_PRIVATE 表示用户需先在 Telegram 应用中加入频道。本技能经过来源核验，但未经验证执行；若无法访问频道或数据缺失，应明确说明为数据缺口，不得视为无重大事件或无风险。",
+      "exampleEn": "Export the last 20 messages of a channel: tdl chat export -c @channel_name -T last -i 20 --all --with-content -o /tmp/tdl-export.json, then read the JSON, group messages by macro, earnings, and crypto themes, and call out breaking news, price targets, and earnings surprises with timestamps and source channels.",
+      "example": "导出某频道最近 20 条消息：tdl chat export -c @channel_name -T last -i 20 --all --with-content -o /tmp/tdl-export.json，然后读取 JSON，按宏观、财报、加密分组，突出突发新闻、目标价与财报意外，并附时间戳与来源频道。",
+      "outputs": [
+        "聊天/频道列表（名称、成员数、类型）",
+        "导出的消息 JSON（id、date、message、from_id、views）",
+        "按主题归纳并附时间戳与来源频道的新闻与市场更新摘要"
+      ],
+      "methodEn": "First probe whether tdl is installed and verify the session (tdl chat ls --limit 1); if unauthenticated, guide the user through interactive QR-code or phone+code login. Then match the read operation: use tdl chat ls (optionally filtered) to list or search channels, and tdl chat export with -T last/time/id plus --all --with-content to export messages to a JSON file. Read the file to extract fields such as id, date, message, and views, then present the most relevant news and market updates with timestamps and source channels, grouped by theme.",
+      "dependencies": [
+        "tdl CLI",
+        "shell 访问",
+        "Telegram 交互式登录会话"
+      ],
+      "inputs": [
+        "tdl 安装与会话状态",
+        "Telegram 聊天/频道标识（@用户名、数字 ID、公开链接）",
+        "消息范围（最近 N 条、Unix 时间戳区间或消息 ID 区间）"
+      ],
+      "id": "skill-da052618a68205be",
+      "author": "himself65",
+      "originalName": "telegram-reader",
+      "repository": "https://github.com/himself65/finance-skills",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
+      "sourcePath": "plugins/social-readers/skills/telegram-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/telegram-reader/SKILL.md",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "inputsEn": [
+        "Portfolio size (default 300,000 CNY)",
+        "Risk tolerance (conservative/balanced/aggressive)",
+        "Investment horizon (1-30+ years)",
+        "Income needs (target yield or total return)",
+        "Account type (regular / with personal pension)",
+        "Existing positions and constraints (sector exclusions, single-stock caps, ESG)",
+        "Rebalancing preference (calendar/threshold/hybrid)"
+      ],
+      "category": "portfolio",
+      "outputsEn": [
+        "Strategic asset allocation plan (range per asset class)",
+        "Holdings detail (ticker, weight, amount, rationale)",
+        "Risk dashboard (expected return, volatility, Sharpe ratio, max drawdown, 95% VaR)",
+        "Rebalancing plan and execution guidance",
+        "Downside protection strategies and stress scenarios",
+        "Implementation guide and risk warnings"
+      ],
+      "environmentEn": "Used as a prompt/workflow skill, relying on repository reference files portfolio-framework.md (capital market assumptions) and output-template.md (report format); optionally uses the findata-toolkit-cn toolkit for real-time A-share data with free sources requiring no API keys.",
+      "nameEn": "Risk-Adjusted Return Optimizer (A-Share)",
+      "tags": [
+        "投资组合",
+        "资产配置",
+        "夏普比率",
+        "再平衡",
+        "A股",
+        "仓位管理",
+        "风险管理"
+      ],
+      "summary": "面向中国投资者的A股投资组合构建技能，按资金规模、风险偏好、投资期限和约束条件生成风险调整后收益（夏普比率）最优的多元化配置方案，含仓位管理、风险估算、再平衡与下行保护。",
+      "evidenceQuotes": [
+        "为中国投资者构建风险调整后收益（夏普比率）最优的多元化投资组合",
+        "阈值 | 任一资产偏离目标≥5% | 响应及时 | 需持续监控"
+      ],
+      "dependenciesEn": [
+        "references/portfolio-framework.md",
+        "references/output-template.md",
+        "Optional: findata-toolkit-cn financial data toolkit (real-time A-share quotes etc.)"
+      ],
+      "environment": "作为提示/工作流技能使用，依赖仓库内参考文件 portfolio-framework.md（资本市场假设）与 output-template.md（报告格式）；可选依赖 findata-toolkit-cn 金融数据工具包获取实时A股数据，数据源免费且无需API密钥。",
+      "summaryEn": "A portfolio construction skill for Chinese A-share investors that produces a risk-adjusted (Sharpe-optimal) diversified allocation based on capital size, risk tolerance, horizon and constraints, including position sizing, risk estimation, rebalancing and downside protection.",
+      "tagsEn": [
+        "portfolio",
+        "asset-allocation",
+        "sharpe-ratio",
+        "rebalancing",
+        "a-shares",
+        "position-sizing",
+        "risk-management"
+      ],
+      "method": "七步工作流：1) 收集输入（组合规模、风险偏好、期限、收入需求、账户类型、现有持仓、约束、再平衡偏好，均含默认值）；2) 将风险偏好映射为战略资产配置（保守/稳健/积极的权益、固收、另类、现金比例区间）；3) 仓位管理（核心-卫星、单股上限3–8%、行业集中度≤权益25%、最低头寸5000元）；4) 风险收益估算（加权预期收益、含相关性矩阵的组合波动率、夏普比率、最大回撤、95% VaR）；5) 按风险偏好的下行保护策略；6) 再平衡规则（定期/阈值±5%/混合）；7) 结构化报告（配置图、持仓明细、风险仪表盘、实施指南、风险提示）。",
+      "name": "风险调整收益优化器（A股）",
+      "notesEn": "This entry is source-checked only; the skill was not executed and its results are independently unverified. Capital market assumptions and thresholds are framework parameters from the document, not investment advice and not a guarantee of returns. Real-time quotes depend on the optional data toolkit; unavailable data is a data gap, not absence of risk. Market-specific constraints such as limited QDII quotas and infrastructure-focused public REITs are explicitly noted in the document.",
+      "notes": "本条目仅对技能文档做来源核验，未实际执行，效果未经独立验证。资本市场假设与再平衡阈值均为文档内框架参数，不构成投资建议，亦不保证收益。实时行情依赖可选数据工具包，若数据不可用应视为数据缺口而非无风险。QDII额度受限、公募REITs以基础设施为主等为中国市场特有约束，文档已明确标注。",
+      "exampleEn": "User provides: 300,000 CNY, balanced profile, 5-year horizon, total return, regular account, no existing positions, threshold rebalancing. The skill outputs equities 40-60% (core 60-80% in broad index ETFs, satellite 20-40% in thematic ETFs, single-stock cap 5%), fixed income 25-40%, alternatives 5-10%, cash 5-10%, plus Sharpe ratio, max drawdown and 95% VaR estimates and a ±5% threshold rebalancing plan.",
+      "example": "用户提供：30万元、稳健、5年、总回报、普通账户、无现有持仓、阈值再平衡。技能输出：权益40–60%（其中核心60–80%配置宽基指数ETF、卫星20–40%配置主题ETF，单股上限5%）、固收25–40%、另类5–10%、现金5–10%，并给出夏普比率、最大回撤、95% VaR估算与±5%阈值再平衡方案。",
+      "outputs": [
+        "战略资产配置方案（各大类比例区间）",
+        "持仓明细（代码、比例、金额、理由）",
+        "风险仪表盘（预期收益、波动率、夏普比率、最大回撤、95% VaR）",
+        "再平衡方案与执行指引",
+        "下行保护策略与压力测试情景",
+        "实施指南与风险提示"
+      ],
+      "methodEn": "A seven-step workflow: 1) collect inputs (capital, risk tolerance, horizon, income needs, account type, existing positions, constraints, rebalancing preference, each with defaults); 2) map risk tolerance to strategic asset allocation ranges across equities, fixed income, alternatives and cash; 3) position sizing (core-satellite, single-stock caps of 3-8%, sector concentration capped at 25% of equity, minimum position 5000 CNY); 4) risk/return estimation (weighted expected return, covariance-based volatility, Sharpe ratio, max drawdown, 95% VaR); 5) downside protection by risk profile; 6) rebalancing rules (calendar / 5% threshold / hybrid); 7) structured report with allocation chart, holdings detail, risk dashboard, implementation guide and risk warnings.",
+      "dependencies": [
+        "references/portfolio-framework.md",
+        "references/output-template.md",
+        "可选：findata-toolkit-cn 金融数据工具包（实时A股行情等）"
+      ],
+      "inputs": [
+        "组合规模（默认30万元）",
+        "风险偏好（保守/稳健/积极）",
+        "投资期限（1–30+年）",
+        "收入需求（目标收益率或总回报）",
+        "账户类型（普通/含个人养老金）",
+        "现有持仓与约束条件（行业排除、单股上限、ESG）",
+        "再平衡偏好（定期/阈值/混合）"
+      ],
+      "id": "skill-1fed72ebd6cd2fd9",
+      "author": "Geeksfino",
+      "originalName": "risk-adjusted-return-optimizer",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "China-market/risk-adjusted-return-optimizer/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/risk-adjusted-return-optimizer/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/risk-adjusted-return-optimizer/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 101,
+      "skills": 104,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -6926,6 +7174,10 @@
           "file": "/licenses/Geeksfino--finskills--China-market--quant-factor-screener--LICENSE.txt"
         },
         {
+          "sourcePath": "China-market/risk-adjusted-return-optimizer/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--China-market--risk-adjusted-return-optimizer--LICENSE.txt"
+        },
+        {
           "sourcePath": "China-market/sector-rotation-detector/LICENSE.txt",
           "file": "/licenses/Geeksfino--finskills--China-market--sector-rotation-detector--LICENSE.txt"
         },
@@ -6999,7 +7251,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d2afeaec24d72dcd4212ce5c28802fe5c8f92b11",
+      "commit": "15b41e510a3842858b5263175461f082d7f09129",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -7021,8 +7273,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--d2afeaec24d72dcd4212ce5c28802fe5c8f92b11.zip",
-      "archiveSha256": "1a2cc781a56288df6c86117be9a318e92869014e001268ba2b115056d6d242ec",
+      "archive": "Jeromelll--AlphaKit--15b41e510a3842858b5263175461f082d7f09129.zip",
+      "archiveSha256": "155d7f79e660b45d8d21fafbaa4e0b29819583d6ff1c08be7517c25174ededb3",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }

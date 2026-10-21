@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-20T08:51:00.883095+00:00",
-  "query": "financial skills in:name,description",
+  "checkedAt": "2026-10-21T06:06:08.682081+00:00",
+  "query": "investment skills in:name,description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -40,7 +40,13 @@
     "dcoburn414-ai/benjamin-cowen",
     "nascimento7030/ApocData-skill",
     "Marekm9823/maia-skill",
-    "NikolaiPelletier/ApocData-skill"
+    "NikolaiPelletier/ApocData-skill",
+    "Kinfxhk/prop-firm-beginner-skill",
+    "pseudo-longinus/quant-buddy-skills",
+    "belos-street/stock-analytics-agent",
+    "j-raddy/compliance-skills",
+    "kehoekatherine/Skills",
+    "KALETECH999/KALETECH999.github.io"
   ],
   "decisions": [
     {
@@ -107,6 +113,38 @@
       "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
       "path": "plugins/data-providers/skills/fintel-data/SKILL.md",
       "contentHash": "dcb856e10a2d99ea3bbf9c57bcc1c5581dae9b6cb3f8b38d772e3cab7ca84ec9",
+      "reason": "Candidate metadata failed format validation after one repair",
+      "diagnostics": [
+        {
+          "field": "evidenceQuotes",
+          "exists": true,
+          "type": "list",
+          "length": 2,
+          "stage": "initial",
+          "reason": "Two distinct exact source quotations are required"
+        },
+        {
+          "field": "evidenceQuotes",
+          "exists": true,
+          "type": "list",
+          "length": 2,
+          "stage": "repair",
+          "reason": "Two distinct exact source quotations are required"
+        }
+      ]
+    },
+    {
+      "repository": "himself65/finance-skills",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
+      "path": "plugins/skill-creator/skills/skill-creator/SKILL.md",
+      "contentHash": "25e03bbb869d1300f851471d4873fb01110ab19234259e644b28586ab4195eaf",
+      "reason": "Model scope review rejected candidate"
+    },
+    {
+      "repository": "himself65/finance-skills",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
+      "path": "plugins/social-readers/skills/twitter-reader/SKILL.md",
+      "contentHash": "6a5285541131cf98fcfaa20abbaca30753d4756280ba9343bf69293e3cbe6505",
       "reason": "Candidate metadata failed format validation after one repair",
       "diagnostics": [
         {
