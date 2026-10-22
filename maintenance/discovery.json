@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-21T06:06:08.682081+00:00",
-  "query": "investment skills in:name,description",
+  "checkedAt": "2026-10-22T02:31:37.492749+00:00",
+  "query": "equity research skills in:description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -46,7 +46,15 @@
     "belos-street/stock-analytics-agent",
     "j-raddy/compliance-skills",
     "kehoekatherine/Skills",
-    "KALETECH999/KALETECH999.github.io"
+    "KALETECH999/KALETECH999.github.io",
+    "HHFinAi/claude-equity-research-skills",
+    "HHFinAi/Institutional-Growth-Equity-Skills",
+    "Ken0507/quant-workflows",
+    "yuuKimy/us-market-agent",
+    "Arthur19940725/invest-workflow-skill",
+    "xttron2033/AI-ME-Research-Tool",
+    "Mai-coding/public-investment-analysis",
+    "agentii-ai/agentii-investment-intelligence"
   ],
   "decisions": [
     {
@@ -164,6 +172,13 @@
           "reason": "Two distinct exact source quotations are required"
         }
       ]
+    },
+    {
+      "repository": "himself65/finance-skills",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
+      "path": "plugins/ui-tools/skills/generative-ui/SKILL.md",
+      "contentHash": "f52710b144d3c621dc0a87a2bfd1cc8e98edf9459f5f4cbc5052eaf18764242a",
+      "reason": "Model scope review rejected candidate"
     }
   ]
 }

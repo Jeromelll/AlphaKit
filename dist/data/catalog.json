@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-22",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5635,9 +5635,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "15b41e510a3842858b5263175461f082d7f09129",
+      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5646,7 +5646,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5705,9 +5705,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "15b41e510a3842858b5263175461f082d7f09129",
+      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5716,7 +5716,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5777,9 +5777,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "15b41e510a3842858b5263175461f082d7f09129",
+      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5788,7 +5788,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/15b41e510a3842858b5263175461f082d7f09129/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -7072,11 +7072,258 @@
       "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/risk-adjusted-return-optimizer/LICENSE.txt",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "name": "YC组合公司数据检索",
+      "evidenceQuotes": [
+        "Fetches Y Combinator company data from the [yc-oss/api](https://github.com/yc-oss/api), an unofficial open-source API that indexes all publicly launched YC companies",
+        "**No authentication required.** The API is public and free. Just use `curl` to fetch JSON endpoints."
+      ],
+      "environmentEn": "Requires a host with shell access plus curl and jq; no authentication needed, data is public static JSON refreshed daily. If shell access is unavailable, that limitation must be reported.",
+      "method": "先检查 curl 与 jq 可用性，再按用户需求映射到具体端点（meta、batches、industries、tags、top、hiring、单公司档案），用 jq 过滤与聚合，最后以摘要形式呈现公司名称、一句话简介、批次、团队规模、状态与招聘信号。",
+      "nameEn": "Y Combinator Portfolio Data Reader",
+      "tagsEn": [
+        "venture-capital",
+        "startup-research",
+        "api-data",
+        "public-data",
+        "company-screening"
+      ],
+      "outputs": [
+        "公司摘要（名称、一句话简介、批次、团队规模、状态、招聘状态、网站）",
+        "批次规模与知名公司列表",
+        "行业/标签的公司计数与聚合统计（如团队规模分布）"
+      ],
+      "notesEn": "Source is the unofficial yc-oss API (built from YC's Algolia index), refreshed daily, read-only and unauthenticated; companies/all.json is a large response (~5,700 companies) so prefer specific endpoints. This skill is source-checked but execution-unverified; failed data access must not be treated as absence of material events.",
+      "tags": [
+        "风险投资",
+        "创业研究",
+        "API数据",
+        "公开数据",
+        "公司筛选"
+      ],
+      "exampleEn": "Query hiring companies in the W25 batch: curl -s https://yc-oss.github.io/api/batches/winter-2025.json | jq '[.[] | select(.isHiring == true)]', then extract name, one_liner, batch, website fields for a summary.",
+      "inputsEn": [
+        "User research question (batch, industry, tag, company name, hiring status)",
+        "yc-oss API JSON endpoint responses",
+        "Valid batch/industry/tag name lists from meta.json"
+      ],
+      "summaryEn": "Retrieves Y Combinator company profiles, batch rosters, industry/tag groupings, hiring status, and overall stats from the public yc-oss static JSON API for startup and venture research.",
+      "environment": "需要具备 shell 工具的主机环境，安装 curl 与 jq；无需身份验证，数据源为公开静态 JSON（每日更新）。若 shell 不可用须如实报告该限制。",
+      "notes": "数据源为非官方的 yc-oss API（源自 YC 的 Algolia 索引），每日刷新，只读且无需认证；companies/all.json 响应很大（约5,700家公司），应优先使用更具体的端点。技能内容经来源核对，但未实际执行验证；数据获取失败不代表无实质事件。",
+      "dependenciesEn": [
+        "curl",
+        "jq",
+        "network connectivity",
+        "yc-oss/api public dataset"
+      ],
+      "category": "deals",
+      "summary": "通过公开的 yc-oss API 静态 JSON 数据集检索 Y Combinator 公司档案、批次名单、行业/标签分组、招聘状态与整体统计，用于创业与风险投资研究。",
+      "outputsEn": [
+        "Company summaries (name, one-liner, batch, team size, status, hiring status, website)",
+        "Batch size and notable company lists",
+        "Industry/tag counts and aggregate stats such as team-size distribution"
+      ],
+      "dependencies": [
+        "curl",
+        "jq",
+        "网络连接",
+        "yc-oss/api 公开数据集"
+      ],
+      "methodEn": "Verify curl/jq availability, map the request to the appropriate endpoint (meta, batches, industries, tags, top, hiring, single-company profile), filter and aggregate with jq, then present summaries of name, one-liner, batch, team size, status, and hiring signal.",
+      "example": "查询 W25 批次中正在招聘的公司：curl -s https://yc-oss.github.io/api/batches/winter-2025.json | jq '[.[] | select(.isHiring == true)]'，再提取 name、one_liner、batch、website 字段做摘要。",
+      "inputs": [
+        "用户研究问题（批次、行业、标签、公司名、招聘状态）",
+        "yc-oss API JSON 端点响应",
+        "meta.json 中的有效批次/行业/标签名称列表"
+      ],
+      "id": "skill-1e42429b200d29dc",
+      "author": "himself65",
+      "originalName": "yc-reader",
+      "repository": "https://github.com/himself65/finance-skills",
+      "commit": "73d554d60c0a3f121a30f505680f7a06b2b1fd11",
+      "sourcePath": "plugins/social-readers/skills/yc-reader/SKILL.md",
+      "sourceUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/plugins/social-readers/skills/yc-reader/SKILL.md",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/himself65/finance-skills/blob/73d554d60c0a3f121a30f505680f7a06b2b1fd11/LICENSE",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "name": "市场情绪与基本面偏差分析器",
+      "evidenceQuotes": [
+        "识别A股市场中被过度看空但基本面稳健的逆向投资机会。当用户询问逆向投资、超跌反弹、市场错误定价",
+        "判断导致负面情绪的问题是**暂时性**还是**结构性**",
+        "该工具包提供A股实时行情、财务指标、董监高增减持、北向资金、宏观数据等功能，所有数据源免费，无需API密钥。"
+      ],
+      "environmentEn": "Chinese A-share analysis workflow; real-time data via the findata-toolkit-cn data toolkit (free sources, no API key); methodology and output templates in the references/ directory.",
+      "method": "六步流程：(1)确定扫描范围、下跌阈值（默认近6个月跌≥20%）与排除条件；(2)扫描负面情绪信号（股价表现、分析师下调、北向资金流出、融资余额下降、舆情、基金减持）；(3)验证基本面强度（营收、扣非盈利、经营现金流、资产负债表、行业地位、护城河）；(4)分类问题是暂时性、结构性还是不确定，不确定者仅观察；(5)量化估值差距（滚动PE/PB vs 5年中位数、行业折价、隐含增长率、安全边际）；(6)按情绪-基本面偏差排名呈现。",
+      "nameEn": "Sentiment-Reality Gap Analyzer",
+      "tagsEn": [
+        "A-shares",
+        "contrarian investing",
+        "sentiment analysis",
+        "fundamental verification",
+        "valuation gap",
+        "mispricing",
+        "value traps"
+      ],
+      "outputs": [
+        "按情绪-基本面偏差排名的候选股票列表",
+        "问题性质分类（暂时性/结构性/不确定）",
+        "量化估值差距指标（估值偏离、隐含增长率、安全边际）",
+        "催化剂识别与风险提示"
+      ],
+      "notesEn": "This entry is source-checked but execution-unverified; no analysis was run and data-source availability was not tested. Emphasizes intellectual honesty (undervaluation can be justified), judging whether policy shocks are permanent, and 6-18 month repricing horizons; if the data toolkit is unavailable, sentiment and fundamental signals carry explicit data gaps and must not be read as absence of risk.",
+      "tags": [
+        "A股",
+        "逆向投资",
+        "情绪分析",
+        "基本面验证",
+        "估值差距",
+        "错误定价",
+        "价值陷阱"
+      ],
+      "exampleEn": "User asks to scan CSI 300 constituents down more than 25% over six months while revenue and operating cash flow remain positive over the last four quarters; output is five candidates ranked by the sentiment-fundamentals gap, split by identified catalysts vs none, with explicit judgment on policy-driven declines.",
+      "inputsEn": [
+        "Scan scope (whole market / SW industry / index constituents)",
+        "Drawdown threshold and exclusion rules",
+        "Price and sector index performance data",
+        "Analyst earnings revisions and rating changes",
+        "Northbound flow and margin balance data",
+        "Financial statements (revenue, non-GAAP profit, operating cash flow, leverage)",
+        "Institutional holdings and media sentiment data"
+      ],
+      "summaryEn": "Identifies oversold but fundamentally sound A-share contrarian opportunities, quantifies the gap between sentiment and fundamentals, and distinguishes mispricing from value traps.",
+      "environment": "中文A股分析工作流；实时数据需配合 findata-toolkit-cn 金融数据工具包（免费数据源，无需API密钥）；方法论与输出模板见 references/ 目录。",
+      "notes": "本条目为对源文件的核验整理，未实际执行分析或验证数据源可用性。强调智识诚实：低估可能合理，政策性下跌需判断永久性，逆向修复可能需6-18个月；若数据工具不可用，情绪与基本面信号存在数据缺口，不视为无风险。",
+      "dependenciesEn": [
+        "findata-toolkit-cn data toolkit (quotes, financials, northbound flows, etc.)",
+        "references/gap-analysis-methodology.md",
+        "references/output-template.md"
+      ],
+      "category": "quant",
+      "summary": "识别A股中被过度看空但基本面稳健的逆向投资机会，量化情绪与基本面的偏差并区分'错杀'与价值陷阱。",
+      "outputsEn": [
+        "Candidate stocks ranked by sentiment-fundamentals gap",
+        "Problem classification (temporary / structural / uncertain)",
+        "Quantified valuation-gap metrics (valuation deviation, implied growth, margin of safety)",
+        "Catalyst identification and risk caveats"
+      ],
+      "dependencies": [
+        "findata-toolkit-cn 金融数据工具包（实时行情、财务指标、北向资金等）",
+        "references/gap-analysis-methodology.md",
+        "references/output-template.md"
+      ],
+      "methodEn": "Six-step workflow: (1) set scope, drawdown threshold (default >=20% over 6 months) and exclusions; (2) scan negative sentiment signals (price underperformance, analyst downgrades, northbound outflows, falling margin balances, media sentiment, fund reductions); (3) verify fundamental strength (revenue trend, non-GAAP profit, operating cash flow, balance sheet, industry rank, moat); (4) classify problems as temporary, structural, or uncertain (uncertain = watch only); (5) quantify valuation gap (trailing PE/PB vs 5-year median, sector discount, implied growth, margin of safety); (6) rank by sentiment-fundamentals gap.",
+      "example": "用户要求扫描沪深300中近6个月跌幅超25%但近4个季度营收与经营现金流仍为正的股票；流程输出5只按情绪-基本面偏差排名的候选股，标注催化剂与暂无催化剂两类，并说明政策性下跌的判断。",
+      "inputs": [
+        "扫描范围（全市场/申万行业/指数成分股）",
+        "下跌阈值与排除条件",
+        "股价与行业指数表现数据",
+        "分析师盈利预测与评级调整",
+        "北向资金与融资余额数据",
+        "财务报表数据（营收、扣非净利润、经营现金流、资产负债率）",
+        "机构持仓与舆情数据"
+      ],
+      "id": "skill-d532cbcdb6579c42",
+      "author": "Geeksfino",
+      "originalName": "sentiment-reality-gap",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "China-market/sentiment-reality-gap/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/sentiment-reality-gap/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/sentiment-reality-gap/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "name": "投资适当性报告生成器",
+      "evidenceQuotes": [
+        "生成机构级投资适当性报告，包括投资理由、风险披露和客户适当性评估",
+        "结论为以下之一：\n- **适当** — 建议在所有维度上与客户画像一致"
+      ],
+      "environmentEn": "Requires an LLM to run report generation; report structure relies on references/report-framework.md and references/output-template.md; optionally uses the findata-toolkit-cn skill for A-share real-time data, with all data sources free and no API keys required.",
+      "method": "六步流程：收集建议、客户画像、投资逻辑等输入；撰写投资理由（建议摘要、支撑分析、市场背景、备选方案、预期结果）；按八类风险（市场、信用、流动性、集中度、通胀、政策、个体、行为）逐项披露并评级；从风险偏好、期限、流动性需求、财务状况、经验、适格投资者门槛、组合契合度七个维度评估适当性并得出适当/附条件适当/不适当结论；记录资本市场假设与模型局限；按模板输出含监管免责声明的结构化报告。",
+      "nameEn": "Investment Suitability Report Generator",
+      "tagsEn": [
+        "suitability",
+        "compliance reporting",
+        "risk disclosure",
+        "China A-shares",
+        "client documentation",
+        "fiduciary duty"
+      ],
+      "outputs": [
+        "结构化适当性报告（摘要、投资理由、风险披露、适当性评估、假设与局限、免责声明）",
+        "适当性结论（适当/附条件适当/不适当）",
+        "风险严重程度与缓释措施清单"
+      ],
+      "notesEn": "Output is a draft only; formal compliance documents must be reviewed by qualified compliance professionals. This entry is source-checked but execution-unverified. Missing market data is an explicit data gap and must not be treated as no material events or no risk.",
+      "tags": [
+        "适当性",
+        "合规报告",
+        "风险披露",
+        "中国A股",
+        "客户文档",
+        "信义义务"
+      ],
+      "exampleEn": "Given a STAR Market stock recommendation, a client risk profile with proof of 500,000 CNY assets and two years of experience, produce a report draft with rationale, eight-category risk disclosure, qualified-investor threshold verification (500k + 2 years), and a suitable/conditionally suitable/unsuitable conclusion.",
+      "inputsEn": [
+        "Investment recommendation",
+        "Client profile (risk preference, horizon, financial situation, experience)",
+        "Investment rationale",
+        "Supporting analysis references (optional)",
+        "Applicable regulation (optional, defaults to China)"
+      ],
+      "summaryEn": "Generates institutional-grade investment suitability reports covering investment rationale, risk disclosure, client suitability assessment, and key assumptions, defaulting to the China (CSRC/SAC) regulatory framework.",
+      "environment": "需要大语言模型执行报告生成；报告格式依赖 references/report-framework.md 与 references/output-template.md；可选接入金融数据工具包技能（findata-toolkit-cn）获取A股实时行情等数据，所有数据源免费、无需API密钥。",
+      "notes": "输出仅为报告草稿，正式合规文件须由合格合规专业人员审核；报告为源文件核对产物，未实际执行验证。缺失的市场数据属于数据缺口，不得视为无相关事件或无风险。",
+      "dependenciesEn": [
+        "LLM",
+        "references/report-framework.md",
+        "references/output-template.md",
+        "findata-toolkit-cn (optional)"
+      ],
+      "category": "operations",
+      "summary": "生成机构级投资适当性报告，涵盖投资理由、风险因素披露、客户适当性评估和关键假设记录，默认采用中国（CSRC/SAC）监管框架。",
+      "outputsEn": [
+        "Structured suitability report (summary, rationale, risk disclosure, suitability assessment, assumptions & limitations, disclaimers)",
+        "Suitability conclusion (suitable / conditionally suitable / unsuitable)",
+        "Risk severity ratings with mitigation measures"
+      ],
+      "dependencies": [
+        "大语言模型",
+        "references/report-framework.md",
+        "references/output-template.md",
+        "findata-toolkit-cn（可选）"
+      ],
+      "methodEn": "A six-step workflow: gather inputs (recommendation, client profile, rationale); document investment rationale (summary, supporting analysis, market context, alternatives, expected outcomes); disclose eight risk categories (market, credit, liquidity, concentration, inflation, policy, idiosyncratic, behavioral) with severity ratings; assess suitability across seven dimensions (risk preference, horizon, liquidity needs, financial situation, experience, qualified-investor thresholds, portfolio fit) with a suitable/conditionally suitable/unsuitable conclusion; record capital market assumptions and model limitations; produce a structured report with regulatory disclaimers per template.",
+      "example": "输入一项科创板个股建议、客户风险偏好与50万资产证明及两年经验记录，生成含投资理由、八类风险披露、适格投资者门槛核实（50万+2年）、以及'适当/附条件适当/不适当'结论的报告草稿。",
+      "inputs": [
+        "投资建议",
+        "客户画像（风险偏好、期限、财务状况、经验）",
+        "投资逻辑",
+        "来源分析（可选）",
+        "适用法规（可选，默认中国）"
+      ],
+      "id": "skill-05d63f0fbf839904",
+      "author": "Geeksfino",
+      "originalName": "suitability-report-generator",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "China-market/suitability-report-generator/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/suitability-report-generator/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/suitability-report-generator/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 104,
+      "skills": 107,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -7182,8 +7429,16 @@
           "file": "/licenses/Geeksfino--finskills--China-market--sector-rotation-detector--LICENSE.txt"
         },
         {
+          "sourcePath": "China-market/sentiment-reality-gap/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--China-market--sentiment-reality-gap--LICENSE.txt"
+        },
+        {
           "sourcePath": "China-market/small-cap-growth-identifier/LICENSE.txt",
           "file": "/licenses/Geeksfino--finskills--China-market--small-cap-growth-identifier--LICENSE.txt"
+        },
+        {
+          "sourcePath": "China-market/suitability-report-generator/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--China-market--suitability-report-generator--LICENSE.txt"
         },
         {
           "sourcePath": "China-market/tech-hype-vs-fundamentals/LICENSE.txt",
@@ -7251,7 +7506,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "15b41e510a3842858b5263175461f082d7f09129",
+      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -7273,8 +7528,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--15b41e510a3842858b5263175461f082d7f09129.zip",
-      "archiveSha256": "155d7f79e660b45d8d21fafbaa4e0b29819583d6ff1c08be7517c25174ededb3",
+      "archive": "Jeromelll--AlphaKit--d0592f7ae23cd1a395f00340529cbfb6b8482b02.zip",
+      "archiveSha256": "3f37d0ba7a4260c20fe92452c8d0b1a6110f6643a4933dab822e4747000440db",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }
