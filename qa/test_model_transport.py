@@ -104,20 +104,25 @@ class TransportTests(unittest.TestCase):
                                              'usage': {'total_tokens': 11}}])
         update_catalog.time.sleep.assert_called_once_with(1)
 
-    def test_retryable_429_stops_after_four_attempts(self):
+    def test_retryable_429_stops_after_seven_attempts(self):
         with mock.patch.object(update_catalog.urllib.request, 'urlopen',
                                side_effect=[http_error(429, error_body(1305))
-                                            for _ in range(4)]) as urlopen:
+                                            for _ in range(7)]) as urlopen:
             with self.assertRaises(update_catalog.ModelTransportError) as raised:
                 self.call_model()
         self.assertEqual(raised.exception.diagnostic['httpStatus'], 429)
         self.assertEqual(raised.exception.diagnostic['providerCode'], 1305)
-        self.assertEqual(raised.exception.diagnostic['attempts'], 4)
+        self.assertEqual(raised.exception.diagnostic['attempts'], 7)
         self.assertEqual([decision['retry'] for decision in
-                          raised.exception.diagnostic['decisions']], [True, True, True, False])
-        self.assertEqual(urlopen.call_count, 4)
+                          raised.exception.diagnostic['decisions']],
+                         [True, True, True, True, True, True, False])
+        self.assertEqual(urlopen.call_count, 7)
         self.assertEqual(update_catalog.time.sleep.call_args_list,
-                         [mock.call(5.0), mock.call(10.0), mock.call(20.0)])
+                         [mock.call(5.0), mock.call(10.0), mock.call(20.0),
+                          mock.call(40.0), mock.call(80.0), mock.call(85.0)])
+        self.assertLessEqual(sum(call.args[0] for call in update_catalog.time.sleep.call_args_list),
+                             update_catalog.MAX_RETRY_WAIT_SECONDS,
+                             'clamped final delay must not exceed the budget')
 
     def test_numeric_string_transient_code_retries_then_succeeds(self):
         result = None
@@ -173,25 +178,26 @@ class TransportTests(unittest.TestCase):
     def test_retry_wait_budget_is_cumulative(self):
         failure = None
         with mock.patch.object(update_catalog.urllib.request, 'urlopen', side_effect=[
-                http_error(429, error_body(1302), {'Retry-After': '40'}),
-                http_error(429, error_body(1302), {'Retry-After': '40'}),
+                http_error(429, error_body(1302), {'Retry-After': '150'}),
+                http_error(429, error_body(1302), {'Retry-After': '150'}),
                 _Response(success_payload())]) as urlopen:
             try:
                 self.call_model()
             except RuntimeError as error:
                 failure = error
-        self.assertLessEqual(sum(call.args[0] for call in update_catalog.time.sleep.call_args_list), 60,
+        self.assertLessEqual(sum(call.args[0] for call in update_catalog.time.sleep.call_args_list),
+                             update_catalog.MAX_RETRY_WAIT_SECONDS,
                              'Retry budget applies to the total wait, not each delay')
         self.assertEqual(urlopen.call_count, 2)
         self.assertIsInstance(failure, update_catalog.ModelTransportError)
         self.assertEqual(failure.diagnostic['attempts'], 2)
         self.assertEqual(failure.diagnostic['decisions'], [
-            {'httpStatus': 429, 'providerCode': 1302, 'retry': True, 'waitSeconds': 40},
-            {'httpStatus': 429, 'providerCode': 1302, 'retry': False, 'waitSeconds': 40},
+            {'httpStatus': 429, 'providerCode': 1302, 'retry': True, 'waitSeconds': 150},
+            {'httpStatus': 429, 'providerCode': 1302, 'retry': False, 'waitSeconds': 150},
         ])
 
     def test_retry_after_over_total_budget_defers_without_retry(self):
-        headers = {'Retry-After': '61'}
+        headers = {'Retry-After': str(update_catalog.MAX_RETRY_WAIT_SECONDS + 1)}
         with mock.patch.object(update_catalog.urllib.request, 'urlopen',
                                side_effect=http_error(429, error_body(1302), headers)) as urlopen:
             with self.assertRaises(update_catalog.ModelTransportError) as raised:
@@ -200,7 +206,8 @@ class TransportTests(unittest.TestCase):
         update_catalog.time.sleep.assert_not_called()
         self.assertEqual(raised.exception.diagnostic['decisions'],
                          [{'httpStatus': 429, 'providerCode': 1302,
-                           'retry': False, 'waitSeconds': 61}])
+                           'retry': False,
+                           'waitSeconds': update_catalog.MAX_RETRY_WAIT_SECONDS + 1}])
 
     def test_malformed_oversized_and_message_bearing_errors_are_sanitized(self):
         marker = 'provider-secret-marker'
