@@ -5635,9 +5635,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
+      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5646,7 +5646,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5705,9 +5705,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
+      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5716,7 +5716,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5777,9 +5777,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
+      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5788,7 +5788,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/d0592f7ae23cd1a395f00340529cbfb6b8482b02/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -7319,11 +7319,257 @@
       "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/China-market/suitability-report-generator/LICENSE.txt",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "example": "用户要求：在标普500股息贵族中按收入优先级排序前10只股票，假设DRIP再投资、10年回看。输出：比较表（收益率、FCF覆盖、派息率）、可持续性评分，以及10万美元投资的10/20/30年收入投影，并标注行业集中度风险。",
+      "evidenceQuotes": [
+        "Analyze Dividend Aristocrats — S&P 500 companies with 25+ consecutive years of dividend increases — evaluating income reliability, total return with reinvestment, and dividend sustainability.",
+        "The streak is a signal, not a guarantee."
+      ],
+      "nameEn": "Dividend Aristocrat ROI Calculator",
+      "inputs": [
+        "用户参数：股票池、期限、排序优先级、再投资假设",
+        "每股股息与EPS历史",
+        "自由现金流与总股息支付",
+        "当前股价与估值（P/E相对历史）",
+        "债务/EBITDA与股息政策声明"
+      ],
+      "name": "股息贵族ROI计算器",
+      "environmentEn": "An LLM agent with financial data analysis capability; live market data via the FinData Toolkit skill (findata-toolkit-us), which requires no API keys.",
+      "method": "定义参数（股票池、期限、优先级、再投资假设）；计算核心指标：10年DRIP总回报、股息率、5/10年股息CAGR、盈利派息率、FCF派息率、FCF覆盖倍数；从派息率余量、FCF覆盖≥1.3x、债务/EBITDA、盈利稳定性、股息增长轨迹、管理层承诺六个维度评估可持续性；按平衡/收益/增长权重组合排序；以结构化报告呈现，含执行摘要、个股档案、对比表与10/20/30年收入投影。",
+      "exampleEn": "User asks: rank the top 10 S&P 500 Dividend Aristocrats by income priority, assuming DRIP reinvestment and a 10-year lookback. Output: a comparative table (yield, FCF coverage, payout ratio), sustainability scores, and a 10/20/30-year income projection for a $100K investment, with sector concentration risk flagged.",
+      "tags": [
+        "股息投资",
+        "股息贵族",
+        "总回报",
+        "FCF覆盖",
+        "投资组合筛选"
+      ],
+      "outputsEn": [
+        "Individual stock metric profiles (DRIP total return, yield, dividend CAGR, payout ratio, FCF coverage)",
+        "Sustainability scores",
+        "Weighted composite ranking table",
+        "Hypothetical 10/20/30-year income projections",
+        "Structured report with disclaimers"
+      ],
+      "inputsEn": [
+        "User parameters: universe, horizon, ranking priority, reinvestment assumption",
+        "Dividend per share and EPS history",
+        "Free cash flow and total dividends paid",
+        "Current price and valuation (P/E vs. history)",
+        "Debt/EBITDA and stated dividend policy"
+      ],
+      "dependenciesEn": [
+        "references/calculation-methodology.md",
+        "references/output-template.md",
+        "findata-toolkit-us (live market data, optional)"
+      ],
+      "tagsEn": [
+        "dividend investing",
+        "dividend aristocrats",
+        "total return",
+        "FCF coverage",
+        "portfolio screening"
+      ],
+      "category": "portfolio",
+      "summaryEn": "Analyzes S&P 500 Dividend Aristocrats (25+ consecutive years of dividend increases) for income reliability, total return with reinvestment, and dividend sustainability, ranking candidates via a composite score.",
+      "outputs": [
+        "个股指标档案（DRIP总回报、股息率、股息CAGR、派息率、FCF覆盖）",
+        "可持续性评分",
+        "加权综合排序候选表",
+        "10/20/30年假设收入投影",
+        "含免责声明的结构化报告"
+      ],
+      "environment": "具备财务数据分析能力的LLM代理；实时行情需FinData Toolkit技能（findata-toolkit-us），其无需API密钥。",
+      "notesEn": "Source-checked but execution-unverified; formula details referenced in references/calculation-methodology.md and references/output-template.md. A high yield may signal an imminent cut, so yield must be paired with sustainability analysis; the 25-year streak is a signal, not a guarantee. No tax advice provided; nominal vs. real returns must be noted.",
+      "methodEn": "Define parameters (universe, horizon, priority, reinvestment assumption); compute core metrics: 10Y DRIP total return, current yield, 5Y/10Y dividend CAGR, earnings payout ratio, FCF payout ratio, FCF coverage; assess sustainability across payout headroom (<75%, <90% for REITs/utilities), FCF coverage >=1.3x, debt/EBITDA, earnings stability, dividend growth trajectory, and management commitment; rank with Balanced/Income/Growth weighting profiles; present a structured report with executive summary, stock profiles, comparative table, and a hypothetical $100K income projection over 10/20/30 years.",
+      "dependencies": [
+        "references/calculation-methodology.md",
+        "references/output-template.md",
+        "findata-toolkit-us（实时行情数据，可选）"
+      ],
+      "summary": "针对连续25年以上提高股息的标普500股息贵族，评估收益可靠性、含再投资总回报与股息可持续性，并按综合评分排序候选股票。",
+      "notes": "此条目经来源核对但未经验证执行；公式细节引用references/calculation-methodology.md与references/output-template.md。高收益可能是削减股息的信号，须与可持续性分析配对；25年连胜纪录是信号而非保证。未提供税务建议；报告中须注明名义或实际回报。",
+      "id": "skill-d791312f5b5244fb",
+      "author": "Geeksfino",
+      "originalName": "dividend-aristocrat-calculator",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/dividend-aristocrat-calculator/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/dividend-aristocrat-calculator/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/dividend-aristocrat-calculator/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "example": "在S&P 500中按Best-in-class方法筛选，排除煤炭开采与争议性武器企业，聚焦治理支柱，输出治理评分前10名公司及其动量与争议监测结果。",
+      "evidenceQuotes": [
+        "Screen and analyze stocks through an ESG (Environmental, Social, Governance) lens, evaluating sustainability practices, controversy exposure, and responsible investing criteria.",
+        "Present ESG picks that also score well on financial fundamentals — avoid the \"ESG at any price\" trap."
+      ],
+      "nameEn": "ESG & Responsible Investing Screener",
+      "inputs": [
+        "股票池（S&P 500/Russell 1000/自定义）",
+        "ESG方法（同类最佳/排除/整合/主题）",
+        "支柱焦点与行业范围",
+        "排除类别清单",
+        "公司碳排放与治理数据",
+        "争议与评级变动信息"
+      ],
+      "name": "ESG与责任投资筛选器",
+      "environmentEn": "Requires an assistant environment capable of markdown-based analysis; live market data relies on the FinData Toolkit skill (findata-toolkit-us), no API keys needed.",
+      "method": "七步流程：确认筛选参数（股票池、ESG方法、支柱、排除项）；应用排除清单（烟草、争议性武器、化石燃料等）；按E/S/G三支柱各约33%权重以0-100分评分；评估ESG动量（排放轨迹、争议趋势、披露质量、目标设定、评级变动）；分级检查争议严重性；将ESG评分与ROE、波动率、股东回报等财务指标整合；按输出模板呈现排名、动量仪表盘与公司卡片。",
+      "exampleEn": "Screen the S&P 500 with a best-in-class approach, excluding coal mining and controversial weapons companies, focusing on the governance pillar, and output the top 10 governance-scored companies with momentum and controversy monitoring.",
+      "tags": [
+        "ESG",
+        "责任投资",
+        "股票筛选",
+        "治理评估",
+        "争议筛查",
+        "可持续投资"
+      ],
+      "outputsEn": [
+        "Screening criteria summary",
+        "Ranked ESG picks with pillar scores",
+        "ESG momentum dashboard",
+        "Controversy monitor table",
+        "ESG vs financial quality integration analysis",
+        "Sector ESG landscape and individual company cards"
+      ],
+      "inputsEn": [
+        "Investment universe (S&P 500 / Russell 1000 / custom)",
+        "ESG approach (best-in-class / exclusion / integration / thematic)",
+        "Pillar focus and sector scope",
+        "Exclusion category list",
+        "Company emissions and governance data",
+        "Controversy and rating change information"
+      ],
+      "dependenciesEn": [
+        "FinData Toolkit skill (findata-toolkit-us, live market data)",
+        "references/esg-framework.md",
+        "references/output-template.md"
+      ],
+      "tagsEn": [
+        "ESG",
+        "responsible investing",
+        "stock screening",
+        "governance assessment",
+        "controversy screening",
+        "sustainable investing"
+      ],
+      "category": "research",
+      "summaryEn": "Screens and scores stocks through an Environmental, Social, Governance (ESG) framework with exclusion screens, controversy monitoring, ESG momentum assessment, and financial quality integration to support responsible investment decisions.",
+      "outputs": [
+        "筛选标准摘要",
+        "排名ESG精选与支柱评分",
+        "ESG动量仪表盘",
+        "争议监测表",
+        "ESG与财务质量整合分析",
+        "行业ESG格局与公司卡片"
+      ],
+      "environment": "需要可运行markdown文档分析的助手环境；实时市场数据依赖FinData Toolkit技能（findata-toolkit-us），无需API密钥。",
+      "notesEn": "ESG data is inconsistent across providers; data sources and limitations must be disclosed; ESG standards evolve rapidly; the framework is analytical, not personalized investment advice. This entry is a source-checked skill description; screening was not actually executed and performance is execution-unverified.",
+      "methodEn": "Seven-step workflow: confirm screening parameters (universe, ESG approach, pillars, exclusions); apply exclusion lists (tobacco, controversial weapons, fossil fuels, etc.); score each company 0-100 across E/S/G pillars weighted ~33% each; assess ESG momentum (emissions trajectory, controversy trends, disclosure quality, target setting, rating changes); grade controversy severity; integrate ESG scores with financial metrics (ROE, volatility, shareholder returns, carbon intensity vs cost structure); present ranked picks, momentum dashboard, and company cards per the output template.",
+      "dependencies": [
+        "FinData Toolkit技能（findata-toolkit-us，实时市场数据）",
+        "references/esg-framework.md",
+        "references/output-template.md"
+      ],
+      "summary": "通过环境、社会、治理（ESG）框架对股票进行筛选与评分，包含排除筛选、争议监测、ESG动量评估与财务质量整合，支持负责任投资决策。",
+      "notes": "ESG数据在不同数据提供商之间不一致，须披露数据来源与局限；ESG标准快速演变；该框架为分析工具而非个性化投资建议。本条目为源文件核对的技能描述，未实际执行筛选，效果未经执行验证。",
+      "id": "skill-26c3951d1a67cd8f",
+      "author": "Geeksfino",
+      "originalName": "esg-screener",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/esg-screener/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/esg-screener/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/esg-screener/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "example": "用户询问当前的并购套利机会：确认范围为活跃 M&A 事件、保守风险偏好、输出 5 个机会后，逐笔分析宣布待批的交易，量化合并价差年化收益、估计反垄断与股东批准风险，并给出概率加权回报排名。",
+      "evidenceQuotes": [
+        "Identify and analyze corporate events that create mispricing opportunities, including M&A, spinoffs, buybacks, restructurings, and index changes",
+        "Rank opportunities by risk-adjusted return. Present per [references/output-template.md](references/output-template.md)"
+      ],
+      "nameEn": "Event-Driven Opportunity Detector",
+      "inputs": [
+        "事件类型与市场范围",
+        "时间窗口与风险偏好",
+        "公司公告与 SEC 文件",
+        "实时行情数据（可选，经 FinData Toolkit）"
+      ],
+      "name": "事件驱动机会探测器",
+      "environmentEn": "Standalone skill; for live market data and SEC filings it can pair with the FinData Toolkit skill (findata-toolkit-us), which requires no API keys.",
+      "method": "五步工作流：1) 确认事件类型、市场范围、时间窗口、风险偏好与输出数量；2) 按 M&A、分拆、回购、重组、指数调整、管理层变动、激进投资者活动、监管催化剂等类别扫描事件；3) 对每个事件量化价差/机会、成交概率、时间线、风险因素与年化风险回报；4) 评估监管、融资、股东、市场、时间与下行风险；5) 按风险调整收益排序，输出仪表盘、深度分析、风险矩阵、历史可比案例与免责声明。",
+      "exampleEn": "User asks about current merger arbitrage opportunities: after confirming active M&A scope, conservative risk appetite and 5 results, analyze announced pending deals, quantify annualized merger spreads, estimate antitrust and shareholder approval risks, and rank by probability-weighted returns.",
+      "tags": [
+        "事件驱动",
+        "并购套利",
+        "特殊情境",
+        "美股",
+        "风险矩阵"
+      ],
+      "outputsEn": [
+        "Event summary dashboard",
+        "Per-opportunity deep dives (spread, probability, timeline, risk/reward)",
+        "Probability-impact risk matrix",
+        "Historical comparables",
+        "Disclaimers"
+      ],
+      "inputsEn": [
+        "Event types and market scope",
+        "Time window and risk appetite",
+        "Corporate announcements and SEC filings",
+        "Live market data (optional, via FinData Toolkit)"
+      ],
+      "dependenciesEn": [
+        "FinData Toolkit skill (optional, live data and SEC filings)"
+      ],
+      "tagsEn": [
+        "event-driven",
+        "merger-arbitrage",
+        "special-situations",
+        "US-equities",
+        "risk-matrix"
+      ],
+      "category": "deals",
+      "summaryEn": "Acts as a special situations analyst to scan US corporate events (M&A, spinoffs, buybacks, restructurings, index changes), quantify mispricing, deal probability and risk/reward, and rank opportunities by risk-adjusted return.",
+      "outputs": [
+        "事件摘要仪表盘",
+        "逐项深度分析（价差、概率、时间线、风险回报）",
+        "概率-影响风险矩阵",
+        "历史可比案例",
+        "免责声明"
+      ],
+      "environment": "独立技能，可脱离工具运行；如需实时行情与 SEC 文件，可配合 FinData Toolkit 技能（findata-toolkit-us），该工具无需 API 密钥。",
+      "notesEn": "Public information analysis only; event-driven is not risk-free and downside scenarios must be quantified; timelines materially affect annualized returns; less liquid situations carry wider spreads; position sizing typically 2-5% of portfolio. All analysis is educational, not personalized investment advice. This entry is source-checked, execution-unverified.",
+      "methodEn": "Five-step workflow: 1) confirm event types, market scope, time window, risk appetite and result count; 2) scan events across M&A, spinoffs, buybacks, restructurings, index changes, management changes, activist campaigns and regulatory catalysts; 3) quantify spread/opportunity, deal probability, timeline, risk factors and annualized risk/reward per event; 4) assess regulatory, financing, shareholder, market, timing and downside risks; 5) rank by risk-adjusted return and present a dashboard, deep dives, risk matrix, historical comparables and disclaimers.",
+      "dependencies": [
+        "FinData Toolkit 技能（可选，实时行情与 SEC 文件）"
+      ],
+      "summary": "以特殊情境分析师角色，扫描美股并购、分拆、回购、重组、指数调整等公司事件，量化错价空间、成交概率与风险回报，并按风险调整后收益排序输出机会清单。",
+      "notes": "仅使用公开信息，不涉及内幕信息；事件驱动并非无风险，须量化下行情景；时间线显著影响年化收益；流动性差的情况价差更宽；仓位建议通常为组合 2–5%。所有分析为教育性质，非个性化投资建议。本条目为来源核对、执行未验证的目录描述。",
+      "id": "skill-407aef00641cc78a",
+      "author": "Geeksfino",
+      "originalName": "event-driven-detector",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/event-driven-detector/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/event-driven-detector/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/event-driven-detector/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 107,
+      "skills": 110,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -7453,6 +7699,18 @@
           "file": "/licenses/Geeksfino--finskills--LICENSE"
         },
         {
+          "sourcePath": "US-market/dividend-aristocrat-calculator/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--dividend-aristocrat-calculator--LICENSE.txt"
+        },
+        {
+          "sourcePath": "US-market/esg-screener/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--esg-screener--LICENSE.txt"
+        },
+        {
+          "sourcePath": "US-market/event-driven-detector/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--event-driven-detector--LICENSE.txt"
+        },
+        {
           "sourcePath": "US-market/financial-statement-analyzer/LICENSE.txt",
           "file": "/licenses/Geeksfino--finskills--US-market--financial-statement-analyzer--LICENSE.txt"
         },
@@ -7506,7 +7764,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "d0592f7ae23cd1a395f00340529cbfb6b8482b02",
+      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -7528,8 +7786,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--d0592f7ae23cd1a395f00340529cbfb6b8482b02.zip",
-      "archiveSha256": "3f37d0ba7a4260c20fe92452c8d0b1a6110f6643a4933dab822e4747000440db",
+      "archive": "Jeromelll--AlphaKit--335e94fb526eda65bbdbbeb3db3de88ad3204c0c.zip",
+      "archiveSha256": "033e948454f43394894476e42ab68aebf8518357b0f71c5a02bb92079b72ca3f",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }
