@@ -114,6 +114,8 @@ def model_json(messages, max_tokens=5500):
                 jitter = 0.0
                 if wait_seconds <= remaining_wait and not server_directed:
                     jitter = random.uniform(0, 0.1 * wait_seconds if wait_seconds else 0.1)
+                    if wait_seconds + jitter > remaining_wait:
+                        jitter = max(0.0, remaining_wait - wait_seconds)
                 retry = (error.code == 429 and attempt < MAX_MODEL_ATTEMPTS and
                          provider_code in RETRYABLE_PROVIDER_CODES and
                          wait_seconds + jitter <= remaining_wait)
