@@ -86,6 +86,7 @@ jobs:
             exit 0
           fi
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Update AlphaKit catalog'
+          python3 qa/privacy_preflight.py --range HEAD~1..HEAD
           git push origin HEAD:main
           gh workflow run deploy.yml --ref main
 
