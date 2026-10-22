@@ -32,8 +32,8 @@ SEARCHES = ('finance skills in:name,description', 'financial skills in:name,desc
             'quant skills in:name,description', '金融 skills in:name,description')
 MODEL_CALLS = []
 MAX_HTTP_BODY_BYTES = 64 * 1024
-MAX_MODEL_ATTEMPTS = 4
-MAX_RETRY_WAIT_SECONDS = 60
+MAX_MODEL_ATTEMPTS = 7
+MAX_RETRY_WAIT_SECONDS = 240
 MAX_PROVIDER_CODE = 2_147_483_647
 RETRYABLE_PROVIDER_CODES = {1302, 1305}
 PERMANENT_RATE_LIMIT_CODES = {
@@ -105,10 +105,14 @@ def model_json(messages, max_tokens=5500):
                             wait_seconds = max(0.0, retry_time.timestamp() - time.time())
                     except (TypeError, ValueError, OverflowError):
                         wait_seconds = None
+                server_directed = wait_seconds is not None
                 if wait_seconds is None:
-                    wait_seconds = 5.0 * (2 ** (attempt - 1))
+                    # A minute-scale 1302 window outlasts exponential backoff, so a locally
+                    # computed delay is clamped to the remaining budget instead of aborting
+                    # with most of it unspent. A server Retry-After is still honoured exactly.
+                    wait_seconds = min(5.0 * (2 ** (attempt - 1)), remaining_wait)
                 jitter = 0.0
-                if wait_seconds <= remaining_wait:
+                if wait_seconds <= remaining_wait and not server_directed:
                     jitter = random.uniform(0, 0.1 * wait_seconds if wait_seconds else 0.1)
                 retry = (error.code == 429 and attempt < MAX_MODEL_ATTEMPTS and
                          provider_code in RETRYABLE_PROVIDER_CODES and
