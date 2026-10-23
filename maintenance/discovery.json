@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-22T05:25:32.624493+00:00",
-  "query": "equity research skills in:description",
+  "checkedAt": "2026-10-23T05:25:45.896680+00:00",
+  "query": "quant skills in:name,description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -54,7 +54,14 @@
     "Arthur19940725/invest-workflow-skill",
     "xttron2033/AI-ME-Research-Tool",
     "Mai-coding/public-investment-analysis",
-    "agentii-ai/agentii-investment-intelligence"
+    "agentii-ai/agentii-investment-intelligence",
+    "bianzhishui/quant_trading_01",
+    "shiyongxin/skills-quant-framework",
+    "Furox-Art/axiomize-quantum-skills-2.0",
+    "x-TheFox/Cortex-54",
+    "Jerome-Jiayu-Lin/Quant-newsletter",
+    "xtt-316/xuanxue-quant-lab",
+    "xiazhicheng/quant-risk"
   ],
   "decisions": [
     {

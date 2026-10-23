@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22",
+  "updatedAt": "2026-10-23",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5635,9 +5635,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
+      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5646,7 +5646,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5705,9 +5705,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
+      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5716,7 +5716,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5777,9 +5777,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
+      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5788,7 +5788,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/335e94fb526eda65bbdbbeb3db3de88ad3204c0c/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -7565,11 +7565,266 @@
       "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/event-driven-detector/LICENSE.txt",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "tagsEn": [
+        "US equities",
+        "data fetching",
+        "financial analysis",
+        "portfolio risk",
+        "macro indicators",
+        "SEC filings"
+      ],
+      "inputsEn": [
+        "Ticker symbols (e.g., AAPL)",
+        "Holdings weight string",
+        "Screening universe and parameters",
+        "CLI options (--metrics, --history, --stress, etc.)"
+      ],
+      "outputsEn": [
+        "JSON company fundamentals and price history",
+        "Insider trades and SEC filings records",
+        "Financial scores (DuPont, Z-Score, M-Score, F-Score)",
+        "Portfolio risk metrics (VaR/CVaR, health score, stress test results)",
+        "Macro indicator dashboard data"
+      ],
+      "nameEn": "US Market Financial Data Toolkit",
+      "outputs": [
+        "JSON格式的公司基本面与价格历史",
+        "内幕交易与SEC文件记录",
+        "财务评分（DuPont、Z-Score、M-Score、F-Score）",
+        "组合风险指标（VaR/CVaR、健康分、压力测试结果）",
+        "宏观指标仪表板数据"
+      ],
+      "method": "通过命令行脚本调用yfinance获取行情与财务数据，SEC EDGAR获取内幕交易与公司文件，FRED获取宏观指标；用DuPont分解、Altman Z-Score、Beneish M-Score、Piotroski F-Score等模型计算财务质量，并执行VaR/CVaR、压力测试、集中度与多因子筛选分析。",
+      "notes": "此条目经来源核对但未执行验证；数据依赖第三方免费源（Yahoo Finance、SEC EDGAR、FRED），可能出现访问失败或数据缺失，此时应视为数据缺口而非市场无事件或无风险。所有脚本输出JSON至stdout，错误输出到stderr。",
+      "name": "美股金融数据工具包",
+      "dependencies": [
+        "Python",
+        "pip依赖包（requirements.txt）",
+        "yfinance",
+        "SEC EDGAR公开接口",
+        "FRED公开数据"
+      ],
+      "category": "data",
+      "notesEn": "Source-checked but execution-unverified. Data depends on free third-party sources (Yahoo Finance, SEC EDGAR, FRED); failed access or missing data must be treated as a data gap, not as no market events or no risk. Scripts output JSON to stdout with errors on stderr.",
+      "summary": "一套覆盖美股实时数据、SEC文件、财务评分、组合风险与宏观指标的免费数据工具包脚本集合，为投资分析提供数据支撑。",
+      "methodEn": "Command-line scripts fetch quotes and financials via yfinance, filings and Form 4 insider trades via SEC EDGAR, and macro series via FRED; compute DuPont, Altman Z-Score, Beneish M-Score, Piotroski F-Score, plus VaR/CVaR, stress testing, concentration, and multi-factor screening.",
+      "summaryEn": "A free-script toolkit covering live US stock data, SEC filings, financial scoring models, portfolio risk analytics, and macro indicators to ground investment analysis.",
+      "tags": [
+        "美股",
+        "数据获取",
+        "财务分析",
+        "组合风险",
+        "宏观指标",
+        "SEC文件"
+      ],
+      "dependenciesEn": [
+        "Python",
+        "pip dependencies (requirements.txt)",
+        "yfinance",
+        "SEC EDGAR public API",
+        "FRED public data"
+      ],
+      "environmentEn": "Python environment, install dependencies via pip from requirements.txt; no API keys required; scripts run from the skill root directory.",
+      "exampleEn": "python scripts/financial_calc.py AAPL --all computes all financial scores; python scripts/portfolio_analytics.py --holdings \"AAPL:30,MSFT:25,GOOGL:20,AMZN:15,META:10\" outputs a 0-100 portfolio health score.",
+      "example": "python scripts/financial_calc.py AAPL --all 计算全部财务评分；python scripts/portfolio_analytics.py --holdings \"AAPL:30,MSFT:25,GOOGL:20,AMZN:15,META:10\" 输出0-100组合健康分。",
+      "inputs": [
+        "股票代码（如AAPL）",
+        "持仓权重字符串",
+        "因子筛选universe与参数",
+        "命令行选项（--metrics、--history、--stress等）"
+      ],
+      "evidenceQuotes": [
+        "A self-contained data toolkit providing live financial data and quantitative calculations for US market analysis. All data sources are **free** and require **no API keys**.",
+        "All scripts output **JSON to stdout** for easy parsing. Errors go to stderr."
+      ],
+      "environment": "Python环境，pip安装requirements.txt依赖，无需API密钥，脚本从技能根目录运行。",
+      "id": "skill-1b9c88f3109c0c1b",
+      "author": "Geeksfino",
+      "originalName": "findata-toolkit",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/findata-toolkit/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/findata-toolkit/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/findata-toolkit/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "tagsEn": [
+        "insider trading",
+        "SEC Form 4",
+        "stock screening",
+        "quantitative signals",
+        "US market"
+      ],
+      "inputsEn": [
+        "Sector or market scope",
+        "Time window (default 90 days)",
+        "Number of results",
+        "Insider roles of interest",
+        "SEC Form 4 filing data",
+        "Stock prices and price context data"
+      ],
+      "outputsEn": [
+        "Structured insider buying report (executive summary, methodology, company profiles, comparative table, disclaimers)",
+        "Ranked list of companies by signal strength",
+        "Per-company buying details and red flag analysis"
+      ],
+      "nameEn": "Insider Trading Pattern Analyzer",
+      "outputs": [
+        "结构化内部人买入报告（执行摘要、方法论、公司画像、对比表、免责声明）",
+        "按信号强度排名的公司列表",
+        "逐公司买入明细与红旗分析"
+      ],
+      "method": "先确认扫描范围（行业、时间窗口默认90天、结果数量、市场范围、内部人角色），再应用筛选条件：至少2名内部人在窗口内买入、仅限公开市场购买（排除期权行权、授予、10b5-1自动计划、赠与）、购买金额相对薪酬与持股有意义；随后按买入人数与级别、合计金额、购买占薪酬比例、逆势买入、集群密度进行排名；对头部公司做深度分析（买入人明细、历史影响、管理层信心信号、红旗风险），最后输出含执行摘要、方法论、公司画像、对比表和免责声明的报告。",
+      "notes": "此处'内部交易'指合法的监管申报交易，非非法内幕交易。卖出信号弱于买入信号；单一内部人买入弱于集群买入；需注明数据截止日期，申报可能延迟最多2个交易日。结果仅为信息性参考，不构成投资建议。本条目为源文件核查所得，执行未经实际验证。",
+      "name": "内部交易模式分析器",
+      "dependencies": [
+        "SEC Form 4申报数据",
+        "FinData Toolkit技能（findata-toolkit-us）",
+        "references/insider-signal-criteria.md",
+        "references/output-template.md"
+      ],
+      "category": "research",
+      "notesEn": "'Insider trading' here refers to legal regulator-reported transactions (SEC Form 4), not illegal trading on material non-public information. Sell signals are weaker than buys; solo buying is weaker than clusters. Always state the data cutoff, noting filings can be delayed up to 2 business days. Findings are informational, not investment advice. This entry is source-checked; execution is unverified.",
+      "summary": "扫描SEC Form 4申报，筛选出具有多内部人集群式公开市场买入的公司，按信号强度排名并生成结构化研究报告。",
+      "methodEn": "Confirm scope (sector, default 90-day window, result count, market scope, insider roles), then apply filters: at least 2 insiders buying within the window, open-market purchases only (excluding option exercises, grants, 10b5-1 automatic plans, gifts), purchase size meaningful relative to compensation and holdings. Rank qualifying companies by number and seniority of buyers, aggregate dollar value, purchase size relative to compensation, buying into price weakness, and cluster density. Deep-dive top companies covering buyer details, historical impact, management confidence signal, and red flags, then compile a report with executive summary, methodology, company profiles, comparative table, and disclaimers.",
+      "summaryEn": "Screens SEC Form 4 filings to surface companies with clustered, meaningful open-market insider buying, ranks them by signal strength, and produces a structured research report.",
+      "tags": [
+        "内部交易",
+        "SEC Form 4",
+        "股票筛选",
+        "量化信号",
+        "美国市场"
+      ],
+      "dependenciesEn": [
+        "SEC Form 4 filing data",
+        "FinData Toolkit skill (findata-toolkit-us)",
+        "references/insider-signal-criteria.md",
+        "references/output-template.md"
+      ],
+      "environmentEn": "Requires access to SEC Form 4 filing data. Live market data, filings, and screening rely on the FinData Toolkit skill (findata-toolkit-us); no API keys needed.",
+      "exampleEn": "Request: scan US technology sector for the top 5 companies by insider buying over the last 90 days. The workflow confirms default scope, filters Form 4 open-market purchases, finds cluster buying by C-suite insiders at several companies, ranks by signal strength, and outputs a report with a comparative table, disclaimers, and the stated data cutoff date.",
+      "example": "用户请求：扫描美国科技行业最近90天内部人买入最多的5家公司。工作流确认默认范围后筛选Form 4公开市场购买，发现3家科技公司出现C级高管集群买入，按信号强度排名，输出含对比表和免责声明的报告，并标注数据截止日期。",
+      "inputs": [
+        "行业/市场范围",
+        "时间窗口（默认90天）",
+        "结果数量",
+        "内部人角色范围",
+        "SEC Form 4申报数据",
+        "股价与价格背景数据"
+      ],
+      "evidenceQuotes": [
+        "Screen for companies matching ALL of the following criteria",
+        "Multiple insiders (≥ 2) buying within the time window",
+        "Rank qualifying companies by signal strength using these factors"
+      ],
+      "environment": "需要能够获取SEC Form 4申报数据的环境；实时行情、SEC申报与筛选功能依赖FinData Toolkit技能（findata-toolkit-us），无需API密钥。",
+      "id": "skill-925f2eb4dd38a4ae",
+      "author": "Geeksfino",
+      "originalName": "insider-trading-analyzer",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/insider-trading-analyzer/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/insider-trading-analyzer/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/insider-trading-analyzer/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "tagsEn": [
+        "portfolio diagnostics",
+        "risk management",
+        "stress testing",
+        "factor exposure",
+        "correlation analysis",
+        "rebalancing"
+      ],
+      "inputsEn": [
+        "Holdings list (ticker + shares/dollars/percentages)",
+        "Cash position",
+        "Account type (optional)",
+        "Benchmark (default S&P 500)",
+        "Risk tolerance (optional)",
+        "Time horizon (optional)"
+      ],
+      "outputsEn": [
+        "Health score (0-100)",
+        "Concentration and factor exposure diagnostics",
+        "Correlation clusters and effective diversification ratio",
+        "Stress scenario impacts and recovery timelines",
+        "Liquidity assessment",
+        "Critical issues, warnings, and rebalancing suggestions"
+      ],
+      "nameEn": "Portfolio Health Check",
+      "outputs": [
+        "健康评分（0-100）",
+        "集中度与因子暴露诊断",
+        "相关性聚类与有效分散比率",
+        "压力测试情景影响与恢复时间",
+        "流动性评估",
+        "关键问题、警示与再平衡建议"
+      ],
+      "method": "八步流程：归一化持仓为百分比；多层次集中度分析（单票、前五、行业、地域、市值、资产类别、风格）；两两相关性聚类检测（3只以上持仓平均相关性>0.7）；因子暴露分解（贝塔、价值、成长、规模、动量、质量、波动、股息）；组合风险指标（波动率、跟踪误差、VaR、CVaR、最大回撤、Sharpe/Sortino）；历史压力测试（2007-2009、2020年3月、2022利率冲击、2000-2002、1973-1974）；流动性评估（按日均成交量20%估算退出天数）；最后综合为健康评分（0-100）、关键问题、警示、优势、改进行动与再平衡建议。",
+      "notes": "来源已核对，但未经验证执行；分析为教育性质，非个性化投资建议。数据不完整时需向用户澄清；缺少实时数据时相应指标不可用，此为数据缺口而非无风险信号。",
+      "name": "投资组合健康检查",
+      "dependencies": [
+        "FinData Toolkit (findata-toolkit-us) 用于实时数据",
+        "仓库参考文件：diagnostic-framework.md、output-template.md"
+      ],
+      "category": "portfolio",
+      "notesEn": "Source-checked but execution-unverified; analysis is educational, not personalized investment advice. Incomplete user data requires clarifying questions; without live data feeds, real-time metrics are an explicit data gap, not evidence of no risk.",
+      "summary": "对既有投资组合进行风险诊断：评估集中度、相关性聚类、因子暴露、流动性及历史压力情景，并输出可执行的改进建议。",
+      "methodEn": "Eight-step workflow: normalize holdings to percentages; multi-level concentration analysis (single stock, top-5, sector, geography, market cap, asset class, style); pairwise correlation cluster detection (groups of 3+ holdings with average pairwise correlation > 0.7); factor exposure decomposition (beta, value, growth, size, momentum, quality, volatility, dividend yield); portfolio risk metrics (volatility, tracking error, VaR, CVaR, max drawdown, Sharpe/Sortino); historical stress testing (2007-2009, Feb-Mar 2020, 2022 rate shock, 2000-2002, 1973-1974); liquidity assessment (days to exit at 20% of average daily volume); then synthesize a 0-100 health score with critical issues, warnings, strengths, improvement actions, and rebalancing suggestions.",
+      "summaryEn": "Diagnoses risks and inefficiencies in an existing portfolio: concentration, correlation clusters, factor exposures, liquidity, and historical stress scenarios, then produces actionable improvement recommendations.",
+      "tags": [
+        "组合诊断",
+        "风险管理",
+        "压力测试",
+        "因子暴露",
+        "相关性分析",
+        "再平衡"
+      ],
+      "dependenciesEn": [
+        "FinData Toolkit (findata-toolkit-us) for live data",
+        "Repository references: diagnostic-framework.md, output-template.md"
+      ],
+      "environmentEn": "US-market equity-oriented portfolios. Live market data optionally depends on the FinData Toolkit skill (findata-toolkit-us); stress scenarios and thresholds come from repository references.",
+      "exampleEn": "User supplies: 300 shares AAPL, 150 shares MSFT, 400 shares VOO, $20,000 cash, moderate risk tolerance, 15-year horizon. The skill normalizes weights, detects a tech sector >30% flag and an AAPL-MSFT correlation cluster, runs the 2022 rate shock scenario to estimate drawdown, then delivers a health score, critical issues, and rebalancing suggestions (public tickers used for illustration, not real holdings).",
+      "example": "用户提供：AAPL 300股、MSFT 150股、VOO 400股、现金$20,000，风险承受度中等，期限15年。技能归一化权重后，检测到科技板块>30%、AAPL与MSFT相关性聚类，运行2022利率冲击情景估算回撤，最后给出健康评分、关键问题与再平衡建议（示例仅用公开代码，非真实持仓）。",
+      "inputs": [
+        "持仓列表（代码+股数/金额/百分比）",
+        "现金头寸",
+        "账户类型（可选）",
+        "基准指数（默认标普500）",
+        "风险承受度（可选）",
+        "投资期限（可选）"
+      ],
+      "evidenceQuotes": [
+        "Evaluate an existing investment portfolio to identify hidden risks, concentration issues, factor tilts, correlation clusters, liquidity gaps, and stress-test vulnerabilities",
+        "Identify **correlation clusters** — groups of 3+ holdings with average pairwise correlation > 0.7"
+      ],
+      "environment": "面向美国市场的股票型组合。实时数据依赖可选的 FinData Toolkit 技能（findata-toolkit-us）；历史情景与风险阈值为仓库内置参考。",
+      "id": "skill-e265fd04896a5f62",
+      "author": "Geeksfino",
+      "originalName": "portfolio-health-check",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/portfolio-health-check/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/portfolio-health-check/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/portfolio-health-check/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 110,
+      "skills": 113,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -7715,6 +7970,18 @@
           "file": "/licenses/Geeksfino--finskills--US-market--financial-statement-analyzer--LICENSE.txt"
         },
         {
+          "sourcePath": "US-market/findata-toolkit/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--findata-toolkit--LICENSE.txt"
+        },
+        {
+          "sourcePath": "US-market/insider-trading-analyzer/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--insider-trading-analyzer--LICENSE.txt"
+        },
+        {
+          "sourcePath": "US-market/portfolio-health-check/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--portfolio-health-check--LICENSE.txt"
+        },
+        {
           "sourcePath": "US-market/sector-rotation-detector/LICENSE.txt",
           "file": "/licenses/Geeksfino--finskills--US-market--sector-rotation-detector--LICENSE.txt"
         },
@@ -7764,7 +8031,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "335e94fb526eda65bbdbbeb3db3de88ad3204c0c",
+      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -7786,8 +8053,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--335e94fb526eda65bbdbbeb3db3de88ad3204c0c.zip",
-      "archiveSha256": "033e948454f43394894476e42ab68aebf8518357b0f71c5a02bb92079b72ca3f",
+      "archive": "Jeromelll--AlphaKit--3b456f9b056ae134ae8439ce8794aedb7f65407f.zip",
+      "archiveSha256": "f213b7198b20fb1675083b1d87785b1a3de73e8148501cc95c17b3e01d519b9a",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }
