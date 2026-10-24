@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "skills": [
     {
       "id": "equity-earnings-update",
@@ -5635,9 +5635,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
+      "commit": "1ad185984f602893a324944903519cffb270b504",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/incremental-business-sizing/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/1ad185984f602893a324944903519cffb270b504/skills/incremental-business-sizing/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "incremental-business-sizing",
@@ -5646,7 +5646,7 @@
       "nameEn": "Incremental business revenue and profit sizing",
       "category": "research",
       "sourcePath": "skills/incremental-business-sizing/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/incremental-business-sizing/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/1ad185984f602893a324944903519cffb270b504/skills/incremental-business-sizing/SKILL.md",
       "summary": "把产能、用户行为、订阅或交易额拆成可复算的收入、利润与 EPS 驱动链，保留缺失参数并用同一模型制作情景和敏感性分析。",
       "summaryEn": "Builds reproducible revenue, profit and EPS drivers from capacity, user activity, subscriptions or transaction volume. Preserves missing inputs and uses one model for scenarios and sensitivities.",
       "method": "先界定收费对象、资源和时间约束，为参数标明单位、期间及来源，再按依赖图计算各情景；两个敏感性轴替换同一模型中的指定输入。",
@@ -5705,9 +5705,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
+      "commit": "1ad185984f602893a324944903519cffb270b504",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/sellside-model-exhibits/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/1ad185984f602893a324944903519cffb270b504/skills/sellside-model-exhibits/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "sellside-model-exhibits",
@@ -5716,7 +5716,7 @@
       "nameEn": "Financial model exhibits and sensitivity tables",
       "category": "operations",
       "sourcePath": "skills/sellside-model-exhibits/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/sellside-model-exhibits/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/1ad185984f602893a324944903519cffb270b504/skills/sellside-model-exhibits/SKILL.md",
       "summary": "把同一份已完成测算制作成计算桥、情景表和敏感性矩阵，保留单位、年份、来源和未知值，输出文档、图片与公式工作簿。",
       "summaryEn": "Turns one completed model result into a calculation bridge, scenario table and sensitivity matrices. Retains units, periods, sources and unknown values, and exports documents, images and formula workbooks.",
       "method": "读取版本化计算结果，根据角色、表达式和状态排版；各格式共享同一数值来源，公式仅绑定到同一情景中的有效输入。",
@@ -5777,9 +5777,9 @@
     {
       "author": "Jeromelll",
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
+      "commit": "1ad185984f602893a324944903519cffb270b504",
       "license": "MIT",
-      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/pre-trade-quick-brief/LICENSE",
+      "licenseUrl": "https://github.com/Jeromelll/AlphaKit/blob/1ad185984f602893a324944903519cffb270b504/skills/pre-trade-quick-brief/LICENSE",
       "sourceVerified": true,
       "executionVerified": false,
       "id": "pre-trade-quick-brief",
@@ -5788,7 +5788,7 @@
       "nameEn": "Quick initial research for a new stock",
       "category": "research",
       "sourcePath": "skills/pre-trade-quick-brief/SKILL.md",
-      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/3b456f9b056ae134ae8439ce8794aedb7f65407f/skills/pre-trade-quick-brief/SKILL.md",
+      "sourceUrl": "https://github.com/Jeromelll/AlphaKit/blob/1ad185984f602893a324944903519cffb270b504/skills/pre-trade-quick-brief/SKILL.md",
       "summary": "先解释市场叙事与新增经营变量，再拆出受约束的业绩上限、三个盈利时间窗、前瞻估值和下一验证点，保留资料缺口。",
       "summaryEn": "Explains the market narrative and new operating variables, then develops a constrained earnings ceiling, three earnings windows, forward valuation conditions and the next verification point while preserving evidence gaps.",
       "method": "冻结信息时点，建立旧预期到新参数的证据链，核对需求、供给、期间、成本及融资稀释，并把当前价值和远期条件终值分开。",
@@ -7820,11 +7820,264 @@
       "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/portfolio-health-check/LICENSE.txt",
       "sourceVerified": true,
       "executionVerified": false
+    },
+    {
+      "environment": "文本分析环境,可选接入FinData Toolkit技能以获取实时行情、SEC文件与宏观指标,无需API密钥。",
+      "notes": "来源已核对但未经验证执行;因子并非万灵药,存在长期跑输与动量崩溃风险;回测不代表未来;交易成本需纳入;结果为分析工具而非个性化投资建议。实时数据缺失时应明确标注为数据缺口,不得视为无事件或无风险。",
+      "outputsEn": [
+        "Macro regime assessment and factor timing view",
+        "Factor crowding dashboard",
+        "Top N stocks table with factor scores and composite",
+        "Sector distribution and factor exposure summary",
+        "Individual stock cards and risk considerations"
+      ],
+      "dependencies": [
+        "FinData Toolkit 技能(可选,实时行情/SEC文件/宏观指标,无需API密钥)",
+        "references/factor-methodology.md",
+        "references/output-template.md"
+      ],
+      "method": "确认参数(股票池、因子、权重、行业中性、Top N)后,按因子逐股计算原始指标,在行业内或全池内排名并转换为0–100百分位得分;按 Composite Score = Σ(因子权重×因子得分) 排名;叠加宏观regime因子择时权重调整与拥挤度信号(估值价差、因子相关性、ETF资金流、媒体关注度),最后输出宏观评估、拥挤度仪表盘、Top Picks表、行业分布、因子暴露、个股卡片与风险提示。",
+      "name": "量化多因子股票筛选",
+      "inputs": [
+        "股票池选择(S&P 500 / Russell 1000 / Russell 3000 / 自定义)",
+        "因子集合与权重(默认六因子等权)",
+        "行业约束(中性或不限制)",
+        "Top N 结果数量与排除项",
+        "宏观regime评估(自动判定)"
+      ],
+      "inputsEn": [
+        "Universe selection (S&P 500 / Russell 1000 / Russell 3000 / custom)",
+        "Factor set and weights (default: six factors equal-weighted)",
+        "Sector constraints (neutral or unconstrained)",
+        "Top N results and exclusions",
+        "Macro regime assessment (auto-detected)"
+      ],
+      "exampleEn": "Input: Russell 1000, six factors equal-weighted, sector-neutral, Top 20; output: regime assessed as late expansion, quality and value weighted up, momentum flagged as crowded on surging ETF inflows, final Top 20 table, sector distribution and risks such as value's decade of underperformance 2010-2020.",
+      "tagsEn": [
+        "multi-factor screening",
+        "factor investing",
+        "smart beta",
+        "factor timing",
+        "crowding",
+        "quantitative equity research"
+      ],
+      "category": "quant",
+      "summaryEn": "A systematic multi-factor stock screening method based on academic factor research, scoring and ranking stocks across value, momentum, quality, low volatility, size and growth factors, with macro-regime factor timing and crowding analysis, producing a Top N list with risk disclosures.",
+      "nameEn": "Quantitative Multi-Factor Stock Screener",
+      "summary": "基于学术因子研究的系统性多因子股票筛选方法,对价值、动量、质量、低波动、市值与成长六大因子进行打分、排序并结合宏观regime与因子拥挤度评估,输出Top N股票清单及风险提示。",
+      "environmentEn": "A text-analysis environment; optionally the FinData Toolkit skill (findata-toolkit-us) for live stock metrics, SEC filings and macro indicators, no API keys required.",
+      "notesEn": "Source-checked but execution-unverified; factors have long underperformance stretches and momentum crashes; backtests are backward-looking; include transaction costs; output is an analytical tool, not personalized advice. Missing live data must be flagged as an explicit data gap, not treated as no events or no risk.",
+      "outputs": [
+        "宏观regime评估与因子择时观点",
+        "因子拥挤度仪表盘",
+        "Top N 股票表(各因子得分与综合分)",
+        "行业分布与因子暴露摘要",
+        "个股卡片与风险提示"
+      ],
+      "dependenciesEn": [
+        "FinData Toolkit skill (optional; live market data, SEC filings, macro indicators; no API keys)",
+        "references/factor-methodology.md",
+        "references/output-template.md"
+      ],
+      "evidenceQuotes": [
+        "Score every stock in the universe on each factor. See [references/factor-methodology.md]",
+        "Composite Score = Σ (Factor Weight × Factor Score)",
+        "Factors have long periods of underperformance. Value underperformed for a decade (2010–2020)."
+      ],
+      "tags": [
+        "多因子筛选",
+        "因子投资",
+        "Smart Beta",
+        "因子择时",
+        "拥挤度",
+        "量化股票研究"
+      ],
+      "methodEn": "Confirm parameters (universe, factors, weights, sector neutrality, Top N); compute raw metrics per stock per factor, rank within sector or universe and convert to 0-100 percentile scores; rank by Composite Score = sum of factor weight times factor score; overlay macro-regime factor timing and crowding signals (valuation spread, factor correlation, ETF flows, media attention); output macro assessment, crowding dashboard, Top Picks table, sector distribution, factor exposure, stock cards and risk notes.",
+      "example": "输入:Russell 1000,六个因子等权,行业中性,Top 20;输出:当前regime判定为late expansion,质量与价值因子获更高权重,拥挤度仪表盘显示动量因子ETF资金流激增标记为拥挤,最终给出Top 20表格、行业分布及2010–2020价值因子长期跑输等风险说明。",
+      "id": "skill-11469f7f3b80003d",
+      "author": "Geeksfino",
+      "originalName": "quant-factor-screener",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/quant-factor-screener/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/quant-factor-screener/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/quant-factor-screener/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "environment": "作为技能说明文件在支持技能加载的助手环境中使用；实时行情数据依赖配套的 FinData Toolkit 技能（无需API密钥）。",
+      "notes": "该内容为教育性框架，明确声明非个性化投资建议；预期收益基于资本假设，历史表现不代表未来。本条目仅经来源核对，未执行验证。",
+      "outputsEn": [
+        "Asset allocation plan with per-holding details (ticker, weight, dollar amount)",
+        "Risk dashboard (expected return, volatility, Sharpe, max drawdown, VaR, Sortino)",
+        "Rebalancing plan and downside protection strategies",
+        "Implementation guide and disclaimers"
+      ],
+      "dependencies": [
+        "FinData Toolkit 技能（实时数据，可选）",
+        "资产配置与资本市场假设参考文件",
+        "输出模板参考文件"
+      ],
+      "method": "七步流程：收集输入（资金、风险偏好、期限、收入需求、税务、约束）→ 将风险/期限映射到战略资产配置（保守/稳健/进取三档）→ 核心卫星仓位定位（单票上限3-8%、行业≤25%权益）→ 估算预期收益、波动率、夏普、最大回撤、VaR、Sortino → 设计下行保护 → 制定日历/阈值/混合再平衡规则 → 按结构化模板输出组合报告。",
+      "name": "风险调整收益组合优化器",
+      "inputs": [
+        "资金规模",
+        "风险承受能力（保守/稳健/进取）",
+        "投资期限",
+        "收入需求与税务状况",
+        "现有持仓与约束（ESG、行业排除、单票上限）",
+        "再平衡偏好"
+      ],
+      "inputsEn": [
+        "Portfolio size",
+        "Risk tolerance (conservative/moderate/aggressive)",
+        "Time horizon",
+        "Income needs and tax situation",
+        "Existing holdings and constraints (ESG, sector exclusions, position limits)",
+        "Rebalancing preference"
+      ],
+      "exampleEn": "Input: $50,000, moderate risk, 10-year horizon, no income needs, taxable account, 5% threshold rebalancing. Output: allocation of 50-65% equities / 25-35% fixed income / 5-10% alternatives / 3-5% cash, per-holding tickers and dollar amounts, a risk dashboard (Sharpe, drawdown, VaR), plus rebalancing and implementation guidance.",
+      "tagsEn": [
+        "portfolio construction",
+        "asset allocation",
+        "Sharpe ratio",
+        "rebalancing",
+        "risk management",
+        "position sizing"
+      ],
+      "category": "portfolio",
+      "summaryEn": "Builds diversified portfolios optimized for risk-adjusted returns given user-specified capital, risk tolerance, and time horizon, with risk metrics and rebalancing rules.",
+      "nameEn": "Risk-Adjusted Return Optimizer",
+      "summary": "根据用户的资金规模、风险承受能力和投资期限，构建以夏普比率为目标并包含风险指标与再平衡规则的多元化组合方案。",
+      "environmentEn": "Used as a skill file in an assistant environment that loads skills; live market data depends on the companion FinData Toolkit skill (no API keys required).",
+      "notesEn": "Educational framework with explicit disclaimer that it is not personalized advice; expected returns rely on capital market assumptions and historical data does not guarantee future results. This entry is source-checked but execution-unverified.",
+      "outputs": [
+        "资产配置方案与单持仓明细（代码、比例、金额）",
+        "风险仪表盘（预期收益、波动率、夏普、最大回撤、VaR、Sortino）",
+        "再平衡计划与下行保护策略",
+        "实施指南与免责声明"
+      ],
+      "dependenciesEn": [
+        "FinData Toolkit skill (live data, optional)",
+        "Portfolio construction framework reference file",
+        "Output template reference file"
+      ],
+      "evidenceQuotes": [
+        "Build diversified portfolios designed to maximize risk-adjusted returns (Sharpe ratio) given the user's capital, risk tolerance, and time horizon",
+        "Threshold | Asset class drifts ≥ 5% from target | Responsive | Requires monitoring"
+      ],
+      "tags": [
+        "组合构建",
+        "资产配置",
+        "夏普比率",
+        "再平衡",
+        "风险管理",
+        "仓位管理"
+      ],
+      "methodEn": "Seven-step workflow: gather inputs (capital, risk tolerance, horizon, income needs, taxes, constraints) → map risk/horizon to strategic allocation (conservative/moderate/aggressive) → core-satellite position sizing (single-position caps 3-8%, sector ≤25% of equities) → estimate expected return, volatility, Sharpe, max drawdown, VaR, Sortino → design downside protection → set calendar/threshold/hybrid rebalancing rules → present a structured portfolio report.",
+      "example": "输入：$50,000、稳健型、10年期、无收入需求、应税账户、5%阈值再平衡。输出：50-65%权益/25-35%固收/5-10%另类/3-5%现金的配置表，每持仓的代码与金额，风险仪表盘（夏普、回撤、VaR）及再平衡与实施指南。",
+      "id": "skill-5eb32a5b0222f31c",
+      "author": "Geeksfino",
+      "originalName": "risk-adjusted-return-optimizer",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/risk-adjusted-return-optimizer/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/risk-adjusted-return-optimizer/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/risk-adjusted-return-optimizer/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
+    },
+    {
+      "environment": "需要具备实时市场数据、SEC文件与筛选工具的FinData Toolkit技能（findata-toolkit-us），无需API密钥；引用的方法论与输出模板存储于技能目录references/子目录中。",
+      "notes": "该技能强调思想诚实：若负面情绪确有基本面支撑则如实说明；情绪-基本面落差本身不构成可操作信号，需识别收敛催化剂并以风险/收益不对称框架呈现。本条目录记录仅基于源文件审核，未实际执行分析，结论未经执行验证。",
+      "outputsEn": [
+        "Ranked list of top 5 stocks with largest sentiment-fundamental gaps",
+        "Individual stock profiles including narrative origin and gap-closing catalysts",
+        "Comparative table of valuation gaps versus history and peers",
+        "Risk/reward asymmetry framing per opportunity",
+        "Structured report with methodology and disclaimers"
+      ],
+      "dependencies": [
+        "findata-toolkit-us技能（实时行情、SEC文件、筛选器）",
+        "references/gap-analysis-methodology.md",
+        "references/output-template.md"
+      ],
+      "method": "六步流程：确认范围（默认美股、全行业、前5名、6个月回溯）；用价格回撤、分析师评级、空头持仓、媒体叙事、资金流与期权指标识别负面情绪候选；以盈利质量、营收韧性、资产负债表、现金流、利润率与竞争地位验证基本面；将负面催化归类为暂时性/周期性/叙事驱动（排除结构性问题）；用P/E、EV/EBITDA、P/FCF对比5年历史与同业衡量估值差；按落差幅度排序输出结构化报告。",
+      "name": "市场情绪与现实落差分析",
+      "inputs": [
+        "市场范围与行业焦点",
+        "情绪回溯时间窗口",
+        "股价回撤与分析师评级数据",
+        "空头持仓、资金流与期权市场数据",
+        "公司财务报表（EPS、现金流、利润率、资产负债表）",
+        "估值倍数（P/E、EV/EBITDA、P/FCF）及其5年历史"
+      ],
+      "inputsEn": [
+        "Market scope and sector focus",
+        "Sentiment lookback window",
+        "Price drawdown and analyst rating data",
+        "Short interest, fund flows, and options market data",
+        "Company financials (EPS, cash flow, margins, balance sheet)",
+        "Valuation multiples (P/E, EV/EBITDA, P/FCF) with 5-year history"
+      ],
+      "exampleEn": "A user asks for US contrarian candidates suppressed by negative narratives: with defaults (US market, all sectors, top 5, 6-month sentiment lookback), the workflow first screens candidates with >20% drawdowns and elevated short interest, verifies operating cash flow and margin stability, excludes structurally declining names, then compares each stock's current P/FCF to its 5-year average and outputs a comparative table.",
+      "tagsEn": [
+        "contrarian-investing",
+        "sentiment-analysis",
+        "US-equities",
+        "valuation",
+        "stock-screening"
+      ],
+      "category": "research",
+      "summaryEn": "Screens US stocks where market sentiment is significantly more negative than fundamentals warrant, quantifying the gap between narrative and financial reality within a contrarian research framework.",
+      "nameEn": "Sentiment-Reality Gap Analyzer",
+      "summary": "筛选市场情绪显著负面但基本面依然稳健的美股，量化情绪与基本面之间的落差并给出反向研究框架。",
+      "environmentEn": "Requires the FinData Toolkit skill (findata-toolkit-us) for live market data, SEC filings, and screening tools, with no API keys needed; referenced methodology and output templates reside in the skill's references/ subdirectory.",
+      "notesEn": "The skill emphasizes intellectual honesty: if negative sentiment is warranted, say so; a sentiment-reality gap alone is not actionable and requires catalyst identification plus risk/reward asymmetry framing. This directory entry is source-checked only; no analysis was executed and conclusions are execution-unverified.",
+      "outputs": [
+        "前5名情绪-基本面落差最大的股票名单",
+        "个股档案含负面叙事起源与收敛催化剂",
+        "比较表格显示各股估值与历史/同业差距",
+        "风险/收益不对称分析",
+        "结构化研究报告含方法论与免责声明"
+      ],
+      "dependenciesEn": [
+        "findata-toolkit-us skill (live market data, SEC filings, screener)",
+        "references/gap-analysis-methodology.md",
+        "references/output-template.md"
+      ],
+      "evidenceQuotes": [
+        "Identify stocks where market sentiment is significantly more negative than fundamentals warrant — the gap between narrative and reality",
+        "A sentiment-reality gap alone is not actionable. Identify what could *close* the gap"
+      ],
+      "tags": [
+        "反向投资",
+        "情绪分析",
+        "美股",
+        "估值",
+        "股票筛选"
+      ],
+      "methodEn": "A six-step workflow: confirm scope (defaults: US market, all sectors, top 5, 6-month lookback); identify negative-sentiment candidates via drawdowns, analyst downgrades, short interest, media narrative, fund flows, and options indicators; validate fundamentals on earnings quality, revenue resilience, balance sheet, cash flow, margins, and competitive position; classify catalysts as temporary/cyclical/narrative-driven (excluding structural); measure valuation gaps using P/E, EV/EBITDA, and P/FCF versus 5-year averages and peers; rank by gap magnitude and present a structured report with disclaimers.",
+      "example": "用户要求寻找美股中被负面叙事压制的反向机会：默认范围为美股全行业、前5名、6个月情绪回溯。流程先筛出回撤超20%且空头持仓偏高的候选，再验证经营现金流与利润率是否稳健，排除结构性衰退股，最后对比各股当前P/FCF与其5年均值并输出对比表。",
+      "id": "skill-3464c3272f516f18",
+      "author": "Geeksfino",
+      "originalName": "sentiment-reality-gap",
+      "repository": "https://github.com/Geeksfino/finskills",
+      "commit": "8722415a68db3250516a8c6f9632da29c1554bf1",
+      "sourcePath": "US-market/sentiment-reality-gap/SKILL.md",
+      "sourceUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/sentiment-reality-gap/SKILL.md",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/Geeksfino/finskills/blob/8722415a68db3250516a8c6f9632da29c1554bf1/US-market/sentiment-reality-gap/LICENSE.txt",
+      "sourceVerified": true,
+      "executionVerified": false
     }
   ],
   "evidence": {
     "checks": {
-      "skills": 113,
+      "skills": 116,
       "repositories": 7,
       "executionTestsRun": 0
     },
@@ -7982,8 +8235,20 @@
           "file": "/licenses/Geeksfino--finskills--US-market--portfolio-health-check--LICENSE.txt"
         },
         {
+          "sourcePath": "US-market/quant-factor-screener/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--quant-factor-screener--LICENSE.txt"
+        },
+        {
+          "sourcePath": "US-market/risk-adjusted-return-optimizer/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--risk-adjusted-return-optimizer--LICENSE.txt"
+        },
+        {
           "sourcePath": "US-market/sector-rotation-detector/LICENSE.txt",
           "file": "/licenses/Geeksfino--finskills--US-market--sector-rotation-detector--LICENSE.txt"
+        },
+        {
+          "sourcePath": "US-market/sentiment-reality-gap/LICENSE.txt",
+          "file": "/licenses/Geeksfino--finskills--US-market--sentiment-reality-gap--LICENSE.txt"
         },
         {
           "sourcePath": "US-market/undervalued-stock-screener/LICENSE.txt",
@@ -8031,7 +8296,7 @@
     },
     {
       "repository": "https://github.com/Jeromelll/AlphaKit",
-      "commit": "3b456f9b056ae134ae8439ce8794aedb7f65407f",
+      "commit": "1ad185984f602893a324944903519cffb270b504",
       "license": "MIT",
       "licensePath": "LICENSE",
       "licenseFile": "/licenses/alphakit-LICENSE.txt",
@@ -8053,8 +8318,8 @@
           "file": "/licenses/alphakit-sellside-model-exhibits-LICENSE.txt"
         }
       ],
-      "archive": "Jeromelll--AlphaKit--3b456f9b056ae134ae8439ce8794aedb7f65407f.zip",
-      "archiveSha256": "f213b7198b20fb1675083b1d87785b1a3de73e8148501cc95c17b3e01d519b9a",
+      "archive": "Jeromelll--AlphaKit--1ad185984f602893a324944903519cffb270b504.zip",
+      "archiveSha256": "71c9178d78c27c48d8c5cda7d8c4fdb7687690bcb8433aa5e0c0a921921d7ef4",
       "description": "AlphaKit 原创投研技能：增量测算、展示表和新股票初筛，示例为原创合成数据。",
       "descriptionEn": "Original AlphaKit research skills for incremental sizing, model exhibits and initial stock research, with original synthetic examples."
     }

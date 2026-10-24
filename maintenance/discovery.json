@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-23T05:25:45.896680+00:00",
-  "query": "quant skills in:name,description",
+  "checkedAt": "2026-10-24T05:05:18.826269+00:00",
+  "query": "金融 skills in:name,description",
   "candidates": [
     "agiprolabs/claude-trading-skills",
     "aldlgt/awesome-financial-skills",
@@ -61,7 +61,14 @@
     "x-TheFox/Cortex-54",
     "Jerome-Jiayu-Lin/Quant-newsletter",
     "xtt-316/xuanxue-quant-lab",
-    "xiazhicheng/quant-risk"
+    "xiazhicheng/quant-risk",
+    "wangcaiandcat-netizen/nfra-penalty-analysis",
+    "panting09266-ai/cuecue-skills",
+    "haiting202-web/jiufeng-invest",
+    "qixizeng-hue/clean-ai-tone",
+    "ykkai-w/kai-plot",
+    "ykkai-w/kai-writing",
+    "ykkai-w/kai-literature"
   ],
   "decisions": [
     {
